@@ -1,0 +1,65 @@
+buildscript {
+  repositories {
+    mavenLocal()
+      maven {
+        url "http://maven.web-education.net/nexus/content/groups/public"
+      }
+  }
+  dependencies {
+    classpath "fr.wseduc:springboard-plugin:0.1-SNAPSHOT"
+  }
+}
+apply plugin: 'scala'
+apply plugin: 'springboard'
+
+configurations {
+  deployment
+}
+
+dependencies {
+  testCompile "org.entcore:tests:$entCoreVersion"
+  testCompile "org.entcore:blog:1.12-SNAPSHOT:tests"
+  testCompile "net.atos:actualites:0.4-SNAPSHOT:tests"
+  testCompile "net.atos:forum:0.4-SNAPSHOT:tests"
+  testCompile "net.atos:rbs:0.4-SNAPSHOT:tests"
+  testCompile "net.atos:wiki:0.4-SNAPSHOT:tests"
+  deployment "org.entcore:blog:1.12-SNAPSHOT:deployment"
+  deployment "net.atos:actualites:0.4-SNAPSHOT:deployment"
+  deployment "net.atos:forum:0.4-SNAPSHOT:deployment"
+  deployment "net.atos:rbs:0.4-SNAPSHOT:deployment"
+  deployment "net.atos:wiki:0.4-SNAPSHOT:deployment"
+  deployment "net.atos:rss:0.3-SNAPSHOT:deployment"
+  deployment "net.atos:support:0.3-SNAPSHOT:deployment"
+  deployment "fr.wseduc:eliot:0.1-SNAPSHOT:deployment"
+  deployment "net.atos:poll:0.1-SNAPSHOT:deployment"
+  deployment "net.atos:timelinegenerator:0.1-SNAPSHOT:deployment"
+  deployment "fr.wseduc:pages:0.4-SNAPSHOT:deployment"
+}
+
+repositories{
+    mavenLocal()
+		maven {
+			url "http://maven.web-education.net:8081/nexus/content/groups/public"
+		}
+}
+
+// empty task to avoid failure if no subprojets are defined
+task copyMod {}
+
+subprojects {
+	afterEvaluate { project ->
+		project.tasks['copyMod'].doLast {
+			file('mods').mkdir()
+			copy {
+				into 'mods'
+				from "${project.name}/build/mods"
+			}
+		}
+	}
+}
+
+clean.doFirst {
+  delete "mods"
+  delete "ent-core.json"
+  delete "ent-core.embedded.json"
+}
