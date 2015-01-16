@@ -1,0 +1,18 @@
+    {
+  		"name": "net.atos~forum~0.4-SNAPSHOT",
+  		"config": {
+  		  "main" : "net.atos.entng.forum.Forum",
+  		  "port" : 8024,
+  		  "app-name" : "Forum",
+  		  "app-address" : "/forum",
+  		  "app-icon" : "forum-large",
+  		  "host": "${host}",
+  		  "ssl" : $ssl,
+  		  "auto-redeploy": false,
+  		  "userbook-host": "${host}",
+  		  "integration-mode" : "HTTP",
+  		  "app-registry.port" : 8012,
+  		  "mode" : "${mode}",
+  		  "entcore.port" : 8009
+  		}
+	  }

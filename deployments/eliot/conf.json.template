@@ -1,0 +1,16 @@
+    {
+      "name": "fr.wseduc~eliot~0.1-SNAPSHOT",
+      "config": {
+        "main" : "fr.wseduc.eliot.Eliot",
+        "port" : 8029,
+        "exported-delay" : ${eliotExportedDelay},
+        "appli-code" : "${eliotAppliCode}",
+        "uri" : "${eliotUri}",
+        "eliotUri" : "${eliotSaasUri}",
+        "host": "${host}",
+        "ssl" : $ssl,
+        "auto-redeploy": false,
+        "userbook-host": "${host}",
+        "mode" : "${mode}"
+      }
+    }

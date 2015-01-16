@@ -1,0 +1,13 @@
+{
+  "name": "org.entcore~blog~1.11-SNAPSHOT",
+    "config": {
+      "main":"org.entcore.blog.Blog",
+      "port": 8018,
+      "address" : "wse.blog",
+      "auto-redeploy": false,
+      "ssl" : $ssl,
+      "host": "${host}",
+      "userbook-host": "${host}",
+      "mode": "${mode}"
+    }
+}

@@ -413,7 +413,8 @@
         "app-icon" : "archive-large",
         "expected-exports" : ["workspace"]
       }
-    },
+    }
+,
     {
       "name": "net.atos~actualites~0.4-SNAPSHOT",
       "config": {
@@ -434,7 +435,7 @@
     }
 ,
 {
-  "name": "org.entcore~blog~1.12-SNAPSHOT",
+  "name": "org.entcore~blog~1.11-SNAPSHOT",
     "config": {
       "main":"org.entcore.blog.Blog",
       "port": 8018,
@@ -446,6 +447,22 @@
       "mode": "${mode}"
     }
 }
+,
+    {
+      "name": "net.atos~community~0.1-SNAPSHOT",
+      "config": {
+        "main" : "net.atos.entng.community.Community",
+        "port" : 8078,
+        "app-name" : "Community",
+        "app-address" : "/community",
+        "app-icon" : "community-large",
+        "host": "${host}",
+        "ssl" : $ssl,
+        "auto-redeploy": false,
+        "userbook-host": "${host}",
+        "mode" : "${mode}"
+      }
+    }
 ,
     {
       "name": "fr.wseduc~eliot~0.1-SNAPSHOT",
@@ -518,6 +535,23 @@
       }
     }
 ,
+{
+    "name": "fr.wseduc~rack~0.2-SNAPSHOT",
+    "config": {
+        "main" : "fr.wseduc.rack.Rack",
+        "port" : 8031,
+        "app-name" : "rack",
+        "app-address" : "/rack",
+        "app-icon" : "rack-large",
+        "app-displayName" : "rack",
+        "host": "${host}",
+        "ssl" :  $ssl,
+        "auto-redeploy": false,
+        "userbook-host": "${host}",
+        "mode": "${mode}"
+    }
+}
+,
     {
       "name": "net.atos~rbs~0.4-SNAPSHOT",
       "config": {
@@ -564,7 +598,7 @@
         "port" : 8027,
         "sql" : true,
         "mongodb" : false,
-        "neo4j" : true,
+        "neo4j" : false,
         "app-name" : "Aide et support",
         "app-address" : "/support",
         "app-icon" : "support-large",
@@ -576,7 +610,12 @@
         "mode" : "${mode}",
         "bug-tracker-host" : "support.web-education.net",
         "bug-tracker-port" : 80,
-        "bug-tracker-api-key" : "f8ffdbfb0ee9bae2448713d70172b7df0142d270"
+        "bug-tracker-api-key" : "f8ffdbfb0ee9bae2448713d70172b7df0142d270",
+        "bug-tracker-projectid" : 39,
+        "escalation-httpclient-maxpoolsize" : 16,
+        "escalation-httpclient-keepalive" : false,
+        "escalation-httpclient-tryusecompression" : true,
+        "refresh-period" : 15
       }
     }
 ,
@@ -675,6 +714,10 @@
             "proxy_pass": "http://localhost:8018"
           },
           {
+            "location": "/community",
+            "proxy_pass": "http://localhost:8078"
+          },
+          {
             "location": "/eliot",
             "proxy_pass": "http://localhost:8029"
           },
@@ -688,6 +731,10 @@
           },
           {
             "location": "/poll",
+            "proxy_pass": "http://localhost:8031"
+          },
+          {
+            "location": "/rack",
             "proxy_pass": "http://localhost:8031"
           },
           {

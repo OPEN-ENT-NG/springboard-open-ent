@@ -1,0 +1,16 @@
+{
+    "name": "fr.wseduc~rack~0.2-SNAPSHOT",
+    "config": {
+        "main" : "fr.wseduc.rack.Rack",
+        "port" : 8031,
+        "app-name" : "rack",
+        "app-address" : "/rack",
+        "app-icon" : "rack-large",
+        "app-displayName" : "rack",
+        "host": "${host}",
+        "ssl" :  $ssl,
+        "auto-redeploy": false,
+        "userbook-host": "${host}",
+        "mode": "${mode}"
+    }
+}

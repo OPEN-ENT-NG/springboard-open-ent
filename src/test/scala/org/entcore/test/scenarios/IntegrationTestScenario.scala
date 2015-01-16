@@ -70,6 +70,10 @@ object IntegrationTestScenario {
       org.entcore.blog.test.integration.BlogScenario.scn
   }
 
+.group("Community Scenario") {
+  net.atos.entng.community.test.integration.CommunityScenario.scn
+}
+
   .group("Forum Scenario - main") {
     net.atos.entng.forum.test.integration.ForumScenario.scn
   }
@@ -88,6 +92,10 @@ object IntegrationTestScenario {
   .group("Forum Scenario - shared manager") {
     net.atos.entng.forum.test.integration.ForumScenario.scnManage
   }
+
+//.group("Rack Scenario") {
+//  fr.wseduc.rack.test.integration.RackScenario.scn
+//}
 
   .group("Rbs Scenario") {
     net.atos.entng.rbs.test.integration.RbsScenario.scnCreateTeachers
