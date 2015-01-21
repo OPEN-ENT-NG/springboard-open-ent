@@ -44,6 +44,8 @@ repositories{
 		maven {
 			url "http://maven.web-education.net:8081/nexus/content/groups/public"
 		}
+  maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+  mavenCentral()
 }
 
 // empty task to avoid failure if no subprojets are defined
