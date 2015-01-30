@@ -1,77 +1,61 @@
 @import "../../../../../css-lib/app";
-@font-face {
-	font-family: Lato;
-	src: url(../font/Roboto.ttf);
-}
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,300,700,400);
 
-@dark-blue: #266881;
-@bright-blue: #23A9AA;
-@black: #2A2829;
-@shiny-blue: #51CCF5;
-@blue-background: @primary-light;
-
-//legend colors
-@green: #B2D663;
-@purple: #A872C5;
-@pink: #DB6087;
-@cyan: #23a9aa;
-@orange: #F3C055;
-@blue: #628CD6;
-@yellow: rgb(233, 227, 91);
-
-//Material colors
-
-/*
-//Primary
-@primary: rgb(27, 177, 157);
-@primary-light: #B2DFDB;
-@primary-dark: #00796B;
-*/
-
-@primary: rgb(85, 13, 122);
-@primary-light: #D1C4E9;
-@primary-dark: #512DA8;
+@primary-dark: #55007A;
+@primary: #8b3eaf;
+@primary-light: rgba(220, 146, 252, 0.5);
 
 //Accent
-@accent: #FF5722;
-@accent-light: #FFE0B2;
+@accent: #C1FF00;
+
+@green: #1ab19d;
+@yellow: #e8af00;
+@orange: #da0a0a;
+@purple: @primary;
+@cyan: #209dcc;
+@pink: #a9008c;
 
 @text-light: #555;
 
-@shadow: rgba(0, 0, 0, 0.3);
+@background: #f9f9f9;
+
+@black: #222;
+
+@shadow: rgba(0, 0, 0, 0.26);
 @shadow-light: rgba(0, 0, 0, 0.1);
 
-@header-height: 80px;
+@header-height: 64px;
 
-.material-card(@shadow-size: 3px, @blur-size: 4px){
-	box-shadow: @shadow-size  @shadow-size  @blur-size @shadow;
-	border: 1px solid @shadow-light;
-	border-radius: 5px;
+@import "../css/modules";
+
+.material-card(@shadow-size: 2px, @blur-size: 3px){
+	box-shadow: 0  @shadow-size  @blur-size @shadow;
+	border-radius: 2px;
+}
+
+title{
+	display: block;
 }
 
 html, body{
-	background: #fff;
-	*{
-		font-family: Lato;
-	}
+	background: #F9F9F9;
+	font-family: Roboto;
 }
 
 body {
 	overflow-x: hidden;
-	.material section.main{
-		background: white;
-		position: relative;
-		top: calc(@header-height - 5px);
-		//z-index: 5;
-		padding: 20px 0px !important;
-		//.material-card(1px, 4px)
+	.material{
+		section.main{
+			position: relative;
+			top: @header-height + 40px;
+			box-sizing: border-box;
+			background: transparent;
+			padding: 8px;
+		}
 	}
 
-	section.main{
-		background: transparent;
-	}
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 16px;
+	line-height: 23px;
 }
 
 a{
@@ -81,35 +65,29 @@ a{
 
 article{
 	background: transparent;
-	border-radius: 3px;
 	border: none;
 	margin-bottom: 15px;
 }
 
-header{
-	background: transparent;
-}
-/*
-h3, h4, h5{
-	color: @primary;
-}
-*/
 h1, h2, h3, h4, h5{
 	a{
-		color: @text-light;
+		color: @primary;
 	}
-	color: @text-light;
-	font-weight: 300;
-
+	color: @primary;
+	font-weight: 400;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	line-height: 30px;
 }
 
 h1{
-	font-size: 2em;
-	margin-top: 0px;
+	font-size: 34px;
 	margin-bottom: 20px;
+	line-height: 50px;
+}
+
+h1:first-child{
+	margin-top: 0;
 }
 
 h2{
@@ -122,33 +100,26 @@ h3{
 }
 
 table{
-	.material-card(5px, 6px);
 	line-height: 45px;
-	*{
-		color: @text-light;
-	}
+	background: #fff;
 	thead{
-		border-bottom: 1px solid @accent;
-
-		tr:hover{
-			background-color: #F5F5F5;
+		tr{
+			background: @primary;
+			color: #fff;
+			border: none;
 		}
 		th{
-			padding: 5px 15px;
+			padding: 4px 15px;
+			text-align: left;
 		}
 	}
 	tbody{
 		tr{
-			border: none;
-
-			&:hover{
-				background-color: @accent-light;
-			}
 			&.checked{
 				background-color: @primary-light;
 			}
 			td{
-				padding: 5px 15px;
+				padding: 4px 15px;
 			}
 		}
 	}
@@ -156,38 +127,29 @@ table{
 
 button, input[type=button], a.button, input[type=submit]{
 	background: @primary;
-	padding: 4px 10px;
+	padding: 8px 18px 10px;
 	color: #fff;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 15px;
-	border: 1px solid transparent;
+	font-size: 14px;
+	border-radius: 2px;
 	.run-transition(background);
-	font-weight: 300;
+	font-weight: 500;
 	line-height: 20px;
-	box-shadow: 2px 2px 4px @shadow;
+	border: none;
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.4);
+	margin-right: 2px;
+	margin-left: 2px;
 }
 
 
-input[type=text], input[type=search]{
+input[type=text], input[type=password], input[type=password], input[type=search]{
+	color: @text-light;
+	background: transparent;
 	height: 25px;
 	line-height: 25px;
 	padding-left: 5px;
-
 	font-size: 14px;
-	margin-bottom: 7px;
-}
-input[type=text], input[type=password], input[type=password]{
-	color: @text-light;
-	background: white;
-	border-bottom: 2px solid @primary;
-}
-
-textarea{
-	padding-left: 5px;
-
-	font-size: 14px;
-	margin-top: 7px;
 	margin-bottom: 7px;
 }
 
@@ -206,12 +168,12 @@ textarea{
 
 i.logo-teal{
 	.icon-custom('leo-teal');
-	height: 80px;
+	height: @header-height;
 	width: 290px;
 }
 i.logo-purple{
 	.icon-custom('leo-purple');
-	height: 80px;
+	height: @header-height;
 	width: 290px;
 }
 
@@ -231,7 +193,7 @@ i.wiki-large{
 }
 
 i.forum-large{
-	.icon(forum-neon, 100px);
+	.icon(forum, 100px);
 	.run-transition(background);
 }
 
@@ -241,7 +203,7 @@ i.pages-large{
 }
 
 i.userbook-large{
-	.icon(userbook-large-neon, 100px);
+	.icon(userbook-large, 100px);
 	.run-transition(background);
 }
 
@@ -251,7 +213,7 @@ i.rbs-large{
 }
 
 i.conversation-large, i.messagerie{
-	.icon(conversation-large-neon, 100px);
+	.icon(conversation-large, 100px);
 	.run-transition(background);
 }
 
@@ -371,7 +333,7 @@ i.worried{
 
 i.show-icons{
 	.icon(glyphicons_156_show_thumbnails, 24px);
-	opacity: 0.5;
+	opacity: 0.2;
 }
 
 i.show-admin{
@@ -404,18 +366,28 @@ i.disconnect{
 
 i.show-details{
 	.icon(glyphicons_157_show_thumbnails_with_lines, 24px);
-	opacity: 0.5;
+	opacity: 0.2;
 	background-size: 100% 93%;
 }
 
 i.show-list{
 	.icon(glyphicons_158_show_lines, 24px);
-	opacity: 0.5;
+	opacity: 0.2;
+	background-size: 100% 93%;
+}
+
+i.show-carousel{
+	.icon(show-carousel, 24px);
+	opacity: 0.4;
 	background-size: 100% 93%;
 }
 
 i.show-icons.selected{
-	opacity: 1;
+	opacity: 0.4;
+}
+
+i.show-carousel.selected{
+	opacity: 0.8;
 }
 
 i.show-details.selected{
@@ -423,7 +395,7 @@ i.show-details.selected{
 }
 
 i.show-list.selected{
-	opacity: 1;
+	opacity: 0.4;
 }
 
 i.show-admin.selected{
@@ -531,7 +503,6 @@ i.folder{
 	}
 
 	header{
-
 		color: @text-light;
 		font-size: 14px;
 		font-weight: bold;
@@ -548,6 +519,7 @@ i.folder{
 .lightbox-window{
 	padding: 10px;
 	box-shadow: 2px 2px 24px @shadow;
+	background: #f9f9f9;
 
 	nav.vertical {
 		margin-right: 0px;
@@ -561,14 +533,13 @@ i.folder{
 	.tabs{
 		margin-top: 10px;
 		section{
-			.material-card(1px, 5px);
 			padding: 15px 20px;
+			border: none;
+			border-top: 1px solid #ddd;
+			background: #fff;
 		}
-		header{
-			margin-left: -2px;
-		}
-		header:first-child{
-			margin-left: 0px;
+		header.selected{
+			background: transparent;
 		}
 	}
 }
@@ -584,22 +555,22 @@ i.folder{
 	}
 }
 
-.row{
-	max-width: 1200px;
+header.main{
+	height: @header-height;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100%;
 }
 
 .container{
-	header.main{
-		height: @header-height;
-		max-width: none;
-	}
-
 	.main.wrapper{
 		padding-top: 0 !important;
 		max-width: none;
 	}
 	.main{
-		max-width: 1200px;
 		min-width: 320px;
 		margin-left: auto;
 		margin-right: auto;
@@ -666,7 +637,7 @@ nav.vertical.stamps{
 	}
 	article.selected{
 		background: @primary;
-		color: @accent-light;
+		color: @accent;
 		i.send-mail{
 			.icon(glyphicons_010_envelope_white, 24px);
 			margin: 7px;
@@ -677,7 +648,7 @@ nav.vertical.stamps{
 		a{
 			color: @accent;
 			&:hover{
-				color: @accent-light;
+				color: @primary;
 			}
 		}
 	}
@@ -688,17 +659,12 @@ nav.vertical.stamps{
 		width: 14%;
 		border: 0;
 		padding: 6px;
-		margin: 10px;
-		.material-card(2px, 3px);
-		border-radius: 15px;
-		.mood{
-			top: 63px;
-		}
+		margin: 1px;
 
 		.domino{
+			.material-card(2px, 3px);
+			border-radius: 3px;
 			border: 0;
-			border-top-left-radius: 10px;
-			border-top-right-radius: 10px;
 			overflow: hidden;
 
 			.bottom{
@@ -706,13 +672,6 @@ nav.vertical.stamps{
 				color: @primary;
 				div.content{
 					padding: 8px;
-				}
-				a:hover{
-					color: @accent;
-				}
-				.mood{
-					top: 53px;
-					width: 42px;
 				}
 				i.send-mail:hover{
 					.icon(glyphicons_010_envelope_white, 24px);
@@ -747,42 +706,21 @@ nav.vertical.stamps{
 	background: @pink;
 }
 .grey{
-	background: @dark-blue;
-}
-
-.actions-list{
-	background: @accent-light;
-	a:hover{
-		color: @primary-dark;
-	}
-	.send-mail:hover{
-		.icon(glyphicons_010_envelope_white, 24px);
-	}
+	background: @primary;
 }
 
 ul.thought-out-actions{
 	padding: 0;
 	margin: 0;
 	li{
-		background: @primary;
+		background: #f0f0f0;
 		margin-bottom: 1px;
 		list-style-type: none;
 		padding: 8px;
 		.run-transition(background);
-		h2{
-			color: #fff;
-			margin: 0;
-			font-size: 20px;
-			font-variant: small-caps;
-		}
-		p{
-			margin: 0;
-			font-size: 12px;
-			color: #ccc;
-		}
 	}
 	li:hover{
-		background: @accent;
+		background: @primary;
 	}
 }
 
@@ -822,10 +760,10 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 }
 
 .navbar{
-	background: @primary;
+	background: @primary-dark;
 	width: 100%;
 	height: @header-height;
-	box-shadow: 0 5px 6px @shadow;
+	box-shadow: 0 2px 5px @shadow;
 
 	.welcome-message{
 		display: none;
@@ -845,12 +783,6 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 	padding-left: 10px;
 }
 
-button.cancel, input[type=button].cancel{
-	background: @primary-light;
-	color: #333;
-	transition: all .25s ease-in-out;
-}
-
 .small-text{
 	font-size: 14px !important;
 	label{
@@ -862,44 +794,32 @@ button.cancel, input[type=button].cancel{
 .icons-view.apps{
 	margin-top: 12px;
 	.element{
-		width: 150px;
+		width: 110px;
 		height: 138px;
 		padding: 0;
 		margin: 10px 10px;
 		border-radius: 10px;
 		a{
-			i{
-				height: 80px;
-				width: 80px;
-				border-radius: 40px;
-			}
-			color: @primary-dark;
+			color: #000;
 		}
 		.container{
-			width: 150px;
+			width: 110px;
 			height: 100px;
 			background: #F9F9F9;
 		}
 		legend{
 			background: #F9F9F9;
-			color: @primary-dark;
+			color: @primary;
 			padding: 0;
 			padding-left: 5px;
 			padding-right: 5px;
 			.border-box;
 			margin-left: 1px;
+			font-size: 14px;
+			font-weight: bold;
 			.run-transition(background);
 			a:hover{
-				color: @accent;
-			}
-		}
-	}
-	.element:hover{
-		legend{
-			background: white;
-			color: @accent;
-			a{
-				color: @accent;
+				clor: @primary;
 			}
 		}
 	}
@@ -934,13 +854,13 @@ button.cancel, input[type=button].cancel{
 	}
 
 	.current.editing{
-		background: @dark-blue;
+		background: @primary;
 		color: #fff;
 		padding-left: 68px;
 	}
 
 	.options-list{
-		background: @dark-blue;
+		background: @primary;
 		color: #fff;
 		font-size: 14px;
 		.border-radius-bottom(3px);
@@ -954,24 +874,18 @@ button.cancel, input[type=button].cancel{
 }
 
 textarea.inline-editing{
-	color: #666;
-	border: 1px solid @primary-light;
-	margin: 3px;
-	height: 45px;
-	line-height: 25px;
-	width: 100%;
+	background: transparent;
+	border-bottom: 1px solid #ddd;
+	padding: 2px;
 }
 
-input[type=text], input[type=search], input[type=password]{
-	background: transparent;
-	border: none;
+textarea.inline-editing:focus{
 	border-bottom: 2px solid @primary;
-	color: @text-light;
-	margin-left: 0;
 }
 
 .label-badge{
-	background: #008cba;
+	background: @primary-dark;
+	.material-card();
 	.run-transition(background);
 	border-radius: 2px;
 	color: #fff;
@@ -988,12 +902,12 @@ input[type=text], input[type=search], input[type=password]{
 
 .badge{
 	line-height: 16px;
-	background: @bright-blue;
+	background: @accent;
 	color: #fff;
 }
 
 .label-badge:hover{
-	background: @dark-blue;
+	background: @primary;
 }
 
 //weird chrome hack for background color in prefilled inputs
@@ -1012,41 +926,65 @@ div.background-material{
 	vertical-align: middle;
 }
 
-.flat-button, button.flat-button, input[type=submit].flat-button{
+.flat-button, button.flat-button,
+input[type=submit].flat-button, input[type=button].cancel, button.cancel{
 	border: none;
 	box-shadow: none;
 	color: @primary;
-	transition: all .25s ease-in-out;
+	background: #f0f0f0;
 
 	&:hover{
-		color: @accent;
-	}
-
-	&:focus, &:active{
-		background-color: @primary-light !important;
+		background: @primary;
+		color: #fff;
 	}
 }
 
-.panel{
-	background: white;
-	color: @text-light;
-	.material-card(6px, 6px);
-	border-radius: 0px;
-	margin-top: 30px;
-	padding: 30px 30px 15px 30px;
-	width: 500px;
+input[type=button].pick-file{
+	.flat-button;
+}
 
-	p{
-		line-height: 29px;
+input[type=text], input[type=password], input[type=search]{
+	color: @text-light;
+	background: transparent;
+	border-bottom: 1px solid #ddd;
+	.run-transition(border-bottom);
+}
+input[type=text]:focus, input[type=password]:focus, input[type=search]:focus{
+	border-bottom: 2px solid @primary;
+	outline: 0;
+}
+
+.panel{
+	background: @primary-dark;
+	width: 100%;
+	height: 256px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 0;
+
+	h1{
+		color: #fff;
+		width: 600px;
+		position: relative;
+		margin: 40px auto;
+		font-size: 56px;
+	}
+
+	form{
+		margin-left: auto;
+		margin-right: auto;
+		width: 600px;
+		background: #fff;
+		border-radius: 3px;
+		padding: 30px;
+		box-sizing: border-box;
 	}
 
 	.browser{
 		border-bottom: 1px solid #555;
 		margin-bottom: 50px;
 
-		a{
-			display: inline-block !important;
-		}
 		.update{
 			img{
 				height: 50px;
@@ -1061,23 +999,9 @@ div.background-material{
 		}
 	}
 
-
-	h1{
-		color: @text-light;
-		font-size: 35px;
-		margin-bottom: 40px;
-	}
-
-	input[type=text], input[type=password]{
-		color: @text-light;
-		background: white;
-		border-bottom: 2px solid @primary;
-	}
-	a:hover{
-		color: @accent;
-	}
 	input[type=submit]{
-		float: none !important;
+		margin-top: 15px;
+		margin-bottom: 5px;
 	}
 
 	button.flat-button, input[type=submit].flat-button{
@@ -1128,8 +1052,7 @@ div.background-material{
 
 .tooltip{
 	.content{
-		background: @accent-light;
-		color: @text-light;
+		background: @accent;
 	}
 	.arrow{
 		display:none;
@@ -1140,7 +1063,7 @@ div.background-material{
 
 .loading-panel{
 	background: #fff;
-	border: 1px solid @bright-blue;
+	border: 1px solid @accent;
 	img{
 		display: none;
 	}
@@ -1189,42 +1112,35 @@ nav.horizontal{
 }
 
 button:hover, input[type=button]:hover, a.button:hover, input[type=submit]:hover{
-	background-color: white;
-	color: @accent;
+	background: @primary-dark;
 }
 
 button.cancel:hover, input[type=button].cancel:hover, a.button.cancel:hover, input[type=submit].cancel:hover{
-	background-color: white;
-	color: @accent;
+	background: @primary;
 }
 
 nav.vertical{
-	.material-card(3px, 6px);
 	padding: 10px 5px;
 	margin-right: 10px;
 	h2{
-		font-size: 18px;
-		font-family: Arial;
-		font-weight: normal;
-		font-variant: small-caps;
+		font-size: 16px;
+		font-weight: bold;
 		color: @primary;
+	}
+
+	> ul, > div > ul{
+		border-left: 5px solid @primary-light;
 	}
 	ul{
 		margin: 0;
 		padding: 0;
 		width: 100%;
 		li{
-			border-bottom: 1px solid @shadow-light;
-			&:last-child{
-				border:none;
-			}
+			font-size: 16px;
 			padding-left: 20px;
 			.border-box;
 			a{
-				color: @text-light;
 				.run-transition(background);
-
-				font-weight: 300;
 				margin-left: 0;
 				i.arrow{
 					height: 20px;
@@ -1241,15 +1157,8 @@ nav.vertical{
 				}
 			}
 			a.selected{
-				color: #fff;
-				background: @primary;
-				i.arrow::before{
-					color: #fff;
-				}
-			}
-			a:hover{
-				color: @text-light;
-				background: @accent-light;
+				color: #999;
+				background: none;
 			}
 			a.opened{
 				i.arrow::before{
@@ -1262,21 +1171,18 @@ nav.vertical{
 		padding-left: 0;
 	}
 	a.classic-link{
-		.material-card(1px, 4px);
 		display: block;
 		margin-top: 15px;
-		padding: 5px 0px;
-		background: white;
-		color: @accent;
-
-		font-weight: 300;
+		padding: 5px 0;
+		background: #f0f0f0;
 		width: 100%;
 		text-align: center;
 		.border-box;
 		.run-transition(background);
+		border-radius: 2px;
 	}
 	a.classic-link:hover{
-		background: @accent;
+		background: @primary;
 		color: white;
 	}
 }
@@ -1300,36 +1206,38 @@ nav.horizontal{
 }
 
 .notification {
-
-	&:first-of-type{
-		border-top: 1px solid @shadow-light;
-	}
-
-	border-bottom: 1px solid @shadow-light;
-
-
+	margin-left: 69px;
+	border-top: 1px solid #ddd;
+	padding: 7px 69px 7px 0;
 	article {
 		margin: 0px;
 		padding: 0;
-
+		.notification-date{
+			right: 69px;
+			em{
+				font-style: normal;
+				color: #777;
+			}
+		}
 		.avatar{
+			position: absolute;
+			left: -72px;
+			top: 5px;
 			img{
-				border-radius: 50px;
-				height: 70px;
-				position: relative;
-				left: 7px;
-				top: 7px;
+				border-radius: 27px;
+				height: 55px;
+				border: 1px solid #eee;
 			}
 		}
 	}
 
 	.content{
-		padding: 5px;
+		padding: 0;
 	}
 }
 
 .toggle-panel{
-	background: @dark-blue;
+	background: @primary;
 	padding: 20px;
 	color: #fff;
 	.run-transition(opacity);
@@ -1340,16 +1248,21 @@ nav.horizontal{
 }
 
 .widgets{
-	padding: 0px;
+	padding: 0;
 }
+
+.widgets-friend{
+	margin-left: 300px;
+}
+
 .widget{
 	width: 254px !important;
 	background-color: white;
 }
 .widget-container{
-	.material-card(3px, 3px);
+	.material-card();
 	background-color: white;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 	h1:first-child{
 		text-align: center;
 		padding-top: 15px;
@@ -1358,12 +1271,10 @@ nav.horizontal{
 
 .calendar.widget{
 	height: 180px;
-	padding-bottom: 35% !important;
 	background: #fff;
-	padding: 0px 10px;
+	padding: 0 10px;
 	.current-month-header{
 		padding-top: 5px;
-		text-transform: uppercase;
 		color: @primary;
 		top: 0;
 	}
@@ -1382,7 +1293,7 @@ nav.horizontal{
 		}
 		.day.today{
 			color: #fff;
-			background: @primary-dark;
+			background: @primary;
 			border-radius: 10px;
 			padding-right: 2px;
 		}
@@ -1418,17 +1329,17 @@ nav.horizontal{
 .notes-widget{
 	padding: 0px 10px;
 
-	textarea{
-		.border-box;
-		background: @accent-light;
-		border: none;
-		border-radius: 10px;
-		padding: 10px;
-		color: @text-light;
-	}
-	h1{
-		//display: none;
-	}
+
+}
+
+textarea{
+	.border-box;
+	border: none;
+	padding: 10px;
+	font-size: 14px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	font-family: Roboto;
 }
 
 .last-mails-widget, .pages-widget {
@@ -1446,7 +1357,7 @@ nav.horizontal{
 		li {
 			list-style-type: none;
 			padding-left: 7px;
-			border-left: 5px solid @bright-blue;
+			border-left: 5px solid @accent;
 			line-height: 22px;
 			a {
 				font-size: 14px;
@@ -1464,12 +1375,10 @@ nav.horizontal{
 		&:before{
 			content: "RSS";
 		}
-		background-color: @primary;
 		color: white;
 		text-align: center;
 		padding-bottom: 10px;
 		margin-bottom: 5px;
-		border-bottom: 3px solid @accent;
 		span{
 			display: block;
 			cursor: pointer;
@@ -1513,7 +1422,7 @@ nav.horizontal{
 			padding-bottom: 5px;
 			padding-top: 5px;
 			> p{
-				color: @primary-dark;
+				color: @primary;
 			}
 		}
 	}
@@ -1570,22 +1479,16 @@ nav.horizontal{
 		width: 150px;
 		padding: 6px;
 		transition: background .25s ease;
-		.material-card(3px, 10px);
 		&.selected{
-			background-color: @accent-light;
+			background-color: @accent;
 		}
 		.container{
 			border:none !important;
-			padding: 10px;
 		}
 		legend{
 			text-align: center;
-			border-top: 1px solid @shadow-light;
 			padding-top: 5px;
 			line-height: 20px;
-		}
-		img{
-			border-radius: 50px;
 		}
 		a{
 			i{
@@ -1594,13 +1497,6 @@ nav.horizontal{
 				border-radius: 50px;
 			}
 		}
-	}
-}
-
-.tabs{
-	section{
-		//background: #fff;
-		//border-color: @primary-light;
 	}
 }
 
@@ -1633,11 +1529,11 @@ filters{
 	width: 100%;
 	left: 0;
 	margin-left: 0;
-	background: @primary-dark;
+	background: @primary;
 	height: 36px;
 	button{
 		.flat-button;
-		background: @primary-dark;
+		background: @primary;
 		color: white;
 		padding: 9px;
 		font-size: 1.3em;
@@ -1673,7 +1569,7 @@ filters{
 }
 
 a:hover{
-	color: @accent;
+	color: @primary-dark;
 }
 
 .line{
@@ -1682,23 +1578,25 @@ a:hover{
 
 
 
+
 .message{
-	background: @accent-light;
 	color: @text-light;
 	text-align: left;
 	.border-radius(0px);
+	background: #f0f0f0;
+	border-left: 10px solid @primary;
 }
 
 .warning{
 	.message;
-	background: #F1D9EB;
+	background: #f0f0f0;
 	border-left: 10px solid @pink;
 }
 
 
 .info{
 	.message;
-	//border-left: 10px solid @bright-blue;
+	//border-left: 10px solid @accent;
 }
 
 
@@ -1724,7 +1622,6 @@ a:hover{
 }
 
 [data-drop-down]{
-	//box-shadow: 3px 3px 3px #fff;
 	.material-card(3px, 5px);
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
@@ -1736,20 +1633,19 @@ a:hover{
 
 		font-size: 1.2em;
 		padding: 1px;
-		padding-left: 10px;
 		li{
 			line-height: 45px;
 		}
 		li:hover{
-			background: #fff;
+			background: @primary;
 			color: @accent;
 		}
 	}
 }
 
 .comment{
-	background: @accent-light;
-	color: @text-light;
+	border: 1px solid #eee;
+	background: #fff;
 }
 
 article.selected{
@@ -1761,7 +1657,10 @@ article.selected{
 }
 
 [contenteditable]{
-	border: 1px solid @primary-light;
+	background: #FFF;
+}
+[contenteditable]:focus{
+	border: 2px solid @primary;
 }
 
 .grid-exemple.row .article, .grid-exemple.row .absolute{
@@ -1828,7 +1727,7 @@ article.selected{
 	margin-bottom: 15px;
 	.accordion{
 		h2{
-			background: @bright-blue;
+			background: @accent;
 			border: 1px solid #fff;
 			border-bottom: 0;
 			font-size: 20px;
@@ -1836,16 +1735,16 @@ article.selected{
 
 		}
 		h2:hover{
-			background: @dark-blue;
+			background: @primary;
 		}
 		.toggle{
 			border: 0;
-			background: @blue-background;
+			background: @background;
 			.content{
 				color: #666;
 				h3{
 					font-weight: normal;
-					color: @bright-blue;
+					color: @accent;
 					font-size: 16px;
 				}
 				select, input[type=text], textarea{
@@ -1865,8 +1764,8 @@ article.selected{
 		h2{
 			border: 1px solid #fff;
 			border-bottom: 0;
-			color: @bright-blue;
-			background: @blue-background;
+			color: @accent;
+			background: @background;
 		}
 		.toggle{
 			height: 350px;
@@ -1888,11 +1787,11 @@ select{
 
 .selectable-list{
 	li{
-		border: 1px solid @bright-blue;
+		border: 1px solid @accent;
 	}
 
 	li.selected{
-		background: @bright-blue;
+		background: @accent;
 		color: #fff;
 	}
 }
@@ -1901,8 +1800,8 @@ select{
 	ul{
 		li{
 			color: #fff;
-			background: @dark-blue;
-			border-color: @bright-blue;
+			background: @primary;
+			border-color: @accent;
 			border-right: none;
 		}
 		li:first-child{
@@ -1912,12 +1811,12 @@ select{
 			border-bottom-left-radius: 5px
 		}
 		li.selected:first-child{
-			border-top: 1px solid @bright-blue;
+			border-top: 1px solid @accent;
 		}
 		li.selected{
 			color: @black;
 			background: #FCFCFC;
-			border-color: @bright-blue;
+			border-color: @accent;
 			border-right: none;
 			border-top: none;
 			border-bottom: none;
@@ -1927,7 +1826,7 @@ select{
 
 .side-tabs-content{
 	.border-radius(0);
-	border-color: @bright-blue;
+	border-color: @accent;
 }
 
 .humane-original-success{
@@ -1939,22 +1838,26 @@ select{
 		background: @primary;
 	}
 	.filled.small{
-		color: @accent-light;
+		color: @accent;
 	}
 }
 
 .illustrated-article{
-	.material-card(2px, 5px);
-
 	.illustration{
-		background: @primary;
+		min-width: 115px;
 		legend{
+			width: 90px;
 			background: transparent;
-			color: #fff;
 			margin: 0;
+			text-align: center;
 		}
 		.image{
-			margin: 0;
+			width: 90px;
+			height: 90px;
+			margin: 8px 0 0;
+			img{
+				border-radius: 100px;
+			}
 		}
 	}
 
@@ -1963,8 +1866,8 @@ select{
 			margin-bottom: 5px;
 		}
 
-		background: #f5f5f5;
-		padding: 8px;
+		border-top: 1px solid #ddd;
+		padding: 8px 8px 8px 0;
 	}
 
 	.small.illustration .image{
@@ -2041,7 +1944,7 @@ select{
 		color: #fff;
 	}
 	button:hover{
-		background: @primary-dark;
+		background: @primary;
 	}
 
 }
@@ -2056,7 +1959,7 @@ select{
 		border-radius: 0;
 	}
 	.grid-add-row:hover{
-		background: @primary-dark;
+		background: @primary;
 	}
 }
 
@@ -2089,10 +1992,10 @@ select{
 		background: @green;
 	}
 	button.blue{
-		background: @bright-blue;
+		background: @accent;
 	}
 	button.black{
-		background: @dark-blue;
+		background: @primary;
 	}
 }
 
@@ -2118,7 +2021,7 @@ select{
 	.run-transition(background);
 }
 .media-container.blue{
-	background: @bright-blue;
+	background: @accent;
 	.run-transition(background);
 	color: #fff;
 	h1,h2,h3{
@@ -2126,7 +2029,7 @@ select{
 	}
 }
 .media-container.black{
-	background: @dark-blue;
+	background: @primary;
 	color: #fff;
 	.run-transition(background);
 	h1,h2,h3{
@@ -2291,7 +2194,6 @@ select{
 		.run-transition(background);
 	}
 	.autocomplete > em:hover{
-		background: @accent-light;
 		color: black;
 		border-bottom: 2px solid @accent;
 	}
@@ -2315,9 +2217,7 @@ select{
 	p:first-child, .filters-icons {
 		font-size: 16px;
 		padding: 10px;
-		//background: @primary;
-		//border-top: 2px solid @accent;
-		border-bottom: 2px solid @accent;
+		border-left: 5px solid @primary-light;
 		color: #fff;
 		.run-transition(background);
 		i.mine{
@@ -2337,10 +2237,10 @@ select{
 
 	}
 	p:first-child:hover {
-		background: @dark-blue;
+		background: @primary;
 	}
 	.wrapper {
-		background: @dark-blue;
+		background: @primary;
 		box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.6);
 		width: 100%;
 		ul {
@@ -2360,13 +2260,14 @@ select{
 		opacity: 0.5;
 	}
 	.filters-icons{
+		padding: 0 0 0 10px;
 		ul{
 			height: 40px;
 			padding: 0;
 			li{
 				padding: 0;
 				label{
-					padding-top: 0;
+					padding: 0;
 					width: auto;
 					i{
 						background-size: 100% auto;
@@ -2428,7 +2329,7 @@ select{
 }
 
 .theme-preview.default{
-	background: @bright-blue;
+	background: @accent;
 }
 
 .drop-down-button{
@@ -2486,7 +2387,7 @@ select{
 .drop-down-button.hidden{
 	label{
 		border-radius: 3px;
-		background: @bright-blue;
+		background: @accent;
 		color: #fff;
 		border: 1px solid transparent;
 	}
@@ -2495,7 +2396,7 @@ select{
 	}
 	label:hover{
 		background: #fff;
-		border: 1px solid @bright-blue;
+		border: 1px solid @accent;
 		color: #000;
 	}
 }
@@ -2707,7 +2608,7 @@ nav.illustrated-links{
 		opacity: 0.3
 	}
 	.grid-media{
-		outline: 1px solid @primary-dark;
+		outline: 1px solid @primary;
 		pointer-events: none;
 	}
 	.square-menu button, .grid-add-row{
@@ -2742,7 +2643,7 @@ nav.illustrated-links{
 	}
 	.marker:nth-child(2){
 		color: white;
-		border-color: transparent transparent @primary-dark transparent;
+		border-color: transparent transparent @primary transparent;
 		a{
 			color: white;
 		}
@@ -2791,20 +2692,20 @@ input[type=text][disabled] {
 
 	.navigation {
 		.items {
-
 			>div:first-child{
 				margin-bottom: 15px;
 			}
 
 			.row {
-				.material-card(6px, 5px);
-				background: @primary-dark;
+				.material-card();
 				border:none;
 				margin-bottom: 15px;
+				background: #fff;
 
 				&.selected{
+					background: @primary;
 					h1{
-						border-bottom: 2px solid @accent;
+						color: @accent;
 					}
 				}
 
@@ -2813,7 +2714,6 @@ input[type=text][disabled] {
 				}
 
 				h1{
-					color: #fff;
 					font-size: 18px;
 				}
 
@@ -2824,41 +2724,6 @@ input[type=text][disabled] {
 						.flat-button;
 						background: transparent;
 						color: white;
-					}
-				}
-			}
-
-			.row:nth-child(2n){
-				background: @accent;
-
-				&.selected{
-					h1{
-						border-bottom: 2px solid @primary;
-					}
-				}
-
-				h1{
-					color: @white;
-					font-size: 18px;
-					margin-right: 115px;
-					text-align: right;
-				}
-
-				img{
-					margin-right: 0px;
-					margin-left: 10px;
-				}
-
-				.bottom-locked{
-					right: 8px;
-				}
-
-				.buttons{
-					left: 21px;
-					input[type=submit], button{
-						&:hover{
-							color: @primary-dark;
-						}
 					}
 				}
 			}
@@ -2873,4 +2738,11 @@ input[type=text][disabled] {
 
 .droptarget{
 	background-color: @primary-light;
+}
+
+.cke_chrome.cke_float{
+	.cke_inner{
+		border: none;
+		background: #f0f0f0;
+	}
 }

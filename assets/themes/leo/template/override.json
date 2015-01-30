@@ -1,4 +1,0 @@
-{
-    "auth": ["login-form", "cgu-content", "activation-form", "forgot-form", "forgot-message", "reset-form"],
-    "timeline": ["main"]
-}

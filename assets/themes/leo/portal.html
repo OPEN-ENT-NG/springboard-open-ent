@@ -18,37 +18,35 @@
  ~
  -->
 
-<div class="centered container row">
 	<div class="material main wrapper">
 		<section class="main">
 			<div id="directory"></div>
 			<div ng-transclude  class="twelve cell"></div>
-			<div class="clear"></div>
 		</section>
 	</div>
-	<header class="main" data-ng-controller="Account">
-		<section class="navbar row">
-			<div class="cell">
-				<i class="logo-purple"></i>
-			</div>
-			<div class="cell">
-				<span class="welcome-message" translate key="welcome"></span>
-			</div>
-			<!--div class="cell">
-				<div class="theme-preview [[theme.displayName]]" ng-repeat="theme in themes" ng-click="skin.setTheme(theme)"></div>
-			</div-->
 
-		</section>
-		<section class="row">
-			<a href="/apps"><div class="logo"></div></a>
-			<nav class="horizontal">
-				<a href="/timeline/timeline"><i18n>portal.header.navigation.whatsnew</i18n></a>
-				<a href="/userbook/annuaire?myClass">Mon réseau</a>
-				<a href="/welcome"><i18n>portal.header.navigation.myapps</i18n></a>
-				<a href="/userbook/mon-compte"><img data-ng-src="[[avatar]]?thumbnail=48x48" id="my-photo" /></a>
-				<a logout><i class="disconnect"></i></a>
-			</nav>
-		</section>
+<header class="main" data-ng-controller="Account">
+	<section class="navbar row">
+		<div class="cell">
+			<i class="logo-purple"></i>
+		</div>
+		<div class="cell">
+			<span class="welcome-message" translate key="welcome"></span>
+		</div>
+		<!--div class="cell">
+			<div class="theme-preview [[theme.displayName]]" ng-repeat="theme in themes" ng-click="skin.setTheme(theme)"></div>
+		</div-->
 
-	</header>
-</div>
+	</section>
+	<section class="row">
+		<a href="/apps"><div class="logo"></div></a>
+		<nav class="horizontal">
+			<a href="/timeline/timeline"><i18n>portal.header.navigation.whatsnew</i18n></a>
+			<a href="/userbook/annuaire?myClass">Mon réseau</a>
+			<a href="/welcome"><i18n>portal.header.navigation.myapps</i18n></a>
+			<a href="/userbook/mon-compte"><img data-ng-src="[[avatar]]?thumbnail=48x48" id="my-photo" /></a>
+			<a logout><i class="disconnect"></i></a>
+		</nav>
+	</section>
+
+</header>
