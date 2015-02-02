@@ -57,6 +57,10 @@ table{
 		tr{
 			&.checked{
 				background-color: @primary-light;
+				color: #fff;
+				a{
+					color: #fff
+				}
 			}
 			td{
 				padding: 4px 15px;
@@ -65,7 +69,7 @@ table{
 	}
 }
 
-button, input[type=button], a.button, input[type=submit]{
+button, input[type=button], a.button, input[type=submit], .drop-down-button label, .drop-down-button.hidden label{
 	background: @primary;
 	padding: 8px 18px 10px;
 	color: #fff;
@@ -284,14 +288,14 @@ i.show-admin{
 
 i.show-calendar{
 	.icon(glyphicons_045_calendar, 24px);
-	opacity: 0.5;
+	opacity: 0.2;
 	margin-left: 2px;
 	margin-right: 2px;
 	.right-magnet;
 }
 
 i.show-calendar.selected{
-	opacity: 1;
+	opacity: 0.6;
 }
 
 i.disconnect{
@@ -731,33 +735,32 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 .icons-view.apps{
 	margin-top: 12px;
 	.element{
-		width: 110px;
-		height: 138px;
+		&:hover{
+			a{
+            				color: @accent;
+            			}
+		}
 		padding: 0;
-		margin: 10px 10px;
-		border-radius: 10px;
+		height: 156px;
+		width: 120px;
 		a{
-			color: #000;
+			color: @primary;
+			font-weight: bold;
 		}
 		.container{
-			width: 110px;
-			height: 100px;
+			width: 120px;
+			height: 120px;
 			background: #F9F9F9;
+			padding: 0;
 		}
 		legend{
-			background: #F9F9F9;
-			color: @primary;
 			padding: 0;
 			padding-left: 5px;
 			padding-right: 5px;
 			.border-box;
 			margin-left: 1px;
-			font-size: 14px;
-			font-weight: bold;
-			.run-transition(background);
-			a:hover{
-				clor: @primary;
-			}
+			position: relative;
+			background: none;
 		}
 	}
 }
@@ -817,7 +820,7 @@ textarea.inline-editing{
 }
 
 textarea.inline-editing:focus{
-	border-bottom: 2px solid @primary;
+	border-bottom: 2px solid @accent;
 	outline: none;
 }
 
@@ -865,7 +868,8 @@ div.background-material{
 }
 
 .flat-button, button.flat-button,
-input[type=submit].flat-button, input[type=button].cancel, button.cancel{
+input[type=submit].flat-button, input[type=button].cancel, button.cancel,
+.drop-down-button label, .drop-down-button.hidden label{
 	border: none;
 	box-shadow: none;
 	color: @primary;
@@ -888,7 +892,7 @@ input[type=text], input[type=password], input[type=search]{
 	.run-transition(border-bottom);
 }
 input[type=text]:focus, input[type=password]:focus, input[type=search]:focus{
-	border-bottom: 2px solid @primary;
+	border-bottom: 2px solid @accent;
 	outline: 0;
 }
 
@@ -1025,16 +1029,24 @@ input[type=text]:focus, input[type=password]:focus, input[type=search]:focus{
 }
 
 nav.horizontal{
-	height: 31px;
+	height: @header-height;
+	bottom: 0px;
 	a{
-
+		height: @header-height;
+		line-height: @header-height;
 		font-weight: 300;
 		font-size: 1.3em;
 		margin-left: 5px;
 		margin-right: 5px;
+		box-sizing: border-box;
 	}
 	a:hover{
-		color: @accent;
+		border-bottom: 3px solid @accent;
+	}
+	img,i{
+		vertical-align: middle;
+        display: inline-block;
+        float: none;
 	}
 }
 
@@ -1099,7 +1111,7 @@ nav.vertical{
 				}
 			}
 			a.selected{
-				color: #999;
+				color: @accent;
 				background: none;
 			}
 			a.opened{
@@ -1131,7 +1143,6 @@ nav.vertical{
 
 nav.horizontal{
 	right: 10px;
-	bottom: 20px;
 	a{
 		color: #fff;
 		vertical-align: middle;
@@ -1276,12 +1287,16 @@ nav.horizontal{
 
 textarea{
 	.border-box;
-	border: none;
+	border:  1px solid #ddd;
 	padding: 10px;
 	font-size: 14px;
 	margin-top: 7px;
 	margin-bottom: 7px;
-	font-family: Roboto;
+}
+
+textarea:focus{
+	outline: none;
+	border: 2px solid @accent;
 }
 
 .last-mails-widget, .pages-widget {
@@ -1621,7 +1636,7 @@ article.selected{
 	background: #FFF;
 }
 [contenteditable]:focus{
-	border: 2px solid @primary;
+	border: 2px solid @accent;
 }
 
 .grid-exemple.row .article, .grid-exemple.row .absolute{
@@ -1682,22 +1697,28 @@ article.selected{
 	color: rgb(245, 103, 103);
 }
 
-
+.accordions:last-of-type{
+	margin-bottom: 15px;
+}
 
 .accordions{
-	margin-bottom: 15px;
 	.accordion{
 		h2{
-			background: @accent;
-			border: 1px solid #fff;
-			border-bottom: 0;
+			background: @primary;
+			border: none;
 			font-size: 20px;
 			color: #fff;
-
+			margin: 3px;
 		}
 		h2:hover{
-			background: @primary;
+			background: @primary-dark;
 		}
+		&:last-child{
+			h2{
+				border: none;
+			}
+		}
+
 		.toggle{
 			border: 0;
 			background: @background;
@@ -1715,25 +1736,19 @@ article.selected{
 		}
 	}
 
-	.accordion:last-child{
-		h2{
-			border-bottom: 1px solid #fff;
-		}
-	}
-
 	.accordion.opened{
 		h2{
-			border: 1px solid #fff;
-			border-bottom: 0;
-			color: @accent;
-			background: @background;
+			color: #fff;
+			background: @accent;
+			border: none;
 		}
 		.toggle{
 			height: 350px;
-			border: 1px solid #fff;
 			border-top: 0;
 			padding: 10px;
 			overflow: auto;
+			background: #fff;
+			border: none;
 		}
 	}
 }
@@ -2001,17 +2016,17 @@ select{
 .schedule{
 	width: 100%;
 	height: auto;
-	margin-left: 115px;
-	padding-right: 115px;
+	margin-left: 130px;
+	padding-right: 130px;
 	box-sizing: border-box;
 	margin-top: 50px;
 	overflow: visible;
 	legend.timeslots{
-		width: 115px;
+		width: 130px;
 		background: @primary-light;
-		color: #777;
+		color: #fff;
 		position: absolute;
-		left: -115px;
+		left: -130px;
 	}
 	.timeslot{
 		height: 40px;
@@ -2029,8 +2044,8 @@ select{
 				text-align: center;
 				height: 40px;
 				line-height: 40px;
-				color: #777;
 				background: @primary-light;
+				color: #fff;
 				.border-box;
 				position: absolute;
 				top: -40px;
@@ -2155,8 +2170,8 @@ select{
 		.run-transition(background);
 	}
 	.autocomplete > em:hover{
-		color: black;
-		border-bottom: 2px solid @accent;
+		color: #fff;
+		background: @accent;
 	}
 	tr:hover{
 		td.drop-line{
@@ -2269,8 +2284,7 @@ select{
 .week-switcher{
 	position: absolute;
 	z-index: 30;
-	top: -35px;
-	left: -8px;
+	left: 45px;
 	font-size: 12px;
 	.date-picker-icon{
 		margin-right: 8px;
@@ -2297,48 +2311,30 @@ select{
 	position: absolute;
 	z-index: 650;
 	white-space: nowrap;
-	label{
-		cursor: pointer;
-		.border-box;
-		width: 100%;
-		padding: 4px;
-		padding-left: 10px;
-		padding-right: 10px;
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
-		border-top-left-radius: 3px;
-		border-top-right-radius: 3px;
-		font-size: 15px;
-		background: #fff;
-		border: 1px solid @primary;
-		color: #000;
-		.run-transition(background);
-
-		font-weight: 300;
+	label, label:hover{
+		color: @accent;
+		background: #eee;
 	}
 
 	.options{
 		ul{
-			padding: 0;
-			margin: 0;
 			background: #fff;
-			border: 1px solid @primary;
-			border-top: 0;
 			position: absolute;
 			width: 100%;
-			top: 23px;
+			top: 31px;
+			left: 0px;
 			box-sizing: border-box;
+			.material-card();
+			border: 0;
 			li{
 				list-style-type: none;
 				.border-box;
 				padding: 5px;
 				.run-transition(background);
-				font-size: 13px;
-				text-align: center;
-				color: #444;
+				font-weight: 500;
 			}
 			li:hover{
-				background: @primary;
+				background: @accent;
 				color: #fff;
 			}
 		}
@@ -2346,19 +2342,12 @@ select{
 }
 
 .drop-down-button.hidden{
-	label{
-		border-radius: 3px;
-		background: @accent;
-		color: #fff;
-		border: 1px solid transparent;
-	}
 	.options{
 		display: none;
 	}
 	label:hover{
-		background: #fff;
-		border: 1px solid @accent;
-		color: #000;
+		background: @primary-dark;
+		border: none;
 	}
 }
 
@@ -2383,8 +2372,7 @@ hr.solid{
 			.run-transition(background);
 		}
 		h2:hover{
-			background: #fff;
-			color: @accent;
+			background: @accent;
 		}
 		h2.disabled{
 			background: #666;
@@ -2418,7 +2406,6 @@ h1.letter-picker:hover{
 }
 
 hr.line{
-	border-bottom: 1px dashed #ddd;
 	margin-left: 0;
 	margin-right: 0;
 }
@@ -2664,9 +2651,9 @@ input[type=text][disabled] {
 				background: #fff;
 
 				&.selected{
-					background: @primary;
+					background: @accent;
 					h1{
-						color: @accent;
+						color: #fff;
 						line-height: 25px;
 					}
 				}
@@ -2737,4 +2724,89 @@ carousel nav ul li::after{
 
 carousel nav ul li.current::after{
 	color: @accent;
+}
+
+.calendar-current-week{
+	top: -110px;
+    height: 40px;
+}
+
+ul.colored{
+	padding-right: 15px;
+	box-sizing: border-box;
+	> li > a{
+		color: #fff;
+	}
+	ul{
+		background: transparent;
+		li{
+			a.selected{
+				color: #fff
+			}
+		}
+	}
+	ul.cyan{
+		li{
+			a.selected{
+				background: @cyan;
+			}
+		}
+	}
+	ul.green{
+		li{
+			a.selected{
+				background: @green;
+			}
+		}
+	}
+	ul.yellow{
+		li.selected{
+			a{
+				background: @yellow;
+			}
+		}
+	}
+	ul.purple{
+		li{
+			a.selected{
+				background: @purple;
+			}
+		}
+	}
+	ul.pink{
+		li{
+			a.selected{
+				background: @pink;
+			}
+		}
+	}
+	ul.orange{
+		li{
+			a.selected{
+				background: @orange;
+			}
+		}
+	}
+	ul.grey{
+		li{
+			a.selected{
+				background: @grey;
+			}
+		}
+	}
+}
+
+.wizard{
+	background: #fff;
+	border: 1px solid #ddd;
+	.steps{
+		background: #eee;
+		li{
+			color: #888;
+		}
+		li.active{
+			background: @accent;
+			color: #fff;
+		}
+	}
 }
