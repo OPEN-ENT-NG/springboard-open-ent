@@ -5088,7 +5088,7 @@ h5 a {
 h1 {
   font-size: 34px;
   margin-bottom: 20px;
-  line-height: 50px;
+  line-height: 40px;
 }
 h1:first-child {
   margin-top: 0;
@@ -8609,6 +8609,7 @@ input[type=text][disabled] {
 }
 .patchwork .navigation .items .row.selected h1 {
   color: #c1ff00;
+  line-height: 25px;
 }
 .patchwork .navigation .items .row img {
   margin-right: 10px;
