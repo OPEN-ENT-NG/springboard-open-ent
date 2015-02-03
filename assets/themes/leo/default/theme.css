@@ -5056,11 +5056,13 @@ body {
   font-size: 16px;
   line-height: 23px;
 }
+body section.main {
+  background: transparent;
+}
 body .material section.main {
   position: relative;
   top: 104px;
   box-sizing: border-box;
-  background: transparent;
   padding: 8px;
 }
 a {
