@@ -737,30 +737,66 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 	.element{
 		&:hover{
 			a{
-            				color: @accent;
-            			}
+				color: #000;
+			}
 		}
 		padding: 0;
-		height: 156px;
+		height: 120px;
 		width: 120px;
+		background: #ecbe30;
+		&:nth-child(6n){
+			background: #46bfaf;
+		}
+		&:nth-child(6n + 1){
+			background: #4cb0d6;
+		}
+		&:nth-child(6n + 2){
+			background: #763294;
+		}
+		&:nth-child(6n + 3){
+			background: #b930a2;
+		}
+		&:nth-child(6n + 4){
+			background: #e13a3a;
+		}
 		a{
-			color: @primary;
+			color: #fff;
 			font-weight: bold;
+			i{
+				display: none;
+			}
 		}
 		.container{
 			width: 120px;
 			height: 120px;
-			background: #F9F9F9;
 			padding: 0;
 		}
 		legend{
 			padding: 0;
-			padding-left: 5px;
-			padding-right: 5px;
 			.border-box;
 			margin-left: 1px;
-			position: relative;
+			top: 0;
+			height: 120px;
+			width: 120px;
+			text-transform: uppercase;
 			background: none;
+			display: table;
+			a{
+				white-space: normal;
+				overflow: hidden;
+				word-wrap: break-word;
+				max-width: 120px;
+				width: 120px;
+				height: 120px;
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				padding: 5px;
+				font-size: 26px;
+                line-height: 22px;
+                box-sizing: border-box;
+			}
+
 		}
 	}
 }

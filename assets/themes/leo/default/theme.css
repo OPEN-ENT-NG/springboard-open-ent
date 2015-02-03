@@ -6473,33 +6473,68 @@ input[type=submit][disabled]:hover {
 }
 .icons-view.apps .element {
   padding: 0;
-  height: 156px;
+  height: 120px;
   width: 120px;
+  background: #ecbe30;
 }
 .icons-view.apps .element:hover a {
-  color: #ff8500;
+  color: #000;
+}
+.icons-view.apps .element:nth-child(6n) {
+  background: #46bfaf;
+}
+.icons-view.apps .element:nth-child(6n + 1) {
+  background: #4cb0d6;
+}
+.icons-view.apps .element:nth-child(6n + 2) {
+  background: #763294;
+}
+.icons-view.apps .element:nth-child(6n + 3) {
+  background: #b930a2;
+}
+.icons-view.apps .element:nth-child(6n + 4) {
+  background: #e13a3a;
 }
 .icons-view.apps .element a {
-  color: #4bafd5;
+  color: #fff;
   font-weight: bold;
+}
+.icons-view.apps .element a i {
+  display: none;
 }
 .icons-view.apps .element .container {
   width: 120px;
   height: 120px;
-  background: #F9F9F9;
   padding: 0;
 }
 .icons-view.apps .element legend {
   padding: 0;
-  padding-left: 5px;
-  padding-right: 5px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
   margin-left: 1px;
-  position: relative;
+  top: 0;
+  height: 120px;
+  width: 120px;
+  text-transform: uppercase;
   background: none;
+  display: table;
+}
+.icons-view.apps .element legend a {
+  white-space: normal;
+  overflow: hidden;
+  word-wrap: break-word;
+  max-width: 120px;
+  width: 120px;
+  height: 120px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5px;
+  font-size: 26px;
+  line-height: 22px;
+  box-sizing: border-box;
 }
 .small-text a,
 .small-text em,
