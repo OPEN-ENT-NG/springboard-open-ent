@@ -8629,10 +8629,19 @@ input[type=text][disabled] {
   font-size: 18px;
 }
 .patchwork .navigation .items .row .buttons {
-  bottom: 10px;
-  right: 21px;
+  bottom: 0px;
+  -o-transition: bottom 250ms ease;
+  -moz-transition: bottom 250ms ease;
+  -webkit-transition: bottom 250ms ease;
+  transition: bottom 250ms ease;
+  width: 100%;
+  left: 0;
+  z-index: 19;
+  background: #ff8500;
+  padding: 12px;
+  display: block;
+  position: fixed;
 }
-.patchwork .navigation .items .row .buttons input[type=submit],
 .patchwork .navigation .items .row .buttons button {
   border: none;
   box-shadow: none;
@@ -8640,11 +8649,24 @@ input[type=text][disabled] {
   background: #f0f0f0;
   background: transparent;
   color: white;
+  padding: 9px;
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
 }
-.patchwork .navigation .items .row .buttons input[type=submit]:hover,
 .patchwork .navigation .items .row .buttons button:hover {
   background: #4bafd5;
   color: #fff;
+}
+.patchwork .navigation .items .row .buttons button:hover {
+  background: #fff;
+  color: #ff8500;
+}
+.patchwork .navigation .items .row .buttons.hidden {
+  bottom: -62px;
+}
+.patchwork .navigation .items .row .bottom-locked {
+  right: 10px;
 }
 .open-right {
   height: 25px;

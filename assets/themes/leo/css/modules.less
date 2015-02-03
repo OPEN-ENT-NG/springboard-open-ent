@@ -2676,13 +2676,34 @@ input[type=text][disabled] {
 				}
 
 				.buttons{
-					bottom: 10px;
-					right: 21px;
-					input[type=submit], button{
+					bottom: 0px;
+					.run-transition(bottom);
+					width: 100%;
+					left: 0;
+					z-index: 19;
+					background: @accent;
+					padding: 12px;
+					display: block;
+					position: fixed;
+					button{
 						.flat-button;
 						background: transparent;
 						color: white;
+						padding: 9px;
+						font-size: 1em;
+						font-weight: normal;
+						margin: 0;
 					}
+					button:hover{
+						background: #fff;
+						color: @accent;
+					}
+				}
+				.buttons.hidden{
+					bottom: -62px;
+				}
+				.bottom-locked{
+					right: 10px;
 				}
 			}
 		}
