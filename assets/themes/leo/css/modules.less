@@ -118,96 +118,6 @@ input[type=text], input[type=password], input[type=password], input[type=search]
 	background-size: contain;
 }
 
-i.workspace-large{
-	.icon(workspace-large, 100px);
-	.run-transition(background);
-}
-
-i.blog-large{
-	.icon(blog-large, 100px);
-	.run-transition(background);
-}
-
-i.wiki-large{
-	.icon(wiki, 100px);
-	.run-transition(background);
-}
-
-i.forum-large{
-	.icon(forum, 100px);
-	.run-transition(background);
-}
-
-i.pages-large{
-	.icon(page, 100px);
-	.run-transition(background);
-}
-
-i.userbook-large{
-	.icon(userbook-large, 100px);
-	.run-transition(background);
-}
-
-i.rbs-large{
-	.icon(rbs-large, 100px);
-	.run-transition(background);
-}
-
-i.conversation-large, i.messagerie{
-	.icon(conversation-large, 100px);
-	.run-transition(background);
-}
-
-i.actualites-large{
-	.icon(actualites-large, 100px);
-	.run-transition(background);
-}
-
-i.archive-large{
-	.icon(archive-large, 100px);
-	.run-transition(background);
-}
-
-i.residence-artiste-large{
-	.icon(residence-artiste-large, 100px);
-	.run-transition(background);
-}
-
-i.emploi-temps{
-	.icon(emploi-temps, 100px);
-	.run-transition(background);
-}
-
-i.cahier-textes{
-	.icon(cahier-textes, 100px);
-	.run-transition(background);
-}
-
-i.scolarite{
-	.icon(scolarite, 100px);
-	.run-transition(background);
-}
-
-i.agenda{
-	.icon(agenda, 100px);
-	.run-transition(background);
-}
-
-i.td-base{
-	.icon(td-base, 100px);
-	.run-transition(background);
-}
-
-i.absences{
-	.icon(absences, 100px);
-	.run-transition(background);
-}
-
-i.notes{
-	.icon(notes, 100px);
-	.run-transition(background);
-}
-
 i.send-mail{
 	.icon(glyphicons_010_envelope, 24px);
 	margin: 7px;
@@ -736,28 +646,45 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 	margin-top: 12px;
 	.element{
 		&:hover{
+			background: transparent !important;
 			a{
-				color: #000;
+				color: @yellow;
 			}
 		}
 		padding: 0;
 		height: 120px;
 		width: 120px;
-		background: #ecbe30;
+		background: @yellow;
+		transition: background .50s ease;
 		&:nth-child(6n){
-			background: #46bfaf;
+			background: @green;
+			&:hover a{
+				color: @green;
+			}
 		}
 		&:nth-child(6n + 1){
-			background: #4cb0d6;
+			background: @cyan;
+			&:hover a{
+				color: @cyan;
+			}
 		}
 		&:nth-child(6n + 2){
-			background: #763294;
+			background: @purple;
+			&:hover a{
+				color: @purple;
+			}
 		}
 		&:nth-child(6n + 3){
-			background: #b930a2;
+			background: @pink;
+			&:hover a{
+				color: @pink;
+			}
 		}
 		&:nth-child(6n + 4){
-			background: #e13a3a;
+			background: @red;
+			&:hover a{
+				color: @red;
+			}
 		}
 		a{
 			color: #fff;
@@ -2231,10 +2158,6 @@ select{
 }
 
 .drop-down-filters, .filters {
-	i.rbs{
-		.icon(rbs-large, 99px);
-		cursor: pointer;
-	}
 	p:first-child, .filters-icons {
 		font-size: 16px;
 		padding: 10px;
@@ -2254,6 +2177,48 @@ select{
 		}
 		i.selected{
 			opacity: 1;
+		}
+		li{
+			label{
+				position: relative;
+				overflow: hidden;
+				span{
+					position: absolute;
+					color: #fff;
+					visibility: hidden;
+					left: 6px;
+                    top: 4px;
+                    font-size: 22px;
+                    span:hover{
+                    	cursor: pointer;
+                    }
+				}
+				span:first-letter{
+					visibility: visible;
+				}
+
+			}
+			i.type{
+				background: @yellow;
+			}
+
+			&:nth-child(6n){
+				i.type{
+					background: @green;
+				}
+			}
+			&:nth-child(6n + 1){
+				i.type{ background: @cyan; }
+			}
+			i.type:nth-child(6n + 2){
+				i.type{ background: @purple; }
+			}
+			&:nth-child(6n + 3){
+				i.type{ background: @pink; }
+			}
+			&:nth-child(6n + 4){
+				i.type{ background: @red; }
+			}
 		}
 
 	}
@@ -2281,14 +2246,14 @@ select{
 		opacity: 0.5;
 	}
 	.filters-icons{
-		padding: 0 0 0 10px;
+		padding: 0 0 0 2px;
 		ul{
 			height: 40px;
 			padding: 0;
 			li{
 				padding: 0;
 				label{
-					padding: 0;
+					padding: 0 1px;
 					width: auto;
 					i{
 						background-size: 100% auto;
