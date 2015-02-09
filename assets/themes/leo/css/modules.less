@@ -2841,3 +2841,24 @@ ul.colored{
 		}
 	}
 }
+
+.compare{
+	margin-top: 20px;
+	> tbody > tr > td, > thead > tr > td{
+		border: 1px solid #ddd;
+		vertical-align: top;
+		.diff{
+			background: fade(@accent, 20%);
+		}
+	}
+	> tbody > tr > td:first-child{
+		.added{
+			background: fade(@red, 20%);
+		}
+	}
+	> tbody > tr > td:last-child{
+		.added{
+			background: fade(@green, 20%);
+		}
+	}
+}
