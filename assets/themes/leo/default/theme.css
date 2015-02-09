@@ -7149,6 +7149,7 @@ a:hover {
 }
 [data-drop-down] ul li {
   line-height: 45px;
+  text-align: left;
 }
 [data-drop-down] ul li:hover {
   background: #4bafd5;
@@ -8108,8 +8109,8 @@ select {
   background: #fff;
   position: absolute;
   width: 100%;
-  top: 31px;
-  left: 0px;
+  top: 38px;
+  left: 1px;
   box-sizing: border-box;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
@@ -8122,11 +8123,13 @@ select {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   padding: 5px;
+  padding-left: 10px;
   -o-transition: background 250ms ease;
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
   font-weight: 500;
+  text-align: left;
 }
 .drop-down-button .options ul li:hover {
   background: #ff8500;
@@ -8567,6 +8570,12 @@ ul.colored ul.grey li a.selected {
 .compare > tbody > tr > td:first-child .added {
   background: rgba(225, 58, 58, 0.2);
 }
+.compare > tbody > tr > td:first-child .removed {
+  visibility: hidden;
+}
 .compare > tbody > tr > td:last-child .added {
   background: rgba(70, 191, 175, 0.2);
+}
+.compare > tbody > tr > td:last-child .removed {
+  visibility: hidden;
 }

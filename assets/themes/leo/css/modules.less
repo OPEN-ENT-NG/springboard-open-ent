@@ -1578,11 +1578,11 @@ a:hover{
 		background: white;
 		border: 1px;
 		color: @text-light;
-
 		font-size: 1.2em;
 		padding: 1px;
 		li{
 			line-height: 45px;
+			text-align: left;
 		}
 		li:hover{
 			background: @primary;
@@ -2331,8 +2331,8 @@ select{
 			background: #fff;
 			position: absolute;
 			width: 100%;
-			top: 31px;
-			left: 0px;
+			top: 38px;
+			left: 1px;
 			box-sizing: border-box;
 			.material-card();
 			border: 0;
@@ -2340,8 +2340,10 @@ select{
 				list-style-type: none;
 				.border-box;
 				padding: 5px;
+				padding-left: 10px;
 				.run-transition(background);
 				font-weight: 500;
+				text-align: left;
 			}
 			li:hover{
 				background: @accent;
@@ -2855,10 +2857,16 @@ ul.colored{
 		.added{
 			background: fade(@red, 20%);
 		}
+		.removed{
+			visibility: hidden;
+		}
 	}
 	> tbody > tr > td:last-child{
 		.added{
 			background: fade(@green, 20%);
+		}
+		.removed{
+			visibility: hidden;
 		}
 	}
 }
