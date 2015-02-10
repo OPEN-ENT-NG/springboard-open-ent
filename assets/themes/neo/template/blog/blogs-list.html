@@ -1,0 +1,27 @@
+<nav class="vertical stamps">
+	<div data-ng-repeat="blog in blogs | orderBy: orderBlogsList">
+		<article class="height-four twelve clip small-text cell" data-ng-class="{
+							'lower-line': $index !== 0,
+							 'selected':isSelected(blog._id)
+							 }">
+			<div class="four cell absolute" ng-click="displayBlog(blog)">
+				<img skin-src="[[blogThumbnail(blog)]]" style="height: 100%" />
+			</div>
+			<div class="eight cell absolute right-magnet reduce-block-eight">
+					<h3 ng-click="displayBlog(blog)">[[blog.shortened]]</h3>
+					<div class="bottom-locked vertical-spacing">
+						<a ng-href="/userbook/annuaire#[[blog.author.userId]]"><i18n>blog.by</i18n> [[blog.author.username]]</a>
+					</div>
+			</div>
+		</article>
+		<div class="row reduce-block-four">
+
+			<a data-ng-click="showEditBlog(blog)" ng-if="blog.myRights.blog.edit" class="small-text twelve cell">
+				<i18n>blog.edit.title</i18n>
+			</a>
+		</div>
+	</div>
+	<a data-ng-click="showCreateBlog()" ng-if="me.myRights.blog.post" class="cell classic-link vertical-spacing">
+		<i18n>blog.create.blog</i18n>
+	</a>
+</nav>
