@@ -2344,6 +2344,12 @@ select{
 				.run-transition(background);
 				font-weight: 500;
 				text-align: left;
+				a{
+					color: #000;
+				}
+				&:hover{
+					a{ color: #fff; }
+				}
 			}
 			li:hover{
 				background: @accent;
@@ -2720,6 +2726,18 @@ input[type=text][disabled] {
 
 .droptarget{
 	background-color: @primary-light;
+}
+
+.droptarget.block-editor{
+	background-color: #eee;
+	border: 3px dashed #ddd;
+}
+
+image-select.droptarget{
+	> div{
+		background-color: #eee;
+        	border: 3px dashed #ccc;
+	}
 }
 
 .cke_chrome.cke_float{
