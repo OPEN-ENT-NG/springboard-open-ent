@@ -397,12 +397,12 @@ i.folder{
 
 .select-file{
 	input[type=text]{
-		height: 30px;
+		height: 39px;
 		margin: 0;
 		width: 195px !important;
 		padding: 4px;
-		margin-right: 10px;
 		box-sizing: border-box;
+		border: 1px solid #ddd;
 	}
 }
 
@@ -2886,5 +2886,14 @@ ul.colored{
 		.removed{
 			visibility: hidden;
 		}
+	}
+}
+
+slider, slider.drawing-zone{
+	.cursor{
+		border-top-color: @accent;
+	}
+	.filled{
+		background: @primary;
 	}
 }
