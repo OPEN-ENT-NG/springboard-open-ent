@@ -51,7 +51,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 8.33333333%;
+  padding-bottom: 8.333333333333334%;
 }
 .height-one .right-magnet.cell.absolute {
   right: 0 !important;
@@ -85,14 +85,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-one {
-    left: 8.33333333%;
+    left: 8.333333333333334%;
   }
 }
 .height-two {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 16.66666667%;
+  padding-bottom: 16.666666666666668%;
 }
 .height-two .right-magnet.cell.absolute {
   right: 0 !important;
@@ -108,7 +108,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-two {
-    left: 16.66666667%;
+    left: 16.666666666666668%;
   }
 }
 .height-three {
@@ -138,7 +138,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 33.33333333%;
+  padding-bottom: 33.333333333333336%;
 }
 .height-four .right-magnet.cell.absolute {
   right: 0 !important;
@@ -154,14 +154,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-four {
-    left: 33.33333333%;
+    left: 33.333333333333336%;
   }
 }
 .height-five {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 41.66666667%;
+  padding-bottom: 41.66666666666667%;
 }
 .height-five .right-magnet.cell.absolute {
   right: 0 !important;
@@ -177,7 +177,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-five {
-    left: 41.66666667%;
+    left: 41.66666666666667%;
   }
 }
 .height-six {
@@ -224,7 +224,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 58.33333333%;
+  padding-bottom: 58.333333333333336%;
 }
 .height-seven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -240,14 +240,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-seven {
-    left: 58.33333333%;
+    left: 58.333333333333336%;
   }
 }
 .height-eight {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 66.66666667%;
+  padding-bottom: 66.66666666666667%;
 }
 .height-eight .right-magnet.cell.absolute {
   right: 0 !important;
@@ -263,7 +263,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eight {
-    left: 66.66666667%;
+    left: 66.66666666666667%;
   }
 }
 .height-nine {
@@ -293,7 +293,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 83.33333333%;
+  padding-bottom: 83.33333333333334%;
 }
 .height-ten .right-magnet.cell.absolute {
   right: 0 !important;
@@ -309,14 +309,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-ten {
-    left: 83.33333333%;
+    left: 83.33333333333334%;
   }
 }
 .height-eleven {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
 }
 .height-eleven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -332,7 +332,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eleven {
-    left: 91.66666667%;
+    left: 91.66666666666667%;
   }
 }
 .height-twelve {
@@ -369,37 +369,37 @@
   left: 0;
 }
 .one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .three {
   width: 25%;
 }
 .four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .five {
-  width: 41.66666667%;
+  width: 41.66666666666667%;
 }
 .six {
   width: 50%;
 }
 .seven {
-  width: 58.33333333%;
+  width: 58.333333333333336%;
 }
 .eight {
-  width: 66.66666667%;
+  width: 66.66666666666667%;
 }
 .nine {
   width: 75%;
 }
 .ten {
-  width: 83.33333333%;
+  width: 83.33333333333334%;
 }
 .eleven {
-  width: 91.66666667%;
+  width: 91.66666666666667%;
 }
 .twelve {
   width: 100%;
@@ -1133,7 +1133,7 @@ p i {
 }
 .birthday nav.vertical ul li a .user {
   display: inline-block;
-  width: 41.66666667%;
+  width: 41.66666666666667%;
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
@@ -1298,7 +1298,7 @@ p i {
 .dominos .item .domino .top {
   box-sizing: content-box;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
   width: 100%;
   position: relative;
   clear: both;
@@ -1615,6 +1615,23 @@ a {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+.read-only .share label {
+  pointer-events: none;
+}
+.read-only .share input[type=checkbox] {
+  opacity: 0.5;
+}
+.read-only .share .row:last-child {
+  display: none;
+}
+.read-only .share .line {
+  margin: 0 !important;
+  border: none !important;
+}
+.read-only .share .drop-line {
+  pointer-events: none;
+  background: none !important;
+}
 .share.publish table tr td:first-child,
 .share.publish table tr th:first-child {
   width: 95%;
@@ -1626,7 +1643,7 @@ a {
   overflow: visible;
 }
 .drop-down {
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   z-index: 8000;
   height: 260px;
@@ -1648,7 +1665,7 @@ a {
   line-height: 25px;
 }
 .dropdown-menu {
-  overflow: hidden;
+  overflow: visible;
   position: absolute;
   z-index: 8000;
   height: 260px;
@@ -1658,6 +1675,7 @@ a {
   -moz-transition: height 250ms ease;
   -webkit-transition: height 250ms ease;
   transition: height 250ms ease;
+  overflow: hidden;
   height: auto;
   padding: 6px;
 }
@@ -1870,6 +1888,10 @@ ul.icons-tabs li i {
   float: left;
   width: 100%;
   height: 36px;
+  position: relative !important;
+  padding: 5px !important;
+  line-height: 20px !important;
+  background: none !important;
 }
 .icons-view .element legend a {
   display: block;
@@ -2124,9 +2146,6 @@ hr {
 .media .lightbox-window {
   cursor: pointer;
 }
-.lightbox-window form {
-  padding: 10px;
-}
 .lightbox-window form input,
 .lightbox-window form label {
   display: block;
@@ -2201,6 +2220,20 @@ section.lightbox-window .lightbox-buttons input[type=button] {
   float: right;
 }
 section.lightbox-window .close-lightbox i {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_207_remove_2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
+i.remove {
   height: 20px;
   width: 20px;
   background-image: url("../img/icons/glyphicons_207_remove_2.png");
@@ -2766,6 +2799,10 @@ em.high-importance {
 }
 .lightbox-view .linker .illustrated-list {
   position: absolute;
+}
+.lightbox-view .linker .illustrated-list li img {
+  position: relative !important;
+  height: 100% !important;
 }
 .accordions .accordion {
   padding: 0;
@@ -3679,6 +3716,12 @@ a.cke_smile img {
 .color-picker.opened .colors-list {
   height: 72px;
 }
+.drop-down {
+  overflow: hidden;
+}
+.drop-down.hidden ul {
+  height: 0;
+}
 .drop-down-filters,
 .filters {
   z-index: 2;
@@ -4131,7 +4174,7 @@ i.shared {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -4221,16 +4264,16 @@ i.shared {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -4270,10 +4313,11 @@ drop-down-button {
   height: 40px;
 }
 .drop-down-button {
-  position: absolute;
   z-index: 650;
   white-space: nowrap;
-  width: 100%;
+  min-width: 100%;
+  position: relative;
+  display: inline-block;
 }
 .drop-down-button label {
   display: block;
@@ -4282,14 +4326,10 @@ drop-down-button {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
-  padding: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  min-width: 100%;
+  padding: 4px 10px;
+  border-radius: 3px 3px 0 0;
+  float: left;
   font-size: 15px;
   background: #fff;
   border: 1px solid #444;
@@ -4717,6 +4757,9 @@ ul.thought-out-actions > li p {
   -webkit-transition: margin-top 250ms ease;
   transition: margin-top 250ms ease;
 }
+table {
+  margin-bottom: 20px;
+}
 .wizard {
   display: table;
   width: 100%;
@@ -4926,6 +4969,130 @@ slider.drawing-zone legend.min {
 slider legend.max,
 slider.drawing-zone legend.max {
   right: -25px;
+}
+.media-library .browse nav.vertical {
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+}
+.media-library .browse nav.vertical li {
+  border: none !important;
+}
+recorder {
+  display: block;
+}
+recorder .metadata input[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+}
+recorder .metadata ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #fff;
+}
+recorder .metadata :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+recorder .metadata :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+recorder .controls {
+  width: 100%;
+  height: 40px;
+}
+recorder .controls i {
+  margin: 10px 3px 3px;
+}
+recorder .controls .play {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_173_play.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
+recorder .controls .record {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_169_record.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
+recorder .controls .pause {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_174_pause.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
+recorder .controls .save {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_443_floppy_disk.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  float: right;
+}
+recorder .controls .remove {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_207_remove_2_accent.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  float: right;
+}
+recorder .status {
+  width: 100%;
+  height: 20px;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+recorder .status .elapsed-time {
+  float: right;
+}
+recorder .status .status {
+  float: left;
+}
+recorder .controls {
+  padding: 2px;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -6266,7 +6433,7 @@ input[type=submit][disabled]:hover {
   padding: 0;
 }
 .icons-view.apps .element legend {
-  padding: 0;
+  padding: 0 !important;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -6276,7 +6443,7 @@ input[type=submit][disabled]:hover {
   height: 120px;
   width: 120px;
   text-transform: uppercase;
-  background: none;
+  background: none !important;
   display: table;
 }
 .icons-view.apps .element legend a {
@@ -7013,11 +7180,11 @@ textarea:focus {
 }
 .icons-view .element legend {
   text-align: center;
-  padding-top: 5px;
-  line-height: 20px;
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  padding-top: 5px !important;
+  line-height: 20px !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  background: rgba(0, 0, 0, 0.4) !important;
   color: #fff;
 }
 .icons-view .element legend a {
@@ -7753,7 +7920,7 @@ select {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -7843,16 +8010,16 @@ select {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -8658,4 +8825,7 @@ slider.drawing-zone .cursor {
 slider .filled,
 slider.drawing-zone .filled {
   background: #4bafd5;
+}
+recorder .metadata .status {
+  color: #444;
 }

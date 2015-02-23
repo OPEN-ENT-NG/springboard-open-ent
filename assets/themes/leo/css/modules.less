@@ -699,14 +699,14 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 			padding: 0;
 		}
 		legend{
-			padding: 0;
+			padding: 0 !important;
 			.border-box;
 			margin-left: 1px;
 			top: 0;
 			height: 120px;
 			width: 120px;
 			text-transform: uppercase;
-			background: none;
+			background: none !important;
 			display: table;
 			a{
 				white-space: normal;
@@ -1421,11 +1421,11 @@ textarea:focus{
 		}
 		legend{
 			text-align: center;
-			padding-top: 5px;
-			line-height: 20px;
-			position: absolute;
-			bottom: 0;
-			background: rgba(0,0,0,0.4);
+			padding-top: 5px !important;
+			line-height: 20px !important;
+			position: absolute !important;
+			bottom: 0 !important;
+			background: rgba(0,0,0,0.4) !important;
 			color: #fff;
 			a{
 				color: #fff;
@@ -2895,5 +2895,13 @@ slider, slider.drawing-zone{
 	}
 	.filled{
 		background: @primary;
+	}
+}
+
+recorder{
+	.metadata{
+		.status{
+            color: #444;
+        }
 	}
 }
