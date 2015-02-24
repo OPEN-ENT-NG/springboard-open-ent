@@ -39,9 +39,13 @@ h3{
 	font-style: italic;
 }
 
-table{
+table, ul.list-view{
 	line-height: 45px;
 	background: #fff;
+	li.head{
+		background: @primary;
+		color: #fff;
+	}
 	thead{
 		tr{
 			background: @primary;
@@ -51,6 +55,15 @@ table{
 		th{
 			padding: 4px 15px;
 			text-align: left;
+		}
+	}
+	li{
+		&.checked{
+			background-color: @primary-light;
+			color: #fff;
+			a{
+				color: #fff
+			}
 		}
 	}
 	tbody{
