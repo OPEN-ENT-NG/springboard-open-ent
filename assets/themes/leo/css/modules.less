@@ -2173,9 +2173,6 @@ select{
 .drop-down-filters, .filters {
 	p:first-child, .filters-icons {
 		font-size: 16px;
-		padding: 10px;
-		border-left: 5px solid @accent;
-		color: #fff;
 		.run-transition(background);
 		i.mine{
 			background-size: 100% auto;
@@ -2187,6 +2184,7 @@ select{
 			.run-transition(opacity);
 			border-radius: 20px;
 			vertical-align: top;
+			.material-card();
 		}
 		i.selected{
 			opacity: 1;
@@ -2194,7 +2192,6 @@ select{
 		li{
 			label{
 				position: relative;
-				overflow: hidden;
 				span{
 					position: absolute;
 					color: #fff;

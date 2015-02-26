@@ -51,7 +51,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 8.33333333%;
+  padding-bottom: 8.333333333333334%;
 }
 .height-one .right-magnet.cell.absolute {
   right: 0 !important;
@@ -85,14 +85,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-one {
-    left: 8.33333333%;
+    left: 8.333333333333334%;
   }
 }
 .height-two {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 16.66666667%;
+  padding-bottom: 16.666666666666668%;
 }
 .height-two .right-magnet.cell.absolute {
   right: 0 !important;
@@ -108,7 +108,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-two {
-    left: 16.66666667%;
+    left: 16.666666666666668%;
   }
 }
 .height-three {
@@ -138,7 +138,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 33.33333333%;
+  padding-bottom: 33.333333333333336%;
 }
 .height-four .right-magnet.cell.absolute {
   right: 0 !important;
@@ -154,14 +154,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-four {
-    left: 33.33333333%;
+    left: 33.333333333333336%;
   }
 }
 .height-five {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 41.66666667%;
+  padding-bottom: 41.66666666666667%;
 }
 .height-five .right-magnet.cell.absolute {
   right: 0 !important;
@@ -177,7 +177,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-five {
-    left: 41.66666667%;
+    left: 41.66666666666667%;
   }
 }
 .height-six {
@@ -224,7 +224,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 58.33333333%;
+  padding-bottom: 58.333333333333336%;
 }
 .height-seven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -240,14 +240,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-seven {
-    left: 58.33333333%;
+    left: 58.333333333333336%;
   }
 }
 .height-eight {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 66.66666667%;
+  padding-bottom: 66.66666666666667%;
 }
 .height-eight .right-magnet.cell.absolute {
   right: 0 !important;
@@ -263,7 +263,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eight {
-    left: 66.66666667%;
+    left: 66.66666666666667%;
   }
 }
 .height-nine {
@@ -293,7 +293,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 83.33333333%;
+  padding-bottom: 83.33333333333334%;
 }
 .height-ten .right-magnet.cell.absolute {
   right: 0 !important;
@@ -309,14 +309,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-ten {
-    left: 83.33333333%;
+    left: 83.33333333333334%;
   }
 }
 .height-eleven {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
 }
 .height-eleven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -332,7 +332,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eleven {
-    left: 91.66666667%;
+    left: 91.66666666666667%;
   }
 }
 .height-twelve {
@@ -369,37 +369,37 @@
   left: 0;
 }
 .one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .three {
   width: 25%;
 }
 .four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .five {
-  width: 41.66666667%;
+  width: 41.66666666666667%;
 }
 .six {
   width: 50%;
 }
 .seven {
-  width: 58.33333333%;
+  width: 58.333333333333336%;
 }
 .eight {
-  width: 66.66666667%;
+  width: 66.66666666666667%;
 }
 .nine {
   width: 75%;
 }
 .ten {
-  width: 83.33333333%;
+  width: 83.33333333333334%;
 }
 .eleven {
-  width: 91.66666667%;
+  width: 91.66666666666667%;
 }
 .twelve {
   width: 100%;
@@ -1133,7 +1133,7 @@ p i {
 }
 .birthday nav.vertical ul li a .user {
   display: inline-block;
-  width: 41.66666667%;
+  width: 41.66666666666667%;
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
@@ -1298,7 +1298,7 @@ p i {
 .dominos .item .domino .top {
   box-sizing: content-box;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
   width: 100%;
   position: relative;
   clear: both;
@@ -1498,7 +1498,6 @@ table tr.underline {
 }
 .list-view {
   width: 100%;
-  list-style-type: none;
 }
 .list-view tr.underline {
   padding-bottom: 15px;
@@ -1535,46 +1534,6 @@ table tr.underline {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-.list-view .date {
-  text-align: right;
-}
-ul.list-view {
-  padding-left: 0;
-}
-ul.list-view li {
-  width: 100%;
-  float: left;
-  border-bottom: 1px solid #ccc;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-sizing: border-box;
-  background: #fff;
-}
-ul.list-view li > div > .cell {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-ul.list-view li.date {
-  text-align: right;
-}
-i.drag-anchor {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_186_move.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  background-size: contain;
-  float: none;
-  display: inline-block;
 }
 a {
   color: blue;
@@ -4215,7 +4174,7 @@ i.shared {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -4305,16 +4264,16 @@ i.shared {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -5024,14 +4983,13 @@ recorder {
   padding: 5px;
 }
 recorder .metadata {
-  float: left;
-  width: 100%;
-  padding: 3px;
-  box-sizing: border-box;
+  float: right;
+  width: 50%;
 }
 recorder .metadata input[type=text] {
   width: 100%;
   box-sizing: border-box;
+  text-align: right;
 }
 recorder .metadata ::-webkit-input-placeholder {
   /* WebKit browsers */
@@ -5048,7 +5006,7 @@ recorder .metadata :-ms-input-placeholder {
 }
 recorder .controls {
   width: 100%;
-  height: 60px;
+  height: 40px;
 }
 recorder .controls i {
   margin: 10px 3px 3px;
@@ -5124,17 +5082,18 @@ recorder .controls .remove {
   vertical-align: middle;
 }
 recorder .view {
-  height: 40px;
+  height: 30px;
 }
 recorder .elapsed-time {
   float: right;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 recorder .status {
-  width: 100%;
-  height: 30px;
-  padding: 3px;
+  width: 50%;
+  height: 20px;
+  padding: 5px;
   box-sizing: border-box;
+  font-size: 14px;
   float: left;
 }
 recorder .status .status {
@@ -5143,9 +5102,6 @@ recorder .status .status {
 recorder .controls {
   padding: 2px;
   box-sizing: border-box;
-}
-recorder .controls i:first-child {
-  margin-left: 0;
 }
 html,
 body {
@@ -7993,7 +7949,7 @@ select {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -8083,16 +8039,16 @@ select {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -8182,9 +8138,6 @@ select {
 .drop-down-filters .filters-icons,
 .filters .filters-icons {
   font-size: 16px;
-  padding: 10px;
-  border-left: 5px solid #ff8500;
-  color: #fff;
   -o-transition: background 250ms ease;
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
@@ -8209,6 +8162,8 @@ select {
   transition: opacity 250ms ease;
   border-radius: 20px;
   vertical-align: top;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
 }
 .drop-down-filters p:first-child i.selected,
 .filters p:first-child i.selected,
@@ -8221,7 +8176,6 @@ select {
 .drop-down-filters .filters-icons li label,
 .filters .filters-icons li label {
   position: relative;
-  overflow: hidden;
 }
 .drop-down-filters p:first-child li label span,
 .filters p:first-child li label span,
