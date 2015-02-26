@@ -6746,7 +6746,6 @@ input[type=search]:focus {
 }
 .tooltip .arrow {
   display: none;
-  color: #ff8500;
 }
 .loading-panel {
   background: #fff;
@@ -8133,16 +8132,6 @@ select {
   width: 100%;
   margin-left: 0;
 }
-.drop-down-filters p:first-child,
-.filters p:first-child,
-.drop-down-filters .filters-icons,
-.filters .filters-icons {
-  font-size: 16px;
-  -o-transition: background 250ms ease;
-  -moz-transition: background 250ms ease;
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
-}
 .drop-down-filters p:first-child i.mine,
 .filters p:first-child i.mine,
 .drop-down-filters .filters-icons i.mine,
@@ -8153,23 +8142,71 @@ select {
 .filters p:first-child i,
 .drop-down-filters .filters-icons i,
 .filters .filters-icons i {
+  opacity: 1;
+  background: #ccc;
   height: 40px !important;
   width: 40px !important;
-  opacity: 0.2;
-  -o-transition: opacity 250ms ease;
-  -moz-transition: opacity 250ms ease;
-  -webkit-transition: opacity 250ms ease;
-  transition: opacity 250ms ease;
-  border-radius: 20px;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
   vertical-align: top;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
 }
-.drop-down-filters p:first-child i.selected,
-.filters p:first-child i.selected,
-.drop-down-filters .filters-icons i.selected,
-.filters .filters-icons i.selected {
+.drop-down-filters p:first-child i:hover,
+.filters p:first-child i:hover,
+.drop-down-filters .filters-icons i:hover,
+.filters .filters-icons i:hover {
   opacity: 1;
+}
+.drop-down-filters p:first-child li label:hover i,
+.filters p:first-child li label:hover i,
+.drop-down-filters .filters-icons li label:hover i,
+.filters .filters-icons li label:hover i {
+  box-shadow: none;
+}
+.drop-down-filters p:first-child li.selected i,
+.filters p:first-child li.selected i,
+.drop-down-filters .filters-icons li.selected i,
+.filters .filters-icons li.selected i {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26) inset;
+}
+.drop-down-filters p:first-child li.selected:nth-child(6n) i,
+.filters p:first-child li.selected:nth-child(6n) i,
+.drop-down-filters .filters-icons li.selected:nth-child(6n) i,
+.filters .filters-icons li.selected:nth-child(6n) i {
+  background: #46bfaf;
+}
+.drop-down-filters p:first-child li.selected:nth-child(6n + 1) i,
+.filters p:first-child li.selected:nth-child(6n + 1) i,
+.drop-down-filters .filters-icons li.selected:nth-child(6n + 1) i,
+.filters .filters-icons li.selected:nth-child(6n + 1) i {
+  background: #4cb0d6;
+}
+.drop-down-filters p:first-child li.selected:nth-child(6n + 2) i,
+.filters p:first-child li.selected:nth-child(6n + 2) i,
+.drop-down-filters .filters-icons li.selected:nth-child(6n + 2) i,
+.filters .filters-icons li.selected:nth-child(6n + 2) i {
+  background: #763294;
+}
+.drop-down-filters p:first-child li.selected:nth-child(6n + 3) i,
+.filters p:first-child li.selected:nth-child(6n + 3) i,
+.drop-down-filters .filters-icons li.selected:nth-child(6n + 3) i,
+.filters .filters-icons li.selected:nth-child(6n + 3) i {
+  background: #b930a2;
+}
+.drop-down-filters p:first-child li.selected:nth-child(6n + 4) i,
+.filters p:first-child li.selected:nth-child(6n + 4) i,
+.drop-down-filters .filters-icons li.selected:nth-child(6n + 4) i,
+.filters .filters-icons li.selected:nth-child(6n + 4) i {
+  background: #e13a3a;
+}
+.drop-down-filters p:first-child li.selected:nth-child(6n + 5) i,
+.filters p:first-child li.selected:nth-child(6n + 5) i,
+.drop-down-filters .filters-icons li.selected:nth-child(6n + 5) i,
+.filters .filters-icons li.selected:nth-child(6n + 5) i {
+  background: #ecbe30;
 }
 .drop-down-filters p:first-child li label,
 .filters p:first-child li label,
@@ -8199,42 +8236,6 @@ select {
 .drop-down-filters .filters-icons li label span:first-letter,
 .filters .filters-icons li label span:first-letter {
   visibility: visible;
-}
-.drop-down-filters p:first-child li i.type,
-.filters p:first-child li i.type,
-.drop-down-filters .filters-icons li i.type,
-.filters .filters-icons li i.type {
-  background: #ecbe30;
-}
-.drop-down-filters p:first-child li:nth-child(6n) i.type,
-.filters p:first-child li:nth-child(6n) i.type,
-.drop-down-filters .filters-icons li:nth-child(6n) i.type,
-.filters .filters-icons li:nth-child(6n) i.type {
-  background: #46bfaf;
-}
-.drop-down-filters p:first-child li:nth-child(6n + 1) i.type,
-.filters p:first-child li:nth-child(6n + 1) i.type,
-.drop-down-filters .filters-icons li:nth-child(6n + 1) i.type,
-.filters .filters-icons li:nth-child(6n + 1) i.type {
-  background: #4cb0d6;
-}
-.drop-down-filters p:first-child li i.type:nth-child(6n + 2) i.type,
-.filters p:first-child li i.type:nth-child(6n + 2) i.type,
-.drop-down-filters .filters-icons li i.type:nth-child(6n + 2) i.type,
-.filters .filters-icons li i.type:nth-child(6n + 2) i.type {
-  background: #763294;
-}
-.drop-down-filters p:first-child li:nth-child(6n + 3) i.type,
-.filters p:first-child li:nth-child(6n + 3) i.type,
-.drop-down-filters .filters-icons li:nth-child(6n + 3) i.type,
-.filters .filters-icons li:nth-child(6n + 3) i.type {
-  background: #b930a2;
-}
-.drop-down-filters p:first-child li:nth-child(6n + 4) i.type,
-.filters p:first-child li:nth-child(6n + 4) i.type,
-.drop-down-filters .filters-icons li:nth-child(6n + 4) i.type,
-.filters .filters-icons li:nth-child(6n + 4) i.type {
-  background: #e13a3a;
 }
 .drop-down-filters p:first-child:hover,
 .filters p:first-child:hover {

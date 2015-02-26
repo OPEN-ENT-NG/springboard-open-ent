@@ -984,7 +984,6 @@ input[type=text]:focus, input[type=password]:focus, input[type=search]:focus{
 	}
 	.arrow{
 		display:none;
-		color: @accent;
 	}
 	z-index:10000;
 }
@@ -2172,24 +2171,50 @@ select{
 
 .drop-down-filters, .filters {
 	p:first-child, .filters-icons {
-		font-size: 16px;
-		.run-transition(background);
 		i.mine{
 			background-size: 100% auto;
 		}
 		i{
+			opacity: 1;
+			background: #ccc;
 			height: 40px !important;
 			width: 40px !important;
-			opacity: 0.2;
-			.run-transition(opacity);
-			border-radius: 20px;
+			.run-transition(background);
 			vertical-align: top;
 			.material-card();
 		}
-		i.selected{
+		i:hover{
 			opacity: 1;
 		}
 		li{
+			label:hover{
+				i{
+					box-shadow: none;
+				}
+			}
+			&.selected{
+				i{
+					box-shadow: 0 2px 3px rgba(0,0,0,0.26) inset;
+				}
+				&:nth-child(6n){
+					i{ background: @green; }
+				}
+				&:nth-child(6n + 1){
+					i{ background: @cyan; }
+				}
+				&:nth-child(6n + 2){
+					i{ background: @purple; }
+				}
+				&:nth-child(6n + 3){
+					i{ background: @pink; }
+				}
+				&:nth-child(6n + 4){
+					i{ background: @red; }
+				}
+				&:nth-child(6n + 5){
+					i{ background: @yellow; }
+				}
+			}
 			label{
 				position: relative;
 				span{
@@ -2207,27 +2232,6 @@ select{
 					visibility: visible;
 				}
 
-			}
-			i.type{
-				background: @yellow;
-			}
-
-			&:nth-child(6n){
-				i.type{
-					background: @green;
-				}
-			}
-			&:nth-child(6n + 1){
-				i.type{ background: @cyan; }
-			}
-			i.type:nth-child(6n + 2){
-				i.type{ background: @purple; }
-			}
-			&:nth-child(6n + 3){
-				i.type{ background: @pink; }
-			}
-			&:nth-child(6n + 4){
-				i.type{ background: @red; }
 			}
 		}
 
