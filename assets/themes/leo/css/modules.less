@@ -1470,9 +1470,6 @@ filters{
 			background-size: 100% auto;
 			margin-left: 10px;
 		}
-		i.mine{
-
-		}
 	}
 }
 
@@ -2171,15 +2168,12 @@ select{
 
 .drop-down-filters, .filters {
 	p:first-child, .filters-icons {
-		i.mine{
-			background-size: 100% auto;
-		}
 		i{
 			opacity: 1;
-			background: #ccc;
+			background: #aaa;
 			height: 40px !important;
 			width: 40px !important;
-			.run-transition(background);
+			.run-transition(all);
 			vertical-align: top;
 			.material-card();
 		}
@@ -2251,10 +2245,6 @@ select{
 				}
 			}
 		}
-	}
-	i.mine{
-		.icon(default, 100px);
-		background-size: 70px;
 	}
 	i:hover{
 		opacity: 0.5;

@@ -1498,6 +1498,7 @@ table tr.underline {
 }
 .list-view {
   width: 100%;
+  list-style-type: none;
 }
 .list-view tr.underline {
   padding-bottom: 15px;
@@ -1534,6 +1535,48 @@ table tr.underline {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+.list-view .date {
+  text-align: right;
+}
+ul.list-view {
+  padding-left: 0;
+}
+ul.list-view li {
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #ccc;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  list-style-type: none;
+}
+ul.list-view li > div > .cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ul.list-view li.date {
+  text-align: right;
+}
+i.drag-anchor {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_186_move.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  background-size: contain;
+  float: none;
+  display: inline-block;
 }
 a {
   color: blue;
@@ -4370,6 +4413,9 @@ drop-down-button {
   background: #444;
   color: #fff;
 }
+.drop-down-button.hidden {
+  z-index: 1;
+}
 .drop-down-button.hidden label {
   border-radius: 3px;
   background: #ccc;
@@ -4983,13 +5029,14 @@ recorder {
   padding: 5px;
 }
 recorder .metadata {
-  float: right;
-  width: 50%;
+  float: left;
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
 }
 recorder .metadata input[type=text] {
   width: 100%;
   box-sizing: border-box;
-  text-align: right;
 }
 recorder .metadata ::-webkit-input-placeholder {
   /* WebKit browsers */
@@ -5006,7 +5053,7 @@ recorder .metadata :-ms-input-placeholder {
 }
 recorder .controls {
   width: 100%;
-  height: 40px;
+  height: 60px;
 }
 recorder .controls i {
   margin: 10px 3px 3px;
@@ -5082,18 +5129,17 @@ recorder .controls .remove {
   vertical-align: middle;
 }
 recorder .view {
-  height: 30px;
+  height: 40px;
 }
 recorder .elapsed-time {
   float: right;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 recorder .status {
-  width: 50%;
-  height: 20px;
-  padding: 5px;
+  width: 100%;
+  height: 30px;
+  padding: 3px;
   box-sizing: border-box;
-  font-size: 14px;
   float: left;
 }
 recorder .status .status {
@@ -5102,6 +5148,9 @@ recorder .status .status {
 recorder .controls {
   padding: 2px;
   box-sizing: border-box;
+}
+recorder .controls i:first-child {
+  margin-left: 0;
 }
 html,
 body {
@@ -8132,24 +8181,18 @@ select {
   width: 100%;
   margin-left: 0;
 }
-.drop-down-filters p:first-child i.mine,
-.filters p:first-child i.mine,
-.drop-down-filters .filters-icons i.mine,
-.filters .filters-icons i.mine {
-  background-size: 100% auto;
-}
 .drop-down-filters p:first-child i,
 .filters p:first-child i,
 .drop-down-filters .filters-icons i,
 .filters .filters-icons i {
   opacity: 1;
-  background: #ccc;
+  background: #aaa;
   height: 40px !important;
   width: 40px !important;
-  -o-transition: background 250ms ease;
-  -moz-transition: background 250ms ease;
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   vertical-align: top;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
@@ -8254,22 +8297,6 @@ select {
 .drop-down-filters .wrapper ul li i,
 .filters .wrapper ul li i {
   border-radius: 50px;
-}
-.drop-down-filters i.mine,
-.filters i.mine {
-  height: 100px;
-  width: 100px;
-  background-image: url("../img/icons/default.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  background-size: 70px;
 }
 .drop-down-filters i:hover,
 .filters i:hover {
