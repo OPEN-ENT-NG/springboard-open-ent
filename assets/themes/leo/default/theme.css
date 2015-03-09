@@ -716,6 +716,11 @@ textarea {
 textarea.inline-editing {
   box-sizing: content-box;
 }
+h1 i {
+  vertical-align: middle !important;
+  float: none !important;
+  display: inline-block !important;
+}
 nav.vertical {
   padding-right: 15px;
   box-sizing: border-box;
@@ -3831,6 +3836,7 @@ a.cke_smile img {
   -webkit-transition: opacity 250ms ease;
   transition: opacity 250ms ease;
   cursor: pointer;
+  display: inline-block;
 }
 .drop-down-filters ul li p,
 .filters ul li p {
@@ -4044,8 +4050,12 @@ i.shared {
   bottom: -2px;
   right: -3px;
 }
+portal .page-markers {
+  display: block;
+}
 .page-markers {
   position: fixed;
+  display: none;
   right: 0;
   bottom: 0;
 }
@@ -4286,6 +4296,12 @@ i.shared {
   position: absolute;
   bottom: 12px;
   right: 12px;
+  z-index: 510;
+}
+.schedule .schedule-items .schedule-item .schedule-item-content .suspended-status {
+  position: absolute;
+  bottom: 14px;
+  right: 13px;
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item .schedule-item-content .validated-status {
