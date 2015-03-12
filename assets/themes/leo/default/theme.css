@@ -3389,6 +3389,10 @@ a.cke_smile img {
 }
 .media .articles-sniplet [contenteditable] {
   position: relative;
+  min-height: 200px;
+}
+.media .wiki-sniplet [contenteditable] {
+  position: relative;
 }
 .media i.close {
   position: absolute;
@@ -6404,6 +6408,9 @@ ul.thought-out-actions li {
 }
 ul.thought-out-actions li:hover {
   background: #4bafd5;
+}
+ul.thought-out-actions li:hover h2 {
+  color: #fff;
 }
 ul.icons-tabs {
   display: none;
