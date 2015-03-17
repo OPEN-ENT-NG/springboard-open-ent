@@ -78,6 +78,11 @@ table, ul.list-view{
 			td{
 				padding: 4px 15px;
 			}
+			i.center{
+				margin-left: auto;
+				margin-right: auto;
+				float: none !important;
+			}
 		}
 	}
 }
@@ -359,6 +364,28 @@ i.folder{
 	.icon(folder, 32px);
 }
 
+i.edit{
+	.icon(glyphicons_030_pencil, 15px);
+	background-size: contain;
+}
+
+i.mail-in{
+	.icon(glyphicons_122_message_in, 15px);
+	background-size: contain;
+}
+i.mail-out{
+	.icon(glyphicons_123_message_out, 15px);
+	background-size: contain;
+}
+i.mail-new{
+	.icon(glyphicons_129_message_new, 15px);
+	background-size: contain;
+}
+i.remove-small{
+	.icon(glyphicons_197_remove, 15px);
+	background-size: contain;
+}
+
 .tabs{
 	text-align:center;
 
@@ -418,6 +445,11 @@ i.folder{
 		border: 1px solid #ddd;
 	}
 }
+
+.select-file.nomargin{
+	margin: 0px;
+}
+
 
 header.main{
 	height: @header-height;
@@ -1093,6 +1125,9 @@ nav.vertical{
 					font-size: 25px;
 					line-height: 13px;
 					color: @accent;
+				}
+				i{
+					margin-left: 5px;
 				}
 			}
 			a.selected{

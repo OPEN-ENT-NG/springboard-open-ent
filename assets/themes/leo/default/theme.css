@@ -51,7 +51,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 8.333333333333334%;
+  padding-bottom: 8.33333333%;
 }
 .height-one .right-magnet.cell.absolute {
   right: 0 !important;
@@ -85,14 +85,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-one {
-    left: 8.333333333333334%;
+    left: 8.33333333%;
   }
 }
 .height-two {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 16.666666666666668%;
+  padding-bottom: 16.66666667%;
 }
 .height-two .right-magnet.cell.absolute {
   right: 0 !important;
@@ -108,7 +108,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-two {
-    left: 16.666666666666668%;
+    left: 16.66666667%;
   }
 }
 .height-three {
@@ -138,7 +138,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 33.333333333333336%;
+  padding-bottom: 33.33333333%;
 }
 .height-four .right-magnet.cell.absolute {
   right: 0 !important;
@@ -154,14 +154,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-four {
-    left: 33.333333333333336%;
+    left: 33.33333333%;
   }
 }
 .height-five {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 41.66666666666667%;
+  padding-bottom: 41.66666667%;
 }
 .height-five .right-magnet.cell.absolute {
   right: 0 !important;
@@ -177,7 +177,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-five {
-    left: 41.66666666666667%;
+    left: 41.66666667%;
   }
 }
 .height-six {
@@ -224,7 +224,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 58.333333333333336%;
+  padding-bottom: 58.33333333%;
 }
 .height-seven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -240,14 +240,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-seven {
-    left: 58.333333333333336%;
+    left: 58.33333333%;
   }
 }
 .height-eight {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 66.66666666666667%;
+  padding-bottom: 66.66666667%;
 }
 .height-eight .right-magnet.cell.absolute {
   right: 0 !important;
@@ -263,7 +263,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eight {
-    left: 66.66666666666667%;
+    left: 66.66666667%;
   }
 }
 .height-nine {
@@ -293,7 +293,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 83.33333333333334%;
+  padding-bottom: 83.33333333%;
 }
 .height-ten .right-magnet.cell.absolute {
   right: 0 !important;
@@ -309,14 +309,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-ten {
-    left: 83.33333333333334%;
+    left: 83.33333333%;
   }
 }
 .height-eleven {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 91.66666666666667%;
+  padding-bottom: 91.66666667%;
 }
 .height-eleven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -332,7 +332,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eleven {
-    left: 91.66666666666667%;
+    left: 91.66666667%;
   }
 }
 .height-twelve {
@@ -369,37 +369,37 @@
   left: 0;
 }
 .one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .three {
   width: 25%;
 }
 .four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .five {
-  width: 41.66666666666667%;
+  width: 41.66666667%;
 }
 .six {
   width: 50%;
 }
 .seven {
-  width: 58.333333333333336%;
+  width: 58.33333333%;
 }
 .eight {
-  width: 66.66666666666667%;
+  width: 66.66666667%;
 }
 .nine {
   width: 75%;
 }
 .ten {
-  width: 83.33333333333334%;
+  width: 83.33333333%;
 }
 .eleven {
-  width: 91.66666666666667%;
+  width: 91.66666667%;
 }
 .twelve {
   width: 100%;
@@ -1138,7 +1138,7 @@ p i {
 }
 .birthday nav.vertical ul li a .user {
   display: inline-block;
-  width: 41.66666666666667%;
+  width: 41.66666667%;
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
@@ -1303,7 +1303,7 @@ p i {
 .dominos .item .domino .top {
   box-sizing: content-box;
   height: 0px;
-  padding-bottom: 91.66666666666667%;
+  padding-bottom: 91.66666667%;
   width: 100%;
   position: relative;
   clear: both;
@@ -1659,6 +1659,11 @@ i.download {
   width: 100%;
   position: relative;
 }
+.embedded-viewer img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .embedded-viewer i {
   margin-left: 3px;
   margin-right: 3px;
@@ -1680,6 +1685,7 @@ i.download {
   background: rgba(0, 0, 0, 0.7);
   top: 40px;
   left: 0;
+  min-height: 100%;
 }
 .fullscreen-viewer .render {
   margin-left: auto;
@@ -3516,6 +3522,7 @@ a.cke_smile img {
 }
 .media .wiki-sniplet [contenteditable] {
   position: relative;
+  min-height: 200px;
 }
 .media i.close {
   position: absolute;
@@ -4354,7 +4361,7 @@ portal .page-markers {
 }
 .schedule .days .day {
   float: left;
-  width: 14.285714285714286%;
+  width: 14.28571429%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -4450,16 +4457,16 @@ portal .page-markers {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -5582,6 +5589,12 @@ table tbody tr td,
 ul.list-view tbody tr td {
   padding: 4px 15px;
 }
+table tbody tr i.center,
+ul.list-view tbody tr i.center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
+}
 button,
 input[type=button],
 a.button,
@@ -6290,6 +6303,81 @@ i.folder {
   float: left;
   vertical-align: middle;
 }
+i.edit {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_030_pencil.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  background-size: contain;
+}
+i.mail-in {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_122_message_in.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  background-size: contain;
+}
+i.mail-out {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_123_message_out.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  background-size: contain;
+}
+i.mail-new {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_129_message_new.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  background-size: contain;
+}
+i.remove-small {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_197_remove.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  background-size: contain;
+}
 .tabs {
   text-align: center;
 }
@@ -6342,6 +6430,9 @@ i.folder {
   padding: 4px;
   box-sizing: border-box;
   border: 1px solid #ddd;
+}
+.select-file.nomargin {
+  margin: 0px;
 }
 header.main {
   height: 64px;
@@ -7056,6 +7147,9 @@ nav.vertical ul li a i.arrow::before {
   font-size: 25px;
   line-height: 13px;
   color: #ff8500;
+}
+nav.vertical ul li a i {
+  margin-left: 5px;
 }
 nav.vertical ul li a.selected {
   color: #ff8500;
@@ -8143,7 +8237,7 @@ select {
 }
 .schedule .days .day {
   float: left;
-  width: 14.285714285714286%;
+  width: 14.28571429%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -8233,16 +8327,16 @@ select {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
