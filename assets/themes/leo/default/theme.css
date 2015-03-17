@@ -5546,6 +5546,34 @@ h3 {
   font-size: 1.4em;
   font-style: italic;
 }
+.list-view .select-file {
+  margin-top: 0px;
+}
+.list-view tbody tr td.small-font {
+  font-size: 12px;
+  padding-top: 7px;
+}
+.list-view tbody tr i.center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
+}
+.list-view tbody tr i.history {
+  height: 17px;
+  width: 17px;
+  background-image: url("../img/icons/glyphicons_057_history.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+  margin: 0px 3px;
+  background-size: contain;
+}
 table,
 ul.list-view {
   line-height: 45px;
@@ -5588,12 +5616,6 @@ ul.list-view tbody tr.checked a {
 table tbody tr td,
 ul.list-view tbody tr td {
   padding: 4px 15px;
-}
-table tbody tr i.center,
-ul.list-view tbody tr i.center {
-  margin-left: auto;
-  margin-right: auto;
-  float: none !important;
 }
 button,
 input[type=button],
@@ -6377,6 +6399,20 @@ i.remove-small {
   float: left;
   vertical-align: middle;
   background-size: contain;
+}
+i.history {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_057_history.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
 }
 .tabs {
   text-align: center;
@@ -7522,6 +7558,31 @@ textarea:focus {
 .icons-view .element a.container i {
   width: 117px;
   height: 117px;
+}
+.icons-view .element i.history {
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  width: 21px;
+  height: 21px;
+  border-radius: 10px;
+  background-size: 15px;
+  background-position: center;
+  transition: all 0.25s ease-in-out;
+  filter: invert(80%);
+  -webkit-filter: invert(0.8);
+  background-color: white;
+}
+.icons-view .element i.history:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 23px;
+  height: 23px;
+  background-size: 17px;
+  background-position: center;
+  box-shadow: 0px 0px 2px black;
+  border-radius: 12px;
+  filter: none;
+  -webkit-filter: none;
 }
 filters {
   padding-bottom: 20px;

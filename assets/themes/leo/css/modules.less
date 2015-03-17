@@ -39,6 +39,32 @@ h3{
 	font-style: italic;
 }
 
+.list-view{
+	.select-file{
+		margin-top: 0px;
+	}
+	tbody{
+		tr{
+			td.small-font{
+				font-size: 12px;
+				padding-top: 7px;
+			}
+
+			i.center{
+				margin-left: auto;
+				margin-right: auto;
+				float: none !important;
+			}
+
+			i.history{
+				.icon(glyphicons_057_history, 17px);
+				margin: 0px 3px;
+				background-size: contain;
+			}
+		}
+	}
+}
+
 table, ul.list-view{
 	line-height: 45px;
 	background: #fff;
@@ -77,11 +103,6 @@ table, ul.list-view{
 			}
 			td{
 				padding: 4px 15px;
-			}
-			i.center{
-				margin-left: auto;
-				margin-right: auto;
-				float: none !important;
 			}
 		}
 	}
@@ -385,6 +406,10 @@ i.remove-small{
 	.icon(glyphicons_197_remove, 15px);
 	background-size: contain;
 }
+i.history{
+	.icon(glyphicons_057_history, 15px);
+}
+
 
 .tabs{
 	text-align:center;
@@ -1493,6 +1518,32 @@ textarea:focus{
 			i{
 				width: 117px;
 				height: 117px;
+			}
+		}
+		i.history{
+			position: absolute;
+			top: 6px;
+			right: 14px;
+			width: 21px;
+			height: 21px;
+			border-radius: 10px;
+			background-size: 15px;
+			background-position: center;
+			transition: all 0.25s ease-in-out;
+			filter: invert(80%);
+			-webkit-filter: invert(0.8);
+			background-color: white;
+
+			&:hover{
+				background-color: rgba(255, 255, 255, 0.5);
+				width: 23px;
+				height: 23px;
+				background-size: 17px;
+				background-position: center;
+				box-shadow: 0px 0px 2px black;
+				border-radius: 12px;
+				filter: none;
+				-webkit-filter: none;
 			}
 		}
 	}
