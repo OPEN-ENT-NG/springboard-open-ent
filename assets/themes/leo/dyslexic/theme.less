@@ -33,7 +33,7 @@
 	src: url(../font/OpenDyslexic3-Regular.ttf);
 }
 
-.material-card(@shadow-size: 1px, @blur-size: 3px){
+.material-card(@shadow-size: 2px, @blur-size: 3px){
 	box-shadow: 0  @shadow-size  @blur-size @shadow;
 	border-radius: 2px;
 }
@@ -44,7 +44,7 @@ title{
 
 html, body{
 	background: #F9F9F9;
-	font-family: Roboto;
+	font-family: OpenDyslexic;
 }
 
 body {
@@ -61,12 +61,28 @@ body {
 		}
 	}
 
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 23px;
 }
 
 button, input[type=button], a.button, input[type=submit], .drop-down-button label, .drop-down-button.hidden label {
-	font-family: Roboto;
+	font-family: OpenDyslexic;
+}
+
+input[type=text]{
+	font-family: OpenDyslexic;
 }
 
 @import "../css/modules";
+
+h1{
+	font-size: 24px;
+}
+
+h2{
+	font-size: 18px;
+}
+
+input[type=text], input[type=password], input[type=password], input[type=search]{
+	height: 35px;
+}

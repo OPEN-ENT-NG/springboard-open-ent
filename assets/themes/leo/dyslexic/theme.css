@@ -4276,53 +4276,6 @@ portal .page-markers {
     display: none;
   }
 }
-.bookmarked-apps {
-  min-height: 48px;
-  padding: 5px;
-  margin-bottom: 30px;
-  border: 2px dashed #ddd;
-  font-size: 24px;
-  text-align: center;
-  line-height: 30px;
-  color: #ccc;
-  font-weight: bold;
-}
-.bookmarked-apps .icons-view {
-  margin-top: 0;
-  padding-left: 5px;
-}
-popover {
-  position: relative;
-  display: inline-block;
-}
-popover popover-content::before {
-  content: "\25b2";
-  display: block;
-  position: absolute;
-  top: -17px;
-  font-size: 36px;
-  left: 50%;
-  margin-left: -14px;
-  color: #fff;
-}
-popover popover-content {
-  position: absolute;
-  min-height: 100px;
-  background: #eee;
-  width: 100px;
-  top: 100%;
-  opacity: 1;
-  -o-transition: opacity 250ms ease;
-  -moz-transition: opacity 250ms ease;
-  -webkit-transition: opacity 250ms ease;
-  transition: opacity 250ms ease;
-  left: -50px;
-  margin-left: 50%;
-}
-popover popover-content.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
 .panel {
   width: 415px;
   margin-left: auto;
@@ -5549,11 +5502,11 @@ title {
 html,
 body {
   background: #F9F9F9;
-  font-family: Roboto;
+  font-family: OpenDyslexic;
 }
 body {
   overflow-x: hidden;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 23px;
 }
 body section.main {
@@ -5571,7 +5524,10 @@ a.button,
 input[type=submit],
 .drop-down-button label,
 .drop-down-button.hidden label {
-  font-family: Roboto;
+  font-family: OpenDyslexic;
+}
+input[type=text] {
+  font-family: OpenDyslexic;
 }
 a {
   color: #4bafd5;
@@ -5699,10 +5655,10 @@ input[type=submit],
   text-transform: uppercase;
   font-size: 14px;
   border-radius: 2px;
-  -o-transition: box-shadow 250ms ease;
-  -moz-transition: box-shadow 250ms ease;
-  -webkit-transition: box-shadow 250ms ease;
-  transition: box-shadow 250ms ease;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
   font-weight: 500;
   line-height: 20px;
   border: none;
@@ -5747,52 +5703,6 @@ i.send-mail {
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
-}
-nav.horizontal i {
-  display: inline-block !important;
-  float: none !important;
-}
-nav.horizontal i.timeline {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/glyphicons_355_bullhorn_white.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-}
-nav.horizontal i.apps {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/glyphicons_156_show_thumbnails_white.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-}
-nav.horizontal i.community {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/glyphicons_308_share_alt_white.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
 }
 i.public {
   height: 25px;
@@ -6781,7 +6691,7 @@ ul.icons-tabs {
   right: 1px;
 }
 ul.icons-tabs li {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   border-radius: 25px;
   border: none;
@@ -7007,7 +6917,7 @@ textarea.inline-editing:focus {
 }
 .label-badge {
   background: #209dcc;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   -o-transition: background 250ms ease;
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
@@ -7255,7 +7165,6 @@ input[type=button]:hover,
 a.button:hover,
 input[type=submit]:hover {
   background: #209dcc;
-  box-shadow: none;
 }
 button.cancel:hover,
 input[type=button].cancel:hover,
@@ -7361,10 +7270,9 @@ nav.horizontal a i {
   margin-bottom: 20px !important;
 }
 .notification {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
-  border-radius: 2px;
-  padding: 7px;
-  margin-bottom: 25px;
+  margin-left: 69px;
+  border-top: 1px solid #ddd;
+  padding: 7px 69px 7px 0;
 }
 .notification article {
   margin: 0px;
@@ -7378,6 +7286,7 @@ nav.horizontal a i {
   color: #777;
 }
 .notification article .avatar {
+  position: absolute;
   left: -72px;
   top: 5px;
 }
@@ -7393,8 +7302,7 @@ nav.horizontal a i {
   background: #4bafd5;
   color: #fff;
   right: 58px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
-  border-radius: 2px;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4);
 }
 .toggle-panel em {
   color: #fff;
@@ -7409,7 +7317,7 @@ nav.horizontal a i {
   display: none;
 }
 .toggle-panel .widgets-picker > .row .inactive i {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   background: #aaa !important;
 }
@@ -7420,7 +7328,6 @@ nav.horizontal a i {
 }
 .toggle-panel .widgets-picker > .row i {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26) inset;
-  border-radius: 2px;
 }
 .toggle-panel .widgets-picker > .row .cell:nth-child(6n) i {
   background: #46bfaf;
@@ -7455,22 +7362,17 @@ nav.horizontal a i {
 }
 .widgets-friend {
   margin-left: 35%;
-  padding-right: 35px;
 }
 .widget {
   width: 100% !important;
   background-color: white;
 }
 .widget-container {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   background-color: white;
   margin-bottom: 30px;
   width: 98%;
-  -o-transition: box-shadow 250ms ease;
-  -moz-transition: box-shadow 250ms ease;
-  -webkit-transition: box-shadow 250ms ease;
-  transition: box-shadow 250ms ease;
 }
 .widget-container h1:first-child {
   text-align: center;
@@ -7478,9 +7380,6 @@ nav.horizontal a i {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 5px;
-}
-.widget-container:hover {
-  box-shadow: none;
 }
 .calendar.widget {
   height: 180px;
@@ -8663,7 +8562,7 @@ select {
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease;
   vertical-align: top;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
 }
 .drop-down-filters p:first-child i:hover,
@@ -8861,7 +8760,7 @@ select {
   top: 38px;
   left: 1px;
   box-sizing: border-box;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   border: 0;
 }
@@ -9152,7 +9051,7 @@ input[type=text][disabled] {
   margin-bottom: 15px;
 }
 .patchwork .navigation .items .row {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   border: none;
   margin-bottom: 15px;
@@ -9395,54 +9294,15 @@ em.skin-dyslexic {
   padding: 5px;
   text-align: center;
 }
-popover popover-content {
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
-  border-radius: 2px;
+h1 {
+  font-size: 24px;
 }
-nav.horizontal .bookmarked-app {
-  display: inline-block;
-  margin: 1px;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  line-height: 30px;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 1) {
-  background: #4cb0d6;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 1):hover a {
-  color: #4cb0d6;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 2) {
-  background: #763294;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 2):hover a {
-  color: #763294;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 3) {
-  background: #b930a2;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 3):hover a {
-  color: #b930a2;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 4) {
-  background: #e13a3a;
-}
-nav.horizontal .bookmarked-app:nth-child(6n + 4):hover a {
-  color: #e13a3a;
-}
-nav.horizontal .bookmarked-app:nth-child(6n) {
-  background: #46bfaf;
-}
-nav.horizontal .bookmarked-app:nth-child(6n):hover a {
-  color: #46bfaf;
-}
-nav.horizontal .bookmarked-app a {
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
+h2 {
   font-size: 18px;
-  height: auto;
-  line-height: inherit;
+}
+input[type=text],
+input[type=password],
+input[type=password],
+input[type=search] {
+  height: 35px;
 }
