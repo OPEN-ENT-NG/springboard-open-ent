@@ -5758,6 +5758,20 @@ i.send-mail {
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
 }
+i.send-mail:hover {
+  height: 24px;
+  width: 24px;
+  background-image: url("../img/icons/glyphicons_010_envelope_accent.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
 nav.horizontal i {
   display: inline-block !important;
   float: none !important;
@@ -9346,6 +9360,9 @@ ul.colored ul.grey li a.selected {
   background: #ff8500;
   color: #fff;
 }
+.wizard [contenteditable] {
+  border: 1px solid #ccc;
+}
 .compare {
   margin-top: 20px;
 }
@@ -9460,6 +9477,7 @@ nav.horizontal .my-apps {
   margin-right: auto;
   margin-top: 15px;
   margin-bottom: 15px;
+  min-height: 40px;
 }
 nav.horizontal .bookmarked-app {
   display: table;
@@ -9523,4 +9541,41 @@ nav.horizontal .bookmarked-app a {
 }
 nav.horizontal .bookmarked-app a:hover {
   border-bottom: none !important;
+}
+label input[type=checkbox] {
+  display: none;
+}
+label input[type=checkbox] + span {
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+label input[type=checkbox] + span::before,
+label input[type=checkbox] + i18n::before {
+  content: " ";
+  border: 2px solid #666;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  box-sizing: border-box;
+}
+label input[type=checkbox]:checked + span::before,
+label input[type=checkbox]:checked + i18n::before {
+  content: " ";
+  transform: rotate(40deg);
+  border-color: #46bfaf;
+  height: 25px;
+  width: 25px;
+  margin-left: -3px;
+  margin-top: -11px;
+}
+label input[type=checkbox]:disabled + span::before {
+  border-color: #ddd !important;
 }

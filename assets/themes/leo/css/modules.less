@@ -3024,6 +3024,9 @@ ul.colored{
 			color: #fff;
 		}
 	}
+	[contenteditable]{
+		border: 1px solid #ccc;
+	}
 }
 
 .compare{
@@ -3218,5 +3221,44 @@ nav.horizontal{
 		a:hover{
 			border-bottom: none !important;
 		}
+	}
+}
+
+label{
+	input[type=checkbox]{
+		display: none;
+	}
+
+	input[type=checkbox] + span{
+		display: inline-block;
+		height: 20px;
+		overflow: hidden;
+		cursor: pointer;
+	}
+
+	input[type=checkbox] + span::before,  input[type=checkbox] + i18n::before {
+		content: " ";
+		border: 2px solid #666;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 5px;
+		.run-transition(all);
+		box-sizing: border-box;
+	}
+
+	input[type=checkbox]:checked + span::before, input[type=checkbox]:checked + i18n::before {
+		content: " ";
+		transform: rotate(40deg);
+		border-color: @green;
+		height: 25px;
+		width: 25px;
+		margin-left: -3px;
+		margin-top: -11px;
+	}
+
+	input[type=checkbox]:disabled + span::before{
+		border-color: #ddd !important;
 	}
 }
