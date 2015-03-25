@@ -5786,16 +5786,24 @@ input[type=submit]::before,
     padding-bottom: 200%;
   }
 }
-button:focus:not(:active),
-input[type=button]:focus:not(:active),
-a.button:focus:not(:active),
-input[type=submit]:focus:not(:active) {
+button:active,
+input[type=button]:active,
+a.button:active,
+input[type=submit]:active,
+button:focus,
+input[type=button]:focus,
+a.button:focus,
+input[type=submit]:focus {
   outline: none;
 }
-button:focus:not(:active)::before,
-input[type=button]:focus:not(:active)::before,
-a.button:focus:not(:active)::before,
-input[type=submit]:focus:not(:active)::before {
+button:active::before,
+input[type=button]:active::before,
+a.button:active::before,
+input[type=submit]:active::before,
+button:focus::before,
+input[type=button]:focus::before,
+a.button:focus::before,
+input[type=submit]:focus::before {
   content: " ";
   background: #fff;
   -webkit-animation: ripple 0.65s linear;
@@ -8864,6 +8872,7 @@ select {
   left: 6px;
   top: 4px;
   font-size: 22px;
+  overflow: visible;
 }
 .drop-down-filters p:first-child li label span span:hover,
 .filters p:first-child li label span span:hover,

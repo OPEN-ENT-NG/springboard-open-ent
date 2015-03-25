@@ -173,7 +173,7 @@ button, input[type=button], a.button, input[type=submit], .drop-down-button labe
 	}
 }
 
-button:focus:not(:active), input[type=button]:focus:not(:active), a.button:focus:not(:active), input[type=submit]:focus:not(:active){
+button:active, input[type=button]:active, a.button:active, input[type=submit]:active, button:focus, input[type=button]:focus, a.button:focus, input[type=submit]:focus{
 	&::before{
 		content: " ";
 		background: #fff;
@@ -2441,6 +2441,7 @@ select{
 					left: 6px;
                     top: 4px;
                     font-size: 22px;
+                    overflow: visible;
                     span:hover{
                     	cursor: pointer;
                     }
