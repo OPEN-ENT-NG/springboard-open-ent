@@ -5696,6 +5696,30 @@ table tbody tr td,
 ul.list-view tbody tr td {
   padding: 4px 15px;
 }
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    -moz-transform: scale(2.5);
+  }
+}
+@-o-keyframes ripple {
+  100% {
+    opacity: 0;
+    -o-transform: scale(2.5);
+  }
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
+}
 button,
 input[type=button],
 a.button,
@@ -5719,6 +5743,68 @@ input[type=submit],
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
   margin-right: 2px;
   margin-left: 2px;
+  overflow: hidden;
+}
+button::before,
+input[type=button]::before,
+a.button::before,
+input[type=submit]::before,
+.drop-down-button label::before,
+.drop-down-button.hidden label::before {
+  content: " ";
+  background: transparent;
+  width: 1%;
+  height: 1%;
+  position: absolute;
+  top: 0%;
+  left: -50%;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  border-radius: 100%;
+  padding: 0;
+}
+@-webkit-keyframes ripple {
+  100% {
+    opacity: 0;
+    width: 200%;
+    padding-bottom: 200%;
+  }
+}
+@-moz-keyframes ripple {
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
+@keyframes ripple {
+  100% {
+    opacity: 0;
+    width: 200%;
+    padding-bottom: 200%;
+  }
+}
+button:focus:not(:active),
+input[type=button]:focus:not(:active),
+a.button:focus:not(:active),
+input[type=submit]:focus:not(:active) {
+  outline: none;
+}
+button:focus:not(:active)::before,
+input[type=button]:focus:not(:active)::before,
+a.button:focus:not(:active)::before,
+input[type=submit]:focus:not(:active)::before {
+  content: " ";
+  background: #fff;
+  -webkit-animation: ripple 0.65s linear;
+  -moz-animation: ripple 0.65s linear;
+  -ms-animation: ripple 0.65s linear;
+  -o-animation: ripple 0.65s linear;
+  animation: ripple 0.65s linear;
+  top: -50%;
+  left: -50%;
 }
 input[type=text],
 input[type=password],
@@ -9572,8 +9658,7 @@ label input[type=checkbox]:checked + i18n::before {
   transform: rotate(40deg);
   border-color: #46bfaf;
   height: 25px;
-  width: 25px;
-  margin-left: -3px;
+  width: 20px;
   margin-top: -11px;
 }
 label input[type=checkbox]:disabled + span::before {
