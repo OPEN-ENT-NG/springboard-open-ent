@@ -150,7 +150,7 @@ input[type=text], input[type=password], input[type=password], input[type=search]
 }
 
 .logo{
-	background: url(../img/illustrations/logo.png);
+	background: url(../img/illustrations/logo.png) center no-repeat;
 	height: @header-height;
 	width: 236px;
 	margin: 0;
@@ -164,7 +164,7 @@ i.send-mail{
 }
 
 i.send-mail:hover{
-
+	.icon(glyphicons_010_envelope_accent, 24px);
 }
 
 nav.horizontal{
@@ -174,6 +174,9 @@ nav.horizontal{
 	}
 	i.timeline{
 		.icon(glyphicons_355_bullhorn_white, 30px);
+	}
+	i.home{
+		.icon(glyphicons_020_home_white, 30px);
 	}
 	i.apps{
 		.icon(glyphicons_156_show_thumbnails_white, 30px);
@@ -1318,6 +1321,12 @@ nav.horizontal{
 .widgets{
 	padding: 0;
 	width: 34%;
+	widgets{
+		padding-left: 35px;
+		position: relative;
+		display: block;
+		box-sizing: border-box;
+	}
 }
 
 .widgets-friend{
@@ -1327,14 +1336,13 @@ nav.horizontal{
 
 .widget{
 	width: 100% !important;
-	background-color: white;
 }
 .widget-container{
 	.material-card();
 	background-color: white;
 	margin-bottom: 30px;
 	width: 98%;
-	.run-transition(box-shadow);
+	.run-transition(all);
 	h1:first-child{
 		text-align: center;
 		padding-top: 15px;
@@ -1343,13 +1351,13 @@ nav.horizontal{
 		margin-bottom: 5px;
 	}
 	&:hover{
-		box-shadow: none;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26) inset;
+		background: #fdfdfd;
 	}
 }
 
 .calendar.widget{
 	height: 180px;
-	background: #fff;
 	.current-month-header{
 		padding-top: 5px;
 		color: @primary;
@@ -1357,7 +1365,6 @@ nav.horizontal{
 	}
 	.content{
 		border: none;
-		background: #fff;
 		height: 124px;
 		box-sizing: content-box;
 		margin-top: 45px;
@@ -2882,7 +2889,7 @@ input[type=text][disabled] {
 }
 
 .droptarget{
-	background-color: @primary-light;
+	border-color: @accent;
 }
 
 .droptarget.block-editor{
@@ -3112,13 +3119,41 @@ em.skin-dyslexic{
 popover{
 	popover-content{
 		background: #fff;
-		.material-card();
+		.material-card(1px, 20px);
+		.more{
+			background: #eee;
+			.run-transition(background);
+			a{
+				color: #666;
+				font-size: 16px;
+				height: 40px;
+				line-height: 40px;
+				width: 100%;
+				&:hover{
+					border: none;
+				}
+			}
+			&:hover{
+				background: @accent;
+				a{
+					color: #fff;
+				}
+			}
+		}
 	}
 }
 
 nav.horizontal{
 	.bookmarked-app:hover{
 		background: transparent !important;
+	}
+	.my-apps{
+		width: 216px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		min-height: 40px;
 	}
 	.bookmarked-app {
 		&:nth-child(6n + 1){
@@ -3145,25 +3180,40 @@ nav.horizontal{
 				color: @red;
 			}
 		}
+		&:nth-child(6n + 5){
+			background: @primary;
+			&:hover a{
+				color: @red;
+			}
+		}
 		&:nth-child(6n){
 			background: @green;
 			&:hover a{
 				color: @green;
 			}
 		}
-		display: inline-block;
+		display: table;
 		margin: 1px;
-		width: 30px;
-		height: 30px;
+		width: 70px;
+		height: 70px;
 		text-align: center;
-		line-height: 30px;
+		line-height: 15px;
+
+		padding: 3px;
+		box-sizing: border-box;
+		float: left;
 		a{
 			color: #fff;
 			font-weight: bold;
 			text-transform: uppercase;
-			font-size: 18px;
-			height: auto;
+			font-size: 14px;
 			line-height: inherit;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			display: table-cell;
+			vertical-align: middle;
+            		word-break: break-word;
 		}
 		a:hover{
 			border-bottom: none !important;

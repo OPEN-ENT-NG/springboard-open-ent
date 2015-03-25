@@ -30,21 +30,29 @@
 		<div class="cell">
 			<i class="logo"></i>
 		</div>
-		<div class="cell">
-			<span class="welcome-message" translate key="welcome"></span>
 		</div>
 	</section>
 	<section class="row">
 		<nav class="horizontal">
-			<a href="/timeline/timeline"><i class="timeline"></i></a>
+			<a href="/timeline/timeline"><i class="home"></i></a>
 			<a href="/community"><i class="community"></i></a>
 			<popover>
 				<a href="/welcome" popover-opener><i class="apps"></i></a>
 				<popover-content>
-					<div class="bookmarked-app" ng-repeat="app in me.bookmarkedApps">
-						<a href="[[app.address]]" target="[[app.target]]">
-							[[lang.translate(app.displayName).charAt(0)]]
-						</a>
+					<div class="content">
+						<div class="my-apps row">
+							<div ng-if="bookmarkedApps.length === 0">
+								Cliquez sur "plus" pour sélectionner vos applications favorites.
+							</div>
+							<div class="bookmarked-app" ng-repeat="app in me.bookmarkedApps">
+								<a href="[[app.address]]" target="[[app.target]]">
+									[[lang.translate(app.displayName)]]
+								</a>
+							</div>
+						</div>
+						<div class="more row">
+							<a href="/welcome"><i18n>plus</i18n></a>
+						</div>
 					</div>
 				</popover-content>
 			</popover>

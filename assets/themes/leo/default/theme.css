@@ -4287,9 +4287,8 @@ portal .page-markers {
   color: #ccc;
   font-weight: bold;
 }
-.bookmarked-apps .icons-view {
+.bookmarked-apps .icons-view.apps {
   margin-top: 0;
-  padding-left: 5px;
 }
 popover {
   position: relative;
@@ -4299,25 +4298,32 @@ popover popover-content::before {
   content: "\25b2";
   display: block;
   position: absolute;
-  top: -17px;
+  top: -7px;
   font-size: 36px;
   left: 50%;
-  margin-left: -14px;
+  margin-left: -17px;
   color: #fff;
+  z-index: 0;
 }
 popover popover-content {
   position: absolute;
   min-height: 100px;
   background: #eee;
-  width: 100px;
+  width: 250px;
   top: 100%;
   opacity: 1;
   -o-transition: opacity 250ms ease;
   -moz-transition: opacity 250ms ease;
   -webkit-transition: opacity 250ms ease;
   transition: opacity 250ms ease;
-  left: -50px;
+  left: -125px;
   margin-left: 50%;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+popover popover-content .content {
+  z-index: 1;
+  position: relative;
 }
 popover popover-content.hidden {
   opacity: 0;
@@ -5017,6 +5023,10 @@ table {
   display: table;
   width: 100%;
   min-height: 350px;
+}
+.wizard .search-results {
+  max-height: 200px;
+  overflow: auto;
 }
 .wizard nav.steps {
   display: table-cell;
@@ -5723,7 +5733,7 @@ input[type=search] {
   margin-bottom: 7px;
 }
 .logo {
-  background: url(../img/illustrations/logo.png);
+  background: url(../img/illustrations/logo.png) center no-repeat;
   height: 64px;
   width: 236px;
   margin: 0;
@@ -5756,6 +5766,20 @@ nav.horizontal i.timeline {
   height: 30px;
   width: 30px;
   background-image: url("../img/icons/glyphicons_355_bullhorn_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
+nav.horizontal i.home {
+  height: 30px;
+  width: 30px;
+  background-image: url("../img/icons/glyphicons_020_home_white.png");
   background-repeat: no-repeat;
   background-position: center;
   display: block;
@@ -7453,13 +7477,18 @@ nav.horizontal a i {
   padding: 0;
   width: 34%;
 }
+.widgets widgets {
+  padding-left: 35px;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
 .widgets-friend {
   margin-left: 35%;
   padding-right: 35px;
 }
 .widget {
   width: 100% !important;
-  background-color: white;
 }
 .widget-container {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
@@ -7467,10 +7496,10 @@ nav.horizontal a i {
   background-color: white;
   margin-bottom: 30px;
   width: 98%;
-  -o-transition: box-shadow 250ms ease;
-  -moz-transition: box-shadow 250ms ease;
-  -webkit-transition: box-shadow 250ms ease;
-  transition: box-shadow 250ms ease;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 .widget-container h1:first-child {
   text-align: center;
@@ -7480,11 +7509,11 @@ nav.horizontal a i {
   margin-bottom: 5px;
 }
 .widget-container:hover {
-  box-shadow: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26) inset;
+  background: #fdfdfd;
 }
 .calendar.widget {
   height: 180px;
-  background: #fff;
 }
 .calendar.widget .current-month-header {
   padding-top: 5px;
@@ -7493,7 +7522,6 @@ nav.horizontal a i {
 }
 .calendar.widget .content {
   border: none;
-  background: #fff;
   height: 124px;
   box-sizing: content-box;
   margin-top: 45px;
@@ -9226,7 +9254,7 @@ input[type=text][disabled] {
   vertical-align: middle;
 }
 .droptarget {
-  background-color: #7ad9ff;
+  border-color: #ff8500;
 }
 .droptarget.block-editor {
   background-color: #eee;
@@ -9397,16 +9425,52 @@ em.skin-dyslexic {
 }
 popover popover-content {
   background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
 }
+popover popover-content .more {
+  background: #eee;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+popover popover-content .more a {
+  color: #666;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+}
+popover popover-content .more a:hover {
+  border: none;
+}
+popover popover-content .more:hover {
+  background: #ff8500;
+}
+popover popover-content .more:hover a {
+  color: #fff;
+}
+nav.horizontal .bookmarked-app:hover {
+  background: transparent !important;
+}
+nav.horizontal .my-apps {
+  width: 216px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 nav.horizontal .bookmarked-app {
-  display: inline-block;
+  display: table;
   margin: 1px;
-  width: 30px;
-  height: 30px;
+  width: 70px;
+  height: 70px;
   text-align: center;
-  line-height: 30px;
+  line-height: 15px;
+  padding: 3px;
+  box-sizing: border-box;
+  float: left;
 }
 nav.horizontal .bookmarked-app:nth-child(6n + 1) {
   background: #4cb0d6;
@@ -9432,6 +9496,12 @@ nav.horizontal .bookmarked-app:nth-child(6n + 4) {
 nav.horizontal .bookmarked-app:nth-child(6n + 4):hover a {
   color: #e13a3a;
 }
+nav.horizontal .bookmarked-app:nth-child(6n + 5) {
+  background: #4bafd5;
+}
+nav.horizontal .bookmarked-app:nth-child(6n + 5):hover a {
+  color: #e13a3a;
+}
 nav.horizontal .bookmarked-app:nth-child(6n) {
   background: #46bfaf;
 }
@@ -9442,7 +9512,15 @@ nav.horizontal .bookmarked-app a {
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
-  height: auto;
+  font-size: 14px;
   line-height: inherit;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+  word-break: break-word;
+}
+nav.horizontal .bookmarked-app a:hover {
+  border-bottom: none !important;
 }
