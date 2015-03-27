@@ -3621,6 +3621,9 @@ a.cke_smile img {
 .editor-view .viewer .media.sub-grid {
   opacity: 1;
 }
+.editor-view .viewer video {
+  width: 100%;
+}
 .viewer {
   padding-left: 80px;
 }
@@ -6901,7 +6904,7 @@ nav.vertical.stamps article.selected a:hover {
   background: #763294;
 }
 .cyan {
-  background: #4cb0d6 s;
+  background: #4bafd5;
 }
 .pink {
   background: #b930a2;
@@ -7024,10 +7027,10 @@ input[type=submit][disabled]:hover {
   color: #46bfaf;
 }
 .icons-view.apps .element:nth-child(6n + 1) {
-  background: #4cb0d6 s;
+  background: #4bafd5;
 }
 .icons-view.apps .element:nth-child(6n + 1):hover a {
-  color: #4cb0d6 s;
+  color: #4bafd5;
 }
 .icons-view.apps .element:nth-child(6n + 2) {
   background: #763294;
@@ -7578,7 +7581,7 @@ nav.horizontal a i {
   background: #46bfaf;
 }
 .toggle-panel .widgets-picker > .row .cell:nth-child(6n + 1) i {
-  background: #4cb0d6 s;
+  background: #4bafd5;
 }
 .toggle-panel .widgets-picker > .row .cell:nth-child(6n + 2) i {
   background: #763294;
@@ -8849,7 +8852,7 @@ select {
 .filters p:first-child li.selected:nth-child(6n + 1) i,
 .drop-down-filters .filters-icons li.selected:nth-child(6n + 1) i,
 .filters .filters-icons li.selected:nth-child(6n + 1) i {
-  background: #4cb0d6 s;
+  background: #4bafd5;
 }
 .drop-down-filters p:first-child li.selected:nth-child(6n + 2) i,
 .filters p:first-child li.selected:nth-child(6n + 2) i,
@@ -9440,7 +9443,7 @@ ul.colored ul li a.selected {
   color: #ffffff;
 }
 ul.colored ul.cyan li a.selected {
-  background: #4cb0d6 s;
+  background: #4bafd5;
 }
 ul.colored ul.green li a.selected {
   background: #46bfaf;
@@ -9605,10 +9608,10 @@ nav.horizontal .bookmarked-app {
   float: left;
 }
 nav.horizontal .bookmarked-app:nth-child(6n + 1) {
-  background: #4cb0d6 s;
+  background: #4bafd5;
 }
 nav.horizontal .bookmarked-app:nth-child(6n + 1):hover a {
-  color: #4cb0d6 s;
+  color: #4bafd5;
 }
 nav.horizontal .bookmarked-app:nth-child(6n + 2) {
   background: #763294;
@@ -9632,7 +9635,7 @@ nav.horizontal .bookmarked-app:nth-child(6n + 5) {
   background: #4bafd5;
 }
 nav.horizontal .bookmarked-app:nth-child(6n + 5):hover a {
-  color: #e13a3a;
+  color: #4bafd5;
 }
 nav.horizontal .bookmarked-app:nth-child(6n) {
   background: #46bfaf;
