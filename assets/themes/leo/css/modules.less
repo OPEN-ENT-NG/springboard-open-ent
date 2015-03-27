@@ -3361,10 +3361,12 @@ image-select > div::before{
 	padding: 10px;
 	font-size: 16px;
 	color: #fff;
-	.run-transition(left);
+	.run-transition(all);
 	box-sizing: border-box;
+	opacity: 0;
 }
 
 image-select > div:hover::before{
-	left: 0
+	left: 0;
+	opacity: 1;
 }

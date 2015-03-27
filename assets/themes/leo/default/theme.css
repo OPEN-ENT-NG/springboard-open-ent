@@ -9741,12 +9741,14 @@ image-select > div::before {
   padding: 10px;
   font-size: 16px;
   color: #fff;
-  -o-transition: left 250ms ease;
-  -moz-transition: left 250ms ease;
-  -webkit-transition: left 250ms ease;
-  transition: left 250ms ease;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   box-sizing: border-box;
+  opacity: 0;
 }
 image-select > div:hover::before {
   left: 0;
+  opacity: 1;
 }
