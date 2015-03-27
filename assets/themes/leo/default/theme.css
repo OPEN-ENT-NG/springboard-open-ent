@@ -5949,6 +5949,35 @@ nav.horizontal i.community {
   float: left;
   vertical-align: middle;
 }
+nav.horizontal i.mail {
+  height: 30px;
+  width: 30px;
+  background-image: url("../img/icons/glyphicons_010_envelope_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
+nav.horizontal i.mail span {
+  background-color: #ff8500;
+  display: block;
+  color: #fff;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 1px;
+  position: relative;
+  left: 20px;
+  top: -5px;
+}
 i.public {
   height: 25px;
   width: 25px;
@@ -9694,4 +9723,30 @@ label input[type=checkbox]:checked + i18n::before {
 }
 label input[type=checkbox]:disabled + span::before {
   border-color: #ddd !important;
+}
+image-select {
+  overflow: hidden;
+}
+image-select > div::before {
+  content: "Cliquez pour choisir une image ou glissez-déposez un fichier depuis votre poste de travail";
+  background: #ff8500;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  pointer-events: none;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  -o-transition: left 250ms ease;
+  -moz-transition: left 250ms ease;
+  -webkit-transition: left 250ms ease;
+  transition: left 250ms ease;
+  box-sizing: border-box;
+}
+image-select > div:hover::before {
+  left: 0;
 }
