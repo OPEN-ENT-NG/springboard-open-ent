@@ -2980,13 +2980,41 @@ em.high-importance {
 .illustrated-links ul {
   padding: 0;
 }
-.lightbox-view .tabs.linker section .icons-view {
+.lightbox {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  z-index: 10001;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.lightbox .content {
+  border-radius: 5px;
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  position: relative;
+  margin-top: 80px;
+  padding: 15px;
+}
+.lightbox-view .tabs.linker section .icons-view,
+.lightbox .tabs.linker section .icons-view {
   border-left: 0;
 }
-.lightbox-view .tabs.linker select {
+.lightbox-view .tabs.linker select,
+.lightbox .tabs.linker select {
   height: 25px;
 }
-.lightbox-view .linker .found-resources {
+.lightbox-view .linker .found-resources,
+.lightbox .linker .found-resources {
   position: relative;
   height: 165px;
   overflow-y: auto;
@@ -2996,7 +3024,8 @@ em.high-importance {
   -webkit-transition: height 250ms ease;
   transition: height 250ms ease;
 }
-.lightbox-view .linker .found-resources .icons-view {
+.lightbox-view .linker .found-resources .icons-view,
+.lightbox .linker .found-resources .icons-view {
   overflow: auto;
   position: absolute;
   height: 100%;
@@ -3004,10 +3033,12 @@ em.high-importance {
   top: 0;
   left: 0;
 }
-.lightbox-view .linker .illustrated-list {
+.lightbox-view .linker .illustrated-list,
+.lightbox .linker .illustrated-list {
   position: absolute;
 }
-.lightbox-view .linker .illustrated-list li img {
+.lightbox-view .linker .illustrated-list li img,
+.lightbox .linker .illustrated-list li img {
   position: relative !important;
   height: 100% !important;
 }
@@ -4695,10 +4726,15 @@ article iframe,
 .letter-picker i.close-2x {
   display: none;
 }
-.letter-picker .lightbox-view {
+.letter-picker .content {
   background: transparent;
 }
-.letter-picker .lightbox-view h2 {
+.letter-picker .lightbox-view,
+.letter-picker .lightbox {
+  background: transparent;
+}
+.letter-picker .lightbox-view h2,
+.letter-picker .lightbox h2 {
   color: #fff;
   margin: 1px;
   width: 86px;
@@ -4707,7 +4743,8 @@ article iframe,
   text-align: center;
   font-size: 24px;
 }
-.letter-picker .lightbox-view h2.disabled {
+.letter-picker .lightbox-view h2.disabled,
+.letter-picker .lightbox h2.disabled {
   color: #ddd;
 }
 h1.letter-picker {
@@ -5492,15 +5529,6 @@ html.print body section {
   padding: 10px;
   box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.26);
   background: #f9f9f9;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  box-shadow: none;
-  color: #888;
-  border-radius: 0;
-  padding: 24px;
   width: 800px;
   text-align: left;
 }
@@ -5525,13 +5553,6 @@ html.print body section {
 }
 .lightbox-view .tabs header.selected {
   background: transparent;
-}
-.lightbox-view h2:first-of-type {
-  margin-top: 0;
-}
-.lightbox-view .line {
-  border: 0;
-  margin: 0;
 }
 .lightbox-background {
   position: fixed;
@@ -6731,31 +6752,39 @@ i.history {
   border-bottom: 2px solid #4bafd5;
   color: #4bafd5;
 }
-.lightbox-window {
+.lightbox-window,
+.lightbox .content {
   padding: 10px;
   box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.26);
   background: #f9f9f9;
 }
-.lightbox-window nav.vertical {
+.lightbox-window nav.vertical,
+.lightbox .content nav.vertical {
   margin-right: 0px;
 }
-.lightbox-window nav.vertical li {
+.lightbox-window nav.vertical li,
+.lightbox .content nav.vertical li {
   padding-left: 10px;
 }
 .lightbox-window nav.vertical ul:first-child > li,
-.lightbox-window nav.vertical div ul:first-child > li {
+.lightbox .content nav.vertical ul:first-child > li,
+.lightbox-window nav.vertical div ul:first-child > li,
+.lightbox .content nav.vertical div ul:first-child > li {
   padding-left: 0;
 }
-.lightbox-window .tabs {
+.lightbox-window .tabs,
+.lightbox .content .tabs {
   margin-top: 10px;
 }
-.lightbox-window .tabs section {
+.lightbox-window .tabs section,
+.lightbox .content .tabs section {
   padding: 15px 20px;
   border: none;
   border-top: 1px solid #ddd;
   background: #fff;
 }
-.lightbox-window .tabs header.selected {
+.lightbox-window .tabs header.selected,
+.lightbox .content .tabs header.selected {
   background: transparent;
 }
 .select-file input[type=text] {
@@ -8072,24 +8101,6 @@ a:hover {
   background: #f0f0f0;
   border-left: 10px solid #4bafd5;
 }
-.lightbox-window {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  box-shadow: none;
-  color: #888;
-  border-radius: 0;
-  padding: 24px;
-}
-.lightbox-window h2:first-of-type {
-  margin-top: 0;
-}
-.lightbox-window .line {
-  border: 0;
-  margin: 0;
-}
 [data-drop-down] {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
@@ -8170,7 +8181,8 @@ article.selected a {
   background: #7ad9ff !important;
 }
 .lightbox-window .datepicker,
-.lightbox-view .datepicker {
+.lightbox-view .datepicker,
+.lightbox .datepicker {
   z-index: 1100;
 }
 .lightbox-view {
@@ -8188,15 +8200,6 @@ article.selected a {
   padding: 10px;
   box-shadow: 2px 2px 24px rgba(0, 0, 0, 0.26);
   background: #f9f9f9;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  box-shadow: none;
-  color: #888;
-  border-radius: 0;
-  padding: 24px;
 }
 .lightbox-view nav.vertical {
   margin-right: 0px;
@@ -8219,13 +8222,6 @@ article.selected a {
 }
 .lightbox-view .tabs header.selected {
   background: transparent;
-}
-.lightbox-view h2:first-of-type {
-  margin-top: 0;
-}
-.lightbox-view .line {
-  border: 0;
-  margin: 0;
 }
 .lightbox-background {
   position: fixed;
@@ -9083,10 +9079,12 @@ select {
   background: #209dcc;
   border: none;
 }
-.letter-picker .lightbox-view {
+.letter-picker .lightbox-view,
+.letter-picker .lightbox {
   background: transparent;
 }
-.letter-picker .lightbox-view h2 {
+.letter-picker .lightbox-view h2,
+.letter-picker .lightbox h2 {
   margin-right: 1px;
   width: 88px;
   height: 88px;
@@ -9101,10 +9099,12 @@ select {
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
 }
-.letter-picker .lightbox-view h2:hover {
+.letter-picker .lightbox-view h2:hover,
+.letter-picker .lightbox h2:hover {
   background: #ff8500;
 }
-.letter-picker .lightbox-view h2.disabled {
+.letter-picker .lightbox-view h2.disabled,
+.letter-picker .lightbox h2.disabled {
   background: #666;
   color: #999;
   cursor: default;
@@ -9163,25 +9163,31 @@ ul.toc li a {
 .dominos.fallen .item .domino .top {
   width: 52%;
 }
-.lightbox-view .tabs.linker .illustrated-list li {
+.lightbox-view .tabs.linker .illustrated-list li,
+.lightbox .tabs.linker .illustrated-list li {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   margin-bottom: 4px;
   height: 42px;
 }
-.lightbox-view .tabs.linker .illustrated-list li a {
+.lightbox-view .tabs.linker .illustrated-list li a,
+.lightbox .tabs.linker .illustrated-list li a {
   display: block;
 }
-.lightbox-view .tabs.linker .illustrated-list li.selected {
+.lightbox-view .tabs.linker .illustrated-list li.selected,
+.lightbox .tabs.linker .illustrated-list li.selected {
   background: #4bafd5;
 }
-.lightbox-view .tabs.linker .illustrated-list li.selected a {
+.lightbox-view .tabs.linker .illustrated-list li.selected a,
+.lightbox .tabs.linker .illustrated-list li.selected a {
   color: #fff;
 }
-.lightbox-view .tabs.linker .illustrated-list .name {
+.lightbox-view .tabs.linker .illustrated-list .name,
+.lightbox .tabs.linker .illustrated-list .name {
   float: left;
 }
-.lightbox-view .tabs.linker .illustrated-list .owner {
+.lightbox-view .tabs.linker .illustrated-list .owner,
+.lightbox .tabs.linker .illustrated-list .owner {
   float: right;
   margin-right: 8px;
 }

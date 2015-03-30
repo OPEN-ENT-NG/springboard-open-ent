@@ -532,7 +532,7 @@ i.history{
 	}
 }
 
-.lightbox-window{
+.lightbox-window, .lightbox .content{
 	padding: 10px;
 	box-shadow: 2px 2px 24px @shadow;
 	background: #f9f9f9;
@@ -1801,22 +1801,6 @@ a:hover{
 	//border-left: 10px solid @green;
 }
 
-.lightbox-window{
-	h2:first-of-type{
-		margin-top: 0;
-	}
-	.border-radius(3px);
-	box-shadow: none;
-	color: #888;
-	border-radius: 0;
-	padding: 24px;
-
-	.line{
-		border: 0;
-		margin: 0;
-	}
-}
-
 [data-drop-down]{
 	.material-card(3px, 5px);
 	border-top-left-radius: 0;
@@ -1900,7 +1884,7 @@ article.selected{
 	}
 }
 
-.lightbox-window .datepicker, .lightbox-view .datepicker{
+.lightbox-window .datepicker, .lightbox-view .datepicker, .lightbox .datepicker{
 	z-index: 1100;
 }
 
@@ -2617,7 +2601,7 @@ hr.solid{
 }
 
 .letter-picker{
-	.lightbox-view{
+	.lightbox-view, .lightbox{
 		background: transparent;
 		h2{
 			margin-right: 1px;
@@ -2706,7 +2690,7 @@ ul.toc{
 	}
 }
 
-.lightbox-view .tabs.linker .illustrated-list{
+.lightbox-view .tabs.linker .illustrated-list, .lightbox .tabs.linker .illustrated-list{
 	li{
 		.material-card(1px, 3px);
 		margin-bottom: 4px;
