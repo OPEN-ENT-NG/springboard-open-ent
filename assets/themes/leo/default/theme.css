@@ -5596,7 +5596,7 @@ body .material section.main {
   position: relative;
   top: 104px;
   box-sizing: border-box;
-  padding: 8px;
+  padding: 8px 35px;
 }
 button,
 input[type=button],
@@ -7638,14 +7638,12 @@ nav.horizontal a i {
   width: 34%;
 }
 .widgets widgets {
-  padding-left: 35px;
   position: relative;
   display: block;
   box-sizing: border-box;
 }
 .widgets-friend {
   margin-left: 35%;
-  padding-right: 35px;
 }
 .widget {
   width: 100% !important;
