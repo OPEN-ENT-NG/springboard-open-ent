@@ -3,10 +3,25 @@ a{
 	text-decoration: none;
 }
 
+.user-book{
+	input[type=button], button{
+		display: none;
+	}
+}
+
 article{
-	background: transparent;
+	background: #fdfdfd;
 	border: none;
 	margin-bottom: 15px;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+article.icons-view{
+	padding-left: 15px;
+	header{
+		display: none;
+	}
 }
 
 h1, h2, h3, h4, h5{
@@ -1310,6 +1325,17 @@ nav.horizontal{
 	margin-bottom: 20px !important;
 }
 
+article{
+	.material-card();
+	article{
+		box-shadow: none;
+	}
+}
+
+article.list-view{
+	padding: 0;
+}
+
 .notification {
 	.material-card();
 	padding: 7px;
@@ -1317,6 +1343,7 @@ nav.horizontal{
 	article {
 		margin: 0px;
 		padding: 0;
+		box-shadow: none;
 		.notification-date{
 			right: 69px;
 			em{
@@ -1837,6 +1864,7 @@ article.selected{
 
 [contenteditable]{
 	background: #FFF;
+	border: 1px solid #ddd;
 }
 [contenteditable]:focus{
 	border: 2px solid @accent;
