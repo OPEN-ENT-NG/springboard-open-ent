@@ -51,7 +51,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 8.33333333%;
+  padding-bottom: 8.333333333333334%;
 }
 .height-one .right-magnet.cell.absolute {
   right: 0 !important;
@@ -85,14 +85,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-one {
-    left: 8.33333333%;
+    left: 8.333333333333334%;
   }
 }
 .height-two {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 16.66666667%;
+  padding-bottom: 16.666666666666668%;
 }
 .height-two .right-magnet.cell.absolute {
   right: 0 !important;
@@ -108,7 +108,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-two {
-    left: 16.66666667%;
+    left: 16.666666666666668%;
   }
 }
 .height-three {
@@ -138,7 +138,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 33.33333333%;
+  padding-bottom: 33.333333333333336%;
 }
 .height-four .right-magnet.cell.absolute {
   right: 0 !important;
@@ -154,14 +154,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-four {
-    left: 33.33333333%;
+    left: 33.333333333333336%;
   }
 }
 .height-five {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 41.66666667%;
+  padding-bottom: 41.66666666666667%;
 }
 .height-five .right-magnet.cell.absolute {
   right: 0 !important;
@@ -177,7 +177,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-five {
-    left: 41.66666667%;
+    left: 41.66666666666667%;
   }
 }
 .height-six {
@@ -224,7 +224,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 58.33333333%;
+  padding-bottom: 58.333333333333336%;
 }
 .height-seven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -240,14 +240,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-seven {
-    left: 58.33333333%;
+    left: 58.333333333333336%;
   }
 }
 .height-eight {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 66.66666667%;
+  padding-bottom: 66.66666666666667%;
 }
 .height-eight .right-magnet.cell.absolute {
   right: 0 !important;
@@ -263,7 +263,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eight {
-    left: 66.66666667%;
+    left: 66.66666666666667%;
   }
 }
 .height-nine {
@@ -293,7 +293,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 83.33333333%;
+  padding-bottom: 83.33333333333334%;
 }
 .height-ten .right-magnet.cell.absolute {
   right: 0 !important;
@@ -309,14 +309,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-ten {
-    left: 83.33333333%;
+    left: 83.33333333333334%;
   }
 }
 .height-eleven {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
 }
 .height-eleven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -332,7 +332,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eleven {
-    left: 91.66666667%;
+    left: 91.66666666666667%;
   }
 }
 .height-twelve {
@@ -369,37 +369,37 @@
   left: 0;
 }
 .one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .three {
   width: 25%;
 }
 .four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .five {
-  width: 41.66666667%;
+  width: 41.66666666666667%;
 }
 .six {
   width: 50%;
 }
 .seven {
-  width: 58.33333333%;
+  width: 58.333333333333336%;
 }
 .eight {
-  width: 66.66666667%;
+  width: 66.66666666666667%;
 }
 .nine {
   width: 75%;
 }
 .ten {
-  width: 83.33333333%;
+  width: 83.33333333333334%;
 }
 .eleven {
-  width: 91.66666667%;
+  width: 91.66666666666667%;
 }
 .twelve {
   width: 100%;
@@ -1138,7 +1138,7 @@ p i {
 }
 .birthday nav.vertical ul li a .user {
   display: inline-block;
-  width: 41.66666667%;
+  width: 41.66666666666667%;
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
@@ -1303,7 +1303,7 @@ p i {
 .dominos .item .domino .top {
   box-sizing: content-box;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
   width: 100%;
   position: relative;
   clear: both;
@@ -1411,6 +1411,25 @@ i.show-icons {
 i.show-list {
   float: right !important;
   margin: 1px;
+}
+i.home {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_020_home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+  margin-top: -3px;
+  margin-right: 5px;
 }
 article.media {
   border: 2px dashed #ccc;
@@ -2995,11 +3014,6 @@ em.high-importance {
   right: 0;
   display: none;
 }
-.lightbox .background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 .lightbox .content {
   border-radius: 5px;
   width: 720px;
@@ -3009,12 +3023,6 @@ em.high-importance {
   position: relative;
   margin-top: 80px;
   padding: 15px;
-}
-.lightbox .content::after {
-  clear: both;
-  content: " ";
-  display: block;
-  width: 100%;
 }
 .lightbox-view .tabs.linker section .icons-view,
 .lightbox .tabs.linker section .icons-view {
@@ -3496,7 +3504,6 @@ a.cke_smile img {
   cursor: inherit;
   min-height: 60px;
   position: relative;
-  z-index: 100;
 }
 .nested-grid .drawing-grid > .row:last-child {
   min-height: 0;
@@ -4490,7 +4497,7 @@ popover popover-content.hidden {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -4586,16 +4593,16 @@ popover popover-content.hidden {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -4639,6 +4646,7 @@ drop-down-button {
   white-space: nowrap;
   min-width: 100%;
   position: relative;
+  display: inline-block;
 }
 .drop-down-button label {
   display: block;
@@ -5440,9 +5448,6 @@ recorder .controls {
 recorder .controls i:first-child {
   margin-left: 0;
 }
-[contenteditable]:focus {
-  cursor: text !important;
-}
 html,
 body {
   margin: 0;
@@ -5725,13 +5730,18 @@ h3 {
 }
 table,
 ul.list-view {
-  line-height: 45px;
+  line-height: 20px;
+  font-size: 14px;
   background: #fff;
 }
 table li.head,
 ul.list-view li.head {
   background: #4bafd5;
   color: #fff;
+}
+table li.head:hover,
+ul.list-view li.head:hover {
+  background: #4bafd5;
 }
 table thead tr,
 ul.list-view thead tr {
@@ -5741,8 +5751,16 @@ ul.list-view thead tr {
 }
 table thead th,
 ul.list-view thead th {
-  padding: 4px 15px;
+  padding: 10px;
   text-align: left;
+}
+table li,
+ul.list-view li {
+  padding: 10px;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
 }
 table li.checked,
 ul.list-view li.checked {
@@ -5753,6 +5771,17 @@ table li.checked a,
 ul.list-view li.checked a {
   color: #ffffff;
 }
+table li:hover,
+ul.list-view li:hover {
+  background: #eee;
+}
+table tbody tr,
+ul.list-view tbody tr {
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
 table tbody tr.checked,
 ul.list-view tbody tr.checked {
   background-color: #7ad9ff;
@@ -5762,9 +5791,13 @@ table tbody tr.checked a,
 ul.list-view tbody tr.checked a {
   color: #ffffff;
 }
+table tbody tr:hover,
+ul.list-view tbody tr:hover {
+  background: #eee;
+}
 table tbody tr td,
 ul.list-view tbody tr td {
-  padding: 4px 15px;
+  padding: 10px;
 }
 @-webkit-keyframes ripple {
   100% {
@@ -8686,7 +8719,7 @@ select {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -8776,16 +8809,16 @@ select {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;

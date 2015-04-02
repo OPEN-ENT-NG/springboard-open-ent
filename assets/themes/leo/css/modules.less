@@ -81,11 +81,15 @@ h3{
 }
 
 table, ul.list-view{
-	line-height: 45px;
+	line-height: 20px;
+	font-size: 14px;
 	background: #fff;
 	li.head{
 		background: @primary;
 		color: #fff;
+		&:hover{
+			background: @primary;
+		}
 	}
 	thead{
 		tr{
@@ -94,11 +98,13 @@ table, ul.list-view{
 			border: none;
 		}
 		th{
-			padding: 4px 15px;
+			padding: 10px;
 			text-align: left;
 		}
 	}
 	li{
+		padding: 10px;
+		.run-transition(background);
 		&.checked{
 			background-color: @primary-light;
 			color: #fff;
@@ -106,9 +112,14 @@ table, ul.list-view{
 				color: #fff
 			}
 		}
+
+		&:hover{
+			background: #eee;
+		}
 	}
 	tbody{
 		tr{
+			.run-transition(background);
 			&.checked{
 				background-color: @primary-light;
 				color: #fff;
@@ -116,8 +127,11 @@ table, ul.list-view{
 					color: #fff
 				}
 			}
+			&:hover{
+				background: #eee;
+			}
 			td{
-				padding: 4px 15px;
+				padding: 10px;
 			}
 		}
 	}
