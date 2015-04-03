@@ -1718,6 +1718,7 @@ i.download {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  max-width: 100%;
 }
 pdf-viewer {
   display: block;
@@ -2426,6 +2427,18 @@ article h2:first-child {
 [complete-click] {
   cursor: pointer;
 }
+.compare {
+  max-width: 100%;
+  table-layout: fixed;
+}
+.compare > tbody > tr > td,
+.compare > thead > tr > td {
+  width: 50%;
+}
+.compare > tbody > tr > td *,
+.compare > thead > tr > td * {
+  max-width: 100%;
+}
 hr {
   border: none;
   margin: 15px;
@@ -3014,6 +3027,11 @@ em.high-importance {
   right: 0;
   display: none;
 }
+.lightbox .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 .lightbox .content {
   border-radius: 5px;
   width: 720px;
@@ -3023,6 +3041,12 @@ em.high-importance {
   position: relative;
   margin-top: 80px;
   padding: 15px;
+}
+.lightbox .content::after {
+  clear: both;
+  content: " ";
+  display: block;
+  width: 100%;
 }
 .lightbox-view .tabs.linker section .icons-view,
 .lightbox .tabs.linker section .icons-view {
@@ -3504,6 +3528,7 @@ a.cke_smile img {
   cursor: inherit;
   min-height: 60px;
   position: relative;
+  z-index: 100;
 }
 .nested-grid .drawing-grid > .row:last-child {
   min-height: 0;
@@ -5447,6 +5472,9 @@ recorder .controls {
 }
 recorder .controls i:first-child {
   margin-left: 0;
+}
+[contenteditable]:focus {
+  cursor: text !important;
 }
 html,
 body {
