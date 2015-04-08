@@ -3049,6 +3049,19 @@ carousel nav ul li.current::after{
 	color: @accent;
 }
 
+carousel.slide{
+	.image.previous{
+		&::after{
+			border-right: 35px solid @primary;
+		}
+	}
+	.image.next{
+		&::after{
+			border-left: 35px solid @primary;
+		}
+	}
+}
+
 .calendar-current-week{
 	top: -110px;
     height: 40px;

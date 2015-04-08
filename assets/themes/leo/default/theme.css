@@ -5052,7 +5052,7 @@ carousel .images {
   width: 100%;
   position: relative;
   height: 0;
-  padding-bottom: 33%;
+  padding-bottom: 45%;
 }
 carousel .images .image {
   position: absolute;
@@ -5064,7 +5064,6 @@ carousel .images .image {
   transition: all 250ms ease;
   text-align: center;
   display: none;
-  overflow: hidden;
   padding: 8px;
   border: 1px solid #ddd;
   background: #fff;
@@ -5109,6 +5108,36 @@ carousel.slide .image.previous .image-container {
 carousel.slide .image.previous .image-container img {
   vertical-align: middle;
 }
+carousel.slide .image.previous::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background: rgba(255, 255, 255, 0.6);
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  top: 20px;
+  left: -25px;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+carousel.slide .image.previous:hover::before {
+  background: #fff;
+}
+carousel.slide .image.previous::after {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 35px solid black;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 45px;
+  left: 0px;
+}
 carousel.slide .image.next {
   display: block;
   width: 30%;
@@ -5121,6 +5150,36 @@ carousel.slide .image.next .image-container {
 }
 carousel.slide .image.next .image-container img {
   vertical-align: middle;
+}
+carousel.slide .image.next::before {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  right: -25px;
+  display: block;
+  background: rgba(255, 255, 255, 0.6);
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+carousel.slide .image.next:hover::before {
+  background: #fff;
+}
+carousel.slide .image.next::after {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 35px solid black;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 45px;
+  right: 0px;
 }
 carousel.slide .image.current {
   display: block;
@@ -9436,6 +9495,12 @@ carousel nav ul li::after {
 }
 carousel nav ul li.current::after {
   color: #ff8500;
+}
+carousel.slide .image.previous::after {
+  border-right: 35px solid #4bafd5;
+}
+carousel.slide .image.next::after {
+  border-left: 35px solid #4bafd5;
 }
 .calendar-current-week {
   top: -110px;
