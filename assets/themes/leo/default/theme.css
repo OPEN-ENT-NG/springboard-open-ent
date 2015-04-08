@@ -3012,7 +3012,7 @@ em.high-importance {
 .illustrated-links ul {
   padding: 0;
 }
-.lightbox {
+section.lightbox {
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -3027,12 +3027,12 @@ em.high-importance {
   right: 0;
   display: none;
 }
-.lightbox .background {
+section.lightbox .background {
   position: absolute;
   width: 100%;
   height: 100%;
 }
-.lightbox .content {
+section.lightbox > div.content {
   border-radius: 5px;
   width: 720px;
   margin-left: auto;
@@ -3041,8 +3041,9 @@ em.high-importance {
   position: relative;
   margin-top: 80px;
   padding: 15px;
+  float: none !important;
 }
-.lightbox .content::after {
+section.lightbox .content::after {
   clear: both;
   content: " ";
   display: block;
@@ -3537,8 +3538,14 @@ a.cke_smile img {
   position: absolute;
   bottom: -47px;
 }
+.illustrated-article {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
 .illustrated-article .illustration {
   display: table-cell;
+  width: 100px;
 }
 .illustrated-article .illustration .image {
   overflow: hidden;
@@ -3567,7 +3574,6 @@ a.cke_smile img {
 }
 .illustrated-article .illustrated-text {
   display: table-cell;
-  width: 100%;
   vertical-align: top;
   position: relative;
 }
@@ -4096,136 +4102,6 @@ a.cke_smile img {
 .filters ul input[type=checkbox] {
   visibility: hidden;
   position: absolute;
-}
-.drop-down-filters i.blog,
-.filters i.blog {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/blog-large.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.drop-down-filters i.userbook,
-.filters i.userbook {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/userbook-large.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.drop-down-filters i.workspace,
-.filters i.workspace {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/workspace-large.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.drop-down-filters i.wiki,
-.filters i.wiki {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/wiki-filter.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.drop-down-filters i.forum,
-.filters i.forum {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/forum-filter.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.drop-down-filters i.news,
-.filters i.news {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/actualites-filter.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.drop-down-filters i.pages,
-.filters i.pages {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/pages-filter.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.drop-down-filters i.conversation,
-.filters i.conversation,
-.drop-down-filters i.messagerie,
-.filters i.messagerie {
-  height: 99px;
-  width: 99px;
-  background-image: url("../img/icons/conversation-large.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  float: left;
-  vertical-align: middle;
-  cursor: pointer;
 }
 .drop-down-filters i.draft,
 .filters i.draft {
@@ -5166,8 +5042,7 @@ table {
   bottom: 10px;
   right: 10px;
 }
-.media .ml-sniplet [contenteditable],
-.media .ml-sniplet [contenteditable] {
+.media sniplet [contenteditable] {
   min-height: 300px;
   position: relative;
   border: 1px solid #eee;
