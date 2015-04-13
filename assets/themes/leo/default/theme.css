@@ -730,6 +730,9 @@ nav.vertical h2 {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+nav.vertical h2:first-child {
+  margin-bottom: 0;
+}
 nav.vertical h1 {
   margin-top: 0;
 }
@@ -815,18 +818,13 @@ input[type=password],
 input[type=search] {
   border: none;
 }
-nav.stamps {
-  width: 320px;
-}
 nav.stamps article {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  margin-top: 0;
   line-height: 20px;
   padding: 0;
-  width: 100%;
   height: 98px;
   width: 290px;
-  clear: both;
   position: relative;
 }
 nav.stamps article > div:nth-child(2) {
@@ -846,6 +844,42 @@ nav.stamps article > div:nth-child(1) {
   position: relative;
 }
 nav.stamps article > div:nth-child(1) img {
+  max-width: 100%;
+}
+nav.half-stamps > div > input[type=checkbox] {
+  margin-top: 30px;
+}
+nav.half-stamps article {
+  display: table;
+  margin-bottom: 5px;
+  line-height: 20px;
+  padding: 0;
+  height: 70px;
+  width: 290px;
+  position: relative;
+}
+nav.half-stamps article > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+nav.half-stamps article > div:nth-child(2) {
+  padding: 8px;
+  margin-left: 70px;
+  width: 100%;
+}
+nav.half-stamps article > div:nth-child(1) {
+  height: 70px;
+  width: 70px;
+  margin-right: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: block;
+  position: relative;
+}
+nav.half-stamps article > div:nth-child(1) img {
   max-width: 100%;
 }
 .dominos .mood {
@@ -1166,12 +1200,12 @@ p i {
   margin-right: 10px;
 }
 .horizontal-spacing {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.horizontal-spacing-twice {
   padding-left: 10px;
   padding-right: 10px;
+}
+.horizontal-spacing-twice {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .vertical-spacing {
   margin-top: 5px !important;
@@ -5411,6 +5445,25 @@ recorder .controls i:first-child {
 [contenteditable]:focus {
   cursor: text !important;
 }
+article.preview {
+  height: 115px;
+  overflow: hidden;
+  -o-transition: height 250ms ease;
+  -moz-transition: height 250ms ease;
+  -webkit-transition: height 250ms ease;
+  transition: height 250ms ease;
+}
+i.important::after {
+  content: "!";
+  font-size: 85px;
+  font-family: serif;
+  line-height: 100px;
+  width: 100px;
+  text-align: center;
+  display: block;
+  height: 100px;
+  position: relative;
+}
 html,
 body {
   margin: 0;
@@ -5662,6 +5715,11 @@ h2 {
 h3 {
   font-size: 1.4em;
   font-style: italic;
+}
+h4 {
+  font-size: 18px;
+  color: #444;
+  font-weight: bold;
 }
 .list-view .select-file {
   margin-top: 0px;
@@ -6859,23 +6917,24 @@ header.main {
 .row {
   max-width: 100%;
 }
-nav.vertical.stamps {
-  padding: 10px 15px;
+nav.vertical.stamps,
+nav.vertical.half-stamps {
+  padding: 0 30px 0 0;
   overflow: hidden;
 }
-nav.vertical.stamps article {
+nav.vertical.stamps article,
+nav.vertical.half-stamps article {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   background: white;
-  margin-top: 20px;
-  margin-bottom: 0px;
   line-height: 20px;
   -o-transition: background 250ms ease;
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
 }
-nav.vertical.stamps article h3 {
+nav.vertical.stamps article h3,
+nav.vertical.half-stamps article h3 {
   font-size: 18px;
   border: 0;
   color: black;
@@ -6883,14 +6942,17 @@ nav.vertical.stamps article h3 {
   font-style: normal;
   margin: 0;
 }
-nav.vertical.stamps article a {
+nav.vertical.stamps article a,
+nav.vertical.half-stamps article a {
   color: #4bafd5;
   margin: 0;
 }
-nav.vertical.stamps article a:hover {
+nav.vertical.stamps article a:hover,
+nav.vertical.half-stamps article a:hover {
   color: #ff8500;
 }
-nav.vertical.stamps article:hover i.send-mail {
+nav.vertical.stamps article:hover i.send-mail,
+nav.vertical.half-stamps article:hover i.send-mail {
   height: 24px;
   width: 24px;
   background-image: url("../img/icons/glyphicons_010_envelope_white.png");
@@ -6905,11 +6967,13 @@ nav.vertical.stamps article:hover i.send-mail {
   vertical-align: middle;
   margin: 7px;
 }
-nav.vertical.stamps article.selected {
+nav.vertical.stamps article.selected,
+nav.vertical.half-stamps article.selected {
   background: #ff8500;
   color: #fff;
 }
-nav.vertical.stamps article.selected i.send-mail {
+nav.vertical.stamps article.selected i.send-mail,
+nav.vertical.half-stamps article.selected i.send-mail {
   height: 24px;
   width: 24px;
   background-image: url("../img/icons/glyphicons_010_envelope_white.png");
@@ -6924,13 +6988,16 @@ nav.vertical.stamps article.selected i.send-mail {
   vertical-align: middle;
   margin: 7px;
 }
-nav.vertical.stamps article.selected h3 {
+nav.vertical.stamps article.selected h3,
+nav.vertical.half-stamps article.selected h3 {
   color: #fff;
 }
-nav.vertical.stamps article.selected a {
+nav.vertical.stamps article.selected a,
+nav.vertical.half-stamps article.selected a {
   color: #fff;
 }
-nav.vertical.stamps article.selected a:hover {
+nav.vertical.stamps article.selected a:hover,
+nav.vertical.half-stamps article.selected a:hover {
   color: #4bafd5;
 }
 .dominos .item {
@@ -7613,6 +7680,7 @@ article.list-view {
   border-radius: 2px;
   padding: 7px;
   margin-bottom: 25px;
+  background: #fff;
 }
 .notification article {
   background: transparent;
@@ -8016,6 +8084,9 @@ textarea:focus {
   filter: none;
   -webkit-filter: none;
 }
+em.metadata {
+  font-size: 12px;
+}
 filters {
   padding-bottom: 20px;
   width: 100%;
@@ -8027,6 +8098,13 @@ filters {
   box-sizing: border-box;
   max-width: 100%;
   display: block;
+}
+filters h4 {
+  margin: 0;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 16px;
+  color: #4bafd5;
 }
 filters p:first-child i {
   background-size: 100% auto;
@@ -9051,6 +9129,22 @@ select {
 .week-switcher .date-picker-icon {
   margin-right: 8px;
 }
+article.preview {
+  box-shadow: none;
+  background: transparent;
+  border: 1px solid #eee;
+}
+article.preview.expanded {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  background: #fff;
+  border: none;
+}
+article.preview.important {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  border: none;
+}
 .theme-preview {
   width: 25px;
   height: 25px;
@@ -9736,6 +9830,9 @@ nav.horizontal .bookmarked-app a {
 nav.horizontal .bookmarked-app a:hover {
   border-bottom: none !important;
 }
+label {
+  overflow: hidden;
+}
 label input[type=checkbox] {
   display: none;
 }
@@ -9799,4 +9896,7 @@ image-select > div::before {
 image-select > div:hover::before {
   left: 0;
   opacity: 1;
+}
+i.important {
+  color: #ff8500;
 }

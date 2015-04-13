@@ -54,6 +54,12 @@ h3{
 	font-style: italic;
 }
 
+h4{
+  font-size: 18px;
+  color: #444;
+  font-weight: bold;
+}
+
 .list-view{
 	.select-file{
 		margin-top: 0px;
@@ -651,15 +657,13 @@ header.main{
 	max-width: 100%;
 }
 
-nav.vertical.stamps{
-	padding: 10px 15px;
+nav.vertical.stamps, nav.vertical.half-stamps{
+	padding: 0 30px 0 0;
 	overflow: hidden;
 
 	article{
 		.material-card(2px, 3px);
 		background: white;
-		margin-top: 20px;
-		margin-bottom: 0px;
 		line-height: 20px;
 		.run-transition(background);
 
@@ -1356,6 +1360,7 @@ article.list-view{
 	.material-card();
 	padding: 7px;
 	margin-bottom: 25px;
+	background: #fff;
 	article {
 		background: transparent;
 		margin: 0px;
@@ -1378,7 +1383,6 @@ article.list-view{
 			}
 		}
 	}
-
 	.content{
 		padding: 0;
 	}
@@ -1756,7 +1760,18 @@ textarea:focus{
 	}
 }
 
+em.metadata{
+	font-size: 12px;
+}
+
 filters{
+	h4{
+		margin: 0;
+		font-weight: bold;
+		line-height: 30px;
+		font-size: 16px;
+		color: @primary;
+	}
 	padding-bottom: 20px;
 	.row;
 	display: block;
@@ -2573,6 +2588,23 @@ select{
 	}
 }
 
+article.preview{
+	box-shadow: none;
+	background: transparent;
+	border: 1px solid #eee;
+}
+
+article.preview.expanded{
+	.material-card();
+	background: #fff;
+	border: none;
+}
+
+article.preview.important{
+	.material-card(3px, 20px);
+	border: none;
+}
+
 .theme-preview{
 	width: 25px;
 	height: 25px;
@@ -3346,6 +3378,7 @@ nav.horizontal{
 }
 
 label{
+	overflow: hidden;
 	input[type=checkbox]{
 		display: none;
 	}
@@ -3409,4 +3442,8 @@ image-select > div::before{
 image-select > div:hover::before{
 	left: 0;
 	opacity: 1;
+}
+
+i.important{
+	color: @accent;
 }
