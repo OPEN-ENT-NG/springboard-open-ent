@@ -157,14 +157,14 @@ table, ul.list-view{
 }
 
 button, input[type=button], a.button, input[type=submit], .drop-down-button label, .drop-down-button.hidden label{
-	background: @primary;
+	background: @accent;
 	padding: 8px 18px 10px;
 	color: #fff;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 14px;
 	border-radius: 2px;
-	.run-transition(box-shadow);
+	.run-transition(all);
 	font-weight: 500;
 	line-height: 20px;
 	border: none;
@@ -269,6 +269,7 @@ nav.horizontal{
 	i{
 		display: inline-block !important;
 		float: none !important;
+		height: 64px !important;
 	}
 	i.timeline{
 		.icon(glyphicons_355_bullhorn_white, 30px);
@@ -787,7 +788,7 @@ ul.icons-tabs{
 		.material-card();
 		border-radius: 25px;
 		border: none;
-		background: @primary;
+		background: @accent;
 		i{
 			.invert-colors();
 		}
@@ -1047,11 +1048,11 @@ input[type=submit].flat-button, input[type=button].cancel, button.cancel,
 .drop-down-button label, .drop-down-button.hidden label{
 	border: none;
 	box-shadow: none;
-	color: @primary;
+	color: @accent;
 	background: #f0f0f0;
 
 	&:hover{
-		background: @primary;
+		background: @accent;
 		color: #fff;
 	}
 }
@@ -1321,10 +1322,8 @@ nav.horizontal{
 	a:hover{
 		border-bottom: 3px solid @accent;
 	}
-	img,i{
-		vertical-align: middle;
-        display: inline-block;
-        float: none;
+	img{
+		margin-top: 11px;
 	}
 }
 
@@ -1344,12 +1343,12 @@ nav.horizontal{
 }
 
 button:hover, input[type=button]:hover, a.button:hover, input[type=submit]:hover{
-	background: @primary-dark;
+	background: @dark-accent;
 	box-shadow: none;
 }
 
 button.cancel:hover, input[type=button].cancel:hover, a.button.cancel:hover, input[type=submit].cancel:hover{
-	background: @primary;
+	background: @accent;
 }
 
 nav.vertical{
@@ -1696,7 +1695,6 @@ textarea:focus{
 			content: "RSS";
 			color: @primary
 		}
-		margin-left: -40px;
 		text-align: center;
 		span{
 			display: block;
@@ -1706,8 +1704,8 @@ textarea:focus{
 			margin: 13px;
 		}
 		.rss-config-button {
-			background-image: url("../img/icons/cog.png");
-			background-size: 19px 19px;
+			background-image: url("../img/icons/glyphicons_137_cogwheels.png");
+			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
 			float: left !important;
@@ -1715,7 +1713,7 @@ textarea:focus{
 		}
 		.rss-refresh-button {
 			background-image: url("../img/icons/rss-refresh.png");
-			background-size: 19px 19px;
+			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center;
 			float: right !important;

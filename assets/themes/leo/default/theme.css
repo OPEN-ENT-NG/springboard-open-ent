@@ -6057,17 +6057,17 @@ a.button,
 input[type=submit],
 .drop-down-button label,
 .drop-down-button.hidden label {
-  background: #4bafd5;
+  background: #ff8500;
   padding: 8px 18px 10px;
   color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-size: 14px;
   border-radius: 2px;
-  -o-transition: box-shadow 250ms ease;
-  -moz-transition: box-shadow 250ms ease;
-  -webkit-transition: box-shadow 250ms ease;
-  transition: box-shadow 250ms ease;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   font-weight: 500;
   line-height: 20px;
   border: none;
@@ -6201,6 +6201,7 @@ i.send-mail:hover {
 nav.horizontal i {
   display: inline-block !important;
   float: none !important;
+  height: 64px !important;
 }
 nav.horizontal i.timeline {
   height: 30px;
@@ -7295,7 +7296,7 @@ ul.icons-tabs li {
   border-radius: 2px;
   border-radius: 25px;
   border: none;
-  background: #4bafd5;
+  background: #ff8500;
 }
 ul.icons-tabs li i {
   -webkit-filter: invert(100%);
@@ -7565,7 +7566,7 @@ button.cancel,
 .drop-down-button.hidden label {
   border: none;
   box-shadow: none;
-  color: #4bafd5;
+  color: #ff8500;
   background: #f0f0f0;
 }
 .flat-button:hover,
@@ -7575,17 +7576,17 @@ input[type=button].cancel:hover,
 button.cancel:hover,
 .drop-down-button label:hover,
 .drop-down-button.hidden label:hover {
-  background: #4bafd5;
+  background: #ff8500;
   color: #fff;
 }
 input[type=button].pick-file {
   border: none;
   box-shadow: none;
-  color: #4bafd5;
+  color: #ff8500;
   background: #f0f0f0;
 }
 input[type=button].pick-file:hover {
-  background: #4bafd5;
+  background: #ff8500;
   color: #fff;
 }
 input[type=text],
@@ -7829,11 +7830,8 @@ nav.horizontal a {
 nav.horizontal a:hover {
   border-bottom: 3px solid #ff8500;
 }
-nav.horizontal img,
-nav.horizontal i {
-  vertical-align: middle;
-  display: inline-block;
-  float: none;
+nav.horizontal img {
+  margin-top: 11px;
 }
 @media screen and (max-width: 550px) {
   nav.horizontal {
@@ -7853,14 +7851,14 @@ button:hover,
 input[type=button]:hover,
 a.button:hover,
 input[type=submit]:hover {
-  background: #209dcc;
+  background: #b25d00;
   box-shadow: none;
 }
 button.cancel:hover,
 input[type=button].cancel:hover,
 a.button.cancel:hover,
 input[type=submit].cancel:hover {
-  background: #4bafd5;
+  background: #ff8500;
 }
 nav.vertical {
   padding: 10px 5px;
@@ -8213,7 +8211,6 @@ textarea:focus {
   padding: 5px;
 }
 .rss-widget.widget h1 {
-  margin-left: -40px;
   text-align: center;
 }
 .rss-widget.widget h1:before {
@@ -8228,8 +8225,8 @@ textarea:focus {
   margin: 13px;
 }
 .rss-widget.widget h1 .rss-config-button {
-  background-image: url("../img/icons/cog.png");
-  background-size: 19px 19px;
+  background-image: url("../img/icons/glyphicons_137_cogwheels.png");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   float: left !important;
@@ -8237,7 +8234,7 @@ textarea:focus {
 }
 .rss-widget.widget h1 .rss-refresh-button {
   background-image: url("../img/icons/rss-refresh.png");
-  background-size: 19px 19px;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   float: right !important;
@@ -8423,7 +8420,7 @@ filters p:first-child i {
 .toggle-buttons button {
   border: none;
   box-shadow: none;
-  color: #4bafd5;
+  color: #ff8500;
   background: #f0f0f0;
   background: transparent;
   color: white;
@@ -8433,7 +8430,7 @@ filters p:first-child i {
   margin: 0;
 }
 .toggle-buttons button:hover {
-  background: #4bafd5;
+  background: #ff8500;
   color: #fff;
 }
 .toggle-buttons button[disabled],
@@ -9812,7 +9809,7 @@ input[type=text][disabled] {
 .patchwork .navigation .items .row .buttons button {
   border: none;
   box-shadow: none;
-  color: #4bafd5;
+  color: #ff8500;
   background: #f0f0f0;
   background: transparent;
   color: white;
@@ -9822,7 +9819,7 @@ input[type=text][disabled] {
   margin: 0;
 }
 .patchwork .navigation .items .row .buttons button:hover {
-  background: #4bafd5;
+  background: #ff8500;
   color: #fff;
 }
 .patchwork .navigation .items .row .buttons button:hover {
