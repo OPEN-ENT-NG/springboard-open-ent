@@ -51,7 +51,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 8.333333333333334%;
+  padding-bottom: 8.33333333%;
 }
 .height-one .right-magnet.cell.absolute {
   right: 0 !important;
@@ -85,14 +85,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-one {
-    left: 8.333333333333334%;
+    left: 8.33333333%;
   }
 }
 .height-two {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 16.666666666666668%;
+  padding-bottom: 16.66666667%;
 }
 .height-two .right-magnet.cell.absolute {
   right: 0 !important;
@@ -108,7 +108,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-two {
-    left: 16.666666666666668%;
+    left: 16.66666667%;
   }
 }
 .height-three {
@@ -138,7 +138,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 33.333333333333336%;
+  padding-bottom: 33.33333333%;
 }
 .height-four .right-magnet.cell.absolute {
   right: 0 !important;
@@ -154,14 +154,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-four {
-    left: 33.333333333333336%;
+    left: 33.33333333%;
   }
 }
 .height-five {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 41.66666666666667%;
+  padding-bottom: 41.66666667%;
 }
 .height-five .right-magnet.cell.absolute {
   right: 0 !important;
@@ -177,7 +177,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-five {
-    left: 41.66666666666667%;
+    left: 41.66666667%;
   }
 }
 .height-six {
@@ -224,7 +224,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 58.333333333333336%;
+  padding-bottom: 58.33333333%;
 }
 .height-seven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -240,14 +240,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-seven {
-    left: 58.333333333333336%;
+    left: 58.33333333%;
   }
 }
 .height-eight {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 66.66666666666667%;
+  padding-bottom: 66.66666667%;
 }
 .height-eight .right-magnet.cell.absolute {
   right: 0 !important;
@@ -263,7 +263,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eight {
-    left: 66.66666666666667%;
+    left: 66.66666667%;
   }
 }
 .height-nine {
@@ -293,7 +293,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 83.33333333333334%;
+  padding-bottom: 83.33333333%;
 }
 .height-ten .right-magnet.cell.absolute {
   right: 0 !important;
@@ -309,14 +309,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-ten {
-    left: 83.33333333333334%;
+    left: 83.33333333%;
   }
 }
 .height-eleven {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 91.66666666666667%;
+  padding-bottom: 91.66666667%;
 }
 .height-eleven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -332,7 +332,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eleven {
-    left: 91.66666666666667%;
+    left: 91.66666667%;
   }
 }
 .height-twelve {
@@ -369,37 +369,37 @@
   left: 0;
 }
 .one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .three {
   width: 25%;
 }
 .four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .five {
-  width: 41.66666666666667%;
+  width: 41.66666667%;
 }
 .six {
   width: 50%;
 }
 .seven {
-  width: 58.333333333333336%;
+  width: 58.33333333%;
 }
 .eight {
-  width: 66.66666666666667%;
+  width: 66.66666667%;
 }
 .nine {
   width: 75%;
 }
 .ten {
-  width: 83.33333333333334%;
+  width: 83.33333333%;
 }
 .eleven {
-  width: 91.66666666666667%;
+  width: 91.66666667%;
 }
 .twelve {
   width: 100%;
@@ -1174,7 +1174,7 @@ p i {
 }
 .birthday nav.vertical ul li a .user {
   display: inline-block;
-  width: 41.66666666666667%;
+  width: 41.66666667%;
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
@@ -1339,7 +1339,7 @@ p i {
 .dominos .item .domino .top {
   box-sizing: content-box;
   height: 0px;
-  padding-bottom: 91.66666666666667%;
+  padding-bottom: 91.66666667%;
   width: 100%;
   position: relative;
   clear: both;
@@ -4446,7 +4446,7 @@ popover popover-content.hidden {
 }
 .schedule .days .day {
   float: left;
-  width: 14.285714285714286%;
+  width: 14.28571429%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -4542,16 +4542,16 @@ popover popover-content.hidden {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -6139,8 +6139,9 @@ input[type=submit]:focus::before {
 }
 input[type=text],
 input[type=password],
-input[type=password],
-input[type=search] {
+input[type=search],
+input[type=tel],
+input[type=email] {
   color: #555555;
   background: transparent;
   height: 25px;
@@ -7581,7 +7582,9 @@ input[type=button].pick-file:hover {
 }
 input[type=text],
 input[type=password],
-input[type=search] {
+input[type=search],
+input[type=tel],
+input[type=email] {
   color: #555555;
   background: transparent;
   border-bottom: 1px solid #ddd;
@@ -7592,7 +7595,9 @@ input[type=search] {
 }
 input[type=text]:focus,
 input[type=password]:focus,
-input[type=search]:focus {
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=email]:focus {
   border-bottom: 2px solid #ff8500;
   outline: 0;
 }
@@ -7620,6 +7625,7 @@ input[type=search]:focus {
   position: relative;
   margin: 40px auto;
   font-size: 56px;
+  line-height: 1em;
 }
 .panel form {
   margin-left: auto;
@@ -7632,9 +7638,22 @@ input[type=search]:focus {
   box-shadow: 0 5px 18px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
 }
+.panel.browser-container > h1 {
+  color: #209dcc;
+}
 .panel .browser {
-  border-bottom: 1px solid #555;
-  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 10px 30px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+}
+.panel .browser h1 {
+  color: #209dcc;
 }
 .panel .browser .update img {
   height: 50px;
@@ -7652,6 +7671,17 @@ input[type=search]:focus {
 .panel input[type=submit].flat-button {
   background: #ffffff;
 }
+.panel.activation input[type="email"],
+.panel.activation input[type="tel"] {
+  width: 100%;
+  float: none;
+}
+.panel input.ng-invalid.ng-dirty {
+  border-bottom: 2px solid #e13a3a;
+}
+.panel input[type=checkbox].ng-invalid.ng-dirty {
+  box-shadow: 0px 0px 10px #e13a3a;
+}
 .panel .button-bar {
   margin-top: 30px;
   border-top: 1px solid rgba(0, 0, 0, 0.26);
@@ -7660,6 +7690,63 @@ input[type=search]:focus {
 .panel .button-bar > * {
   display: inline-block;
   vertical-align: middle;
+}
+.panel input-password input[type=password],
+.panel input-password input[type=text] {
+  width: 90%;
+  margin: 0px;
+  height: 32px;
+  display: inline-block;
+  float: none;
+}
+.panel input-password input[type=password].ng-invalid.ng-dirty,
+.panel input-password input[type=text].ng-invalid.ng-dirty {
+  border-bottom: 2px solid #e13a3a;
+}
+.panel input-password button {
+  background-image: url("../img/icons/glyphicons_051_eye_open.png");
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  background-size: 55%;
+  height: 32px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.panel .fill-bar {
+  width: 100%;
+  height: 15px;
+  box-shadow: 0px 0px 3px #444;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.panel .fill-bar > div:first-child {
+  height: 100%;
+  transition: all 0.25s ease-in-out;
+}
+.panel .fill-bar > div:first-child.weak {
+  background-color: #e13a3a;
+}
+.panel .fill-bar > div:first-child.normal {
+  background-color: #ff8500;
+}
+.panel .fill-bar > div:first-child.strong {
+  background-color: #46bfaf;
+}
+.panel .input-errors {
+  color: #e13a3a;
+  font-size: 12px;
+  display: block;
+}
+.panel .input-errors label {
+  font-size: 10px;
+  margin-left: 0px;
+}
+.panel .input-errors label:before {
+  content: "* ";
+}
+.panel .input-errors label:after {
+  content: "\A";
+  white-space: pre;
 }
 @-moz-keyframes blink {
   0% {
@@ -8962,7 +9049,7 @@ select {
 }
 .schedule .days .day {
   float: left;
-  width: 14.285714285714286%;
+  width: 14.28571429%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -9052,16 +9139,16 @@ select {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -10108,6 +10195,8 @@ h2 {
 input[type=text],
 input[type=password],
 input[type=password],
-input[type=search] {
+input[type=search],
+input[type="tel"],
+input[type="email"] {
   height: 35px;
 }
