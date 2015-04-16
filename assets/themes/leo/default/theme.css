@@ -5670,6 +5670,11 @@ plus .opener.plus .minus {
 }
 plus .opener.minus .plus {
   transform: scaleY(0);
+side-panel .opener::after {
+  content: "<";
+}
+side-panel.hidden .opener::after {
+  content: ">";
 }
 html,
 body {
@@ -7128,7 +7133,6 @@ header.main {
 }
 nav.vertical.stamps,
 nav.vertical.half-stamps {
-  padding: 0 30px 0 0;
   overflow: hidden;
 }
 nav.vertical.stamps article,
@@ -7861,7 +7865,7 @@ input[type=submit].cancel:hover {
   background: #ff8500;
 }
 nav.vertical {
-  padding: 10px 5px;
+  padding: 0 20px 0 0;
   margin-right: 10px;
 }
 nav.vertical h2 {
@@ -8305,7 +8309,6 @@ textarea:focus {
   font-weight: bold;
 }
 .icons-view {
-  background: transparent;
   margin-top: 0;
 }
 .icons-view strong {
