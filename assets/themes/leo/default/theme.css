@@ -5671,10 +5671,35 @@ plus .opener.plus .minus {
 plus .opener.minus .plus {
   transform: scaleY(0);
 side-panel .opener::after {
-  content: "<";
+  content: "\25B2";
+  display: block;
+  margin-top: -3px;
 }
-side-panel.hidden .opener::after {
-  content: ">";
+side-panel.hidden .toggle {
+  width: 0;
+}
+side-panel.hidden .opener {
+  transform: rotate(-90deg);
+}
+side-panel.hidden .opener:hover {
+  transform: rotate(90deg);
+}
+side-panel .toggle {
+  position: absolute;
+  width: 300px;
+  box-sizing: border-box;
+  -o-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -webkit-transition: width 250ms ease;
+  transition: width 250ms ease;
+  overflow: hidden;
+  top: 0;
+  left: 55px;
+}
+side-panel .toggle .content {
+  padding: 15px;
+  width: 300px;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -10191,4 +10216,16 @@ image-select > div:hover::before {
 }
 i.important {
   color: #ff8500;
+}
+side-panel .toggle {
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  background: #fff;
+}
+side-panel .opener {
+  color: #fff;
+  background: #ff8500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  border-radius: 25px;
 }
