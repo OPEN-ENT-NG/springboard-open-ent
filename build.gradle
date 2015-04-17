@@ -6,7 +6,7 @@ buildscript {
       }
   }
   dependencies {
-    classpath "fr.wseduc:springboard-plugin:0.2.0"
+    classpath "fr.wseduc:springboard-plugin:$springboardPluginVersion"
   }
 }
 apply plugin: 'scala'
