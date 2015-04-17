@@ -1891,7 +1891,7 @@ filters{
 	margin-left: 0;
 	background: @accent;
 	height: 58px;
-	button{
+	button, .button{
 		.flat-button;
 		background: transparent;
 		color: white;
@@ -1903,7 +1903,7 @@ filters{
 	button[disabled], button.disabled{
 		color: #888;
 	}
-	button:hover{
+	button:hover, .button:hover{
 		color: @accent;
 		background: white;
 	}
@@ -3538,14 +3538,38 @@ i.important{
 }
 
 side-panel{
+	&.hidden{
+		.opener{
+			.material-card();
+			border-radius: 25px;
+			background: @accent;
+		}
+	}
 	.toggle{
 		.material-card(5px, 25px);
 		background: #fff;
 	}
 	.opener{
 		color: #fff;
-		background: @accent;
+		background: @dark-accent;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+		border-radius: 25px;
+	}
+}
+
+plus{
+	.opener.plus{
 		.material-card();
 		border-radius: 25px;
+	}
+	.opener{
+		color: #fff;
+		background: @accent;
+		border-radius: 25px;
+		.run-transition(all);
+	}
+	.opener.minus{
+		background: @dark-accent;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
 	}
 }

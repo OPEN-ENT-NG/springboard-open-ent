@@ -5670,6 +5670,7 @@ plus .opener.plus .minus {
 }
 plus .opener.minus .plus {
   transform: scaleY(0);
+}
 side-panel .opener::after {
   content: "\25B2";
   display: block;
@@ -8445,7 +8446,8 @@ filters p:first-child i {
   background: #ff8500;
   height: 58px;
 }
-.toggle-buttons button {
+.toggle-buttons button,
+.toggle-buttons .button {
   border: none;
   box-shadow: none;
   color: #ff8500;
@@ -8457,7 +8459,8 @@ filters p:first-child i {
   font-weight: normal;
   margin: 0;
 }
-.toggle-buttons button:hover {
+.toggle-buttons button:hover,
+.toggle-buttons .button:hover {
   background: #ff8500;
   color: #fff;
 }
@@ -8465,7 +8468,8 @@ filters p:first-child i {
 .toggle-buttons button.disabled {
   color: #888;
 }
-.toggle-buttons button:hover {
+.toggle-buttons button:hover,
+.toggle-buttons .button:hover {
   color: #ff8500;
   background: white;
 }
@@ -10217,6 +10221,12 @@ image-select > div:hover::before {
 i.important {
   color: #ff8500;
 }
+side-panel.hidden .opener {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  border-radius: 25px;
+  background: #ff8500;
+}
 side-panel .toggle {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
@@ -10224,8 +10234,25 @@ side-panel .toggle {
 }
 side-panel .opener {
   color: #fff;
-  background: #ff8500;
+  background: #b25d00;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 25px;
+}
+plus .opener.plus {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
   border-radius: 25px;
+}
+plus .opener {
+  color: #fff;
+  background: #ff8500;
+  border-radius: 25px;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+plus .opener.minus {
+  background: #b25d00;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
 }
