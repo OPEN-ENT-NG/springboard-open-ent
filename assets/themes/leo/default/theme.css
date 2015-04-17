@@ -9603,6 +9603,7 @@ ul.toc {
 }
 ul.toc li {
   list-style-type: none;
+  padding: 3px;
 }
 ul.toc li a {
   font-size: 16px;
