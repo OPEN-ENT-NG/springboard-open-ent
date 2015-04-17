@@ -1534,6 +1534,11 @@ nav.vertical{
 		margin: 0;
 		padding: 0;
 		width: 100%;
+
+		&.sublist{
+			margin-left: 10px;
+		}
+
 		li{
 			font-size: 16px;
 			padding-left: 20px;
@@ -2351,6 +2356,7 @@ select{
 .illustrated-article{
 	.illustration{
 		min-width: 115px;
+		padding: 15px;
 		legend{
 			width: 90px;
 			background: transparent;
@@ -2373,7 +2379,20 @@ select{
 		}
 
 		border-top: 1px solid #ddd;
-		padding: 8px 8px 8px 0;
+		border-radius: 15px;
+		box-shadow: 0 0 2px;
+
+		.cke_editable{
+			border: none;
+			min-height: 110px;
+			border: 1px dashed #ddd;
+			margin-bottom: 10px;
+
+			&:focus{
+				border-width: 1px;
+				border-style: dashed;
+			}
+		}
 	}
 
 	.small.illustration .image{
@@ -2382,6 +2401,37 @@ select{
 	}
 }
 
+.bubble-container{
+	.bubble::after{
+		border-left: 2px solid #ddd;
+		border-top: 2px solid #ddd;
+		content: "";
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		top: 60px;
+		background: white;
+		left: -10px;
+		transform: rotate(-45deg);
+	}
+}
+/*
+.bubble-container:nth-child(2n+1){
+	.bubble::after{
+		border-right: 2px solid #ddd;
+		border-bottom: 2px solid #ddd;
+		content: "";
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		top: 60px;
+		background: white;
+		right: -10px;
+		z-index: 10;
+		transform: rotate(-45deg);
+	}
+}
+*/
 .menu-items{
 	padding: 0;
 	margin: 0;
@@ -3059,12 +3109,18 @@ ul.toc{
 nav.illustrated-links{
 	ul{
 		padding: 0;
+
 		li{
 			.material-card(3px, 4px);
 			list-style-type: none;
 			display: table;
 			margin-bottom: 12px;
 			border-right: 8px solid @primary;
+			transition: border-color 0.25s ease-in-out;
+
+			&.selected{
+				border-color: @accent;
+			}
 
 			.illustration{
 				display: table-cell;
@@ -3074,6 +3130,20 @@ nav.illustrated-links{
 					position: absolute;
 					width: 120px;
 					height: 120px;
+				}
+			}
+			.tiny-illustration{
+				display: table-cell;
+				min-width: 60px;
+				height: 60px;
+				img{
+					position: absolute;
+					width: 60px;
+					height: 60px;
+				}
+				& + .content input[type=checkbox]{
+					height: 40px;
+					margin: 0px 10px;
 				}
 			}
 			.content{
@@ -3099,9 +3169,115 @@ nav.illustrated-links{
 				em{
 					color: #aaa;
 				}
+				a{
+					line-height: 40px;
+				}
+			}
+		}
+
+		ul.secondary-list{
+			//margin-left: 60px;
+			display: table;
+			table-layout: fixed;
+			margin-bottom: 10px;
+
+			li{
+				box-shadow: none;
+				border: none;
+				display: table-row;
+				transition: background 0.25s ease-in-out;
+
+				&:hover{
+					background: @primary-light;
+				}
+				&.selected{
+					background: @primary;
+				}
+
+				> *{
+					height: 30px;
+					padding: 5px 5px 0px 5px;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					display: table-cell;
+					vertical-align: middle;
+					border-bottom: 1px solid #666;
+				}
+
+				.fixed-tiny{
+					width: 20px;
+				}
+				.fixed-small{
+					width: 45px;
+				}
+				.fixed-regular{
+					width: 100px;
+				}
+				.fixed-large{
+					width: 300px;
+				}
+
+				img{
+				  	height: 40px;
+				  	border-radius: 20px;
+				  	width: 40px;
+
+					&.small-image{
+						height:20px;
+						border-radius: 10px;
+						width: 20px;
+					}
+				}
+
+				.ellipsis{
+					*{
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+				}
+
+				.bubble-container{
+					position: relative;
+					*{
+						display:inline-block;
+						vertical-align: middle;
+					}
+
+					.bubble-small{
+						border-top: 1px solid #ddd;
+						border-radius: 15px;
+						box-shadow: 0 0 2px;
+						padding: 0px 10px;
+	  					font-size: 13px;
+						margin-left: 15px;
+						min-width: 50px;
+						height: 30px;
+						line-height: 30px;
+						max-width: 90%;
+						background: @background;
+					}
+					&::after{
+						border-left: 2px solid #bbb;
+						border-top: 2px solid #bbb;
+						content: "";
+						position: absolute;
+						width: 7px;
+						height: 7px;
+						top: 25px;
+						background: @background;
+						left: 15px;
+						transform: rotate(-45deg);
+					}
+				}
 			}
 		}
 	}
+}
+
+.caption{
+	line-height: 10px;
 }
 
 .media{

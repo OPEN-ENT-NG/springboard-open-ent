@@ -52,7 +52,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 8.333333333333334%;
+  padding-bottom: 8.33333333%;
 }
 .height-one .right-magnet.cell.absolute {
   right: 0 !important;
@@ -86,14 +86,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-one {
-    left: 8.333333333333334%;
+    left: 8.33333333%;
   }
 }
 .height-two {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 16.666666666666668%;
+  padding-bottom: 16.66666667%;
 }
 .height-two .right-magnet.cell.absolute {
   right: 0 !important;
@@ -109,7 +109,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-two {
-    left: 16.666666666666668%;
+    left: 16.66666667%;
   }
 }
 .height-three {
@@ -139,7 +139,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 33.333333333333336%;
+  padding-bottom: 33.33333333%;
 }
 .height-four .right-magnet.cell.absolute {
   right: 0 !important;
@@ -155,14 +155,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-four {
-    left: 33.333333333333336%;
+    left: 33.33333333%;
   }
 }
 .height-five {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 41.66666666666667%;
+  padding-bottom: 41.66666667%;
 }
 .height-five .right-magnet.cell.absolute {
   right: 0 !important;
@@ -178,7 +178,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-five {
-    left: 41.66666666666667%;
+    left: 41.66666667%;
   }
 }
 .height-six {
@@ -225,7 +225,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 58.333333333333336%;
+  padding-bottom: 58.33333333%;
 }
 .height-seven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -241,14 +241,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-seven {
-    left: 58.333333333333336%;
+    left: 58.33333333%;
   }
 }
 .height-eight {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 66.66666666666667%;
+  padding-bottom: 66.66666667%;
 }
 .height-eight .right-magnet.cell.absolute {
   right: 0 !important;
@@ -264,7 +264,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eight {
-    left: 66.66666666666667%;
+    left: 66.66666667%;
   }
 }
 .height-nine {
@@ -294,7 +294,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 83.33333333333334%;
+  padding-bottom: 83.33333333%;
 }
 .height-ten .right-magnet.cell.absolute {
   right: 0 !important;
@@ -310,14 +310,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-ten {
-    left: 83.33333333333334%;
+    left: 83.33333333%;
   }
 }
 .height-eleven {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 91.66666666666667%;
+  padding-bottom: 91.66666667%;
 }
 .height-eleven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -333,7 +333,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eleven {
-    left: 91.66666666666667%;
+    left: 91.66666667%;
   }
 }
 .height-twelve {
@@ -370,37 +370,37 @@
   left: 0;
 }
 .one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .three {
   width: 25%;
 }
 .four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .five {
-  width: 41.66666666666667%;
+  width: 41.66666667%;
 }
 .six {
   width: 50%;
 }
 .seven {
-  width: 58.333333333333336%;
+  width: 58.33333333%;
 }
 .eight {
-  width: 66.66666666666667%;
+  width: 66.66666667%;
 }
 .nine {
   width: 75%;
 }
 .ten {
-  width: 83.33333333333334%;
+  width: 83.33333333%;
 }
 .eleven {
-  width: 91.66666666666667%;
+  width: 91.66666667%;
 }
 .twelve {
   width: 100%;
@@ -1175,7 +1175,7 @@ p i {
 }
 .birthday nav.vertical ul li a .user {
   display: inline-block;
-  width: 41.66666666666667%;
+  width: 41.66666667%;
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
@@ -1340,7 +1340,7 @@ p i {
 .dominos .item .domino .top {
   box-sizing: content-box;
   height: 0px;
-  padding-bottom: 91.66666666666667%;
+  padding-bottom: 91.66666667%;
   width: 100%;
   position: relative;
   clear: both;
@@ -4447,7 +4447,7 @@ popover popover-content.hidden {
 }
 .schedule .days .day {
   float: left;
-  width: 14.285714285714286%;
+  width: 14.28571429%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -4543,16 +4543,16 @@ popover popover-content.hidden {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -8050,6 +8050,9 @@ nav.vertical ul {
   padding: 0;
   width: 100%;
 }
+nav.vertical ul.sublist {
+  margin-left: 10px;
+}
 nav.vertical ul li {
   font-size: 16px;
   padding-left: 20px;
@@ -8922,6 +8925,7 @@ select {
 }
 .illustrated-article .illustration {
   min-width: 115px;
+  padding: 15px;
 }
 .illustrated-article .illustration legend {
   width: 90px;
@@ -8939,15 +8943,55 @@ select {
 }
 .illustrated-article .illustrated-text {
   border-top: 1px solid #ddd;
-  padding: 8px 8px 8px 0;
+  border-radius: 15px;
+  box-shadow: 0 0 2px;
 }
 .illustrated-article .illustrated-text .upper-title {
   margin-bottom: 5px;
+}
+.illustrated-article .illustrated-text .cke_editable {
+  border: none;
+  min-height: 110px;
+  border: 1px dashed #ddd;
+  margin-bottom: 10px;
+}
+.illustrated-article .illustrated-text .cke_editable:focus {
+  border-width: 1px;
+  border-style: dashed;
 }
 .illustrated-article .small.illustration .image {
   width: 100px;
   height: 100px;
 }
+.bubble-container .bubble::after {
+  border-left: 2px solid #ddd;
+  border-top: 2px solid #ddd;
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 60px;
+  background: white;
+  left: -10px;
+  transform: rotate(-45deg);
+}
+/*
+.bubble-container:nth-child(2n+1){
+	.bubble::after{
+		border-right: 2px solid #ddd;
+		border-bottom: 2px solid #ddd;
+		content: "";
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		top: 60px;
+		background: white;
+		right: -10px;
+		z-index: 10;
+		transform: rotate(-45deg);
+	}
+}
+*/
 .menu-items {
   padding: 0;
   margin: 0;
@@ -9228,7 +9272,7 @@ select {
 }
 .schedule .days .day {
   float: left;
-  width: 14.285714285714286%;
+  width: 14.28571429%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -9318,16 +9362,16 @@ select {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.333333333333334%;
+  width: 8.33333333%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.666666666666668%;
+  width: 16.66666667%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.333333333333336%;
+  width: 33.33333333%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -9803,6 +9847,10 @@ nav.illustrated-links ul li {
   display: table;
   margin-bottom: 12px;
   border-right: 8px solid #4bafd5;
+  transition: border-color 0.25s ease-in-out;
+}
+nav.illustrated-links ul li.selected {
+  border-color: #ff8500;
 }
 nav.illustrated-links ul li .illustration {
   display: table-cell;
@@ -9813,6 +9861,20 @@ nav.illustrated-links ul li .illustration img {
   position: absolute;
   width: 120px;
   height: 120px;
+}
+nav.illustrated-links ul li .tiny-illustration {
+  display: table-cell;
+  min-width: 60px;
+  height: 60px;
+}
+nav.illustrated-links ul li .tiny-illustration img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+nav.illustrated-links ul li .tiny-illustration + .content input[type=checkbox] {
+  height: 40px;
+  margin: 0px 10px;
 }
 nav.illustrated-links ul li .content {
   padding: 8px;
@@ -9838,6 +9900,85 @@ nav.illustrated-links ul li .content p {
 }
 nav.illustrated-links ul li .content em {
   color: #aaa;
+}
+nav.illustrated-links ul li .content a {
+  line-height: 40px;
+}
+nav.illustrated-links ul ul.secondary-list {
+  display: table;
+  table-layout: fixed;
+  border-spacing: 0px 5px;
+  margin-bottom: 10px;
+}
+nav.illustrated-links ul ul.secondary-list li {
+  box-shadow: none;
+  border: none;
+  display: table-row;
+  transition: background 0.25s ease-in-out;
+}
+nav.illustrated-links ul ul.secondary-list li:hover {
+  background: #7ad9ff;
+}
+nav.illustrated-links ul ul.secondary-list li.selected {
+  background: #4bafd5;
+}
+nav.illustrated-links ul ul.secondary-list li > * {
+  height: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: table-cell;
+  vertical-align: middle;
+  border-bottom: 1px solid #666;
+}
+nav.illustrated-links ul ul.secondary-list li .fixed-small {
+  width: 30px;
+}
+nav.illustrated-links ul ul.secondary-list li .fixed-regular {
+  width: 100px;
+}
+nav.illustrated-links ul ul.secondary-list li .fixed-large {
+  width: 300px;
+}
+nav.illustrated-links ul ul.secondary-list li img {
+  height: 40px;
+  border-radius: 20px;
+  width: 40px;
+}
+nav.illustrated-links ul ul.secondary-list li .ellipsis * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+nav.illustrated-links ul ul.secondary-list li .bubble-container {
+  position: relative;
+}
+nav.illustrated-links ul ul.secondary-list li .bubble-container * {
+  display: inline-block;
+  vertical-align: middle;
+}
+nav.illustrated-links ul ul.secondary-list li .bubble-container .bubble {
+  border-top: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0 0 2px;
+  padding: 0px 10px;
+  font-size: 13px;
+  margin-left: 15px;
+  background: #f9f9f9;
+}
+nav.illustrated-links ul ul.secondary-list li .bubble-container::after {
+  border-left: 2px solid #bbb;
+  border-top: 2px solid #bbb;
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: 21px;
+  background: #f9f9f9;
+  left: 55px;
+  transform: rotate(-45deg);
 }
 .media .articles-sniplet img {
   width: auto;
