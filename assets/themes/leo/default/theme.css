@@ -10151,6 +10151,10 @@ input[type=text][disabled] {
 .flexible:empty + .flexible .patchwork .row h1 {
   color: #fff;
 }
+.flexible:empty + .flexible .patchwork .navigation article {
+  background: transparent;
+  box-shadow: none;
+}
 .patchwork {
   color: #555555;
 }
