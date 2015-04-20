@@ -5968,6 +5968,10 @@ h4 {
   margin: 0px 3px;
   background-size: contain;
 }
+.list-view tbody tr.new-element {
+  background: #efefef;
+  font-weight: bold;
+}
 table,
 ul.list-view {
   line-height: 20px;
@@ -6298,7 +6302,7 @@ nav.horizontal i.mail span {
   padding: 1px;
   position: relative;
   left: 20px;
-  top: -5px;
+  top: 13px;
 }
 i.public {
   height: 25px;
