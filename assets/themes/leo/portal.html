@@ -46,7 +46,7 @@
 							</div>
 							<div class="bookmarked-app" ng-repeat="app in me.bookmarkedApps">
 								<a href="[[app.address]]" target="[[app.target]]">
-									[[lang.translate(app.displayName)]]
+									<i class="[[app.icon]]" tooltip="[[app.displayName]]"></i>
 								</a>
 							</div>
 						</div>

@@ -1,3 +1,27 @@
+@import "../css/halflings.css";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../font/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.woff?8144122');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello-custom.woff?8144122');
+  font-weight: normal;
+  font-style: normal;
+}
+
 a{
 	color: @primary;
 	text-decoration: none;
@@ -854,6 +878,186 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 	}
 }
 
+i.workspace-large, i.type.workspace{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.workspace-large::before, i.type.workspace::before{
+	content: "\f07b";
+	color: @red;
+}
+
+i.conversation-large, i.type.messagerie{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.conversation-large::before, i.type.messagerie::before{
+	content: "\f0e0";
+	color: @yellow;
+}
+
+i.actualites-large, i.type.actualites{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.actualites-large::before, i.type.actualites::before{
+	content: "\f1ea";
+	color: @cyan;
+}
+
+i.wiki-large, i.type.wiki{
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.wiki-large::before, i.type.wiki::before{
+	content: '\e813';
+	color: @purple;
+}
+
+i.support-large, i.type.support{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.support-large::before, i.type.support::before{
+	content: "\f059";
+	color: @green;
+}
+
+i.userbook-large, i.type.userbook{
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.userbook-large::before, i.type.userbook::before{
+	content: '\e811';
+	color: @green;
+}
+
+i.archive-large, i.type.archive{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.archive-large::before, i.type.archive::before{
+	content: "\f1c6";
+	color: @orange;
+}
+
+i.blog-large, i.type.blog{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.blog-large::before, i.type.blog::before{
+	content: "\f0a1";
+	color: @orange;
+}
+
+i.mindmap-large, i.type.mindmap{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.mindmap-large::before, i.type.mindmap::before{
+	content: "\f0e8";
+	color: @cyan;
+}
+
+i.rack-large, i.type.rack{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.rack-large::before, i.type.rack::before{
+	content: "\f01c";
+	color: @red;
+}
+
+i.community-large, i.type.community{
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.community-large::before, i.type.community::before{
+	content: '\e814';
+	color: @purple;
+}
+
+i.forum-large, i.type.forum{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.forum-large::before, i.type.forum::before{
+	content: "\f086";
+	color: @purple;
+}
+
+i.my-network-large{
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.my-network-large::before{
+	content: '\e82e';
+	color: @orange;
+}
+
+i.collaborative-wall-large, i.type.collaborativewall{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.collaborative-wall-large::before, i.type.collaborativewall::before{
+	content: "\f1e7";
+	color: @green;
+}
+
+i.pages-large, i.type.pages{
+	font-family: FontAwesome;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.pages-large::before, i.type.pages::before{
+	content: "\f0c5";
+	color: @red;
+}
+
+i.admin-large{
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.admin-large::before{
+	content: '\e81a';
+	color: @yellow;
+}
+
+i.rbs-large, i.type.rbs{
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.rbs-large::before, i.type.rbs::before{
+	content: '\e81f';
+	color: @orange;
+}
+
+i.timelinegenerator-large, i.type.timelinegenerator{
+	font-family: fontello;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+i.timelinegenerator-large::before, i.type.timelinegenerator::before{
+	content: '\e80c';
+	color: @yellow;
+}
+
 .icons-view.apps{
 	margin-top: 12px;
 	.element{
@@ -866,76 +1070,39 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 		padding: 0;
 		height: 120px;
 		width: 120px;
-		background: @yellow;
-		transition: background .50s ease;
-		&:nth-child(6n){
-			background: @green;
-			&:hover a{
-				color: @green;
-			}
-		}
-		&:nth-child(6n + 1){
-			background: @cyan;
-			&:hover a{
-				color: @cyan;
-			}
-		}
-		&:nth-child(6n + 2){
-			background: @purple;
-			&:hover a{
-				color: @purple;
-			}
-		}
-		&:nth-child(6n + 3){
-			background: @pink;
-			&:hover a{
-				color: @pink;
-			}
-		}
-		&:nth-child(6n + 4){
-			background: @red;
-			&:hover a{
-				color: @red;
-			}
-		}
-		a{
-			color: #fff;
-			font-weight: bold;
-			i{
-				display: none;
+		&:hover{
+			i::before, a{
+				color: @accent !important;
 			}
 		}
 		.container{
 			width: 120px;
 			height: 120px;
 			padding: 0;
+			font-size: 75px;
+            line-height: 90px;
+            text-align: center;
+            i::before{
+            	.run-transition(color);
+            	font-weight: normal;
+            }
 		}
 		legend{
 			padding: 0 !important;
 			.border-box;
 			margin-left: 1px;
-			top: 0;
-			height: 120px;
 			width: 120px;
-			text-transform: uppercase;
 			background: none !important;
-			display: table;
 			a{
-				white-space: normal;
-				overflow: hidden;
-				word-wrap: break-word;
 				max-width: 120px;
-				width: 120px;
-				height: 120px;
-				display: table-cell;
 				vertical-align: middle;
 				text-align: center;
 				padding: 5px;
-				font-size: 26px;
                 line-height: 22px;
                 box-sizing: border-box;
+                color: #333;
+                font-weight: normal;
 			}
-
 		}
 	}
 }
@@ -1272,6 +1439,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=search]:focus, in
 }
 
 .tooltip{
+	pointer-events: none;
 	.content{
 		background: @accent;
 		color: #fff;
@@ -2604,10 +2772,14 @@ select{
                     	cursor: pointer;
                     }
 				}
-				span:first-letter{
-					visibility: visible;
+				i{
+					text-align: center;
+                      line-height: 38px;
+                      font-size: 25px;
 				}
-
+				i::before{
+					color: #fff !important;
+				}
 			}
 		}
 
@@ -3390,53 +3562,19 @@ popover{
 nav.horizontal{
 	.bookmarked-app:hover{
 		background: transparent !important;
+		i::before{
+			color: @accent;
+		}
 	}
 	.my-apps{
 		width: 216px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 15px;
-		margin-bottom: 15px;
+		margin-top: 5px;
+		margin-bottom: 5px;
 		min-height: 40px;
 	}
 	.bookmarked-app {
-		&:nth-child(6n + 1){
-			background: @cyan;
-			&:hover a{
-				color: @cyan;
-			}
-		}
-		&:nth-child(6n + 2){
-			background: @purple;
-			&:hover a{
-				color: @purple;
-			}
-		}
-		&:nth-child(6n + 3){
-			background: @pink;
-			&:hover a{
-				color: @pink;
-			}
-		}
-		&:nth-child(6n + 4){
-			background: @red;
-			&:hover a{
-				color: @red;
-			}
-		}
-		&:nth-child(6n + 5){
-			background: @primary;
-			&:hover a{
-				color: @primary;
-			}
-		}
-		&:nth-child(6n){
-			background: @green;
-			&:hover a{
-				color: @green;
-			}
-		}
-		display: table;
 		margin: 1px;
 		width: 70px;
 		height: 70px;
@@ -3447,17 +3585,14 @@ nav.horizontal{
 		box-sizing: border-box;
 		float: left;
 		a{
-			color: #fff;
-			font-weight: bold;
-			text-transform: uppercase;
-			font-size: 14px;
-			line-height: inherit;
-			height: 100%;
 			width: 100%;
-			margin: 0;
-			display: table-cell;
-			vertical-align: middle;
-            		word-break: break-word;
+			i{
+				display: block;
+				font-size: 50px;
+				height: 55px !important;
+				line-height: 40px;
+                width: 100%;
+			}
 		}
 		a:hover{
 			border-bottom: none !important;
