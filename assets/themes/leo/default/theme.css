@@ -7608,6 +7608,28 @@ i.type.timelinegenerator::before {
   content: '\e80c';
   color: #ecbe30;
 }
+i.pronote-large,
+i.type.pronote {
+  font-family: fontello;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.pronote-large::before,
+i.type.pronote::before {
+  content: '\e809';
+  color: #e13a3a;
+}
+i.note-large,
+i.type.note {
+  font-family: fontello;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.note-large::before,
+i.type.note::before {
+  content: '\f044';
+  color: #ecbe30;
+}
 .icons-view.apps {
   margin-top: 12px;
 }
