@@ -7624,7 +7624,7 @@ i.type.note {
 }
 i.note-large::before,
 i.type.note::before {
-  content: '\f044';
+  content: '\f080';
   color: #ecbe30;
 }
 .icons-view.apps {
