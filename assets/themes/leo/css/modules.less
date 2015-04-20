@@ -3931,3 +3931,34 @@ plus{
 		box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
 	}
 }
+
+.bookmark-widget{
+	h1::before{
+		content: "Signets"
+	}
+	.bookmark-add-button{
+		display: block;
+		font-size: 40px;
+		float: right;
+		margin-right: 15px;
+		&:hover{
+			color: @accent;
+		}
+	}
+	.bookmark-add-button::before{
+		content: "+";
+	}
+	.bookmark-config-button{
+    		display: block;
+        	font-size: 30px;
+        	float: left;
+        	margin-left: 15px;
+    		&:hover{
+        		color: @accent;
+        	}
+    	}
+    	.bookmark-config-button::before{
+    		font-family: FontAwesome;
+            content: "\f013";
+    	}
+}
