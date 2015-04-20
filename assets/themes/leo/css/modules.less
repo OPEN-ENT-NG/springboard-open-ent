@@ -1837,6 +1837,22 @@ textarea:focus{
 	border: 2px solid @accent;
 }
 
+.last-infos-widget{
+	.last-infos-config-button{
+		display: block;
+    	font-size: 30px;
+    	float: left;
+    	margin-left: 15px;
+		&:hover{
+    		color: @accent;
+    	}
+	}
+	.last-infos-config-button::before{
+		font-family: FontAwesome;
+        content: "\f013";
+	}
+}
+
 .last-mails-widget, .pages-widget {
 	background: #fff;
 	margin-bottom: 12px;
@@ -1872,28 +1888,31 @@ textarea:focus{
 			color: @primary
 		}
 		text-align: center;
-		span{
+		.rss-config-button{
+			font-family: FontAwesome;
 			display: block;
-			cursor: pointer;
-			height: 24px;
-			width: 24px;
-			margin: 13px;
+			font-size: 30px;
+			float: left;
+			margin-left: 15px;
+			&:hover{
+				color: @accent;
+			}
 		}
-		.rss-config-button {
-			background-image: url("../img/icons/glyphicons_137_cogwheels.png");
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			float: left !important;
-			margin: 0px 5px;
+		.rss-config-button::before {
+			content: "\f013";
 		}
-		.rss-refresh-button {
-			background-image: url("../img/icons/rss-refresh.png");
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center;
-			float: right !important;
-			margin: 0px 5px;
+		.rss-refresh-button{
+			font-family: FontAwesome;
+			display: block;
+			font-size: 30px;
+			float: right;
+			margin-right: 15px;
+			&:hover{
+				color: @accent;
+			}
+		}
+		.rss-refresh-button::before {
+			content: "\f021";
 		}
 	}
 	a{
