@@ -36,7 +36,7 @@ dependencies {
       deployment "net.atos:timelinegenerator:0.1-SNAPSHOT:deployment"
       deployment "fr.wseduc:pages:0.5-SNAPSHOT:deployment"
       deployment "net.atos:community:0.2-SNAPSHOT:deployment"
-      deployment "fr.wseduc:rack:0.3-SNAPSHOT:deployment"
+      deployment "fr.wseduc:rack:0.2-SNAPSHOT:deployment"
       deployment "net.atos:bookmark:0.3-SNAPSHOT:deployment"
       deployment "net.atos:collaborativewall:0.1-SNAPSHOT:deployment"
 }
