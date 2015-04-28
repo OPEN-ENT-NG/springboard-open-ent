@@ -29,7 +29,7 @@ dependencies {
       deployment "net.atos:actualites:0.5-SNAPSHOT:deployment"
       deployment "net.atos:rbs:0.5-SNAPSHOT:deployment"
       deployment "net.atos:wiki:0.5-SNAPSHOT:deployment"
-      deployment "net.atos:rss:0.4-SNAPSHOT:deployment"
+      deployment "net.atos:rss:0.3-SNAPSHOT:deployment"
       deployment "net.atos:support:0.4-SNAPSHOT:deployment"
       deployment "fr.wseduc:eliot:0.3-SNAPSHOT:deployment"
       deployment "net.atos:poll:0.1-SNAPSHOT:deployment"
