@@ -41,6 +41,7 @@ dependencies {
     deployment "net.atos:mindmap:$mindmapVersion:deployment"
     deployment "net.atos:poll:$pollVersion:deployment"
     deployment "net.atos:timelinegenerator:$timelinegeneratorVersion:deployment"
+    deployment "org.entcore:maxicours:$maxicoursVersion:deployment"
 }
 
 repositories{

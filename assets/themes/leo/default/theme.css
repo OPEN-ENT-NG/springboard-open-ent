@@ -1560,9 +1560,6 @@ table tr.underline {
   width: 100%;
   list-style-type: none;
 }
-.list-view > table {
-  margin: 0;
-}
 .list-view tr.underline {
   padding-bottom: 15px;
 }
@@ -5274,9 +5271,6 @@ carousel.triplets .image.current {
 carousel.triplets .image.next {
   margin-left: 66%;
 }
-.user-infos {
-  line-height: 25px;
-}
 .user-infos input[type=text] {
   margin: 0;
 }
@@ -5572,7 +5566,7 @@ nav.double-content-stamps article .horizontal-content label {
 }
 side-panel {
   position: relative;
-  z-index: 7001;
+  z-index: 1;
 }
 side-panel .opener {
   cursor: pointer;
@@ -8558,6 +8552,45 @@ textarea:focus {
 .rss-widget.widget .selected-item a {
   color: #fff;
   font-weight: bold;
+}
+.maxicours-widget h1 i.refresh-button {
+  font-family: FontAwesome;
+  display: block;
+  font-size: 30px;
+  float: right;
+  margin-right: 15px;
+}
+.maxicours-widget h1 i.refresh-button:hover {
+  color: #ff8500;
+}
+.maxicours-widget h1 i.refresh-button::before {
+  content: "\f021";
+}
+.maxicours-widget div.text-band {
+  background-color: #7ad9ff;
+  border-bottom: 2px solid #222222;
+  border-top: 2px solid #222222;
+  padding: 5px 0px;
+}
+.maxicours-widget div.text-band .highlighted {
+  background-color: #ff8500;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+}
+.maxicours-widget div.activity {
+  box-shadow: 0px 0px 2px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+}
+.maxicours-widget div.activity > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.maxicours-widget div.activity img.picto {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
 }
 .icons-view {
   margin-top: 0;
