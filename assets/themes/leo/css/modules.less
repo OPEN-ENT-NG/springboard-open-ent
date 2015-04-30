@@ -2692,9 +2692,9 @@ select{
 	height: auto;
 	margin-left: 130px;
 	padding-right: 130px;
-	box-sizing: border-box;
-	margin-top: 50px;
-	overflow: visible;
+	button{
+		border-radius: 0;
+	}
 	legend.timeslots{
 		width: 130px;
 		background: @primary-light;
@@ -2716,13 +2716,8 @@ select{
 			legend{
 				width: 100%;
 				text-align: center;
-				height: 40px;
-				line-height: 40px;
 				background: @primary-light;
 				color: #fff;
-				.border-box;
-				position: absolute;
-				top: -40px;
 			}
 			.timeslots{
 				height: auto;
@@ -2739,16 +2734,7 @@ select{
 	}
 
 	.schedule-items{
-		position: absolute;
-		left: 0;
-		top: 0px;
-		width: 100%;
-		.border-box;
 		.schedule-item{
-			width: 100%;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			position: absolute;
 			border: 1px solid transparent;
 			border-radius: 5px;
 			.border-box;
@@ -3621,11 +3607,6 @@ carousel.slide{
 			border-left: 35px solid @primary;
 		}
 	}
-}
-
-.calendar-current-week{
-	top: -110px;
-    height: 40px;
 }
 
 ul.colored{

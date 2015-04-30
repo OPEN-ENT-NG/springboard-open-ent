@@ -4436,8 +4436,40 @@ popover popover-content.hidden {
   margin-left: 115px;
   padding-right: 115px;
   box-sizing: border-box;
-  margin-top: 50px;
   overflow: visible;
+}
+.schedule .previous-timeslots {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: 800;
+}
+.schedule .next-timeslots {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 800;
+  height: 27px;
+}
+.schedule .hidden-schedule-items {
+  position: absolute;
+  top: -27px;
+  z-index: 801;
+  font-size: 10px;
+  left: 50%;
+  width: 22px;
+  margin-left: -7px;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  color: #666;
+  pointer-events: none;
+}
+.schedule .hidden-schedule-items.after {
+  bottom: -24px;
+  top: initial;
 }
 .schedule legend.timeslots {
   width: 115px;
@@ -4445,6 +4477,7 @@ popover popover-content.hidden {
   color: #777;
   position: absolute;
   left: -115px;
+  margin-top: 60px;
 }
 .schedule .timeslot {
   height: 40px;
@@ -4454,6 +4487,10 @@ popover popover-content.hidden {
 }
 .schedule .days {
   width: 100%;
+  padding-top: 60px;
+  overflow: hidden;
+  position: relative;
+  height: 546px;
 }
 .schedule .days .day {
   float: left;
@@ -4472,7 +4509,8 @@ popover popover-content.hidden {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
-  top: -40px;
+  top: -60px;
+  z-index: 800;
 }
 .schedule .days .day .timeslots {
   height: auto;
@@ -4488,10 +4526,6 @@ popover popover-content.hidden {
   box-sizing: border-box;
 }
 .schedule .schedule-items {
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -4568,11 +4602,9 @@ popover popover-content.hidden {
   width: 50%;
 }
 .week-switcher {
-  position: absolute;
   z-index: 30;
-  top: -35px;
-  left: -8px;
   font-size: 12px;
+  top: 15px;
 }
 .week-switcher .date-picker-icon {
   margin-right: 8px;
@@ -4587,7 +4619,7 @@ popover popover-content.hidden {
 }
 .calendar-current-week {
   position: absolute;
-  top: -98px;
+  top: -63px;
   height: 45px;
   background: #efefef;
   width: 100%;
@@ -9352,9 +9384,9 @@ select {
   height: auto;
   margin-left: 130px;
   padding-right: 130px;
-  box-sizing: border-box;
-  margin-top: 50px;
-  overflow: visible;
+}
+.schedule button {
+  border-radius: 0;
 }
 .schedule legend.timeslots {
   width: 130px;
@@ -9379,16 +9411,8 @@ select {
 .schedule .days .day legend {
   width: 100%;
   text-align: center;
-  height: 40px;
-  line-height: 40px;
   background: #7ad9ff;
   color: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  top: -40px;
 }
 .schedule .days .day .timeslots {
   height: auto;
@@ -9403,21 +9427,7 @@ select {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
-.schedule .schedule-items {
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-}
 .schedule .schedule-items .schedule-item {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  position: absolute;
   border: 1px solid transparent;
   border-radius: 5px;
   -webkit-box-sizing: border-box;
@@ -10316,10 +10326,6 @@ carousel.slide .image.previous::after {
 }
 carousel.slide .image.next::after {
   border-left: 35px solid #4bafd5;
-}
-.calendar-current-week {
-  top: -110px;
-  height: 40px;
 }
 ul.colored {
   padding-right: 15px;
