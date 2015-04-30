@@ -87,6 +87,12 @@ h4{
 		margin-top: 0px;
 	}
 	tbody{
+		tr:hover{
+			td.drop-line{
+				background: url(../img/icons/glyphicons_207_remove_2.png) no-repeat;
+				background-position: center 8px;
+			}
+		}
 		tr{
 			td.small-font{
 				font-size: 12px;
@@ -2840,12 +2846,6 @@ select{
 	.autocomplete > em:hover{
 		color: #fff;
 		background: @accent;
-	}
-	tr:hover{
-		td.drop-line{
-			background: url(../img/icons/glyphicons_207_remove_2.png) no-repeat;
-			background-position: center 8px;
-		}
 	}
 	input[type=text]{
 		width: 100%;

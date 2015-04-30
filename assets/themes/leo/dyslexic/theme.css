@@ -51,7 +51,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 8.33333333%;
+  padding-bottom: 8.333333333333334%;
 }
 .height-one .right-magnet.cell.absolute {
   right: 0 !important;
@@ -85,14 +85,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-one {
-    left: 8.33333333%;
+    left: 8.333333333333334%;
   }
 }
 .height-two {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 16.66666667%;
+  padding-bottom: 16.666666666666668%;
 }
 .height-two .right-magnet.cell.absolute {
   right: 0 !important;
@@ -108,7 +108,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-two {
-    left: 16.66666667%;
+    left: 16.666666666666668%;
   }
 }
 .height-three {
@@ -138,7 +138,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 33.33333333%;
+  padding-bottom: 33.333333333333336%;
 }
 .height-four .right-magnet.cell.absolute {
   right: 0 !important;
@@ -154,14 +154,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-four {
-    left: 33.33333333%;
+    left: 33.333333333333336%;
   }
 }
 .height-five {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 41.66666667%;
+  padding-bottom: 41.66666666666667%;
 }
 .height-five .right-magnet.cell.absolute {
   right: 0 !important;
@@ -177,7 +177,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-five {
-    left: 41.66666667%;
+    left: 41.66666666666667%;
   }
 }
 .height-six {
@@ -224,7 +224,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 58.33333333%;
+  padding-bottom: 58.333333333333336%;
 }
 .height-seven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -240,14 +240,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-seven {
-    left: 58.33333333%;
+    left: 58.333333333333336%;
   }
 }
 .height-eight {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 66.66666667%;
+  padding-bottom: 66.66666666666667%;
 }
 .height-eight .right-magnet.cell.absolute {
   right: 0 !important;
@@ -263,7 +263,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eight {
-    left: 66.66666667%;
+    left: 66.66666666666667%;
   }
 }
 .height-nine {
@@ -293,7 +293,7 @@
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 83.33333333%;
+  padding-bottom: 83.33333333333334%;
 }
 .height-ten .right-magnet.cell.absolute {
   right: 0 !important;
@@ -309,14 +309,14 @@
 }
 @media screen and (min-width: 720px) {
   .left-ten {
-    left: 83.33333333%;
+    left: 83.33333333333334%;
   }
 }
 .height-eleven {
   box-sizing: content-box;
   position: relative;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
 }
 .height-eleven .right-magnet.cell.absolute {
   right: 0 !important;
@@ -332,7 +332,7 @@
 }
 @media screen and (min-width: 720px) {
   .left-eleven {
-    left: 91.66666667%;
+    left: 91.66666666666667%;
   }
 }
 .height-twelve {
@@ -369,37 +369,37 @@
   left: 0;
 }
 .one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .three {
   width: 25%;
 }
 .four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .five {
-  width: 41.66666667%;
+  width: 41.66666666666667%;
 }
 .six {
   width: 50%;
 }
 .seven {
-  width: 58.33333333%;
+  width: 58.333333333333336%;
 }
 .eight {
-  width: 66.66666667%;
+  width: 66.66666666666667%;
 }
 .nine {
   width: 75%;
 }
 .ten {
-  width: 83.33333333%;
+  width: 83.33333333333334%;
 }
 .eleven {
-  width: 91.66666667%;
+  width: 91.66666666666667%;
 }
 .twelve {
   width: 100%;
@@ -1174,7 +1174,7 @@ p i {
 }
 .birthday nav.vertical ul li a .user {
   display: inline-block;
-  width: 41.66666667%;
+  width: 41.66666666666667%;
   height: 100%;
   line-height: 100%;
   vertical-align: middle;
@@ -1339,7 +1339,7 @@ p i {
 .dominos .item .domino .top {
   box-sizing: content-box;
   height: 0px;
-  padding-bottom: 91.66666667%;
+  padding-bottom: 91.66666666666667%;
   width: 100%;
   position: relative;
   clear: both;
@@ -1559,6 +1559,9 @@ table tr.underline {
 .list-view {
   width: 100%;
   list-style-type: none;
+}
+.list-view > table {
+  margin: 0;
 }
 .list-view tr.underline {
   padding-bottom: 15px;
@@ -1977,6 +1980,17 @@ a {
 .toggle-panel .toggle {
   width: 300px;
   padding: 20px;
+}
+.toggle-panel .toggle .row {
+  min-height: 0;
+}
+.toggle-panel .toggle ul {
+  margin: 0;
+  padding: 0;
+}
+.toggle-panel .toggle ul li {
+  list-style-type: none;
+  margin-left: 5px;
 }
 .toggle-buttons-spacer {
   margin-bottom: 50px;
@@ -4443,7 +4457,7 @@ popover popover-content.hidden {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -4539,16 +4553,16 @@ popover popover-content.hidden {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -5260,6 +5274,9 @@ carousel.triplets .image.current {
 carousel.triplets .image.next {
   margin-left: 66%;
 }
+.user-infos {
+  line-height: 25px;
+}
 .user-infos input[type=text] {
   margin: 0;
 }
@@ -5555,7 +5572,7 @@ nav.double-content-stamps article .horizontal-content label {
 }
 side-panel {
   position: relative;
-  z-index: 1;
+  z-index: 7001;
 }
 side-panel .opener {
   cursor: pointer;
@@ -5935,6 +5952,10 @@ h4 {
 }
 .list-view .select-file {
   margin-top: 0px;
+}
+.list-view tbody tr:hover td.drop-line {
+  background: url(../img/icons/glyphicons_207_remove_2.png) no-repeat;
+  background-position: center 8px;
 }
 .list-view tbody tr td.small-font {
   font-size: 12px;
@@ -8195,7 +8216,7 @@ article.list-view {
 }
 .toggle-panel {
   background: #4bafd5;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
   right: 58px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
@@ -8211,6 +8232,12 @@ article.list-view {
 }
 .toggle-panel h1 {
   display: none;
+}
+.toggle-panel a {
+  color: #fff;
+}
+.toggle-panel ul li {
+  font-size: 14px;
 }
 .toggle-panel .widgets-picker > .row .inactive i {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
@@ -9346,7 +9373,7 @@ select {
 }
 .schedule .days .day {
   float: left;
-  width: 14.28571429%;
+  width: 14.285714285714286%;
   position: relative;
 }
 .schedule .days .day legend {
@@ -9436,16 +9463,16 @@ select {
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
-  width: 8.33333333%;
+  width: 8.333333333333334%;
 }
 .schedule .schedule-items .schedule-item.two {
-  width: 16.66666667%;
+  width: 16.666666666666668%;
 }
 .schedule .schedule-items .schedule-item.three {
   width: 25%;
 }
 .schedule .schedule-items .schedule-item.four {
-  width: 33.33333333%;
+  width: 33.333333333333336%;
 }
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
@@ -9521,10 +9548,6 @@ select {
 .share .autocomplete > em:hover {
   color: #fff;
   background: #ff8500;
-}
-.share tr:hover td.drop-line {
-  background: url(../img/icons/glyphicons_207_remove_2.png) no-repeat;
-  background-position: center 8px;
 }
 .share input[type=text] {
   width: 100%;
