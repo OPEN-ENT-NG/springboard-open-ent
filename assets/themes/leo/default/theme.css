@@ -1560,6 +1560,9 @@ table tr.underline {
   width: 100%;
   list-style-type: none;
 }
+.list-view > table {
+  margin: 0;
+}
 .list-view tr.underline {
   padding-bottom: 15px;
 }
@@ -1977,6 +1980,17 @@ a {
 .toggle-panel .toggle {
   width: 300px;
   padding: 20px;
+}
+.toggle-panel .toggle .row {
+  min-height: 0;
+}
+.toggle-panel .toggle ul {
+  margin: 0;
+  padding: 0;
+}
+.toggle-panel .toggle ul li {
+  list-style-type: none;
+  margin-left: 5px;
 }
 .toggle-buttons-spacer {
   margin-bottom: 50px;
@@ -4422,8 +4436,40 @@ popover popover-content.hidden {
   margin-left: 115px;
   padding-right: 115px;
   box-sizing: border-box;
-  margin-top: 50px;
   overflow: visible;
+}
+.schedule .previous-timeslots {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: 800;
+}
+.schedule .next-timeslots {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 800;
+  height: 27px;
+}
+.schedule .hidden-schedule-items {
+  position: absolute;
+  top: -27px;
+  z-index: 801;
+  font-size: 10px;
+  left: 50%;
+  width: 22px;
+  margin-left: -7px;
+  background: #fff;
+  border-radius: 15px;
+  text-align: center;
+  color: #666;
+  pointer-events: none;
+}
+.schedule .hidden-schedule-items.after {
+  bottom: -24px;
+  top: initial;
 }
 .schedule legend.timeslots {
   width: 115px;
@@ -4431,6 +4477,7 @@ popover popover-content.hidden {
   color: #777;
   position: absolute;
   left: -115px;
+  margin-top: 60px;
 }
 .schedule .timeslot {
   height: 40px;
@@ -4440,6 +4487,10 @@ popover popover-content.hidden {
 }
 .schedule .days {
   width: 100%;
+  padding-top: 60px;
+  overflow: hidden;
+  position: relative;
+  height: 546px;
 }
 .schedule .days .day {
   float: left;
@@ -4458,7 +4509,8 @@ popover popover-content.hidden {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   position: absolute;
-  top: -40px;
+  top: -60px;
+  z-index: 800;
 }
 .schedule .days .day .timeslots {
   height: auto;
@@ -4474,10 +4526,6 @@ popover popover-content.hidden {
   box-sizing: border-box;
 }
 .schedule .schedule-items {
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -4554,11 +4602,9 @@ popover popover-content.hidden {
   width: 50%;
 }
 .week-switcher {
-  position: absolute;
   z-index: 30;
-  top: -35px;
-  left: -8px;
   font-size: 12px;
+  top: 15px;
 }
 .week-switcher .date-picker-icon {
   margin-right: 8px;
@@ -4573,7 +4619,7 @@ popover popover-content.hidden {
 }
 .calendar-current-week {
   position: absolute;
-  top: -98px;
+  top: -63px;
   height: 45px;
   background: #efefef;
   width: 100%;
@@ -5260,6 +5306,9 @@ carousel.triplets .image.current {
 carousel.triplets .image.next {
   margin-left: 66%;
 }
+.user-infos {
+  line-height: 25px;
+}
 .user-infos input[type=text] {
   margin: 0;
 }
@@ -5495,9 +5544,67 @@ input-password button {
   vertical-align: middle;
   border-left: none;
 }
+.hash-magnet {
+  margin-top: -80px;
+  padding-top: 80px;
+  display: block;
+}
+nav.double-content-stamps {
+  text-align: center;
+}
+nav.double-content-stamps article::first-child {
+  margin-right: 0;
+}
+nav.double-content-stamps article {
+  width: 330px;
+  display: inline-block;
+  text-align: left;
+  padding: 0;
+  margin-right: 25px;
+  margin-bottom: 20px;
+  position: relative;
+}
+nav.double-content-stamps article .illustration {
+  float: left;
+  width: 180px;
+  height: 120px;
+}
+nav.double-content-stamps article .illustration img {
+  width: 180px;
+  height: 120px;
+}
+nav.double-content-stamps article .vertical-content {
+  float: right;
+  width: 150px;
+  height: 240px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+nav.double-content-stamps article .vertical-content ul {
+  padding: 0;
+}
+nav.double-content-stamps article .vertical-content ul li {
+  list-style-type: none;
+}
+nav.double-content-stamps article .vertical-content ul li a {
+  display: block;
+  margin-bottom: 3px;
+}
+nav.double-content-stamps article .horizontal-content {
+  float: left;
+  width: 180px;
+  height: 120px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+nav.double-content-stamps article .horizontal-content label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
 side-panel {
   position: relative;
-  z-index: 1;
+  z-index: 7001;
 }
 side-panel .opener {
   cursor: pointer;
@@ -6201,6 +6308,20 @@ nav.horizontal i.community {
   height: 30px;
   width: 30px;
   background-image: url("../img/icons/glyphicons_308_share_alt_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  vertical-align: middle;
+}
+nav.horizontal i.help {
+  height: 30px;
+  width: 30px;
+  background-image: url("../img/icons/glyphicons_194_circle_question_mark_white.png");
   background-repeat: no-repeat;
   background-position: center;
   display: block;
