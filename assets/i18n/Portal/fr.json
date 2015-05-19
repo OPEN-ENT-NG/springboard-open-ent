@@ -1,7 +1,7 @@
 {
-  "default": "défaut",
-  "dyslexic": "dyslexiques",
-  "recorder": "dictaphone",
-  "calendar": "calendrier",
-  "actualites": "actualités"
+  "default": "Défaut",
+  "dyslexic": "Dyslexiques",
+  "recorder": "Dictaphone",
+  "calendar": "Calendrier",
+  "actualites": "Actualités"
 }
