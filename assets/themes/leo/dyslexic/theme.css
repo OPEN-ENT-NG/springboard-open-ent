@@ -4742,10 +4742,6 @@ article iframe,
 .letter-picker .content {
   background: transparent;
 }
-.letter-picker .lightbox-view,
-.letter-picker .lightbox {
-  background: transparent;
-}
 .letter-picker .lightbox-view h2,
 .letter-picker .lightbox h2 {
   color: #fff;
@@ -4761,10 +4757,12 @@ article iframe,
   color: #ddd;
 }
 h1.letter-picker {
-  width: 16px;
-  margin-left: 5px;
-  text-align: center;
   clear: both;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin: 40px auto -9px;
 }
 nav.illustrated-links ul li {
   list-style-type: none;
@@ -4787,6 +4785,8 @@ nav.illustrated-links ul li .content {
   display: table-cell;
   vertical-align: top;
   width: 100%;
+  position: relative;
+  min-height: 0;
 }
 nav.illustrated-links ul li .content h1 {
   margin: 0px;
@@ -5079,6 +5079,7 @@ ul.thought-out-actions > li p {
   float: right !important;
   overflow: hidden;
   padding: 0;
+  position: relative;
 }
 [sortable-element] {
   cursor: move;
@@ -5163,6 +5164,7 @@ carousel .images .image {
 }
 carousel .images .image img {
   display: inline-block;
+  max-height: 100%;
 }
 carousel .images .image .image-container {
   height: 100%;
@@ -10683,4 +10685,7 @@ input[type=search],
 input[type="tel"],
 input[type="email"] {
   height: 35px;
+}
+textarea {
+  font-family: OpenDyslexic;
 }
