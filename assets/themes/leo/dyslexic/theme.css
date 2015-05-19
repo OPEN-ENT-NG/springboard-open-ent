@@ -5903,9 +5903,6 @@ input[type=submit],
 .drop-down-button.hidden label {
   font-family: OpenDyslexic;
 }
-input[type=text] {
-  font-family: OpenDyslexic;
-}
 @font-face {
   font-family: 'FontAwesome';
   src: url('../font/fontawesome-webfont.eot?v=4.3.0');
@@ -10686,6 +10683,8 @@ input[type="tel"],
 input[type="email"] {
   height: 35px;
 }
-textarea {
+input[type=text],
+textarea,
+select {
   font-family: OpenDyslexic;
 }
