@@ -2552,10 +2552,10 @@ select{
 		background-color: transparent;
 		border: none;
 	}
-	i.image, input[type=button].image{
+	i.image, input[type=button].image, input[type=button].image:hover{
 		.icon(picture-icon, 30px);
 	}
-	i.sound, input[type=button].sound{
+	i.sound, input[type=button].sound, input[type=button].sound:hover{
 		.icon(music-icon, 30px);
 	}
 	i.video{
@@ -2590,6 +2590,8 @@ select{
 	}
 	input[type=button]:hover{
 		color: @accent;
+		background-color: transparent;
+		background-size: 19px;
 	}
 }
 

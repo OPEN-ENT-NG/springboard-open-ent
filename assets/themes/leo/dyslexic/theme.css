@@ -9176,7 +9176,8 @@ select {
   border: none;
 }
 .menu-items i.image,
-.menu-items input[type=button].image {
+.menu-items input[type=button].image,
+.menu-items input[type=button].image:hover {
   height: 30px;
   width: 30px;
   background-image: url("../img/icons/picture-icon.png");
@@ -9191,7 +9192,8 @@ select {
   vertical-align: middle;
 }
 .menu-items i.sound,
-.menu-items input[type=button].sound {
+.menu-items input[type=button].sound,
+.menu-items input[type=button].sound:hover {
   height: 30px;
   width: 30px;
   background-image: url("../img/icons/music-icon.png");
@@ -9270,6 +9272,8 @@ select {
 }
 .menu-items input[type=button]:hover {
   color: #ff8500;
+  background-color: transparent;
+  background-size: 19px;
 }
 .square-menu button {
   background: #4bafd5;
