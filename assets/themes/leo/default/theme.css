@@ -5718,6 +5718,15 @@ body {
 html section.main,
 body section.main {
   background: #fff;
+  position: relative;
+  padding-bottom: 60px;
+}
+html section.main::after,
+body section.main::after {
+  clear: both;
+  content: " ";
+  display: block;
+  width: 100%;
 }
 html.print {
   background: transparent;
@@ -5896,6 +5905,7 @@ body .material section.main {
   top: 104px;
   box-sizing: border-box;
   padding: 8px 35px;
+  padding-bottom: 60px;
 }
 button,
 input[type=button],
