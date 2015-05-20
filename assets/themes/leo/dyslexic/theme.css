@@ -3695,6 +3695,7 @@ a.cke_smile img {
   right: 7px;
   top: 5px;
   background-size: 60%;
+  z-index: 200;
 }
 .media .icons-view i.close {
   right: 11px;
