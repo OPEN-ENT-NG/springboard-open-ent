@@ -5542,6 +5542,10 @@ input-password button {
   margin-top: -80px;
   padding-top: 80px;
   display: block;
+  pointer-events: none;
+}
+.hash-magnet > * {
+  pointer-events: all;
 }
 nav.double-content-stamps {
   text-align: center;
