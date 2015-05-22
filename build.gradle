@@ -42,6 +42,7 @@ dependencies {
     deployment "net.atos:poll:$pollVersion:deployment"
     deployment "net.atos:timelinegenerator:$timelinegeneratorVersion:deployment"
     deployment "org.entcore:maxicours:$maxicoursVersion:deployment"
+    deployment "fr.wseduc:fake-sso:$fakeSSOVersion:deployment"
 }
 
 repositories{
