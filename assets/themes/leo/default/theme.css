@@ -1810,6 +1810,16 @@ a {
 .cke_editable {
   padding: 4px;
 }
+.lightbox-window .share .found-users-list,
+.lightbox-view .share .found-users-list {
+  height: 180px;
+  overflow-y: auto;
+}
+.lightbox-window .share .groups-list,
+.lightbox-view .share .groups-list {
+  height: 160px;
+  overflow-y: auto;
+}
 .share table {
   width: 100%;
 }
@@ -5542,10 +5552,6 @@ input-password button {
   margin-top: -80px;
   padding-top: 80px;
   display: block;
-  pointer-events: none;
-}
-.hash-magnet > * {
-  pointer-events: all;
 }
 nav.double-content-stamps {
   text-align: center;
@@ -10561,7 +10567,7 @@ label input[type=checkbox] {
 }
 label input[type=checkbox] + span {
   display: inline-block;
-  height: 20px;
+  height: 21px;
   overflow: hidden;
   cursor: pointer;
 }
