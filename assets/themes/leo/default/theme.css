@@ -7223,12 +7223,6 @@ nav.vertical.stamps,
 nav.vertical.half-stamps {
   overflow: hidden;
 }
-nav.vertical.stamps .small-text,
-nav.vertical.half-stamps .small-text,
-nav.vertical.stamps .small-text span,
-nav.vertical.half-stamps .small-text span {
-  font-size: 12px !important;
-}
 nav.vertical.stamps article,
 nav.vertical.half-stamps article {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
@@ -9741,7 +9735,7 @@ select {
 }
 .drop-down-filters .filters-icons,
 .filters .filters-icons {
-  padding: 0 0 0 2px;
+  margin-top: 0;
 }
 .drop-down-filters .filters-icons ul,
 .filters .filters-icons ul {
