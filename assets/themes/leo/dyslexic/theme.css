@@ -7233,10 +7233,15 @@ nav.vertical.half-stamps article {
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
+  font-size: 12px;
+}
+nav.vertical.stamps article .small-text,
+nav.vertical.half-stamps article .small-text {
+  font-size: 12px;
 }
 nav.vertical.stamps article h3,
 nav.vertical.half-stamps article h3 {
-  font-size: 16px;
+  font-size: 15px;
   border: 0;
   color: black;
   line-height: 20px;
@@ -10567,7 +10572,7 @@ label input[type=checkbox] {
 }
 label input[type=checkbox] + span {
   display: inline-block;
-  height: 20px;
+  height: 21px;
   overflow: hidden;
   cursor: pointer;
 }
