@@ -1810,16 +1810,6 @@ a {
 .cke_editable {
   padding: 4px;
 }
-.lightbox-window .share .found-users-list,
-.lightbox-view .share .found-users-list {
-  height: 180px;
-  overflow-y: auto;
-}
-.lightbox-window .share .groups-list,
-.lightbox-view .share .groups-list {
-  height: 160px;
-  overflow-y: auto;
-}
 .share table {
   width: 100%;
 }
@@ -5552,6 +5542,10 @@ input-password button {
   margin-top: -80px;
   padding-top: 80px;
   display: block;
+  pointer-events: none;
+}
+.hash-magnet > * {
+  pointer-events: all;
 }
 nav.double-content-stamps {
   text-align: center;
@@ -7233,10 +7227,6 @@ nav.vertical.half-stamps article {
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
-  font-size: 12px;
-}
-nav.vertical.stamps article .small-text,
-nav.vertical.half-stamps article .small-text {
   font-size: 12px;
 }
 nav.vertical.stamps article h3,
@@ -9739,7 +9729,7 @@ select {
 }
 .drop-down-filters .filters-icons,
 .filters .filters-icons {
-  padding: 0 0 0 2px;
+  margin-top: 0;
 }
 .drop-down-filters .filters-icons ul,
 .filters .filters-icons ul {
