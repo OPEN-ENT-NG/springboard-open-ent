@@ -1997,7 +1997,7 @@ a {
   -moz-transition: height 250ms ease;
   -webkit-transition: height 250ms ease;
   transition: height 250ms ease;
-  z-index: 20;
+  z-index: 8000;
 }
 .toggle-buttons .toggle {
   padding: 10px;
