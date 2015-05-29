@@ -5905,6 +5905,7 @@ button,
 input[type=button],
 a.button,
 input[type=submit],
+input[type=search],
 .drop-down-button label,
 .drop-down-button.hidden label {
   font-family: OpenDyslexic;
