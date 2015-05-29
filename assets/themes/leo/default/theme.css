@@ -7929,7 +7929,7 @@ input-password button {
   display: block;
 }
 .input-errors label {
-  font-size: 10px;
+  font-size: 10px !important;
   margin-left: 0px;
   float: none !important;
 }
