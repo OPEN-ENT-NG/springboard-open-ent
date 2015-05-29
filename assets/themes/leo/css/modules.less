@@ -1272,6 +1272,70 @@ input.ng-invalid.ng-dirty {
     border-bottom: 2px solid @red;
 }
 
+input-password{
+    input[type=password], input[type=text]{
+        width: 90%;
+        margin: 0px;
+        height: 32px;
+        display: inline-block;
+        float: none;
+
+        &.ng-invalid.ng-dirty {
+            border-bottom: 2px solid @red;
+        }
+    }
+    button{
+        background-image: url("../img/icons/glyphicons_051_eye_open.png");
+        background-repeat: no-repeat;
+        background-position: 40% 50%;
+        background-size: 55%;
+
+        height: 32px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+}
+
+.fill-bar {
+    width: 100%;
+    height: 15px;
+    box-shadow: 0px 0px 3px #444;
+    border-radius: 10px;
+    overflow: hidden;
+
+    & > div:first-child {
+        height: 100%;
+        transition: all 0.25s ease-in-out;
+
+        &.weak{
+            background-color: @red;
+        }
+        &.normal{
+            background-color: @orange;
+        }
+        &.strong{
+            background-color: @green;
+        }
+    }
+}
+.input-errors{
+    color: @red;
+    font-size: 12px;
+    display: block;
+    label{
+        font-size: 10px;
+        margin-left: 0px;
+        float: none !important;
+        &:before{
+            content: "* ";
+        }
+        &:after{
+            content: "\A";
+            white-space: pre;
+        }
+    }
+}
+
 .panel{
 	background: url(../img/illustrations/logo.png) no-repeat 6px 6px #209dcc;
 	background-size: 245px;
@@ -1378,68 +1442,27 @@ input.ng-invalid.ng-dirty {
 		}
 	}
 
-	input-password{
-		input[type=password], input[type=text]{
-			width: 90%;
-			margin: 0px;
-			height: 32px;
-			display: inline-block;
-			float: none;
+    input-password{
+        input[type=password], input[type=text]{
+            width: 90%;
+            margin: 0px;
+            height: 32px;
+            display: inline-block;
+            float: none;
+        }
+    }
 
-			&.ng-invalid.ng-dirty {
-				border-bottom: 2px solid @red;
-			}
-		}
-		button{
-			background-image: url("../img/icons/glyphicons_051_eye_open.png");
-			background-repeat: no-repeat;
-			background-position: 40% 50%;
-			background-size: 55%;
-
-			height: 32px;
-			border-top-right-radius: 15px;
-			border-bottom-right-radius: 15px;
-		}
-	}
-
-	.fill-bar {
-		width: 100%;
-		height: 15px;
-		box-shadow: 0px 0px 3px #444;
-		border-radius: 10px;
-		overflow: hidden;
-
-		& > div:first-child {
-			height: 100%;
-			transition: all 0.25s ease-in-out;
-
-			&.weak{
-				background-color: @red;
-			}
-			&.normal{
-				background-color: @orange;
-			}
-			&.strong{
-				background-color: @green;
-			}
-		}
-	}
-	.input-errors{
-		color: @red;
-		font-size: 12px;
-		display: block;
-		label{
-			font-size: 10px;
-			margin-left: 0px;
-			&:before{
-				content: "* ";
-			}
-			&:after{
-				content: "\A";
-				white-space: pre;
-			}
-		}
-	}
+    &.login{
+        input#email{
+            width: 100%;
+            height: 32px;
+            margin-top: 5px;
+            float: none;
+        }
+        input[type=checkbox]#rememberMe {
+      		width: 11px;
+    	}
+    }
 }
 
 @-moz-keyframes blink {
@@ -1544,7 +1567,7 @@ nav.horizontal{
 }
 
 button:hover, input[type=button]:hover, a.button:hover, input[type=submit]:hover{
-	background: @dark-accent;
+	background-color: @dark-accent;
 	box-shadow: none;
 }
 

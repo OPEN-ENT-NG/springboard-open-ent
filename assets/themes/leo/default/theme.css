@@ -7882,6 +7882,64 @@ input[type=email]:focus {
 input.ng-invalid.ng-dirty {
   border-bottom: 2px solid #e13a3a;
 }
+input-password input[type=password],
+input-password input[type=text] {
+  width: 90%;
+  margin: 0px;
+  height: 32px;
+  display: inline-block;
+  float: none;
+}
+input-password input[type=password].ng-invalid.ng-dirty,
+input-password input[type=text].ng-invalid.ng-dirty {
+  border-bottom: 2px solid #e13a3a;
+}
+input-password button {
+  background-image: url("../img/icons/glyphicons_051_eye_open.png");
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  background-size: 55%;
+  height: 32px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.fill-bar {
+  width: 100%;
+  height: 15px;
+  box-shadow: 0px 0px 3px #444;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.fill-bar > div:first-child {
+  height: 100%;
+  transition: all 0.25s ease-in-out;
+}
+.fill-bar > div:first-child.weak {
+  background-color: #e13a3a;
+}
+.fill-bar > div:first-child.normal {
+  background-color: #ff8500;
+}
+.fill-bar > div:first-child.strong {
+  background-color: #46bfaf;
+}
+.input-errors {
+  color: #e13a3a;
+  font-size: 12px;
+  display: block;
+}
+.input-errors label {
+  font-size: 10px;
+  margin-left: 0px;
+  float: none !important;
+}
+.input-errors label:before {
+  content: "* ";
+}
+.input-errors label:after {
+  content: "\A";
+  white-space: pre;
+}
 .panel {
   background: url(../img/illustrations/logo.png) no-repeat 6px 6px #209dcc;
   background-size: 245px;
@@ -7980,54 +8038,14 @@ input.ng-invalid.ng-dirty {
   display: inline-block;
   float: none;
 }
-.panel input-password input[type=password].ng-invalid.ng-dirty,
-.panel input-password input[type=text].ng-invalid.ng-dirty {
-  border-bottom: 2px solid #e13a3a;
-}
-.panel input-password button {
-  background-image: url("../img/icons/glyphicons_051_eye_open.png");
-  background-repeat: no-repeat;
-  background-position: 40% 50%;
-  background-size: 55%;
-  height: 32px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-.panel .fill-bar {
+.panel.login input#email {
   width: 100%;
-  height: 15px;
-  box-shadow: 0px 0px 3px #444;
-  border-radius: 10px;
-  overflow: hidden;
+  height: 32px;
+  margin-top: 5px;
+  float: none;
 }
-.panel .fill-bar > div:first-child {
-  height: 100%;
-  transition: all 0.25s ease-in-out;
-}
-.panel .fill-bar > div:first-child.weak {
-  background-color: #e13a3a;
-}
-.panel .fill-bar > div:first-child.normal {
-  background-color: #ff8500;
-}
-.panel .fill-bar > div:first-child.strong {
-  background-color: #46bfaf;
-}
-.panel .input-errors {
-  color: #e13a3a;
-  font-size: 12px;
-  display: block;
-}
-.panel .input-errors label {
-  font-size: 10px;
-  margin-left: 0px;
-}
-.panel .input-errors label:before {
-  content: "* ";
-}
-.panel .input-errors label:after {
-  content: "\A";
-  white-space: pre;
+.panel.login input[type=checkbox]#rememberMe {
+  width: 11px;
 }
 @-moz-keyframes blink {
   0% {
@@ -8124,7 +8142,7 @@ button:hover,
 input[type=button]:hover,
 a.button:hover,
 input[type=submit]:hover {
-  background: #b25d00;
+  background-color: #b25d00;
   box-shadow: none;
 }
 button.cancel:hover,
