@@ -5980,7 +5980,14 @@ h2 {
 }
 h3 {
   font-size: 1.4em;
-  font-style: italic;
+}
+.list li {
+  list-style-type: none;
+  color: #666;
+}
+.list li::before {
+  content: "\2666";
+  color: #ff8500;
 }
 h4 {
   font-size: 18px;
@@ -8906,11 +8913,11 @@ article.selected a {
 }
 [contenteditable] [style*="font-size:72px"],
 [bind-html] [style*="font-size:72px"] {
-  line-height: 78px;
+  line-height: 90px;
 }
 [contenteditable] [style*="font-size:48px"],
 [bind-html] [style*="font-size:48px"] {
-  line-height: 56px;
+  line-height: 60px;
 }
 [contenteditable] [style*="font-size:36px"],
 [bind-html] [style*="font-size:36px"] {

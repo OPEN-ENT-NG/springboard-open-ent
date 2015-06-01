@@ -73,7 +73,18 @@ h2{
 
 h3{
 	font-size: 1.4em;
-	font-style: italic;
+}
+
+.list{
+	li{
+		list-style-type: none;
+		color: #666;
+	}
+	li::before{
+		content: "\2666";
+		color: @accent;
+		padding-right: 6px;
+	}
 }
 
 h4{

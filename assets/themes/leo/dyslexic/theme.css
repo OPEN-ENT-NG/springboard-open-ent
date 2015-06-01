@@ -5981,7 +5981,14 @@ h2 {
 }
 h3 {
   font-size: 1.4em;
-  font-style: italic;
+}
+.list li {
+  list-style-type: none;
+  color: #666;
+}
+.list li::before {
+  content: "\2666";
+  color: #ff8500;
 }
 h4 {
   font-size: 18px;
