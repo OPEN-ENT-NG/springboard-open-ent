@@ -5888,7 +5888,7 @@ body {
 }
 body {
   overflow-x: hidden;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 19px;
 }
 body section.main {
@@ -5989,6 +5989,7 @@ h3 {
 .list li::before {
   content: "\2666";
   color: #ff8500;
+  padding-right: 6px;
 }
 h4 {
   font-size: 18px;
@@ -10759,4 +10760,8 @@ input[type=text],
 textarea,
 select {
   font-family: OpenDyslexic;
+}
+nav.vertical.stamps article h3,
+nav.vertical.half-stamps article h3 {
+  font-size: 13px;
 }
