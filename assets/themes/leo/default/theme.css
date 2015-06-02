@@ -2270,6 +2270,10 @@ ul.icons-tabs li i {
 .file-selector {
   cursor: pointer;
 }
+.rss-flux i {
+  display: inline !important;
+  font-style: italic;
+}
 .action-cell {
   width: 30px;
   height: 30px;
@@ -5988,6 +5992,7 @@ h3 {
 .list li::before {
   content: "\2666";
   color: #ff8500;
+  padding-right: 6px;
 }
 h4 {
   font-size: 18px;
