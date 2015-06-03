@@ -1,4 +1,5 @@
 {
 	"directory.explaination": "Saisissez quelques caractères et cliquez sur OK pour afficher les résultats.",
-    "userBook.profile.health": "Divers"
+    "userBook.profile.health": "Divers",
+	"password.errors": "Erreur(s) lors de la saisie du mot de passe. Il doit comporter au moins 1 chiffre et 1 lettre et avoir une taille minimale de 8 caractères."
 }
