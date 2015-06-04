@@ -4528,6 +4528,10 @@ popover popover-content.hidden {
   box-sizing: border-box;
 }
 .schedule .schedule-items .schedule-item {
+  -o-transition: top 250ms ease;
+  -moz-transition: top 250ms ease;
+  -webkit-transition: top 250ms ease;
+  transition: top 250ms ease;
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -8021,10 +8025,6 @@ input-password button {
 .panel .browser .download img {
   height: 30px;
   width: 30px;
-}
-.panel input[type=submit] {
-  margin-top: 15px;
-  margin-bottom: 5px;
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {

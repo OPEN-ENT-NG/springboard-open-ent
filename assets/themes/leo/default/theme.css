@@ -8025,10 +8025,6 @@ input-password button {
   height: 30px;
   width: 30px;
 }
-.panel input[type=submit] {
-  margin-top: 15px;
-  margin-bottom: 5px;
-}
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
   background: #ffffff;
