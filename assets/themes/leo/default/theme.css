@@ -6367,6 +6367,7 @@ nav.horizontal i.help {
   box-sizing: border-box;
   float: left;
   vertical-align: middle;
+  cursor: pointer;
 }
 nav.horizontal i.mail {
   height: 30px;
