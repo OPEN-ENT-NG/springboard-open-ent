@@ -7926,6 +7926,10 @@ input-password button {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
+input-password button.pushed {
+  background-color: #b25d00;
+  box-shadow: none;
+}
 .fill-bar {
   width: 100%;
   height: 15px;
