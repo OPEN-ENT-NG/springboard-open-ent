@@ -1,3 +1,3 @@
 {
-	"password.errors": "Erreur(s) lors de la saisie du mot de passe. Il doit comporter au moins 1 chiffre et 1 lettre et avoir une taille minimale de 8 caractères."
+	"password.errors": "Erreur(s) lors de la saisie du mot de passe. Choisissez 8 caractères minimum, lettres et chiffres obligatoires. Il est recommandé de mélanger chiffres, lettres, majuscules, minuscules et caractères spéciaux."
 }
