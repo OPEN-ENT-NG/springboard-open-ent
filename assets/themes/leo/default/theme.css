@@ -7993,10 +7993,21 @@ input-password button.pushed {
   font-size: 56px;
   line-height: 1em;
 }
-.panel form {
+.panel form:not(.nostyle) {
   margin-left: auto;
   margin-right: auto;
   width: 600px;
+  background: #fff;
+  border-radius: 3px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+}
+.panel .content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
   background: #fff;
   border-radius: 3px;
   padding: 30px;
@@ -8069,6 +8080,23 @@ input-password button.pushed {
 }
 .panel.login input[type=checkbox]#rememberMe {
   width: 11px;
+}
+.panel form.nostyle input {
+  float: none;
+  width: auto;
+}
+.panel form.rowstyle {
+  margin-top: 5px;
+}
+.panel form.rowstyle input {
+  height: 35px;
+}
+.panel form.rowstyle input[type=text],
+.panel form.rowstyle input[type=email],
+.panel form.rowstyle input[type=tel],
+.panel form.rowstyle input[type=password] {
+  width: 80%;
+  float: left;
 }
 @-moz-keyframes blink {
   0% {

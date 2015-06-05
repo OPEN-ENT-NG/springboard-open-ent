@@ -1379,7 +1379,7 @@ input-password{
 		line-height: 1em;
 	}
 
-	form{
+	form:not(.nostyle){
 		margin-left: auto;
 		margin-right: auto;
 		width: 600px;
@@ -1389,6 +1389,17 @@ input-password{
 		box-sizing: border-box;
 		.material-card(5px, 18px);
 	}
+
+    .content{
+        margin-left: auto;
+		margin-right: auto;
+		width: 800px;
+		background: #fff;
+		border-radius: 3px;
+		padding: 30px;
+		box-sizing: border-box;
+        .material-card(5px, 18px);
+    }
 
 	&.browser-container{
 		> h1 {
@@ -1474,6 +1485,24 @@ input-password{
         input[type=checkbox]#rememberMe {
       		width: 11px;
     	}
+    }
+
+    form.nostyle{
+        input{
+            float: none;
+            width: auto;
+        }
+    }
+
+    form.rowstyle{
+        margin-top: 5px;
+        input{
+            height: 35px;
+        }
+        input[type=text], input[type=email], input[type=tel], input[type=password]{
+            width: 80%;
+            float: left;
+        }
     }
 }
 
