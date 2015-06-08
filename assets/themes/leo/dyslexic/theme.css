@@ -2270,10 +2270,6 @@ ul.icons-tabs li i {
 .file-selector {
   cursor: pointer;
 }
-.rss-flux i {
-  display: inline !important;
-  font-style: italic;
-}
 .action-cell {
   width: 30px;
   height: 30px;
@@ -4543,12 +4539,6 @@ popover popover-content.hidden {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 500;
-}
-.schedule .schedule-items .schedule-item container {
-  -o-transition: all 250ms ease;
-  -moz-transition: all 250ms ease;
-  -webkit-transition: all 250ms ease;
-  transition: all 250ms ease;
 }
 .schedule .schedule-items .schedule-item .schedule-item-content {
   position: absolute;
