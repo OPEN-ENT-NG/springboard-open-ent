@@ -1,6 +1,7 @@
 {
 	"auth.forgot.header": "Besoin d'aide ?",
-	"password.errors": "Erreur(s) lors de la saisie du mot de passe. Choisissez 8 caractères minimum, lettres et chiffres obligatoires. Il est recommandé de mélanger chiffres, lettres, majuscules, minuscules et caractères spéciaux.",
+	"password.errors": "Choisissez 8 caractères minimum, lettres et chiffres obligatoires.",
+	"password.recommandations": " Il est recommandé de mélanger chiffres, lettres, majuscules, minuscules et caractères spéciaux.",
 	"auth.forgot.text": "Fournissez simplement les informations suivantes et nous vous aiderons à accéder à votre compte.",
 	"auth.lost.password": "Vous avez perdu votre mot de passe ?",
 	"auth.lost.password.text": "Entrez votre identifiant de connexion pour recevoir les instructions pour changer votre mot de passe.",
