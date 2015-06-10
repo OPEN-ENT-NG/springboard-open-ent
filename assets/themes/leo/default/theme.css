@@ -746,6 +746,12 @@ help section.lightbox > div.content {
 .app-single-post .app-content-container {
   margin-top: 15px;
 }
+.app-single-post::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  clear: both;
+}
 nav.vertical,
 .app-menu {
   padding-right: 15px;
