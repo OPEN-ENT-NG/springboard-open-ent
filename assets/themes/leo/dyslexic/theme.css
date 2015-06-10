@@ -721,31 +721,64 @@ h1 i {
   float: none !important;
   display: inline-block !important;
 }
-nav.vertical {
+help section.lightbox > div.content {
+  width: 920px;
+}
+.app-single-post {
+  background: #fff;
+}
+.app-single-post section.app-content-section:not(:target) {
+  display: none;
+}
+.app-single-post .app-menu {
+  float: left;
+  width: 250px;
+}
+.app-single-post .app-content-section {
+  width: 640px;
+  float: right;
+  overflow: auto;
+  height: 395px;
+}
+.app-single-post .app-content-section img {
+  max-width: 100%;
+}
+.app-single-post .app-content-container {
+  margin-top: 15px;
+}
+nav.vertical,
+.app-menu {
   padding-right: 15px;
   box-sizing: border-box;
 }
-nav.vertical h2 {
+nav.vertical h2,
+.app-menu h2 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-nav.vertical h2:first-child {
+nav.vertical h2:first-child,
+.app-menu h2:first-child {
   margin-bottom: 0;
 }
-nav.vertical h1 {
+nav.vertical h1,
+.app-menu h1 {
   margin-top: 0;
 }
 nav.vertical ul:first-child,
-nav.vertical div ul:first-child {
+.app-menu ul:first-child,
+nav.vertical div ul:first-child,
+.app-menu div ul:first-child {
   padding-left: 0;
 }
-nav.vertical ul {
+nav.vertical ul,
+.app-menu ul {
   margin-top: 0;
   width: 99%;
   padding-left: 10px;
 }
-nav.vertical ul li {
+nav.vertical ul li,
+.app-menu ul li {
   float: none;
   display: block;
   font-size: 14px;
@@ -753,7 +786,8 @@ nav.vertical ul li {
   width: 100% !important;
   top: 0;
 }
-nav.vertical ul li a {
+nav.vertical ul li a,
+.app-menu ul li a {
   display: block;
   position: relative;
   line-height: 20px;
@@ -768,15 +802,18 @@ nav.vertical ul li a {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-nav.vertical ul li a i {
+nav.vertical ul li a i,
+.app-menu ul li a i {
   display: block;
   float: right;
   margin-top: 2px;
 }
-nav.vertical ul li a i.arrow {
+nav.vertical ul li a i.arrow,
+.app-menu ul li a i.arrow {
   float: left;
 }
-nav.vertical ul li a i.arrow::before {
+nav.vertical ul li a i.arrow::before,
+.app-menu ul li a i.arrow::before {
   content: ">";
   font-weight: 900;
   font-size: 12px;
@@ -784,23 +821,29 @@ nav.vertical ul li a i.arrow::before {
   margin-right: 6px;
   font-family: Arial;
 }
-nav.vertical ul li a img {
+nav.vertical ul li a img,
+.app-menu ul li a img {
   vertical-align: middle;
   margin-right: 5px;
 }
-nav.vertical ul li a.selected {
+nav.vertical ul li a.selected,
+.app-menu ul li a.selected {
   background: #ccc;
 }
-nav.vertical ul li a.opened i.arrow::before {
+nav.vertical ul li a.opened i.arrow::before,
+.app-menu ul li a.opened i.arrow::before {
   content: "v";
 }
-nav.vertical ul li input {
+nav.vertical ul li input,
+.app-menu ul li input {
   position: relative !important;
   top: 0px !important;
   left: 0px !important;
 }
 nav.vertical ul li input[type=text],
-nav.vertical ul li input[type=search] {
+.app-menu ul li input[type=text],
+nav.vertical ul li input[type=search],
+.app-menu ul li input[type=search] {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
@@ -2269,6 +2312,10 @@ ul.icons-tabs li i {
 }
 .file-selector {
   cursor: pointer;
+}
+.rss-flux i {
+  display: inline !important;
+  font-style: italic;
 }
 .action-cell {
   width: 30px;
@@ -4540,6 +4587,12 @@ popover popover-content.hidden {
   box-sizing: border-box;
   z-index: 500;
 }
+.schedule .schedule-items .schedule-item container {
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
 .schedule .schedule-items .schedule-item .schedule-item-content {
   position: absolute;
   top: 0;
@@ -5705,6 +5758,57 @@ plus .opener.plus .minus {
 plus .opener.minus .plus {
   transform: scaleY(0);
 }
+.cards-list {
+  width: 100%;
+  text-align: center;
+}
+.cards-list .card {
+  text-align: left;
+  display: inline-block;
+  padding: 10px;
+  margin: 8px;
+  vertical-align: top;
+}
+.cards-list .card .illustration {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 25%;
+  box-sizing: content-box;
+  height: 0px;
+  padding-bottom: 25%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: block;
+  position: relative;
+}
+.cards-list .card .illustration .right-magnet.cell.absolute {
+  right: 0 !important;
+  left: auto;
+}
+.cards-list .card .illustration .cell.fluid {
+  position: relative;
+  height: 100%;
+}
+.cards-list .card .illustration .bottom-magnet.cell {
+  bottom: 0;
+  position: absolute;
+}
+.cards-list .card .illustration img {
+  max-width: 100%;
+}
+.cards-list .card .illustration input[type=checkbox] {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+.cards-list .card h3:first-of-type,
+.cards-list .card h1:first-of-type,
+.cards-list .card h2:first-of-type {
+  margin-top: 0;
+}
 html,
 body {
   margin: 0;
@@ -5972,6 +6076,16 @@ h4 a,
 h5 a {
   color: #4bafd5;
 }
+h1 strong.subtitle,
+h2 strong.subtitle,
+h3 strong.subtitle,
+h4 strong.subtitle,
+h5 strong.subtitle {
+  color: #666;
+  font-size: 14px;
+  display: block;
+  margin-top: -5px;
+}
 h1 {
   font-size: 34px;
   margin-bottom: 20px;
@@ -5985,6 +6099,9 @@ h2 {
 }
 h3 {
   font-size: 1.4em;
+}
+strong {
+  color: #666;
 }
 .list li {
   list-style-type: none;
@@ -8193,28 +8310,35 @@ a.button.cancel:hover,
 input[type=submit].cancel:hover {
   background: #ff8500;
 }
-nav.vertical {
+nav.vertical,
+.app-menu {
   padding: 0 20px 0 0;
   margin-right: 10px;
 }
-nav.vertical h2 {
+nav.vertical h2,
+.app-menu h2 {
   font-size: 16px;
   font-weight: bold;
   color: #4bafd5;
 }
 nav.vertical > ul,
-nav.vertical > div > ul {
+.app-menu > ul,
+nav.vertical > div > ul,
+.app-menu > div > ul {
   border-left: 5px solid #ff8500;
 }
-nav.vertical ul {
+nav.vertical ul,
+.app-menu ul {
   margin: 0;
   padding: 0;
   width: 100%;
 }
-nav.vertical ul.sublist {
+nav.vertical ul.sublist,
+.app-menu ul.sublist {
   margin-left: 10px;
 }
-nav.vertical ul li {
+nav.vertical ul li,
+.app-menu ul li {
   font-size: 16px;
   padding-left: 20px;
   -webkit-box-sizing: border-box;
@@ -8222,43 +8346,54 @@ nav.vertical ul li {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
-nav.vertical ul li a {
+nav.vertical ul li a,
+.app-menu ul li a {
   -o-transition: background 250ms ease;
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
   margin-left: 0;
 }
-nav.vertical ul li a i.arrow {
+nav.vertical ul li a i.arrow,
+.app-menu ul li a i.arrow {
   height: 20px;
   display: block;
   float: left;
   color: #fff;
   font-family: Arial;
 }
-nav.vertical ul li a i.arrow::before {
+nav.vertical ul li a i.arrow::before,
+.app-menu ul li a i.arrow::before {
   content: "▸";
   font-size: 25px;
   line-height: 13px;
   color: #ff8500;
 }
-nav.vertical ul li a i {
+nav.vertical ul li a i,
+.app-menu ul li a i {
   margin-left: 5px;
 }
-nav.vertical ul li a.selected {
+nav.vertical ul li a.selected,
+.app-menu ul li a.selected {
   color: #ff8500;
   background: none;
 }
-nav.vertical ul li a.opened i.arrow::before {
+nav.vertical ul li a.opened i.arrow::before,
+.app-menu ul li a.opened i.arrow::before {
   content: "▾";
 }
 nav.vertical ul:first-child > li,
+.app-menu ul:first-child > li,
 nav.vertical div ul:first-child > li,
+.app-menu div ul:first-child > li,
 nav.vertical h2 + ul > li,
-nav.vertical .search + ul > li {
+.app-menu h2 + ul > li,
+nav.vertical .search + ul > li,
+.app-menu .search + ul > li {
   padding-left: 0;
 }
-nav.vertical a.classic-link {
+nav.vertical a.classic-link,
+.app-menu a.classic-link {
   display: block;
   margin-top: 15px;
   padding: 5px 0;
@@ -8275,7 +8410,8 @@ nav.vertical a.classic-link {
   transition: background 250ms ease;
   border-radius: 2px;
 }
-nav.vertical a.classic-link:hover {
+nav.vertical a.classic-link:hover,
+.app-menu a.classic-link:hover {
   background: #4bafd5;
   color: white;
 }
@@ -10774,6 +10910,16 @@ plus .opener.minus {
 .bookmark-widget .bookmark-config-button::before {
   font-family: FontAwesome;
   content: "\f013";
+}
+.card {
+  background: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  font-size: 14px;
+}
+.card h3 {
+  font-size: 18px;
+  line-height: 23px;
 }
 h1 {
   font-size: 24px;
