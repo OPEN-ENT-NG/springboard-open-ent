@@ -724,6 +724,9 @@ h1 i {
 help section.lightbox > div.content {
   width: 920px;
 }
+help section.lightbox > div.content iframe {
+  height: 550px;
+}
 .app-single-post {
   background: #fff;
 }
