@@ -13,7 +13,9 @@ apply plugin: 'scala'
 apply plugin: 'springboard'
 
 configurations {
-  deployment
+  deployment {
+    transitive = false
+ }
 }
 
 dependencies {
