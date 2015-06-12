@@ -724,9 +724,6 @@ h1 i {
 help section.lightbox > div.content {
   width: 920px;
 }
-help section.lightbox > div.content iframe {
-  height: 550px;
-}
 .app-single-post {
   background: #fff;
 }
@@ -10311,7 +10308,7 @@ nav.illustrated-links ul ul.secondary-list li .fixed-small {
   width: 60px;
 }
 nav.illustrated-links ul ul.secondary-list li .fixed-regular {
-  width: 100px;
+  width: 150px;
 }
 nav.illustrated-links ul ul.secondary-list li .fixed-large {
   width: 300px;
@@ -10348,7 +10345,7 @@ nav.illustrated-links ul ul.secondary-list li .bubble-container .bubble-small {
   min-width: 50px;
   height: 30px;
   line-height: 30px;
-  max-width: 90%;
+  max-width: calc(100% - 35px);
   background: #f9f9f9;
 }
 nav.illustrated-links ul ul.secondary-list li .bubble-container::after {
