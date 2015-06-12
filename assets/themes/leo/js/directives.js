@@ -145,6 +145,10 @@ if(window.skin){
 						var getXitiConfig = function(hook){
 							return function(){
 								$http.get('/xiti/config').success(function(data){
+									//If XiTi is disabled
+									if(!data.active)
+										return
+
 									scope.xitiConf.ID_COLLECTIVITE = data.ID_COLLECTIVITE
 									scope.xitiConf.ID_PLATEFORME = data.ID_PLATEFORME
 									scope.xitiConf.ID_PROJET = data.ID_PROJET
