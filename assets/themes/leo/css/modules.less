@@ -2601,16 +2601,35 @@ select{
 }
 
 .bubble-container{
+	.image{
+		width: 100px;
+		height: 100px;
+		padding: 15px;
+		img{
+			border-radius: 50px;
+		}
+	}
+	article{
+		min-height: 180px;
+		border-radius: 5px;
+		[contenteditable]{
+			min-height: 150px !important;
+			margin-bottom: 15px;
+		}
+	}
+	.bubble{
+		position: relative;
+	}
 	.bubble::after{
-		border-left: 2px solid #ddd;
-		border-top: 2px solid #ddd;
+		border-left: 1px solid #ddd;
+		border-top: 1px solid #ddd;
 		content: "";
 		position: absolute;
 		width: 15px;
 		height: 15px;
 		top: 60px;
 		background: white;
-		left: -10px;
+		left: -8px;
 		transform: rotate(-45deg);
 	}
 }
