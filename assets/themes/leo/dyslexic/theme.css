@@ -3655,6 +3655,7 @@ a.cke_smile img {
   width: 100%;
 }
 .illustrated-article .illustration {
+  position: relative;
   display: table-cell;
   width: 100px;
 }
@@ -4838,6 +4839,8 @@ nav.illustrated-links ul li {
   margin-bottom: 12px;
 }
 nav.illustrated-links ul li .illustration {
+  position: relative;
+  width: auto;
   display: table-cell;
   min-width: 120px;
   height: 120px;
