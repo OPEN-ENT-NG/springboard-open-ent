@@ -695,6 +695,19 @@ input[type=submit] {
   margin: 0;
   margin-left: 1px;
   margin-right: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  display: block;
+  position: relative;
+}
+a.button img,
+button img,
+input[type=button] img,
+input[type=submit] img {
+  max-width: 100%;
 }
 i {
   font-style: normal;
@@ -2539,7 +2552,7 @@ article h2:first-child {
 }
 hr {
   border: none;
-  margin: 15px;
+  padding: 10px;
 }
 .cell img {
   max-width: 100%;
@@ -5814,6 +5827,23 @@ plus .opener.minus .plus {
 .cards-list .card h1:first-of-type,
 .cards-list .card h2:first-of-type {
   margin-top: 0;
+}
+.illustration {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  left: 0;
+}
+.illustration img {
+  align-self: center;
+}
+.illustration input[type=checkbox] {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 html,
 body {
