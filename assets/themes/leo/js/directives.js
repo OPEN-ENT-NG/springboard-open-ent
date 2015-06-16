@@ -232,7 +232,7 @@ if(window.skin){
 							window.xtparam = xt_multc + "&ac="+ xt_ac  +"&at=" + xt_at
 
 							xtnv = document;
-							xtsd = "http://logi7";
+							xtsd = window.location.protocol === "https:" ? "https://logs" : "http://logi7";
 							xtsite = scope.xitiConf.ID_COLLECTIVITE;
 							xtn2 = scope.xitiConf.ID_ETAB;
 							xtpage = scope.xitiConf.LIB_SERVICE;
