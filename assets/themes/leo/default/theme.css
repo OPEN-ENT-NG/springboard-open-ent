@@ -737,6 +737,20 @@ h1 i {
 help section.lightbox > div.content {
   width: 920px;
 }
+<<<<<<< HEAD
+=======
+help section.lightbox > div.content iframe {
+  height: 550px;
+}
+.checkbox-filters ul {
+  margin: 0;
+}
+.checkbox-filters ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+>>>>>>> recompiled css
 .app-single-post {
   background: #fff;
 }
