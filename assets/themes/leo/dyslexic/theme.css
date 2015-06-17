@@ -7341,8 +7341,8 @@ i.history {
   box-sizing: border-box;
   border: 1px solid #ddd;
 }
-.select-file.nomargin {
-  margin: 0px;
+.nomargin {
+  margin: 0px !important;
 }
 header.main {
   height: 64px;
@@ -8900,7 +8900,7 @@ textarea:focus {
   line-height: 20px !important;
   position: absolute !important;
   bottom: 0 !important;
-  background: rgba(0, 0, 0, 0.4) !important;
+  background: rgba(0, 0, 0, 0.5) !important;
   color: #fff;
 }
 .icons-view .element legend a {
@@ -8912,6 +8912,7 @@ textarea:focus {
 .icons-view .element legend strong {
   font-style: normal;
   font-size: 10px;
+  color: #fff;
 }
 .icons-view .element a,
 .icons-view .element a.container {
@@ -9393,6 +9394,8 @@ select {
   width: 100px;
   height: 100px;
   padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bubble-container .image img {
   border-radius: 50px;
