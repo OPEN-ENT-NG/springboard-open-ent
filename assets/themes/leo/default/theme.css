@@ -8204,7 +8204,7 @@ input-password button.pushed {
 .panel .button-bar {
   margin-top: 30px;
   border-top: 1px solid rgba(0, 0, 0, 0.26);
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .panel .button-bar > * {
   display: inline-block;
