@@ -737,8 +737,6 @@ h1 i {
 help section.lightbox > div.content {
   width: 920px;
 }
-<<<<<<< HEAD
-=======
 help section.lightbox > div.content iframe {
   height: 550px;
 }
@@ -750,7 +748,6 @@ help section.lightbox > div.content iframe {
   display: inline-block;
   margin-right: 15px;
 }
->>>>>>> recompiled css
 .app-single-post {
   background: #fff;
 }
@@ -10424,7 +10421,7 @@ nav.illustrated-links ul ul.secondary-list li .bubble-container::after {
   position: absolute;
   width: 7px;
   height: 7px;
-  top: 24px;
+  top: 23px;
   background: #f9f9f9;
   left: 15px;
   transform: rotate(-45deg);
@@ -10994,4 +10991,7 @@ plus .opener.minus {
 .card h3 {
   font-size: 18px;
   line-height: 23px;
+}
+.block-editor div[drawing-zone] {
+  height: auto;
 }
