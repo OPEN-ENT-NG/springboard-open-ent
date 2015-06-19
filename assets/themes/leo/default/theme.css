@@ -740,6 +740,11 @@ help section.lightbox > div.content {
 help section.lightbox > div.content iframe {
   height: 550px;
 }
+.checkbox-filters {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
 .checkbox-filters ul {
   margin: 0;
 }
@@ -5222,6 +5227,9 @@ table {
   min-height: 300px;
   position: relative;
   border: 1px solid #eee;
+}
+[contenteditable] {
+  height: auto;
 }
 carousel .images {
   width: 100%;
