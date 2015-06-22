@@ -2279,8 +2279,26 @@ a:hover{
 	border: none;
 }
 
+[stick-top-top]{
+	.run-transition(top);
+}
 
-
+.floating-navigation{
+	li{
+		.material-card();
+		border-top: 0;
+		margin-bottom: 5px;
+		background: #fff;
+		border-radius: 1px;
+	}
+	li:hover{
+		background: @accent;
+		box-shadow: none;
+		a{
+			color: #fff;
+		}
+	}
+}
 
 .message{
 	color: @text-light;

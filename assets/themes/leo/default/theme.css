@@ -5231,6 +5231,18 @@ table {
 [contenteditable] {
   height: auto;
 }
+.floating-navigation {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.floating-navigation li {
+  list-style-type: none;
+  padding: 3px;
+  padding: 5px;
+}
+.floating-navigation li:first-child {
+  margin-top: 20px;
+}
 carousel .images {
   width: 100%;
   position: relative;
@@ -9055,6 +9067,27 @@ a:hover {
 }
 .line {
   border: none;
+}
+[stick-top-top] {
+  -o-transition: top 250ms ease;
+  -moz-transition: top 250ms ease;
+  -webkit-transition: top 250ms ease;
+  transition: top 250ms ease;
+}
+.floating-navigation li {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  border-top: 0;
+  margin-bottom: 5px;
+  background: #fff;
+  border-radius: 1px;
+}
+.floating-navigation li:hover {
+  background: #ff8500;
+  box-shadow: none;
+}
+.floating-navigation li:hover a {
+  color: #fff;
 }
 .message {
   color: #555555;
