@@ -625,8 +625,6 @@
   background: -moz-linear-gradient(#cccccc, #cccccc);
   background: -o-linear-gradient(#cccccc, #cccccc);
   background: linear-gradient(#cccccc, #cccccc);
-  -pie-background: linear-gradient(#cccccc, #cccccc);
-  behavior: url(/assets/themes/panda/css/PIE.htc);
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -652,8 +650,6 @@
   background: -moz-linear-gradient(#cccccc, #cccccc);
   background: -o-linear-gradient(#cccccc, #cccccc);
   background: linear-gradient(#cccccc, #cccccc);
-  -pie-background: linear-gradient(#cccccc, #cccccc);
-  behavior: url(/assets/themes/panda/css/PIE.htc);
   color: #fff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -739,6 +735,11 @@ help section.lightbox > div.content {
 }
 help section.lightbox > div.content iframe {
   height: 550px;
+}
+.checkbox-filters {
+  height: 50px;
+  display: flex;
+  align-items: center;
 }
 .checkbox-filters ul {
   margin: 0;
@@ -837,10 +838,16 @@ nav.vertical ul li a i,
   display: block;
   float: right;
   margin-top: 2px;
+  opacity: 0;
+  -o-transition: opacity 250ms ease;
+  -moz-transition: opacity 250ms ease;
+  -webkit-transition: opacity 250ms ease;
+  transition: opacity 250ms ease;
 }
 nav.vertical ul li a i.arrow,
 .app-menu ul li a i.arrow {
   float: left;
+  opacity: 1;
 }
 nav.vertical ul li a i.arrow::before,
 .app-menu ul li a i.arrow::before {
@@ -860,9 +867,17 @@ nav.vertical ul li a.selected,
 .app-menu ul li a.selected {
   background: #ccc;
 }
+nav.vertical ul li a.selected i,
+.app-menu ul li a.selected i {
+  opacity: 1;
+}
 nav.vertical ul li a.opened i.arrow::before,
 .app-menu ul li a.opened i.arrow::before {
   content: "v";
+}
+nav.vertical ul li a:hover i,
+.app-menu ul li a:hover i {
+  opacity: 1;
 }
 nav.vertical ul li input,
 .app-menu ul li input {
@@ -1527,18 +1542,30 @@ i.home {
   background-image: url("../img/icons/glyphicons_020_home.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   background-size: contain;
   display: inline-block;
   vertical-align: middle;
   float: none;
   margin-top: -3px;
   margin-right: 5px;
+}
+i.attachment {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/glyphicons_062_paperclip.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background-size: contain;
 }
 article.media {
   border: 2px dashed #ccc;
@@ -1703,12 +1730,10 @@ i.drag-anchor {
   background-image: url("../img/icons/glyphicons_186_move.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: contain;
   float: none;
@@ -1720,12 +1745,11 @@ i.fullscreen {
   background-image: url("../img/icons/glyphicons_215_resize_full.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.leave-fullscreen {
@@ -1734,12 +1758,11 @@ i.leave-fullscreen {
   background-image: url("../img/icons/glyphicons_214_resize_small.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.previous {
@@ -1748,12 +1771,11 @@ i.previous {
   background-image: url("../img/icons/glyphicons_210_left_arrow.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.next {
@@ -1762,12 +1784,11 @@ i.next {
   background-image: url("../img/icons/glyphicons_211_right_arrow.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.download {
@@ -1776,12 +1797,11 @@ i.download {
   background-image: url("../img/icons/glyphicons_181_download_alt.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .embedded-viewer {
@@ -2586,12 +2606,11 @@ section.lightbox-window .close-lightbox i {
   background-image: url("../img/icons/glyphicons_207_remove_2.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.remove {
@@ -2600,12 +2619,11 @@ i.remove {
   background-image: url("../img/icons/glyphicons_207_remove_2.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .loading-panel {
@@ -3219,8 +3237,6 @@ section.lightbox .content::after {
   background: -moz-linear-gradient(#eeeeee, #e5e5e5);
   background: -o-linear-gradient(#eeeeee, #e5e5e5);
   background: linear-gradient(#eeeeee, #e5e5e5);
-  -pie-background: linear-gradient(#eeeeee, #e5e5e5);
-  behavior: url(/assets/themes/panda/css/PIE.htc);
   border: 1px solid #555;
   border-bottom: 0;
   font-size: 20px;
@@ -3401,12 +3417,11 @@ a.cke_smile img {
   background-image: url("../img/icons/text-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
 }
@@ -3416,12 +3431,11 @@ a.cke_smile img {
   background-image: url("../img/icons/picture-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
 }
@@ -3431,12 +3445,11 @@ a.cke_smile img {
   background-image: url("../img/icons/music-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
 }
@@ -3446,12 +3459,11 @@ a.cke_smile img {
   background-image: url("../img/icons/video-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
 }
@@ -3502,8 +3514,6 @@ a.cke_smile img {
   background: -moz-linear-gradient(#383838, #333333);
   background: -o-linear-gradient(#383838, #333333);
   background: linear-gradient(#383838, #333333);
-  -pie-background: linear-gradient(#383838, #333333);
-  behavior: url(/assets/themes/panda/css/PIE.htc);
   border: 1px solid #555;
   border-bottom: 0;
   font-size: 20px;
@@ -4234,12 +4244,11 @@ a.cke_smile img {
   background-image: url("../img/icons/draft.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -4250,12 +4259,11 @@ a.cke_smile img {
   background-image: url("../img/icons/submitted.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -4266,12 +4274,11 @@ a.cke_smile img {
   background-image: url("../img/icons/published.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -4280,11 +4287,11 @@ i.shared {
   width: 18px;
   background-image: url("../img/icons/shared.png");
   background-repeat: no-repeat;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-position: center;
   display: block;
@@ -4983,12 +4990,11 @@ ul.thought-out-actions > li p {
   background-image: url("../img/icons/text-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
   background-color: transparent;
@@ -5001,12 +5007,11 @@ ul.thought-out-actions > li p {
   background-image: url("../img/icons/picture-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .menu-items i.sound,
@@ -5016,12 +5021,11 @@ ul.thought-out-actions > li p {
   background-image: url("../img/icons/music-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .menu-items i.video {
@@ -5030,12 +5034,11 @@ ul.thought-out-actions > li p {
   background-image: url("../img/icons/video-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-color: transparent;
   border: none;
@@ -5046,12 +5049,11 @@ ul.thought-out-actions > li p {
   background-image: url("../img/icons/glyphicons_099_vector_path_all.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
   background-color: transparent;
@@ -5063,12 +5065,11 @@ ul.thought-out-actions > li p {
   background-image: url("../img/icons/glyphicons_155_show_big_thumbnails.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
   background-color: transparent;
@@ -5222,6 +5223,21 @@ table {
   min-height: 300px;
   position: relative;
   border: 1px solid #eee;
+}
+[contenteditable] {
+  height: auto;
+}
+.floating-navigation {
+  padding-left: 0;
+  padding-right: 20px;
+}
+.floating-navigation li {
+  list-style-type: none;
+  padding: 3px;
+  padding: 5px;
+}
+.floating-navigation li:first-child {
+  margin-top: 20px;
 }
 carousel .images {
   width: 100%;
@@ -5499,12 +5515,11 @@ recorder .controls .play {
   background-image: url("../img/icons/glyphicons_173_play.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 recorder .controls .record {
@@ -5513,12 +5528,11 @@ recorder .controls .record {
   background-image: url("../img/icons/glyphicons_169_record.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 recorder .controls .pause {
@@ -5527,12 +5541,11 @@ recorder .controls .pause {
   background-image: url("../img/icons/glyphicons_174_pause.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 recorder .controls .save {
@@ -5541,12 +5554,11 @@ recorder .controls .save {
   background-image: url("../img/icons/glyphicons_443_floppy_disk.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 recorder .controls .remove {
@@ -5555,12 +5567,11 @@ recorder .controls .remove {
   background-image: url("../img/icons/glyphicons_207_remove_2_accent.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 recorder .view {
@@ -6194,12 +6205,11 @@ h4 {
   background-image: url("../img/icons/glyphicons_057_history.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   margin: 0px 3px;
   background-size: contain;
@@ -6424,12 +6434,11 @@ i.send-mail {
   background-image: url("../img/icons/glyphicons_010_envelope.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   margin: 7px;
   -o-transition: background 250ms ease;
@@ -6443,12 +6452,11 @@ i.send-mail:hover {
   background-image: url("../img/icons/glyphicons_010_envelope_accent.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 nav.horizontal i {
@@ -6462,12 +6470,11 @@ nav.horizontal i.timeline {
   background-image: url("../img/icons/glyphicons_355_bullhorn_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 nav.horizontal i.home {
@@ -6476,12 +6483,11 @@ nav.horizontal i.home {
   background-image: url("../img/icons/glyphicons_020_home_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 nav.horizontal i.apps {
@@ -6490,12 +6496,11 @@ nav.horizontal i.apps {
   background-image: url("../img/icons/glyphicons_156_show_thumbnails_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 nav.horizontal i.community {
@@ -6504,12 +6509,11 @@ nav.horizontal i.community {
   background-image: url("../img/icons/glyphicons_308_share_alt_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 nav.horizontal i.help {
@@ -6518,12 +6522,11 @@ nav.horizontal i.help {
   background-image: url("../img/icons/glyphicons_194_circle_question_mark_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -6533,12 +6536,11 @@ nav.horizontal i.mail {
   background-image: url("../img/icons/glyphicons_010_envelope_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 nav.horizontal i.mail span {
@@ -6562,12 +6564,11 @@ i.public {
   background-image: url("../img/icons/public.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -6577,12 +6578,11 @@ i.prive {
   background-image: url("../img/icons/prive.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   cursor: pointer;
 }
@@ -6592,12 +6592,11 @@ i.angry {
   background-image: url("../img/icons/angry.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.default {
@@ -6606,12 +6605,11 @@ i.default {
   background-image: url("../img/icons/default.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.dreamy {
@@ -6620,12 +6618,11 @@ i.dreamy {
   background-image: url("../img/icons/dreamy.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.happy {
@@ -6634,12 +6631,11 @@ i.happy {
   background-image: url("../img/icons/happy.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.joker {
@@ -6648,12 +6644,11 @@ i.joker {
   background-image: url("../img/icons/joker.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.love {
@@ -6662,12 +6657,11 @@ i.love {
   background-image: url("../img/icons/love.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.proud {
@@ -6676,12 +6670,11 @@ i.proud {
   background-image: url("../img/icons/proud.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.sad {
@@ -6690,12 +6683,11 @@ i.sad {
   background-image: url("../img/icons/sad.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.sick {
@@ -6704,12 +6696,11 @@ i.sick {
   background-image: url("../img/icons/sick.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.tired {
@@ -6718,12 +6709,11 @@ i.tired {
   background-image: url("../img/icons/tired.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.worried {
@@ -6732,12 +6722,11 @@ i.worried {
   background-image: url("../img/icons/worried.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.show-icons {
@@ -6746,12 +6735,11 @@ i.show-icons {
   background-image: url("../img/icons/glyphicons_156_show_thumbnails.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   opacity: 0.2;
 }
@@ -6761,12 +6749,11 @@ i.show-admin {
   background-image: url("../img/icons/glyphicons_137_cogwheels.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   opacity: 0.5;
   background-size: 100% auto;
@@ -6780,12 +6767,11 @@ i.show-calendar {
   background-image: url("../img/icons/glyphicons_045_calendar.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   opacity: 0.2;
   margin-left: 2px;
@@ -6801,12 +6787,11 @@ i.disconnect {
   background-image: url("../img/icons/glyphicons_063_power_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   margin: 5px;
   float: right;
@@ -6818,12 +6803,11 @@ i.show-details {
   background-image: url("../img/icons/glyphicons_157_show_thumbnails_with_lines.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   opacity: 0.2;
   background-size: 100% 93%;
@@ -6834,12 +6818,11 @@ i.show-list {
   background-image: url("../img/icons/glyphicons_158_show_lines.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   opacity: 0.2;
   background-size: 100% 93%;
@@ -6850,12 +6833,11 @@ i.show-carousel {
   background-image: url("../img/icons/show-carousel.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   opacity: 0.2;
   background-size: 100% 93%;
@@ -6881,12 +6863,11 @@ i.close {
   background-image: url("../img/icons/glyphicons_207_remove_2.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 100% 100%;
 }
@@ -6896,12 +6877,11 @@ i.close-2x {
   background-image: url("../img/icons/glyphicons_207_remove_2.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.tools {
@@ -6910,12 +6890,11 @@ i.tools {
   background-image: url("../img/icons/glyphicons_280_settings.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.unknown-large,
@@ -6928,12 +6907,11 @@ i.video-large {
   background-image: url("../img/icons/unknown-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.folder-large {
@@ -6942,12 +6920,11 @@ i.folder-large {
   background-image: url("../img/icons/folder-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.doc {
@@ -6956,12 +6933,11 @@ i.doc {
   background-image: url("../img/icons/doc.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.unknown {
@@ -6970,12 +6946,11 @@ i.unknown {
   background-image: url("../img/icons/unknown.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.img {
@@ -6984,12 +6959,11 @@ i.img {
   background-image: url("../img/icons/img.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.xls {
@@ -6998,12 +6972,11 @@ i.xls {
   background-image: url("../img/icons/xls.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.video {
@@ -7012,12 +6985,11 @@ i.video {
   background-image: url("../img/icons/video.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.pdf {
@@ -7026,12 +6998,11 @@ i.pdf {
   background-image: url("../img/icons/pdf.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.ppt {
@@ -7040,12 +7011,11 @@ i.ppt {
   background-image: url("../img/icons/ppt.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.zip {
@@ -7054,12 +7024,11 @@ i.zip {
   background-image: url("../img/icons/zip.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.audio {
@@ -7068,12 +7037,11 @@ i.audio {
   background-image: url("../img/icons/audio.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.xls-large {
@@ -7082,12 +7050,11 @@ i.xls-large {
   background-image: url("../img/icons/xls-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.doc-large {
@@ -7096,12 +7063,11 @@ i.doc-large {
   background-image: url("../img/icons/doc-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.unknown-large {
@@ -7110,12 +7076,11 @@ i.unknown-large {
   background-image: url("../img/icons/unknown-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.video-large {
@@ -7124,12 +7089,11 @@ i.video-large {
   background-image: url("../img/icons/video-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.pdf-large {
@@ -7138,12 +7102,11 @@ i.pdf-large {
   background-image: url("../img/icons/pdf-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.ppt-large {
@@ -7152,12 +7115,11 @@ i.ppt-large {
   background-image: url("../img/icons/ppt-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.audio-large {
@@ -7166,12 +7128,11 @@ i.audio-large {
   background-image: url("../img/icons/audio-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.zip-large {
@@ -7180,12 +7141,11 @@ i.zip-large {
   background-image: url("../img/icons/zip-large.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.folder {
@@ -7194,12 +7154,11 @@ i.folder {
   background-image: url("../img/icons/folder.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 i.edit {
@@ -7208,12 +7167,11 @@ i.edit {
   background-image: url("../img/icons/glyphicons_030_pencil.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: contain;
 }
@@ -7223,12 +7181,11 @@ i.mail-in {
   background-image: url("../img/icons/glyphicons_122_message_in.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: contain;
 }
@@ -7238,12 +7195,11 @@ i.mail-out {
   background-image: url("../img/icons/glyphicons_123_message_out.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: contain;
 }
@@ -7253,12 +7209,11 @@ i.mail-new {
   background-image: url("../img/icons/glyphicons_129_message_new.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: contain;
 }
@@ -7268,12 +7223,11 @@ i.remove-small {
   background-image: url("../img/icons/glyphicons_197_remove.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: contain;
 }
@@ -7283,12 +7237,11 @@ i.history {
   background-image: url("../img/icons/glyphicons_057_history.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .tabs {
@@ -7435,12 +7388,11 @@ nav.vertical.half-stamps article:hover i.send-mail {
   background-image: url("../img/icons/glyphicons_010_envelope_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   margin: 7px;
 }
@@ -7456,12 +7408,11 @@ nav.vertical.half-stamps article.selected i.send-mail {
   background-image: url("../img/icons/glyphicons_010_envelope_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   margin: 7px;
 }
@@ -7503,12 +7454,11 @@ nav.vertical.half-stamps article.selected a:hover {
   background-image: url("../img/icons/glyphicons_010_envelope_white.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   margin: 7px;
 }
@@ -9049,6 +8999,27 @@ a:hover {
 .line {
   border: none;
 }
+[stick-top-top] {
+  -o-transition: top 250ms ease;
+  -moz-transition: top 250ms ease;
+  -webkit-transition: top 250ms ease;
+  transition: top 250ms ease;
+}
+.floating-navigation li {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
+  border-radius: 2px;
+  border-top: 0;
+  margin-bottom: 5px;
+  background: #fff;
+  border-radius: 1px;
+}
+.floating-navigation li:hover {
+  background: #ff8500;
+  box-shadow: none;
+}
+.floating-navigation li:hover a {
+  color: #fff;
+}
 .message {
   color: #555555;
   text-align: left;
@@ -9472,12 +9443,11 @@ select {
   background-image: url("../img/icons/text-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
   background-color: transparent;
@@ -9491,12 +9461,11 @@ select {
   background-image: url("../img/icons/picture-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .menu-items i.sound,
@@ -9507,12 +9476,11 @@ select {
   background-image: url("../img/icons/music-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .menu-items i.video {
@@ -9521,12 +9489,11 @@ select {
   background-image: url("../img/icons/video-icon.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-color: transparent;
   border: none;
@@ -9537,12 +9504,11 @@ select {
   background-image: url("../img/icons/glyphicons_099_vector_path_all.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
   background-color: transparent;
@@ -9554,12 +9520,11 @@ select {
   background-image: url("../img/icons/glyphicons_155_show_big_thumbnails.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 60% auto;
   background-color: transparent;
@@ -9610,12 +9575,11 @@ select {
   background-image: url("../img/icons/glyphicons_234_brush.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   box-shadow: none;
   margin: 0;
@@ -9833,12 +9797,11 @@ select {
   background-image: url("../img/icons/glyphicons_206_ok_2.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 100% auto;
 }
@@ -9848,12 +9811,11 @@ select {
   background-image: url("../img/icons/glyphicons_207_remove_2.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 100% auto;
 }
@@ -9863,12 +9825,11 @@ select {
   background-image: url("../img/icons/glyphicons_057_history.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   background-size: 100% auto;
 }
@@ -10058,12 +10019,11 @@ select {
   background-image: url("../img/icons/glyphicons_119_table.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
   opacity: 0.7;
   -o-transition: opacity 250ms ease;
@@ -10602,12 +10562,11 @@ input[type=text][disabled] {
   background-image: url("../img/icons/glyphicons_223_chevron-right.png");
   background-repeat: no-repeat;
   background-position: center;
-  display: block;
+  display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  float: left;
   vertical-align: middle;
 }
 .droptarget {
