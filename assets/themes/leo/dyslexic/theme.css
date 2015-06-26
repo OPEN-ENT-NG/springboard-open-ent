@@ -4069,7 +4069,7 @@ a.cke_smile img {
   background-size: 60% auto;
   background-color: transparent;
 }
-.square-menu ul.menu-items li input[type=button]:hover {
+.square-menu ul.menu-items li > li > div > input[type=button]:hover {
   background-color: transparent;
 }
 .square-menu-actions {
@@ -5074,7 +5074,7 @@ ul.thought-out-actions > li p {
   background-size: 60% auto;
   background-color: transparent;
 }
-.menu-items input[type=button] {
+.menu-items > li > div > input[type=button] {
   background-position: 4px !important;
   padding-left: 29px;
   background-size: 19px;
@@ -5084,7 +5084,7 @@ ul.thought-out-actions > li p {
   text-align: left;
   font-size: 12px;
 }
-.menu-items input[type=button]:hover {
+.menu-items > li > div > input[type=button]:hover {
   color: #000;
 }
 .flexible {
@@ -9427,14 +9427,14 @@ select {
   margin: 0;
   font-size: 12px;
 }
-.menu-items li {
+.menu-items > li {
   min-height: 30px;
   line-height: 30px;
   list-style-type: none;
   color: #4bafd5;
   cursor: pointer !important;
 }
-.menu-items li:hover {
+.menu-items > li:hover {
   color: #ff8500;
 }
 .menu-items i.text {
@@ -9529,7 +9529,7 @@ select {
   background-size: 60% auto;
   background-color: transparent;
 }
-.menu-items input[type=button] {
+.menu-items > li > div > input[type=button] {
   background-position: 4px !important;
   padding-left: 29px;
   font-family: Arial;
@@ -9543,7 +9543,7 @@ select {
   font-size: 12px;
   box-shadow: none;
 }
-.menu-items input[type=button]:hover {
+.menu-items > li > div > input[type=button]:hover {
   color: #ff8500;
   background-color: transparent;
   background-size: 19px;

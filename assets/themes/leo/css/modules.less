@@ -2675,14 +2675,14 @@ select{
 	padding: 0;
 	margin: 0;
 	font-size: 12px;
-	li{
+	> li{
 		min-height: 30px;
 		line-height: 30px;
 		list-style-type: none;
 		color: @primary;
 		cursor: pointer !important;
 	}
-	li:hover{
+	> li:hover{
 		color: @accent;
 	}
 	i.text{
@@ -2713,7 +2713,7 @@ select{
 		background-size: 60% auto;
 		background-color: transparent
 	}
-	input[type=button]{
+	 > li > div > input[type=button]{
 		background-position: 4px !important;
 		padding-left: 29px;
 		font-family: Arial;
@@ -2727,7 +2727,7 @@ select{
 		font-size: 12px;
 		box-shadow: none;
 	}
-	input[type=button]:hover{
+	 > li > div > input[type=button]:hover{
 		color: @accent;
 		background-color: transparent;
 		background-size: 19px;
