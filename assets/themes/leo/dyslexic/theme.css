@@ -6896,6 +6896,7 @@ i.tools {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: middle;
+  display: block;
 }
 i.unknown-large,
 i.xls-large,
