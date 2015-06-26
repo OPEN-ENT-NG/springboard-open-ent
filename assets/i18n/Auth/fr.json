@@ -12,8 +12,19 @@
 	"auth.contact.help": "Vous souhaitez contacter l'assistance ?",
 	"auth.contact.help.text": "<ul><li>ASSISTANCE PARENT : 0810 901 982 (du lundi au vendredi de 8h à 20h et le samedi de 8h à 15h, N° azur 0,078€/appel puis 0,028€/min) ou via le <a href='http://leo.picardie.fr/assistance/' target='_blank' style='display: inline'>formulaire d'assistance</a>.</li><li>Assistance académique pour les enseignants et personnels : 03 22 82 37 40</li></ul>",
 	"auth.back.to.login": "Retour à l'écran d'accueil",
-  "email.reset.infos2" : "Vous avez demandé la réinitialisation de votre mot de passe pour le service ENT LEO - l’ENT des lycées de Picardie.<br />",
-  "email.click.to.reset" : "Pour procéder à cette réinitialisation, veuillez cliquer sur le lien ci-dessous :",
-  "email.reset.infos" : "Si vous n'êtes pas à l'origine de cette demande, vous pouvez ignorer ce message.<br /><br />Si vous rencontrez des difficultés, vous pouvez utiliser le formulaire à votre disposition dans la rubrique contact du site.",
-  "email.signature" : "L'équipe des ENT<br />ENT LEO – L’ENT des lycées de Picardie - http://leo.picardie.fr"
+	"auth.click.to.send.mail": "Recevoir un courriel à l'adresse",
+	"auth.click.to.send.sms": "Recevoir un texto au numéro",
+	"mail.reset.pw.subject": "Réinitialisation mot de passe - ENT LEO",
+	"mail.reset.id.subject": "Rappel de votre identifiant de connexion - ENT LEO",
+	"email.hi": "Bonjour,",
+    "email.login": "Votre identifiant ",
+    "email.regards": "",
+    "email.reset.infos": "Si vous n'êtes pas à l'origine de cette demande, vous pouvez ignorer cet email.",
+    "email.reset.pw.infos": "Vous avez demandé la réinitialisation de votre mot de passe pour vous connecter à l’ENT LEO.",
+	"email.signature" : "LEO , l’ENT des lycées de Picardie<br/><a href=\"http://leo.picardie.fr\">http://leo.picardie.fr</a>",
+	"phone.hi": "Bonjour, ",
+	"phone.how.to.reset": "Vous pouvez vous connecter à l'ENT LEO en saisissant votre identifiant et votre nouveau code d'activation",
+	"phone.login": "Voici le rappel de votre identifiant de connexion à l'ENT LEO",
+	"phone.regards": "",
+	"phone.signature": ""
 }
