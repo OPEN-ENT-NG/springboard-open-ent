@@ -3675,33 +3675,33 @@ a.cke_smile img {
   table-layout: fixed;
   width: 100%;
 }
-.illustrated-article .illustration {
+.illustrated-article > .illustration {
   position: relative;
   display: table-cell;
   width: 100px;
 }
-.illustrated-article .illustration .image {
+.illustrated-article > .illustration .image {
   overflow: hidden;
   height: 100px;
   width: 100px;
   margin-right: 15px;
   position: relative;
 }
-.illustrated-article .illustration .image img {
+.illustrated-article > .illustration .image img {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
 }
-.illustrated-article .illustration legend {
+.illustrated-article > .illustration legend {
   min-height: 55px;
   width: 100px;
   margin-right: 15px;
   box-sizing: border-box;
   padding: 6px 6px 6px 10px;
 }
-.illustrated-article .illustration legend a {
+.illustrated-article > .illustration legend a {
   color: #fff;
   font-size: 14px;
 }
