@@ -319,7 +319,7 @@ i.send-mail:hover{
 }
 
 nav.horizontal{
-	i{
+	> i{
 		display: inline-block !important;
 		float: none !important;
 		height: 64px !important;
@@ -1586,7 +1586,7 @@ input-password{
 nav.horizontal{
 	height: @header-height;
 	bottom: 0px;
-	a{
+	> a{
 		height: @header-height;
 		line-height: @header-height;
 		font-weight: 300;
@@ -1595,7 +1595,7 @@ nav.horizontal{
 		margin-right: 5px;
 		box-sizing: border-box;
 	}
-	a:hover{
+	> a:hover{
 		border-bottom: 3px solid @accent;
 	}
 	img{
@@ -1606,7 +1606,7 @@ nav.horizontal{
 @media screen and (max-width: 550px){
 	nav.horizontal{
 		right: 0;
-		a{
+		> a{
 			font-size: 14px;
 			margin-left: 0;
 		}
@@ -1705,7 +1705,7 @@ nav.vertical, .app-menu{
 
 nav.horizontal{
 	right: 10px;
-	a{
+	> a{
 		color: #fff;
 		vertical-align: middle;
 		i{

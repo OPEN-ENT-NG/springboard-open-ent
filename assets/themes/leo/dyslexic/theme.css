@@ -1043,7 +1043,7 @@ nav.horizontal {
   right: 0;
   bottom: 0px;
 }
-nav.horizontal a {
+nav.horizontal > a {
   display: inline-block;
   vertical-align: bottom;
 }
@@ -3166,6 +3166,7 @@ section.lightbox {
   left: 0;
   right: 0;
   display: none;
+  text-align: left;
 }
 section.lightbox .background {
   position: absolute;
@@ -6459,7 +6460,7 @@ i.send-mail:hover {
   box-sizing: border-box;
   vertical-align: middle;
 }
-nav.horizontal i {
+nav.horizontal > i {
   display: inline-block !important;
   float: none !important;
   height: 64px !important;
@@ -8269,7 +8270,7 @@ nav.horizontal {
   height: 64px;
   bottom: 0px;
 }
-nav.horizontal a {
+nav.horizontal > a {
   height: 64px;
   line-height: 64px;
   font-weight: 300;
@@ -8278,7 +8279,7 @@ nav.horizontal a {
   margin-right: 5px;
   box-sizing: border-box;
 }
-nav.horizontal a:hover {
+nav.horizontal > a:hover {
   border-bottom: 3px solid #ff8500;
 }
 nav.horizontal img {
@@ -8288,7 +8289,7 @@ nav.horizontal img {
   nav.horizontal {
     right: 0;
   }
-  nav.horizontal a {
+  nav.horizontal > a {
     font-size: 14px;
     margin-left: 0;
   }
@@ -8419,11 +8420,11 @@ nav.vertical a.classic-link:hover,
 nav.horizontal {
   right: 10px;
 }
-nav.horizontal a {
+nav.horizontal > a {
   color: #fff;
   vertical-align: middle;
 }
-nav.horizontal a i {
+nav.horizontal > a i {
   margin: 0;
   padding: 0;
 }

@@ -8268,7 +8268,7 @@ nav.horizontal {
   height: 64px;
   bottom: 0px;
 }
-nav.horizontal a {
+nav.horizontal > a {
   height: 64px;
   line-height: 64px;
   font-weight: 300;
@@ -8277,7 +8277,7 @@ nav.horizontal a {
   margin-right: 5px;
   box-sizing: border-box;
 }
-nav.horizontal a:hover {
+nav.horizontal > a:hover {
   border-bottom: 3px solid #ff8500;
 }
 nav.horizontal img {
