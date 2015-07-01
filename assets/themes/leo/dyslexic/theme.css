@@ -8454,6 +8454,7 @@ article.list-view {
   margin: 0px;
   padding: 0;
   box-shadow: none;
+  height: auto;
 }
 .notification article .notification-date {
   right: 69px;
@@ -8465,6 +8466,7 @@ article.list-view {
 .notification article .avatar {
   left: -72px;
   top: 5px;
+  height: auto;
 }
 .notification article .avatar img {
   border-radius: 27px;

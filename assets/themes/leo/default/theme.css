@@ -1043,7 +1043,7 @@ nav.horizontal {
   right: 0;
   bottom: 0px;
 }
-nav.horizontal a {
+nav.horizontal > a {
   display: inline-block;
   vertical-align: bottom;
 }
@@ -3166,6 +3166,7 @@ section.lightbox {
   left: 0;
   right: 0;
   display: none;
+  text-align: left;
 }
 section.lightbox .background {
   position: absolute;
@@ -6458,7 +6459,7 @@ i.send-mail:hover {
   box-sizing: border-box;
   vertical-align: middle;
 }
-nav.horizontal i {
+nav.horizontal > i {
   display: inline-block !important;
   float: none !important;
   height: 64px !important;
@@ -8287,7 +8288,7 @@ nav.horizontal img {
   nav.horizontal {
     right: 0;
   }
-  nav.horizontal a {
+  nav.horizontal > a {
     font-size: 14px;
     margin-left: 0;
   }
@@ -8418,11 +8419,11 @@ nav.vertical a.classic-link:hover,
 nav.horizontal {
   right: 10px;
 }
-nav.horizontal a {
+nav.horizontal > a {
   color: #fff;
   vertical-align: middle;
 }
-nav.horizontal a i {
+nav.horizontal > a i {
   margin: 0;
   padding: 0;
 }
@@ -8452,6 +8453,7 @@ article.list-view {
   margin: 0px;
   padding: 0;
   box-shadow: none;
+  height: auto;
 }
 .notification article .notification-date {
   right: 69px;
@@ -8463,6 +8465,7 @@ article.list-view {
 .notification article .avatar {
   left: -72px;
   top: 5px;
+  height: auto;
 }
 .notification article .avatar img {
   border-radius: 27px;
