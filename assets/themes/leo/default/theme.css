@@ -752,9 +752,6 @@ help section.lightbox > div.content iframe {
 .app-single-post {
   background: #fff;
 }
-.app-single-post section.app-content-section:not(:target) {
-  display: none;
-}
 .app-single-post .app-menu {
   float: left;
   width: 250px;
@@ -762,11 +759,10 @@ help section.lightbox > div.content iframe {
 .app-single-post .app-content-section {
   width: 640px;
   float: right;
-  overflow: auto;
-  height: 395px;
 }
 .app-single-post .app-content-section img {
   max-width: 100%;
+  display: block;
 }
 .app-single-post .app-content-container {
   margin-top: 15px;
@@ -3167,6 +3163,10 @@ section.lightbox {
   right: 0;
   display: none;
   text-align: left;
+  color: initial;
+  line-height: initial;
+  font-size: initial;
+  font-weight: normal;
 }
 section.lightbox .background {
   position: absolute;
@@ -3185,6 +3185,12 @@ section.lightbox > div.content {
   float: none !important;
 }
 section.lightbox .content::after {
+  clear: both;
+  content: " ";
+  display: block;
+  width: 100%;
+}
+section.lightbox::after {
   clear: both;
   content: " ";
   display: block;
