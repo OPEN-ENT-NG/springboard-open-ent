@@ -6861,7 +6861,6 @@ i.disconnect {
   box-sizing: border-box;
   vertical-align: middle;
   margin: 5px;
-  float: right;
   margin-bottom: -6px;
 }
 i.show-details {
@@ -7642,9 +7641,11 @@ input[type=submit][disabled]:hover {
   display: block;
 }
 #my-photo {
+  margin-top: 0px;
   padding: 5px;
   border-radius: 20px;
   width: 30px;
+  vertical-align: middle;
 }
 .navbar {
   background: #209dcc;
