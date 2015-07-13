@@ -18,7 +18,7 @@ if(window.skin){
 				restrict: 'E',
 				replace: false,
 				template:
-					'<input type="password"/>' +
+					'<input type="password" autocomplete="off"/>' +
 					'<button type="button" ng-class="{ pushed: toggle }" ng-click="show(!toggle)"></button>',
 				scope: true,
 				compile: function(element, attributes){
