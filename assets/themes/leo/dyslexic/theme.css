@@ -7230,10 +7230,38 @@ i.folder {
   box-sizing: border-box;
   vertical-align: middle;
 }
+i.view {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_051_eye_open.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background-size: contain;
+}
 i.edit {
   height: 15px;
   width: 15px;
   background-image: url("../img/icons/glyphicons_030_pencil.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background-size: contain;
+}
+i.manage {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_137_cogwheels.png");
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
@@ -10272,6 +10300,10 @@ ul.toc li a {
 }
 .dominos.fallen .item strong {
   font-size: 16px;
+}
+.dominos.fallen .two-lines {
+  max-height: 42px;
+  overflow: hidden;
 }
 .lightbox-view .tabs.linker .illustrated-list li,
 .lightbox .tabs.linker .illustrated-list li {
