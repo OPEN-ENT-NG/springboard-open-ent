@@ -6147,22 +6147,30 @@ input[type=search],
 .drop-down-button.hidden label {
   font-family: OpenDyslexic;
 }
-@font-face {
+/*@font-face {
   font-family: 'FontAwesome';
   src: url('../font/fontawesome-webfont.eot?v=4.3.0');
   src: url('../font/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../font/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'fontello';
   src: url('../font/fontello.woff?8144122');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'fontello';
   src: url('../font/fontello-custom.woff?8144122');
+  font-weight: normal;
+  font-style: normal;
+}*/
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/new_fontello/fontello.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -7676,42 +7684,48 @@ input[type=submit][disabled]:hover {
   font-size: 14px !important;
   line-height: 26px;
 }
+/* Mixin for icons style */
+.fonticon {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 i.workspace-large,
 i.type.workspace {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.workspace-large::before,
 i.type.workspace::before {
-  content: "\f07b";
+  content: "\e81b";
   color: #e13a3a;
 }
 i.conversation-large,
 i.type.messagerie {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.conversation-large::before,
 i.type.messagerie::before {
-  content: "\f0e0";
+  content: "\e804";
   color: #ecbe30;
 }
 i.actualites-large,
 i.type.news {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.actualites-large::before,
 i.type.news::before {
-  content: "\f1ea";
+  content: "\e85b";
   color: #4cb0d6;
 }
 i.wiki-large,
 i.type.wiki {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7722,18 +7736,18 @@ i.type.wiki::before {
 }
 i.support-large,
 i.type.support {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.support-large::before,
 i.type.support::before {
-  content: "\f059";
+  content: "\e835";
   color: #46bfaf;
 }
 i.userbook-large,
 i.type.userbook {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7744,51 +7758,51 @@ i.type.userbook::before {
 }
 i.archive-large,
 i.type.archive {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.archive-large::before,
 i.type.archive::before {
-  content: "\f1c6";
+  content: "\e81d";
   color: #ff8500;
 }
 i.blog-large,
 i.type.blog {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.blog-large::before,
 i.type.blog::before {
-  content: "\f0a1";
+  content: "\e809";
   color: #ff8500;
 }
 i.mindmap-large,
 i.type.mindmap {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.mindmap-large::before,
 i.type.mindmap::before {
-  content: "\f0e8";
+  content: "\e859";
   color: #4cb0d6;
 }
 i.rack-large,
 i.type.rack {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.rack-large::before,
 i.type.rack::before {
-  content: "\f01c";
+  content: "\e80d";
   color: #e13a3a;
 }
 i.community-large,
 i.type.community {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7799,7 +7813,7 @@ i.type.community::before {
 }
 i.forum-large,
 i.type.forum {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7809,7 +7823,7 @@ i.type.forum::before {
   color: #763294;
 }
 i.my-network-large {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7819,28 +7833,28 @@ i.my-network-large::before {
 }
 i.collaborative-wall-large,
 i.type.collaborativewall {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.collaborative-wall-large::before,
 i.type.collaborativewall::before {
-  content: "\f1e7";
+  content: "\e800";
   color: #46bfaf;
 }
 i.pages-large,
 i.type.pages {
-  font-family: FontAwesome;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.pages-large::before,
 i.type.pages::before {
-  content: "\f0c5";
+  content: "\e876";
   color: #e13a3a;
 }
 i.admin-large {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -7850,47 +7864,91 @@ i.admin-large::before {
 }
 i.rbs-large,
 i.type.rbs {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.rbs-large::before,
 i.type.rbs::before {
-  content: '\e81f';
+  content: '\e80e';
   color: #ff8500;
 }
 i.timelinegenerator-large,
 i.type.timelinegenerator {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.timelinegenerator-large::before,
 i.type.timelinegenerator::before {
-  content: '\e80c';
+  content: '\e819';
   color: #ecbe30;
 }
 i.pronote-large,
 i.type.pronote {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.pronote-large::before,
 i.type.pronote::before {
-  content: '\e809';
+  content: '\e82a';
   color: #e13a3a;
 }
 i.note-large,
 i.type.note {
-  font-family: fontello;
+  font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 i.note-large::before,
 i.type.note::before {
-  content: '\f080';
+  content: '\e806';
   color: #ecbe30;
+}
+i.calendar-large,
+i.type.calendar {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.calendar-large::before,
+i.type.calendar::before {
+  content: '\e834';
+  color: #ecbe30;
+}
+i.forum-large,
+i.forum.cas {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.forum-large::before,
+i.type.forum::before {
+  content: '\e81e';
+  color: #4cb0d6;
+}
+i.poll-large,
+i.poll.cas {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.poll-large::before,
+i.type.poll::before {
+  content: '\e832';
+  color: #4cb0d6;
+}
+i.statistics-large,
+i.statistics.cas {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+i.statistics-large::before,
+i.type.statistics::before {
+  content: '\e810';
+  color: #763294;
 }
 .icons-view.apps {
   margin-top: 12px;
@@ -8049,7 +8107,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
 }
 .aligned {
   display: inline-block;
@@ -8248,7 +8306,7 @@ input-password button.pushed {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: #ffffff;
+  background: white;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {

@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'FontAwesome';
   src: url('../font/fontawesome-webfont.eot?v=4.3.0');
   src: url('../font/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../font/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
@@ -18,7 +18,15 @@
   src: url('../font/fontello-custom.woff?8144122');
   font-weight: normal;
   font-style: normal;
+}*/
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/new_fontello/fontello.woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
 
 a{
 	color: @primary;
@@ -924,40 +932,40 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 	}
 }
 
+/* Mixin for icons style */
+.fonticon{
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
 i.workspace-large, i.type.workspace{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	.fonticon;
 }
 i.workspace-large::before, i.type.workspace::before{
-	content: "\f07b";
+	content: "\e81b";
 	color: @red;
 }
 
 i.conversation-large, i.type.messagerie{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.conversation-large::before, i.type.messagerie::before{
-	content: "\f0e0";
+	content: "\e804";
 	color: @yellow;
 }
 
 i.actualites-large, i.type.news{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.actualites-large::before, i.type.news::before{
-	content: "\f1ea";
+  content: "\e85b";
 	color: @cyan;
 }
 
 i.wiki-large, i.type.wiki{
-	font-family: fontello;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.wiki-large::before, i.type.wiki::before{
 	content: '\e813';
@@ -965,19 +973,15 @@ i.wiki-large::before, i.type.wiki::before{
 }
 
 i.support-large, i.type.support{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.support-large::before, i.type.support::before{
-	content: "\f059";
+	content: "\e835";
 	color: @green;
 }
 
 i.userbook-large, i.type.userbook{
-	font-family: fontello;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.userbook-large::before, i.type.userbook::before{
 	content: '\e811';
@@ -985,49 +989,39 @@ i.userbook-large::before, i.type.userbook::before{
 }
 
 i.archive-large, i.type.archive{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.archive-large::before, i.type.archive::before{
-	content: "\f1c6";
+	content: "\e81d";
 	color: @orange;
 }
 
 i.blog-large, i.type.blog{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.blog-large::before, i.type.blog::before{
-	content: "\f0a1";
+	content: "\e809";
 	color: @orange;
 }
 
 i.mindmap-large, i.type.mindmap{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.mindmap-large::before, i.type.mindmap::before{
-	content: "\f0e8";
+	content: "\e859";
 	color: @cyan;
 }
 
 i.rack-large, i.type.rack{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.rack-large::before, i.type.rack::before{
-	content: "\f01c";
+	content: "\e80d";
 	color: @red;
 }
 
 i.community-large, i.type.community{
-	font-family: fontello;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.community-large::before, i.type.community::before{
 	content: '\e814';
@@ -1035,9 +1029,7 @@ i.community-large::before, i.type.community::before{
 }
 
 i.forum-large, i.type.forum{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.forum-large::before, i.type.forum::before{
 	content: "\f086";
@@ -1045,9 +1037,7 @@ i.forum-large::before, i.type.forum::before{
 }
 
 i.my-network-large{
-	font-family: fontello;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.my-network-large::before{
 	content: '\e82e';
@@ -1055,29 +1045,23 @@ i.my-network-large::before{
 }
 
 i.collaborative-wall-large, i.type.collaborativewall{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.collaborative-wall-large::before, i.type.collaborativewall::before{
-	content: "\f1e7";
+	content: "\e800";
 	color: @green;
 }
 
 i.pages-large, i.type.pages{
-	font-family: FontAwesome;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.pages-large::before, i.type.pages::before{
-	content: "\f0c5";
+	content: "\e876";
 	color: @red;
 }
 
 i.admin-large{
-	font-family: fontello;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.admin-large::before{
 	content: '\e81a';
@@ -1085,43 +1069,69 @@ i.admin-large::before{
 }
 
 i.rbs-large, i.type.rbs{
-	font-family: fontello;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.rbs-large::before, i.type.rbs::before{
-	content: '\e81f';
+	content: '\e80e';
 	color: @orange;
 }
 
 i.timelinegenerator-large, i.type.timelinegenerator{
-	font-family: fontello;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.timelinegenerator-large::before, i.type.timelinegenerator::before{
-	content: '\e80c';
+	content: '\e819';
 	color: @yellow;
 }
 i.pronote-large, i.type.pronote{
-    font-family: fontello;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.pronote-large::before, i.type.pronote::before{
-    content: '\e809';
+    content: '\e82a';
     color: @red;
 }
 
 i.note-large, i.type.note{
-    font-family: fontello;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  .fonticon;
 }
 i.note-large::before, i.type.note::before{
-    content: '\f080';
+    content: '\e806';
     color: @yellow;
 }
+
+i.calendar-large, i.type.calendar{
+  .fonticon;
+}
+i.calendar-large::before, i.type.calendar::before{
+  content: '\e834';
+  color: @yellow;
+}
+
+i.forum-large, i.forum.cas{
+  .fonticon;
+}
+i.forum-large::before, i.type.forum::before{
+  content: '\e81e';
+  color: @cyan;
+}
+
+i.poll-large, i.poll.cas{
+  .fonticon;
+}
+i.poll-large::before, i.type.poll::before{
+  content: '\e832';
+  color: @cyan;
+}
+
+i.statistics-large, i.statistics.cas{
+  .fonticon;
+}
+i.statistics-large::before, i.type.statistics::before{
+  content: '\e810';
+  color: @purple;
+}
+
+
 
 .icons-view.apps{
 	margin-top: 12px;
