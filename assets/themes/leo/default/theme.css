@@ -10307,6 +10307,10 @@ ul.toc li a {
   max-height: 42px;
   overflow: hidden;
 }
+lightbox-view .linker .found-resources,
+.lightbox .linker .found-resources {
+  height: 200px;
+}
 .lightbox-view .tabs.linker .illustrated-list li,
 .lightbox .tabs.linker .illustrated-list li {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
