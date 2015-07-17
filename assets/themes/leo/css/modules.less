@@ -2666,6 +2666,7 @@ select{
 		background: white;
 		left: -8px;
 		transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
 	}
 }
 /*
@@ -2682,6 +2683,7 @@ select{
 		right: -10px;
 		z-index: 10;
 		transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
 	}
 }
 */
@@ -2849,10 +2851,10 @@ select{
 }
 
 .schedule{
-	width: 100%;
+	width: calc(~"100% - 130px");
 	height: auto;
 	margin-left: 130px;
-	padding-right: 130px;
+	padding-right: 0px;
 	button{
 		border-radius: 0;
 	}
@@ -3507,6 +3509,7 @@ nav.illustrated-links{
 						background: @background;
 						left: 15px;
 						transform: rotate(-45deg);
+                        -webkit-transform: rotate(-45deg);
 					}
 				}
 			}
@@ -4043,6 +4046,7 @@ label{
 	input[type=checkbox]:checked + span::before, input[type=checkbox]:checked + i18n::before {
 		content: " ";
 		transform: rotate(40deg);
+        -webkit-transform: rotate(40deg);
 		border-color: @green;
 		height: 25px;
 		width: 20px;

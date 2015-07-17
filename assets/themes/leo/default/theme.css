@@ -9503,6 +9503,7 @@ select {
   background: white;
   left: -8px;
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 /*
 .bubble-container:nth-child(2n+1){
@@ -9518,6 +9519,7 @@ select {
 		right: -10px;
 		z-index: 10;
 		transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
 	}
 }
 */
@@ -9773,10 +9775,10 @@ select {
   color: #fff;
 }
 .schedule {
-  width: 100%;
+  width: calc(100% - 130px);
   height: auto;
   margin-left: 130px;
-  padding-right: 130px;
+  padding-right: 0px;
 }
 .schedule button {
   border-radius: 0;
@@ -10489,6 +10491,7 @@ nav.illustrated-links ul ul.secondary-list li .bubble-container::after {
   background: #f9f9f9;
   left: 15px;
   transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
 }
 .caption {
   line-height: 10px;
@@ -10943,6 +10946,7 @@ label input[type=checkbox]:checked + span::before,
 label input[type=checkbox]:checked + i18n::before {
   content: " ";
   transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
   border-color: #46bfaf;
   height: 25px;
   width: 20px;
