@@ -8019,6 +8019,10 @@ i.type.statistics::before {
   transition: color 250ms ease;
   font-weight: normal;
 }
+.icons-view.apps .element .container img {
+  max-width: 70%;
+  max-height: 70%;
+}
 .icons-view.apps .element legend {
   padding: 0 !important;
   -webkit-box-sizing: border-box;
