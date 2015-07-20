@@ -11167,3 +11167,9 @@ plus .opener.minus {
 .block-editor div[drawing-zone] {
   height: auto;
 }
+.main-col .checkbox-filters {
+  float: left;
+}
+.main-col .preview {
+  float: left;
+}
