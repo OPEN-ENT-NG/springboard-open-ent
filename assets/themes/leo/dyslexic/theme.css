@@ -7986,6 +7986,57 @@ i.type.statistics::before {
   content: '\e810';
   color: #763294;
 }
+i.validated-icon-large,
+i.validated-icon {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.validated-icon-large::before,
+i.validated-icon::before {
+  content: '\e871';
+  color: #46bfaf;
+}
+i.suspended-icon-large,
+i.suspended-icon {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.suspended-icon-large::before,
+i.suspended-icon::before {
+  content: '\e856';
+  color: #ff8500;
+}
+i.refused-icon-large,
+i.refused-icon {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.refused-icon-large::before,
+i.refused-icon::before {
+  content: '\e866';
+  color: #e13a3a;
+}
+i.pending-icon-large,
+i.pending-icon,
+table.colored i.pending-icon {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.pending-icon-large::before,
+i.pending-icon::before,
+table.colored i.pending-icon::before {
+  content: '\e85c';
+  color: #763294;
+  font-family: "fontello";
+}
 .icons-view.apps {
   margin-top: 12px;
 }

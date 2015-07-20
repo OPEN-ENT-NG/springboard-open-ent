@@ -1132,6 +1132,38 @@ i.statistics-large::before, i.type.statistics::before{
   color: @purple;
 }
 
+i.validated-icon-large, i.validated-icon{
+  .fonticon;
+}
+i.validated-icon-large::before, i.validated-icon::before{
+  content: '\e871';
+  color: @green;
+}
+
+i.suspended-icon-large, i.suspended-icon{
+  .fonticon;
+}
+i.suspended-icon-large::before, i.suspended-icon::before{
+  content: '\e856';
+  color: @orange;
+}
+
+i.refused-icon-large, i.refused-icon{
+  .fonticon;
+}
+i.refused-icon-large::before, i.refused-icon::before{
+  content: '\e866';
+  color: @red;
+}
+
+i.pending-icon-large, i.pending-icon, table.colored i.pending-icon{
+  .fonticon;
+}
+i.pending-icon-large::before, i.pending-icon::before, table.colored i.pending-icon::before{
+  content: '\e85c';
+  color: @purple;
+  font-family: "fontello";
+}
 
 
 .icons-view.apps{
