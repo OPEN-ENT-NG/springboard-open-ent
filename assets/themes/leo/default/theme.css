@@ -11164,6 +11164,11 @@ plus .opener.minus {
   font-size: 18px;
   line-height: 23px;
 }
+.card span.row {
+  height: 22px;
+  display: inline-block;
+  overflow: hidden;
+}
 .block-editor div[drawing-zone] {
   height: auto;
 }
