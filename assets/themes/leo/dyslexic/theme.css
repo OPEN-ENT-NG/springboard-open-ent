@@ -8670,6 +8670,8 @@ article.list-view {
 }
 .notification .content {
   padding: 0;
+  float: left;
+  width: 85%;
 }
 .toggle-panel {
   background: #4bafd5;
