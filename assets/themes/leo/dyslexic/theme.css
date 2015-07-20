@@ -7691,6 +7691,174 @@ input[type=submit][disabled]:hover {
   -moz-osx-font-smoothing: grayscale;
   background-image: none;
 }
+i.absences-large,
+i.type.absences,
+i.absences {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.absences-large::before,
+i.type.absences::before,
+i.absences::before {
+  content: "\e80b";
+  color: #e13a3a;
+}
+i.esidoc-large,
+i.type.esidoc,
+i.esidoc {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.esidoc-large::before,
+i.type.esidoc::before,
+i.esidoc::before {
+  content: "\e826";
+  color: #763294;
+}
+i.edumedia-large,
+i.type.edumedia,
+i.edumedia {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.edumedia-large::before,
+i.type.edumedia::before,
+i.edumedia::before {
+  content: "\e887";
+  color: #4cb0d6;
+}
+i.agenda-large,
+i.type.agenda,
+i.agenda {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.agenda-large::before,
+i.type.agenda::before,
+i.agenda::before {
+  content: "\e83c";
+  color: #ecbe30;
+}
+i.cahier-textes-large,
+i.type.cahier-textes,
+i.cahier-textes {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.cahier-textes-large::before,
+i.type.cahier-textes::before,
+i.cahier-textes::before {
+  content: "\e86f";
+  color: #46bfaf;
+}
+i.lesitetv-large,
+i.type.lesitetv,
+i.lesitetv {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.lesitetv-large::before,
+i.type.lesitetv::before,
+i.lesitetv::before {
+  content: "\e87a";
+  color: #ecbe30;
+}
+i.maxicours-large,
+i.type.maxicours,
+i.maxicours {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.maxicours-large::before,
+i.type.maxicours::before,
+i.maxicours::before {
+  content: "\e825";
+  color: #ff8500;
+}
+i.notes-large,
+i.type.notes,
+i.notes {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.notes-large::before,
+i.type.notes::before,
+i.notes::before {
+  content: "\e806";
+  color: #4cb0d6;
+}
+i.scolarite-large,
+i.type.scolarite,
+i.scolarite {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.scolarite-large::before,
+i.type.scolarite::before,
+i.scolarite::before {
+  content: "\e802";
+  color: #4cb0d6;
+}
+i.td-base-large,
+i.type.td-base,
+i.td-base {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.td-base-large::before,
+i.type.td-base::before,
+i.td-base::before {
+  content: "\e883";
+  color: #4cb0d6;
+}
+i.universalis-large,
+i.type.universalis,
+i.universalis {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.universalis-large::before,
+i.type.universalis::before,
+i.universalis::before {
+  content: "\e831";
+  color: #4cb0d6;
+}
+i.webclasseur-large,
+i.type.webclasseur,
+i.webclasseur {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.webclasseur-large::before,
+i.type.webclasseur::before,
+i.webclasseur::before {
+  content: "\e878";
+  color: #4cb0d6;
+}
 i.workspace-large,
 i.type.workspace,
 i.workspace {
