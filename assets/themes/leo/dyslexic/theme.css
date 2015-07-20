@@ -7689,12 +7689,15 @@ input[type=submit][disabled]:hover {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.workspace-large,
-i.type.workspace {
+i.type.workspace,
+i.workspace {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.workspace-large::before,
 i.type.workspace::before {
@@ -7702,10 +7705,12 @@ i.type.workspace::before {
   color: #e13a3a;
 }
 i.conversation-large,
-i.type.messagerie {
+i.type.messagerie,
+i.mail {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.conversation-large::before,
 i.type.messagerie::before {
@@ -7713,10 +7718,12 @@ i.type.messagerie::before {
   color: #ecbe30;
 }
 i.actualites-large,
-i.type.news {
+i.type.news,
+i.actualites {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.actualites-large::before,
 i.type.news::before {
@@ -7724,10 +7731,12 @@ i.type.news::before {
   color: #4cb0d6;
 }
 i.wiki-large,
-i.type.wiki {
+i.type.wiki,
+i.wiki {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.wiki-large::before,
 i.type.wiki::before {
@@ -7735,10 +7744,12 @@ i.type.wiki::before {
   color: #763294;
 }
 i.support-large,
-i.type.support {
+i.type.support,
+i.support {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.support-large::before,
 i.type.support::before {
@@ -7746,10 +7757,12 @@ i.type.support::before {
   color: #46bfaf;
 }
 i.userbook-large,
-i.type.userbook {
+i.type.userbook,
+i.userbook {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.userbook-large::before,
 i.type.userbook::before {
@@ -7757,10 +7770,12 @@ i.type.userbook::before {
   color: #46bfaf;
 }
 i.archive-large,
-i.type.archive {
+i.type.archive,
+i.archive {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.archive-large::before,
 i.type.archive::before {
@@ -7768,10 +7783,12 @@ i.type.archive::before {
   color: #ff8500;
 }
 i.blog-large,
-i.type.blog {
+i.type.blog,
+i.blog {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.blog-large::before,
 i.type.blog::before {
@@ -7779,10 +7796,12 @@ i.type.blog::before {
   color: #ff8500;
 }
 i.mindmap-large,
-i.type.mindmap {
+i.type.mindmap,
+i.mindmap {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.mindmap-large::before,
 i.type.mindmap::before {
@@ -7790,10 +7809,12 @@ i.type.mindmap::before {
   color: #4cb0d6;
 }
 i.rack-large,
-i.type.rack {
+i.type.rack,
+i.rack {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.rack-large::before,
 i.type.rack::before {
@@ -7801,10 +7822,12 @@ i.type.rack::before {
   color: #e13a3a;
 }
 i.community-large,
-i.type.community {
+i.type.community,
+i.community {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.community-large::before,
 i.type.community::before {
@@ -7816,6 +7839,7 @@ i.type.forum {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.forum-large::before,
 i.type.forum::before {
@@ -7826,6 +7850,7 @@ i.my-network-large {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.my-network-large::before {
   content: '\e82e';
@@ -7836,6 +7861,7 @@ i.type.collaborativewall {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.collaborative-wall-large::before,
 i.type.collaborativewall::before {
@@ -7847,6 +7873,7 @@ i.type.pages {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.pages-large::before,
 i.type.pages::before {
@@ -7857,6 +7884,7 @@ i.admin-large {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.admin-large::before {
   content: '\e81a';
@@ -7867,6 +7895,7 @@ i.type.rbs {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.rbs-large::before,
 i.type.rbs::before {
@@ -7878,6 +7907,7 @@ i.type.timelinegenerator {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.timelinegenerator-large::before,
 i.type.timelinegenerator::before {
@@ -7889,6 +7919,7 @@ i.type.pronote {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.pronote-large::before,
 i.type.pronote::before {
@@ -7900,6 +7931,7 @@ i.type.note {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.note-large::before,
 i.type.note::before {
@@ -7911,6 +7943,7 @@ i.type.calendar {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.calendar-large::before,
 i.type.calendar::before {
@@ -7922,6 +7955,7 @@ i.forum.cas {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.forum-large::before,
 i.type.forum::before {
@@ -7933,6 +7967,7 @@ i.poll.cas {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.poll-large::before,
 i.type.poll::before {
@@ -7944,6 +7979,7 @@ i.statistics.cas {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 i.statistics-large::before,
 i.type.statistics::before {
