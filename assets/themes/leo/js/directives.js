@@ -194,8 +194,14 @@ if(window.skin){
 								var inUserbook = scope.locationPath.indexOf("/userbook") === 0
 								////////////////////////////////////////
 
-								$http.get('/' + (inUserbook ? 'directory' : appPrefix) + '/conf/public').success(function(data){
-									var currentLocation = scope.locationPath
+								// Eliot workaround //
+								var inEliot = false;
+								if(typeof eliotPrefix !== "undefined"){
+									inEliot = true
+								}
+
+								$http.get('/' + (inUserbook ? 'directory' : inEliot ? 'eliot' : appPrefix) + '/conf/public').success(function(data){
+									var currentLocation = inEliot ? '/eliot/'+eliotPrefix : scope.locationPath
 
 									var serviceObj = getOrElse(data.xiti, 'ID_SERVICE', {})
 									scope.xitiConf.ID_SERVICE = getOrElse(serviceObj, 'default', '')
