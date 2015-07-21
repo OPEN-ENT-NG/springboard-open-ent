@@ -7197,7 +7197,7 @@ nav.horizontal popover > a i {
 }
 nav.horizontal > a i:before,
 nav.horizontal popover > a i:before {
-  color: lime;
+  color: white;
   font-size: 30px;
 }
 nav.horizontal > a i.home,
