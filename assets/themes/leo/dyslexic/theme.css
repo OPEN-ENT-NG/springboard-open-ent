@@ -7209,7 +7209,8 @@ nav.horizontal > a:hover {
   border-bottom: 3px solid #ff8500;
 }
 nav.horizontal #my-photo {
-  margin-top: -4px;
+  margin-top: 11px;
+  vertical-align: 0;
 }
 i.public {
   font-family: "fontello";
