@@ -697,6 +697,7 @@ i.help-large, i.help.cas, i.help{
 }
 i.help-large::before, i.type.help::before, i.help::before{
   content: '\e835';
+  cursor: pointer;
 }
 
 i.disconnect-large, i.disconnect.cas, i.disconnect{
@@ -706,6 +707,10 @@ i.disconnect-large::before, i.type.disconnect::before, i.disconnect::before{
   content: '\e842';
 }
 
+/* no ico in app page title*/
+h1 i:before{
+	display: none;
+}
 /* nav horiz menu icons */
 
 
