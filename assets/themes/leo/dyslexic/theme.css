@@ -6553,6 +6553,8 @@ i.type.edumedia::before,
 i.edumedia::before {
   content: "\e887";
   color: #4cb0d6;
+  font-size: 23px;
+  vertical-align: middle;
 }
 i.agenda-large,
 i.type.agenda,
@@ -6692,7 +6694,89 @@ i.pronote-large::before,
 i.type.pronote::before,
 i.pronote::before {
   content: '\e82a';
+  color: #763294;
+  font-size: 23px;
+  vertical-align: middle;
+}
+i.charlemagne-large,
+i.type.charlemagne,
+i.charlemagne {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.charlemagne-large::before,
+i.type.charlemagne::before,
+i.charlemagne::before {
+  content: '\e885';
   color: #e13a3a;
+  font-size: 23px;
+  vertical-align: middle;
+}
+i.scolinfo-large,
+i.type.scolinfo,
+i.scolinfo {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.scolinfo-large::before,
+i.type.scolinfo::before,
+i.scolinfo::before {
+  content: '\e886';
+  color: #763294;
+  font-size: 23px;
+  vertical-align: middle;
+}
+i.paraschool-large,
+i.type.paraschool,
+i.paraschool {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.paraschool-large::before,
+i.type.paraschool::before,
+i.paraschool::before {
+  content: '\e82d';
+  color: #763294;
+  font-size: 21px;
+  vertical-align: middle;
+}
+i.vie-scolaire-large,
+i.type.vie-scolaire,
+i.vie-scolaire {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.vie-scolaire-large::before,
+i.type.vie-scolaire::before,
+i.vie-scolaire::before {
+  content: '\e879';
+  color: #ecbe30;
+  font-size: 23px;
+  vertical-align: middle;
+}
+i.pro-eps-large,
+i.type.pro-eps,
+i.pro-eps {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.pro-eps-large::before,
+i.type.pro-eps::before,
+i.pro-eps::before {
+  content: '\e884';
+  color: #4cb0d6;
+  font-size: 23px;
+  vertical-align: middle;
 }
 /* ico for main apps */
 i.workspace-large,
