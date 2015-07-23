@@ -117,9 +117,9 @@ h4{
 	}
 	tbody{
 		tr:hover{
-			td.drop-line{
-				background: url(../img/icons/glyphicons_207_remove_2.png) no-repeat;
-				background-position: center;
+			td.drop-line:before{
+				.fonticon;
+			  	content: '\e866';
 			}
 		}
 		tr{
@@ -135,9 +135,11 @@ h4{
 			}
 
 			i.history{
-				.icon(glyphicons_057_history, 17px);
+				.fonticon;
 				margin: 0px 3px;
-				background-size: contain;
+			}
+		  	i.history:before{
+				content:'\e844';
 			}
 		}
 		tr.new-element{
@@ -951,7 +953,7 @@ i.send-mail:hover{
 
 
 
-/* icons moods */
+/* attention icones moods */
 
 
 i.angry{
@@ -998,44 +1000,59 @@ i.worried{
 	.icon(worried, 50px);
 }
 
+/* attention icones*/
 
 
 i.show-icons{
-	.icon(glyphicons_156_show_thumbnails, 24px);
+	.fonticon;
 	opacity: 0.2;
+}
+i.show-icons:before{
+  content: '\e837';
+  font-size: 28px;
 }
 
 i.show-admin{
-	.icon(glyphicons_137_cogwheels, 24px);
-	opacity: 0.5;
-	background-size: 100% auto;
-	margin-left: 2px;
-	margin-right: 2px;
-	.right-magnet;
+	.fonticon;
+ 	 text-align: center;
+}
+i.show-admin:before{
+	content: '\e81a';
+ 	 font-size: 18px;
 }
 
 i.show-calendar{
-	.icon(glyphicons_045_calendar, 24px);
+	.fonticon;
 	opacity: 0.2;
 	margin-left: 2px;
 	margin-right: 2px;
 	.right-magnet;
 }
-
+i.show-calendar{
+  content: '\e834';
+  font-size: 18px;
+}
 i.show-calendar.selected{
 	opacity: 0.6;
 }
 
 i.show-details{
-	.icon(glyphicons_157_show_thumbnails_with_lines, 24px);
+	.fonticon;
 	opacity: 0.2;
-	background-size: 100% 93%;
+}
+i.show-details:before{
+  content: '\e86d';
+  font-size: 18px;
 }
 
 i.show-list{
 	.icon(glyphicons_158_show_lines, 24px);
 	opacity: 0.2;
-	background-size: 100% 93%;
+	text-align: center;
+}
+i.show-list:before{
+  content: '\e84f';
+  font-size: 18px;
 }
 
 i.show-carousel{
@@ -1065,98 +1082,175 @@ i.show-admin.selected{
 }
 
 i.close{
-	.icon(glyphicons_207_remove_2, 15px);
-	background-size: 100% 100%;
+	.fonticon;
+	text-align: center;
+}
+i.close:before{
+  content: '\e866';
+	font-size: 12px;
 }
 
 i.close-2x{
-	.icon(glyphicons_207_remove_2, 50px);
+  text-align: center;
+}
+i.close-2x:before{
+  content: '\e866';
+  font-size: 26px;
 }
 
 i.tools{
-	.icon(glyphicons_280_settings, 25px);
-	display: block;
+	.fonticon;
+  	display: block;
+  	text-indent: 8px;
+}
+i.tools:before{
+  content: '\e855';
+  font-size: 28px;
 }
 
-i.unknown-large, i.xls-large, i.ppt-large, i.pdf-large, i.video-large{
-	.icon(unknown-large, 135px);
+i.unknown-large, i.doc-large{
+  .fonticon;
+  text-align: center;
+}
+i.unknown-large:before, i.doc-large:before{
+  font-size: 45px;
+  content: '\e850';
+}
+i.unknown, i.doc{
+  .fonticon;
+  text-align: center;
+}
+i.unknown:before, i.doc:before{
+  font-size: 18px;
+  content: '\e850';
+}
+
+
+i.xls-large{
+  .fonticon;
+  text-align: center;
+}
+i.xls-large:before{
+  font-size: 45px;
+  content: '\e881';
+}
+i.xls{
+  .fonticon;
+  text-align: center;
+}
+i.xls:before{
+  font-size: 18px;
+  content: '\e881';
+}
+
+i.ppt-large{
+  .fonticon;
+  text-align: center;
+}
+i.ppt-large:before{
+  font-size: 45px;
+  content: '\e85f';
+}
+i.ppt{
+  .fonticon;
+  text-align: center;
+}
+i.ppt:before{
+  font-size: 18px;
+  content: '\e85f';
+}
+
+i.pdf-large{
+  .fonticon;
+  text-align: center;
+}
+i.pdf-large:before{
+  font-size: 45px;
+  content: '\e857';
+}
+i.pdf{
+  .fonticon;
+  text-align: center;
+}
+i.pdf:before{
+  font-size: 18px;
+  content: '\e857';
+}
+
+i.video-large{
+  .fonticon;
+  text-align: center;
+}
+i.video-large:before{
+  font-size: 45px;
+  content: '\e872';
+}
+i.video{
+  .fonticon;
+  text-align: center;
+}
+i.video:before{
+  font-size: 18px;
+  content: '\e872';
+}
+
+i.word-large{
+  .fonticon;
+  text-align: center;
+}
+i.word-large:before{
+  font-size: 45px;
+  content: '\e880';
+}
+i.word{
+  .fonticon;
+  text-align: center;
+}
+i.word:before{
+  font-size: 18px;
+  content: '\e880';
 }
 
 i.folder-large{
-	.icon(folder-large, 100px);
+  .fonticon;
+  text-align: center;
+}
+i.folder-large:before{
+  content: '\e846';
+  font-size: 35px;
+}
+i.folder{
+  .fonticon;
+  text-align: center;
+}
+i.folder:before{
+  content: '\e846';
+  font-size: 18px;
 }
 
-i.doc{
-	.icon(doc, 32px);
-}
 
-i.unknown{
-	.icon(unknown, 25px);
-}
+
+
 
 i.img{
 	.icon(img, 25px);
 }
 
-i.xls{
-	.icon(xls, 32px);
-}
-
-i.video{
-	.icon(video, 32px);
-}
-
-i.pdf{
-	.icon(pdf, 32px);
-}
-
-i.ppt{
-	.icon(ppt, 32px);
-}
 
 i.zip{
 	.icon(zip, 32px);
+}
+i.zip-large{
+  .icon(zip-large, 119px);
 }
 
 i.audio{
 	.icon(audio, 32px);
 }
-
-i.xls-large{
-	.icon(xls-large, 119px);
-}
-
-i.doc-large{
-	.icon(doc-large, 119px);
-}
-
-i.unknown-large{
-	.icon(unknown-large, 119px);
-}
-
-i.video-large{
-	.icon(video-large, 119px);
-}
-
-i.pdf-large{
-	.icon(pdf-large, 119px);
-}
-
-i.ppt-large{
-	.icon(ppt-large, 119px);
-}
-
 i.audio-large{
 	.icon(audio-large, 119px);
 }
 
-i.zip-large{
-	.icon(zip-large, 119px);
-}
-
-i.folder{
-	.icon(folder, 32px);
-}
 
 i.view{
     .icon(glyphicons_051_eye_open, 15px);
