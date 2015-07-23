@@ -8682,18 +8682,25 @@ input-password input[type=text].ng-invalid.ng-dirty {
   border-bottom: 2px solid #e13a3a;
 }
 input-password button {
-  background-image: url("../img/icons/glyphicons_051_eye_open.png");
-  /* attention icon */
-  background-repeat: no-repeat;
-  background-position: 40% 50%;
-  background-size: 55%;
   height: 32px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 input-password button.pushed {
   background-color: #b25d00;
   box-shadow: none;
+}
+input-password button:before {
+  content: '\e873';
+  line-height: 31px;
+  font-size: 27px;
+  text-align: center;
+  text-indent: 40px;
+  color: black;
 }
 .fill-bar {
   width: 100%;
@@ -9288,8 +9295,11 @@ textarea:focus {
   color: #ff8500;
 }
 .last-infos-widget .last-infos-config-button::before {
-  font-family: FontAwesome;
-  content: "\f013";
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  content: "\e854";
 }
 .last-mails-widget,
 .pages-widget {
@@ -9322,7 +9332,6 @@ textarea:focus {
 .pages-widget ul li a {
   font-size: 14px;
 }
-/* attention icones */
 .rss-widget.widget {
   font-weight: normal;
   width: auto !important;
@@ -9336,7 +9345,10 @@ textarea:focus {
   color: #4bafd5;
 }
 .rss-widget.widget h1 .rss-config-button {
-  font-family: FontAwesome;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
   display: block;
   font-size: 30px;
   float: left;
@@ -9346,10 +9358,13 @@ textarea:focus {
   color: #ff8500;
 }
 .rss-widget.widget h1 .rss-config-button::before {
-  content: "\f013";
+  content: "\e854";
 }
 .rss-widget.widget h1 .rss-refresh-button {
-  font-family: FontAwesome;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
   display: block;
   font-size: 30px;
   float: right;
@@ -9359,7 +9374,7 @@ textarea:focus {
   color: #ff8500;
 }
 .rss-widget.widget h1 .rss-refresh-button::before {
-  content: "\f021";
+  content: "\e874";
 }
 .rss-widget.widget a {
   color: #4bafd5;
@@ -10060,7 +10075,6 @@ select {
 	}
 }
 */
-/* attention icones */
 .menu-items {
   padding: 0;
   margin: 0;
@@ -10076,97 +10090,97 @@ select {
 .menu-items > li:hover {
   color: #ff8500;
 }
+.menu-items i {
+  background: none;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  color: black;
+}
 .menu-items i.text {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/text-icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: 60% auto;
-  background-color: transparent;
+  background: none;
   border: none;
+  font-size: 30px;
+  text-align: center;
+}
+.menu-items i.text:before {
+  content: 'T';
+  font-family: serif;
+  font-weight: bold;
+  display: block;
+  width: 24px;
 }
 .menu-items i.image,
 .menu-items input[type=button].image,
 .menu-items input[type=button].image:hover {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/picture-icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  background: none;
+}
+.menu-items i.image:before,
+.menu-items li > div.image:before {
+  content: '\e84a';
+  font-family: "fontello";
+  display: block;
+  position: absolute;
+  line-height: 35px;
+  font-size: 22px;
+  color: black;
+  text-align: center;
 }
 .menu-items i.sound,
 .menu-items input[type=button].sound,
 .menu-items input[type=button].sound:hover {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/music-icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  background: none;
+}
+.menu-items i.sound:before,
+.menu-items li > div.sound:before {
+  content: '\e839';
+  font-family: "fontello";
+  display: block;
+  position: absolute;
+  line-height: 35px;
+  font-size: 22px;
+  color: black;
+  text-align: center;
 }
 .menu-items i.video {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/video-icon.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-color: transparent;
-  border: none;
+  font-size: 20px;
+  background: none;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: left;
+  color: black;
+}
+.menu-items i.video:before {
+  content: '\e872';
 }
 .menu-items i.grid {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/glyphicons_099_vector_path_all.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: 60% auto;
-  background-color: transparent;
-  border: none;
+  font-size: 23px;
+  background: none;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: left;
+  color: black;
+}
+.menu-items i.grid:before {
+  content: '\e801';
 }
 .menu-items i.sniplet {
-  height: 30px;
-  width: 30px;
-  background-image: url("../img/icons/glyphicons_155_show_big_thumbnails.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: 60% auto;
-  background-color: transparent;
+  font-size: 26px;
+  background: none;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: left;
+  color: black;
+}
+.menu-items i.sniplet:before {
+  content: '\e837';
 }
 .menu-items > li > div > input[type=button] {
   background-position: 4px !important;
@@ -10205,22 +10219,15 @@ select {
 .editor.drawing-grid .grid-add-row:hover {
   background: #4bafd5;
 }
-/* attention icones */
 .color-picker {
   right: 42px;
 }
 .color-picker button.colors-opener {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_234_brush.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  width: 20px;
   box-shadow: none;
   margin: 0;
   padding: 0;
@@ -10228,6 +10235,11 @@ select {
   position: absolute;
   right: -20px;
   top: 1px;
+}
+.color-picker button.colors-opener:before {
+  content: '\e83b';
+  text-indent: 13px;
+  color: black;
 }
 .color-picker button.pink {
   background: #b930a2;
@@ -10382,28 +10394,34 @@ select {
   color: #fff;
   line-height: 17px;
 }
-.schedule .schedule-items .schedule-item .schedule-item-content .pending-status::before {
+.schedule .schedule-items .schedule-item .schedule-item-content i {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+.schedule .schedule-items .schedule-item .schedule-item-content i.pending-status {
   position: absolute;
   bottom: 12px;
   right: 12px;
   z-index: 510;
 }
-.schedule .schedule-items .schedule-item .schedule-item-content .validated-status {
+.schedule .schedule-items .schedule-item .schedule-item-content i.validated-status {
   position: absolute;
-  bottom: 14px;
+  bottom: 12px;
   right: 12px;
   z-index: 510;
 }
-.schedule .schedule-items .schedule-item .schedule-item-content .refused-status {
+.schedule .schedule-items .schedule-item .schedule-item-content i.refused-status {
   position: absolute;
-  bottom: 15px;
-  right: 14px;
+  bottom: 12px;
+  right: 12px;
   z-index: 510;
 }
-.schedule .schedule-items .schedule-item .schedule-item-content .periodic-status {
+.schedule .schedule-items .schedule-item .schedule-item-content i.periodic-status {
   position: absolute;
-  bottom: 15px;
-  right: 36px;
+  bottom: 12px;
+  right: 12px;
   z-index: 510;
 }
 .schedule .schedule-items .schedule-item.one {
@@ -10421,58 +10439,21 @@ select {
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
 }
-/* attention icones */
-.pending-status::before {
-  content: "?";
-  height: 20px;
-  width: 20px;
-  display: block;
-  color: #000;
-  font-size: 21px;
-  font-family: Arial;
-  font-weight: 900;
+.pending-status:before {
+  content: '\e85c';
+  font-size: 16px;
+  position: static!important;
 }
-.validated-status {
-  height: 20px;
-  width: 20px;
-  background-image: url("../img/icons/glyphicons_206_ok_2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: 100% auto;
+.validated-status:before {
+  content: '\e871';
 }
-.refused-status {
-  height: 16px;
-  width: 16px;
-  background-image: url("../img/icons/glyphicons_207_remove_2.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: 100% auto;
+.refused-status:before {
+  content: '\e848';
+  font-size: 15px;
 }
-.periodic-status {
-  height: 16px;
-  width: 16px;
-  background-image: url("../img/icons/glyphicons_057_history.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: 100% auto;
+.periodic-status:before {
+  content: '\e844';
+  font-size: 15px;
 }
 .share h3 {
   padding: 0;
@@ -10668,7 +10649,8 @@ select {
   transition: opacity 250ms ease;
 }
 .date-picker-icon a i.calendar:before {
-  content: '/e834';
+  content: '\e834';
+  font-size: 45px;
 }
 .date-picker-icon a i.calendar:hover {
   opacity: 1;
@@ -11206,17 +11188,13 @@ input[type=text][disabled] {
 }
 /* attention icone */
 .open-right {
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/icons/glyphicons_223_chevron-right.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+.open-right:before {
+  content: '\e823';
 }
 .droptarget {
   border-color: #ff8500;
@@ -11596,8 +11574,11 @@ plus .opener.minus {
   color: #ff8500;
 }
 .bookmark-widget .bookmark-config-button::before {
-  font-family: FontAwesome;
-  content: "\f013";
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  content: "\e854";
 }
 .card {
   background: #fff;

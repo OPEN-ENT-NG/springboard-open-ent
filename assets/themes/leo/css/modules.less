@@ -1703,20 +1703,26 @@ input-password{
         }
     }
     button{
-        background-image: url("../img/icons/glyphicons_051_eye_open.png"); /* attention icon */
-        background-repeat: no-repeat;
-        background-position: 40% 50%;
-        background-size: 55%;
-
         height: 32px;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
+
+	  	.fonticon;
 
         &.pushed{
             background-color: @dark-accent;
             box-shadow: none;
         }
+
     }
+	button:before{
+	  content: '\e873';
+	  line-height: 31px;
+	  font-size: 27px;
+	  text-align: center;
+	  text-indent: 40px;
+	  color: black;
+	}
 }
 
 .fill-bar {
@@ -2321,8 +2327,8 @@ textarea:focus{
     	}
 	}
 	.last-infos-config-button::before{
-		font-family: FontAwesome;
-        content: "\f013";
+		.fonticon;
+        content: "\e854";
 	}
 }
 
@@ -2350,7 +2356,6 @@ textarea:focus{
 	}
 }
 
-/* attention icones */
 
 .rss-widget.widget{
 	font-weight: normal;
@@ -2364,7 +2369,7 @@ textarea:focus{
 		}
 		text-align: center;
 		.rss-config-button{
-			font-family: FontAwesome;
+			.fonticon;
 			display: block;
 			font-size: 30px;
 			float: left;
@@ -2374,10 +2379,10 @@ textarea:focus{
 			}
 		}
 		.rss-config-button::before {
-			content: "\f013";
+			content: "\e854";
 		}
 		.rss-refresh-button{
-			font-family: FontAwesome;
+			.fonticon;
 			display: block;
 			font-size: 30px;
 			float: right;
@@ -2387,7 +2392,7 @@ textarea:focus{
 			}
 		}
 		.rss-refresh-button::before {
-			content: "\f021";
+			content: "\e874";
 		}
 	}
 	a{
@@ -3046,7 +3051,6 @@ select{
 }
 */
 
-/* attention icones */
 .menu-items{
 	padding: 0;
 	margin: 0;
@@ -3061,34 +3065,89 @@ select{
 	> li:hover{
 		color: @accent;
 	}
+
+	i{
+	  background: none;
+	  .fonticon;
+	  color: black;
+	}
+
 	i.text{
-		.icon(text-icon, 30px);
-		background-size: 60% auto;
-		background-color: transparent;
+		background: none;
 		border: none;
+		font-size: 30px;
+		text-align: center;
 	}
+  	i.text:before{
+		content: 'T';
+		font-family: serif;
+		font-weight: bold;
+		display: block;
+		width: 24px;
+	}
+
 	i.image, input[type=button].image, input[type=button].image:hover{
-		.icon(picture-icon, 30px);
+	  background: none;
 	}
+  	//i.image:before, input[type=button].image:before, input[type=button].image:before:hover{
+	i.image:before, li > div.image:before{
+	  content: '\e84a';
+	  font-family: "fontello";
+	  display: block;
+	  position: absolute;
+	  line-height: 35px;
+	  font-size: 22px;
+	  color: black;
+	  text-align: center;
+	}
+
 	i.sound, input[type=button].sound, input[type=button].sound:hover{
-		.icon(music-icon, 30px);
+	  background: none;
 	}
+	i.sound:before, li > div.sound:before{
+	  content: '\e839';
+	  font-family: "fontello";
+	  display: block;
+	  position: absolute;
+	  line-height: 35px;
+	  font-size: 22px;
+	  color: black;
+	  text-align: center;
+	}
+
 	i.video{
-		.icon(video-icon, 30px);
-		background-color: transparent;
-		border: none;
+	  font-size: 20px;
+	  background: none;
+	  .fonticon;
+	  text-align: left;
+	  color: black;
 	}
+  	i.video:before{
+	  content: '\e872';
+	}
+
 	i.grid{
-		.icon(glyphicons_099_vector_path_all, 30px);
-		background-size: 60% auto;
-		background-color: transparent;
-		border: none;
+	  font-size: 23px;
+	  background: none;
+	  .fonticon;
+	  text-align: left;
+	  color: black;
 	}
-	i.sniplet {
-		.icon(glyphicons_155_show_big_thumbnails, 30px);
-		background-size: 60% auto;
-		background-color: transparent
+  	i.grid:before {
+	  content: '\e801';
 	}
+
+	i.sniplet{
+	  font-size: 26px;
+	  background: none;
+	  .fonticon;
+	  text-align: left;
+	  color: black;
+	}
+  	i.sniplet:before {
+	  content: '\e837';
+	}
+
 	 > li > div > input[type=button]{
 		background-position: 4px !important;
 		padding-left: 29px;
@@ -3136,11 +3195,11 @@ select{
 	}
 }
 
-/* attention icones */
 .color-picker {
 	right: 42px;
 	button.colors-opener {
-		.icon(glyphicons_234_brush, 15px);
+	  	.fonticon;
+	  	width: 20px;
 		box-shadow: none;
 		margin: 0;
 		padding: 0;
@@ -3148,6 +3207,11 @@ select{
 		position: absolute;
 		right: -20px;
 		top: 1px;
+	}
+  	button.colors-opener:before{
+	  content: '\e83b';
+	  text-indent: 13px;
+	  color: black;
 	}
 	button.pink{
 		background: @pink;
@@ -3263,6 +3327,7 @@ select{
 			border-radius: 5px;
 			.border-box;
 			z-index: 500;
+
 			.schedule-item-content{
 				position: absolute;
 				top: 0;
@@ -3275,30 +3340,36 @@ select{
 				color: #fff;
 
 				line-height: 17px;
-				.pending-status::before{
-					position: absolute;
-					bottom: 12px;
-					right: 12px;
-					z-index: 510;
+
+				i{
+				  .fonticon;
 				}
-				.validated-status{
-					position: absolute;
-					bottom: 14px;
-					right: 12px;
-					z-index: 510;
+
+				i.pending-status{
+				  position: absolute;
+				  bottom: 12px;
+				  right: 12px;
+				  z-index: 510;
 				}
-				.refused-status{
-					position: absolute;
-					bottom: 15px;
-					right: 14px;
-					z-index: 510;
+				i.validated-status{
+				  position: absolute;
+				  bottom: 12px;
+				  right: 12px;
+				  z-index: 510;
 				}
-				.periodic-status{
-					position: absolute;
-					bottom: 15px;
-					right: 36px;
-					z-index: 510;
+				i.refused-status{
+				  position: absolute;
+				  bottom: 12px;
+				  right: 12px;
+				  z-index: 510;
 				}
+				i.periodic-status{
+				  position: absolute;
+				  bottom: 12px;
+				  right: 12px;
+				  z-index: 510;
+				}
+
 			}
 		}
 		.schedule-item.one{
@@ -3319,29 +3390,24 @@ select{
 	}
 }
 
-/* attention icones */
-.pending-status::before{
-	content: "?";
-	height: 20px;
-	width: 20px;
-	display: block;
-	color: #000;
-	font-size: 21px;
-	font-family: Arial;
-	font-weight: 900;
+
+.pending-status:before{
+  content: '\e85c';
+  font-size: 16px;
+  position: static!important;
 }
-.validated-status{
-	.icon(glyphicons_206_ok_2, 20px);
-	background-size: 100% auto;
+.validated-status:before{
+  content: '\e871';
 }
-.refused-status{
-	.icon(glyphicons_207_remove_2, 16px);
-	background-size: 100% auto;
+.refused-status:before{
+  content:  '\e848';
+  font-size: 15px;
 }
-.periodic-status{
-	.icon(glyphicons_057_history, 16px);
-	background-size: 100% auto;
+.periodic-status:before{
+  content: '\e844';
+  font-size: 15px;
 }
+
 
 .share{
 	h3{
@@ -3495,7 +3561,8 @@ select{
 			.run-transition(opacity);
 		}
 		i.calendar:before{
-  			content:'/e834';
+  			content:'\e834';
+		  	font-size: 45px;
 		}
 		i.calendar:hover{
 			opacity: 1;
@@ -4081,7 +4148,10 @@ input[type=text][disabled] {
 
 /* attention icone */
 .open-right{
-	.icon(glyphicons_223_chevron-right, 25px);
+	.fonticon;
+}
+.open-right:before{
+  content: '\e823';
 }
 
 .droptarget{
@@ -4533,8 +4603,8 @@ plus{
 
   /* attention icone */
 	.bookmark-config-button::before{
-		font-family: FontAwesome;
-		content: "\f013";
+		.fonticon;
+		content: "\e854";
 	}
 }
 
