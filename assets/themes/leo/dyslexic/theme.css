@@ -11531,6 +11531,9 @@ image-select > div:hover::before {
 i.important {
   color: #ff8500;
 }
+i side-panel {
+  font-family: Roboto;
+}
 side-panel.hidden .opener {
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
@@ -11643,4 +11646,7 @@ select {
 nav.vertical.stamps article h3,
 nav.vertical.half-stamps article h3 {
   font-size: 13px;
+}
+i side-panel {
+  font-family: OpenDyslexic;
 }

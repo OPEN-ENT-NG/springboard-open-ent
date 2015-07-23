@@ -11530,6 +11530,9 @@ image-select > div:hover::before {
 i.important {
   color: #ff8500;
 }
+i side-panel {
+  font-family: Roboto;
+}
 side-panel.hidden .opener {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
   border-radius: 2px;
