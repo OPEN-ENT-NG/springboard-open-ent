@@ -315,6 +315,15 @@ input[type=text], input[type=password], input[type=search], input[type=tel], inp
 
 
 /* ico for connectors */
+
+i.agenda-large, i.type.agenda, i.agenda{
+  .fonticon;
+}
+i.agenda-large::before, i.type.agenda::before, i.agenda::before{
+  content: "\e83c";
+  color: @yellow;
+}
+
 i.absences-large, i.type.absences, i.absences{
   .fonticon;
 }
@@ -323,12 +332,22 @@ i.absences-large::before, i.type.absences::before, i.absences::before{
   color: @red;
 }
 
+/* custom apps */
+
 i.esidoc-large, i.type.esidoc, i.esidoc{
   .fonticon;
 }
 i.esidoc-large::before, i.type.esidoc::before, i.esidoc::before{
   content: "\e826";
   color: @purple;
+}
+
+i.cahier-textes-large, i.type.cahier-textes, i.cahier-textes{
+  .fonticon;
+}
+i.cahier-textes-large::before, i.type.cahier-textes::before, i.cahier-textes::before{
+  content: "\e86f";
+  color: @green;
 }
 
 i.edumedia-large, i.type.edumedia, i.edumedia{
@@ -339,22 +358,6 @@ i.edumedia-large::before, i.type.edumedia::before, i.edumedia::before{
   color: @cyan;
   font-size: 23px;
   vertical-align: middle;
-}
-
-i.agenda-large, i.type.agenda, i.agenda{
-  .fonticon;
-}
-i.agenda-large::before, i.type.agenda::before, i.agenda::before{
-  content: "\e83c";
-  color: @yellow;
-}
-
-i.cahier-textes-large, i.type.cahier-textes, i.cahier-textes{
-  .fonticon;
-}
-i.cahier-textes-large::before, i.type.cahier-textes::before, i.cahier-textes::before{
-  content: "\e86f";
-  color: @green;
 }
 
 i.lesitetv-large, i.type.lesitetv, i.lesitetv{
@@ -373,14 +376,6 @@ i.maxicours-large::before, i.type.maxicours::before, i.maxicours::before{
   color: @orange;
 }
 
-i.notes-large, i.type.notes, i.notes{
-  .fonticon;
-}
-i.notes-large::before, i.type.notes::before, i.notes::before{
-  content: "\e806";
-  color: @cyan;
-}
-
 i.scolarite-large, i.type.scolarite, i.scolarite{
   .fonticon;
 }
@@ -395,6 +390,22 @@ i.td-base-large, i.type.td-base, i.td-base{
 i.td-base-large::before, i.type.td-base::before, i.td-base::before{
   content: "\e883";
   color: @cyan;
+}
+
+i.canal-numerique-large, i.type.canal-numerique, i.canal-numerique{
+  .fonticon;
+}
+i.canal-numerique-large::before, i.type.canal-numerique::before, i.canal-numerique::before{
+  content: "\e80a";
+  color: @red;
+}
+
+i.aide-devoirs-large, i.type.aide-devoirs, i.aide-devoirs{
+  .fonticon;
+}
+i.aide-devoirs-large::before, i.type.aide-devoirs::before, i.aide-devoirs::before{
+  content: "\e818";
+  color: @green;
 }
 
 i.universalis-large, i.type.universalis, i.universalis{
@@ -413,11 +424,31 @@ i.webclasseur-large::before, i.type.webclasseur::before, i.webclasseur::before{
   color: @cyan;
 }
 
+i.admission-post-bac-large, i.type.admission-post-bac, i.admission-post-bac{
+  .fonticon;
+}
+i.admission-post-bac-large::before, i.type.admission-post-bac::before, i.admission-post-bac::before{
+  content: '\e816';
+  color: @red;
+  font-size: 23px;
+  vertical-align: middle;
+}
+
 i.pronote-large, i.type.pronote, i.pronote{
   .fonticon;
 }
 i.pronote-large::before, i.type.pronote::before, i.pronote::before{
   content: '\e82a';
+  color: @purple;
+  font-size: 23px;
+  vertical-align: middle;
+}
+
+i.cerise-large, i.type.cerise, i.cerise{
+  .fonticon;
+}
+i.cerise-large::before, i.type.cerise::before, i.cerise::before{
+  content: '\e81c';
   color: @purple;
   font-size: 23px;
   vertical-align: middle;
@@ -473,8 +504,51 @@ i.pro-eps-large::before, i.type.pro-eps::before, i.pro-eps::before{
   vertical-align: middle;
 }
 
+i.kne-large, i.type.kne, i.kne{
+  .fonticon;
+}
+i.kne-large::before, i.type.kne::before, i.kne::before{
+  content: '\e81f';
+  color: @purple;
+  font-size: 21px;
+  vertical-align: middle;
+}
+i.picardie-cursus-large, i.type.picardie-cursus, i.picardie-cursus{
+  .fonticon;
+}
+i.picardie-cursus-large::before, i.type.picardie-cursus::before, i.picardie-cursus::before{
+  content: '\e889';
+  color: @purple;
+  font-size: 21px;
+  vertical-align: middle;
+}
 
 
+/* futur apps ? */
+
+i.chat-large, i.type.chat, i.chat{
+  .fonticon;
+}
+i.chat-large::before, i.type.chat::before, i.chat::before{
+  content: "\e817";
+  color: @red;
+}
+
+i.pad-large, i.type.pad, i.pad{
+  .fonticon;
+}
+i.pad-large::before, i.type.pad::before, i.pad::before{
+  content: "\e829";
+  color: @cyan;
+}
+
+i.exerciseur-large, i.type.exerciseur, i.exerciseur{
+  .fonticon;
+}
+i.exerciseur-large::before, i.type.exerciseur::before, i.exerciseur::before{
+  content: "\e833";
+  color: @red;
+}
 
 /* ico for main apps */
 
@@ -484,31 +558,6 @@ i.workspace-large, i.type.workspace, i.workspace{
 i.workspace-large::before, i.type.workspace::before, i.workspace::before{
   content: "\e81b";
   color: @red;
-}
-
-
-i.conversation-large, i.type.messagerie, i.mail{
-  .fonticon;
-}
-
-i.mail span{
-  background-color: @accent;
-  display: block;
-  color: #fff;
-  height: 15px;
-  width: 15px;
-  line-height: 15px;
-  font-size: 12px;
-  text-align: center;
-  border-radius: 7px;
-  padding: 1px;
-  position: relative;
-  left: 20px;
-  top: -30px;
-}
-i.conversation-large::before, i.type.messagerie::before, i.mail::before{
-  content: "\e804";
-  color: @yellow;
 }
 
 i.actualites-large, i.type.news, i.actualites{
@@ -579,15 +628,7 @@ i.community-large, i.type.community, i.community{
   .fonticon;
 }
 i.community-large::before, i.type.community::before, i.community::before{
-  content: '\e814';
-  color: @purple;
-}
-
-i.forum-large, i.type.forum, i.forum{
-  .fonticon;
-}
-i.forum-large::before, i.type.forum::before, i.forum::before{
-  content: "\f086";
+  content: '\e822';
   color: @purple;
 }
 
@@ -686,11 +727,65 @@ i.statistics-large::before, i.type.statistics::before, i.statistics::before{
   color: @purple;
 }
 
+/* Homepage widgets ico */
+
+.widgets-picker i{
+  color: white;
+  .fonticon;
+  font-size: 35px;
+  line-height: 55px;
+}
+
+i.recorder-icon:before{
+	content: '\e864';
+}
+i.notes-icon:before{
+	content: '\e806';
+}
+i.calendar-icon:before{
+	content: '\e834';
+}
+i.actualites-icon:before{
+	content: '\e85b';
+}
+i.rss-icon:before{
+	content: '\e861';
+}
+i.maxicours-icon:before{
+	content: '\e825';
+}
 
 
 
 
-/* indication type icons */
+
+
+/* UI & indication type icons */
+
+i.conversation-large, i.type.messagerie, i.mail{
+  .fonticon;
+}
+
+i.mail span{
+  background-color: @accent;
+  display: block;
+  color: #fff;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 1px;
+  position: relative;
+  left: 20px;
+  top: -30px;
+}
+i.conversation-large::before, i.type.messagerie::before, i.mail::before{
+  content: "\e804";
+  color: @yellow;
+}
+
 
 i.validated-icon-large, i.validated-icon{
   .fonticon;
@@ -733,10 +828,6 @@ i.home-large, i.home.cas, i.home{
 }
 i.home-large::before, i.type.home::before, i.home::before{
   content: '\e82b';
-}
-
-i.community::before{
-  content: '\e814';
 }
 
 i.apps-large, i.apps.cas, i.apps{
@@ -849,19 +940,20 @@ i.send-mail{
   margin: 7px;
   .run-transition(background);
 }
-
 i.send-mail::before{
   content: '\e84e';
+  color: white;
 }
 
-
 i.send-mail:hover{
-	//.icon(glyphicons_010_envelope_accent, 24px);
+  color: @accent;
 }
 
 
 
 /* icons moods */
+
+
 i.angry{
 	.icon(angry, 50px);
 }
@@ -1241,7 +1333,6 @@ nav.vertical.stamps, nav.vertical.half-stamps{
 	}
 	article:hover{
 		i.send-mail{
-			.icon(glyphicons_010_envelope_white, 24px);
 			margin: 7px;
 		}
 	}
@@ -1249,7 +1340,6 @@ nav.vertical.stamps, nav.vertical.half-stamps{
 		background: @accent;
 		color: #fff;
 		i.send-mail{
-			.icon(glyphicons_010_envelope_white, 24px);
 			margin: 7px;
 		}
 		h3{
@@ -1284,7 +1374,6 @@ nav.vertical.stamps, nav.vertical.half-stamps{
 					padding: 8px;
 				}
 				i.send-mail:hover{
-					.icon(glyphicons_010_envelope_white, 24px);
 					margin: 7px;
 				}
 			}
@@ -1614,7 +1703,7 @@ input-password{
         }
     }
     button{
-        background-image: url("../img/icons/glyphicons_051_eye_open.png");
+        background-image: url("../img/icons/glyphicons_051_eye_open.png"); /* attention icon */
         background-repeat: no-repeat;
         background-position: 40% 50%;
         background-size: 55%;
@@ -2261,6 +2350,8 @@ textarea:focus{
 	}
 }
 
+/* attention icones */
+
 .rss-widget.widget{
 	font-weight: normal;
 	width: auto !important;
@@ -2363,10 +2454,11 @@ textarea:focus{
 	}
 }
 
+/*ico ok*/
 .maxicours-widget{
     h1{
         i.refresh-button{
-            font-family: FontAwesome;
+		  	.fonticon;
 			display: block;
 			font-size: 30px;
 			float: right;
@@ -2375,7 +2467,7 @@ textarea:focus{
 				color: @accent;
 			}
             &::before {
-    			content: "\f021";
+    			content: "\e874";
     		}
         }
     }
@@ -2953,6 +3045,8 @@ select{
 	}
 }
 */
+
+/* attention icones */
 .menu-items{
 	padding: 0;
 	margin: 0;
@@ -3042,6 +3136,7 @@ select{
 	}
 }
 
+/* attention icones */
 .color-picker {
 	right: 42px;
 	button.colors-opener {
@@ -3224,6 +3319,7 @@ select{
 	}
 }
 
+/* attention icones */
 .pending-status::before{
 	content: "?";
 	height: 20px;
@@ -3389,16 +3485,22 @@ select{
 	}
 }
 
+/* ok icon */
 .date-picker-icon{
 	a{
 		i.calendar{
-			.icon(glyphicons_119_table, 25px);
+		    .fonticon;
+		  font-size: 20px;
 			opacity: 0.7;
 			.run-transition(opacity);
+		}
+		i.calendar:before{
+  			content:'/e834';
 		}
 		i.calendar:hover{
 			opacity: 1;
 		}
+
 	}
 }
 
@@ -3977,6 +4079,7 @@ input[type=text][disabled] {
 
 }
 
+/* attention icone */
 .open-right{
 	.icon(glyphicons_223_chevron-right, 25px);
 }
@@ -4415,18 +4518,20 @@ plus{
 		content: "+";
 	}
 	.bookmark-config-button{
-    		display: block;
-        	font-size: 30px;
-        	float: left;
-        	margin-left: 15px;
-    		&:hover{
-        		color: @accent;
-        	}
-    	}
-    	.bookmark-config-button::before{
-    		font-family: FontAwesome;
-            content: "\f013";
-    	}
+		display: block;
+		font-size: 30px;
+		float: left;
+		margin-left: 15px;
+		&:hover{
+			color: @accent;
+		}
+	}
+
+  /* attention icone */
+	.bookmark-config-button::before{
+		font-family: FontAwesome;
+		content: "\f013";
+	}
 }
 
 .card{

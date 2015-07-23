@@ -6512,6 +6512,20 @@ input[type=email] {
   background-image: none;
 }
 /* ico for connectors */
+i.agenda-large,
+i.type.agenda,
+i.agenda {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.agenda-large::before,
+i.type.agenda::before,
+i.agenda::before {
+  content: "\e83c";
+  color: #ecbe30;
+}
 i.absences-large,
 i.type.absences,
 i.absences {
@@ -6526,6 +6540,7 @@ i.absences::before {
   content: "\e80b";
   color: #e13a3a;
 }
+/* custom apps */
 i.esidoc-large,
 i.type.esidoc,
 i.esidoc {
@@ -6539,6 +6554,20 @@ i.type.esidoc::before,
 i.esidoc::before {
   content: "\e826";
   color: #763294;
+}
+i.cahier-textes-large,
+i.type.cahier-textes,
+i.cahier-textes {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.cahier-textes-large::before,
+i.type.cahier-textes::before,
+i.cahier-textes::before {
+  content: "\e86f";
+  color: #46bfaf;
 }
 i.edumedia-large,
 i.type.edumedia,
@@ -6555,34 +6584,6 @@ i.edumedia::before {
   color: #4cb0d6;
   font-size: 23px;
   vertical-align: middle;
-}
-i.agenda-large,
-i.type.agenda,
-i.agenda {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
-}
-i.agenda-large::before,
-i.type.agenda::before,
-i.agenda::before {
-  content: "\e83c";
-  color: #ecbe30;
-}
-i.cahier-textes-large,
-i.type.cahier-textes,
-i.cahier-textes {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
-}
-i.cahier-textes-large::before,
-i.type.cahier-textes::before,
-i.cahier-textes::before {
-  content: "\e86f";
-  color: #46bfaf;
 }
 i.lesitetv-large,
 i.type.lesitetv,
@@ -6612,20 +6613,6 @@ i.maxicours::before {
   content: "\e825";
   color: #ff8500;
 }
-i.notes-large,
-i.type.notes,
-i.notes {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
-}
-i.notes-large::before,
-i.type.notes::before,
-i.notes::before {
-  content: "\e806";
-  color: #4cb0d6;
-}
 i.scolarite-large,
 i.type.scolarite,
 i.scolarite {
@@ -6653,6 +6640,34 @@ i.type.td-base::before,
 i.td-base::before {
   content: "\e883";
   color: #4cb0d6;
+}
+i.canal-numerique-large,
+i.type.canal-numerique,
+i.canal-numerique {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.canal-numerique-large::before,
+i.type.canal-numerique::before,
+i.canal-numerique::before {
+  content: "\e80a";
+  color: #e13a3a;
+}
+i.aide-devoirs-large,
+i.type.aide-devoirs,
+i.aide-devoirs {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.aide-devoirs-large::before,
+i.type.aide-devoirs::before,
+i.aide-devoirs::before {
+  content: "\e818";
+  color: #46bfaf;
 }
 i.universalis-large,
 i.type.universalis,
@@ -6682,6 +6697,22 @@ i.webclasseur::before {
   content: "\e878";
   color: #4cb0d6;
 }
+i.admission-post-bac-large,
+i.type.admission-post-bac,
+i.admission-post-bac {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.admission-post-bac-large::before,
+i.type.admission-post-bac::before,
+i.admission-post-bac::before {
+  content: '\e816';
+  color: #e13a3a;
+  font-size: 23px;
+  vertical-align: middle;
+}
 i.pronote-large,
 i.type.pronote,
 i.pronote {
@@ -6694,6 +6725,22 @@ i.pronote-large::before,
 i.type.pronote::before,
 i.pronote::before {
   content: '\e82a';
+  color: #763294;
+  font-size: 23px;
+  vertical-align: middle;
+}
+i.cerise-large,
+i.type.cerise,
+i.cerise {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.cerise-large::before,
+i.type.cerise::before,
+i.cerise::before {
+  content: '\e81c';
   color: #763294;
   font-size: 23px;
   vertical-align: middle;
@@ -6778,6 +6825,81 @@ i.pro-eps::before {
   font-size: 23px;
   vertical-align: middle;
 }
+i.kne-large,
+i.type.kne,
+i.kne {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.kne-large::before,
+i.type.kne::before,
+i.kne::before {
+  content: '\e81f';
+  color: #763294;
+  font-size: 21px;
+  vertical-align: middle;
+}
+i.picardie-cursus-large,
+i.type.picardie-cursus,
+i.picardie-cursus {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.picardie-cursus-large::before,
+i.type.picardie-cursus::before,
+i.picardie-cursus::before {
+  content: '\e889';
+  color: #763294;
+  font-size: 21px;
+  vertical-align: middle;
+}
+/* futur apps ? */
+i.chat-large,
+i.type.chat,
+i.chat {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.chat-large::before,
+i.type.chat::before,
+i.chat::before {
+  content: "\e817";
+  color: #e13a3a;
+}
+i.pad-large,
+i.type.pad,
+i.pad {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.pad-large::before,
+i.type.pad::before,
+i.pad::before {
+  content: "\e829";
+  color: #4cb0d6;
+}
+i.exerciseur-large,
+i.type.exerciseur,
+i.exerciseur {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.exerciseur-large::before,
+i.type.exerciseur::before,
+i.exerciseur::before {
+  content: "\e833";
+  color: #e13a3a;
+}
 /* ico for main apps */
 i.workspace-large,
 i.type.workspace,
@@ -6792,35 +6914,6 @@ i.type.workspace::before,
 i.workspace::before {
   content: "\e81b";
   color: #e13a3a;
-}
-i.conversation-large,
-i.type.messagerie,
-i.mail {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
-}
-i.mail span {
-  background-color: #ff8500;
-  display: block;
-  color: #fff;
-  height: 15px;
-  width: 15px;
-  line-height: 15px;
-  font-size: 12px;
-  text-align: center;
-  border-radius: 7px;
-  padding: 1px;
-  position: relative;
-  left: 20px;
-  top: -30px;
-}
-i.conversation-large::before,
-i.type.messagerie::before,
-i.mail::before {
-  content: "\e804";
-  color: #ecbe30;
 }
 i.actualites-large,
 i.type.news,
@@ -6945,21 +7038,7 @@ i.community {
 i.community-large::before,
 i.type.community::before,
 i.community::before {
-  content: '\e814';
-  color: #763294;
-}
-i.forum-large,
-i.type.forum,
-i.forum {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
-}
-i.forum-large::before,
-i.type.forum::before,
-i.forum::before {
-  content: "\f086";
+  content: '\e822';
   color: #763294;
 }
 i.my-network-large,
@@ -7125,7 +7204,64 @@ i.statistics::before {
   content: '\e810';
   color: #763294;
 }
-/* indication type icons */
+/* Homepage widgets ico */
+.widgets-picker i {
+  color: white;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 35px;
+  line-height: 55px;
+}
+i.recorder-icon:before {
+  content: '\e864';
+}
+i.notes-icon:before {
+  content: '\e806';
+}
+i.calendar-icon:before {
+  content: '\e834';
+}
+i.actualites-icon:before {
+  content: '\e85b';
+}
+i.rss-icon:before {
+  content: '\e861';
+}
+i.maxicours-icon:before {
+  content: '\e825';
+}
+/* UI & indication type icons */
+i.conversation-large,
+i.type.messagerie,
+i.mail {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.mail span {
+  background-color: #ff8500;
+  display: block;
+  color: #fff;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 1px;
+  position: relative;
+  left: 20px;
+  top: -30px;
+}
+i.conversation-large::before,
+i.type.messagerie::before,
+i.mail::before {
+  content: "\e804";
+  color: #ecbe30;
+}
 i.validated-icon-large,
 i.validated-icon {
   font-family: "fontello";
@@ -7190,9 +7326,6 @@ i.home-large::before,
 i.type.home::before,
 i.home::before {
   content: '\e82b';
-}
-i.community::before {
-  content: '\e814';
 }
 i.apps-large,
 i.apps.cas,
@@ -7334,6 +7467,10 @@ i.send-mail {
 }
 i.send-mail::before {
   content: '\e84e';
+  color: white;
+}
+i.send-mail:hover {
+  color: #ff8500;
 }
 /* icons moods */
 i.angry {
@@ -8146,17 +8283,6 @@ nav.vertical.half-stamps article a:hover {
 }
 nav.vertical.stamps article:hover i.send-mail,
 nav.vertical.half-stamps article:hover i.send-mail {
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/icons/glyphicons_010_envelope_white.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
   margin: 7px;
 }
 nav.vertical.stamps article.selected,
@@ -8166,17 +8292,6 @@ nav.vertical.half-stamps article.selected {
 }
 nav.vertical.stamps article.selected i.send-mail,
 nav.vertical.half-stamps article.selected i.send-mail {
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/icons/glyphicons_010_envelope_white.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
   margin: 7px;
 }
 nav.vertical.stamps article.selected h3,
@@ -8212,17 +8327,6 @@ nav.vertical.half-stamps article.selected a:hover {
   padding: 8px;
 }
 .dominos .item .domino .bottom i.send-mail:hover {
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/icons/glyphicons_010_envelope_white.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
   margin: 7px;
 }
 .green {
@@ -8580,6 +8684,7 @@ input-password input[type=text].ng-invalid.ng-dirty {
 }
 input-password button {
   background-image: url("../img/icons/glyphicons_051_eye_open.png");
+  /* attention icon */
   background-repeat: no-repeat;
   background-position: 40% 50%;
   background-size: 55%;
@@ -9218,6 +9323,7 @@ textarea:focus {
 .pages-widget ul li a {
   font-size: 14px;
 }
+/* attention icones */
 .rss-widget.widget {
   font-weight: normal;
   width: auto !important;
@@ -9320,8 +9426,12 @@ textarea:focus {
   color: #fff;
   font-weight: bold;
 }
+/*ico ok*/
 .maxicours-widget h1 i.refresh-button {
-  font-family: FontAwesome;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
   display: block;
   font-size: 30px;
   float: right;
@@ -9331,7 +9441,7 @@ textarea:focus {
   color: #ff8500;
 }
 .maxicours-widget h1 i.refresh-button::before {
-  content: "\f021";
+  content: "\e874";
 }
 .maxicours-widget div.text-band {
   background-color: #7ad9ff;
@@ -9951,6 +10061,7 @@ select {
 	}
 }
 */
+/* attention icones */
 .menu-items {
   padding: 0;
   margin: 0;
@@ -10095,6 +10206,7 @@ select {
 .editor.drawing-grid .grid-add-row:hover {
   background: #4bafd5;
 }
+/* attention icones */
 .color-picker {
   right: 42px;
 }
@@ -10310,6 +10422,7 @@ select {
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
 }
+/* attention icones */
 .pending-status::before {
   content: "?";
   height: 20px;
@@ -10542,23 +10655,21 @@ select {
 .filters p ul li i {
   border-radius: 50px;
 }
+/* ok icon */
 .date-picker-icon a i.calendar {
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/icons/glyphicons_119_table.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 20px;
   opacity: 0.7;
   -o-transition: opacity 250ms ease;
   -moz-transition: opacity 250ms ease;
   -webkit-transition: opacity 250ms ease;
   transition: opacity 250ms ease;
+}
+.date-picker-icon a i.calendar:before {
+  content: '/e834';
 }
 .date-picker-icon a i.calendar:hover {
   opacity: 1;
@@ -11094,6 +11205,7 @@ input[type=text][disabled] {
 .patchwork .navigation .items .row .bottom-locked {
   right: 10px;
 }
+/* attention icone */
 .open-right {
   height: 25px;
   width: 25px;
@@ -11453,6 +11565,9 @@ plus .opener {
 plus .opener.minus {
   background: #b25d00;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
+}
+.bookmark-widget {
+  /* attention icone */
 }
 .bookmark-widget h1::before {
   content: "Signets";
