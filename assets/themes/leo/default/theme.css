@@ -7607,7 +7607,9 @@ i.doc-large {
 }
 i.unknown-large:before,
 i.doc-large:before {
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
   content: '\e850';
 }
 i.unknown,
@@ -7631,7 +7633,9 @@ i.xls-large {
   text-align: center;
 }
 i.xls-large:before {
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
   content: '\e881';
 }
 i.xls {
@@ -7653,7 +7657,9 @@ i.ppt-large {
   text-align: center;
 }
 i.ppt-large:before {
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
   content: '\e85f';
 }
 i.ppt {
@@ -7675,7 +7681,9 @@ i.pdf-large {
   text-align: center;
 }
 i.pdf-large:before {
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
   content: '\e857';
 }
 i.pdf {
@@ -7697,7 +7705,9 @@ i.video-large {
   text-align: center;
 }
 i.video-large:before {
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
   content: '\e872';
 }
 i.video {
@@ -7719,7 +7729,9 @@ i.word-large {
   text-align: center;
 }
 i.word-large:before {
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
   content: '\e880';
 }
 i.word {
@@ -7742,7 +7754,9 @@ i.folder-large {
 }
 i.folder-large:before {
   content: '\e846';
-  font-size: 35px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
 }
 i.folder {
   font-family: "fontello";
@@ -7754,17 +7768,6 @@ i.folder {
 i.folder:before {
   content: '\e846';
   font-size: 18px;
-}
-i.img {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
-  text-align: center;
-}
-i.img:before {
-  content: '\e84a';
-  font-size: 20px;
 }
 i.zip {
   font-family: "fontello";
@@ -7786,7 +7789,9 @@ i.zip-large {
 }
 i.zip-large:before {
   content: '\e81d';
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
 }
 i.audio {
   font-family: "fontello";
@@ -7808,7 +7813,20 @@ i.audio-large {
 }
 i.audio-large:before {
   content: '\e839';
-  font-size: 45px;
+  font-size: 50px;
+  display: block;
+  line-height: 67px;
+}
+i.img {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.img:before {
+  content: '\e84a';
+  font-size: 20px;
 }
 i.view {
   font-family: "fontello";
