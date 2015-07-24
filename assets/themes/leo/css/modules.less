@@ -972,6 +972,7 @@ i.show-icons.selected{
 i.show-admin{
 	.fonticon;
  	 text-align: center;
+      opacity: 0.3;
 }
 i.show-admin:before{
 	content: '\e81a';
@@ -988,7 +989,7 @@ i.show-calendar{
 	margin-right: 2px;
 	.right-magnet;
 }
-i.show-calendar{
+i.show-calendar:before{
   content: '\e834';
   font-size: 18px;
 }
@@ -1319,49 +1320,133 @@ i.history:before{
 
 /* attention icones moods */
 
+
+/* default */
 i.default{
-  .icon(default, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.default:before{
+  content: '\e870';
+  color: @grey;
 }
 
+/* concentre */
 i.angry{
-  .icon(angry, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.angry:before{
+  content: '\e845';
+  color: @orange;
 }
 
+/* nerveux */
 i.dreamy{
-  .icon(dreamy, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.dreamy:before{
+  content: '\e862';
+  color: @pink;
 }
 
+/* accompli */
 i.happy{
-  .icon(happy, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.happy:before{
+  content: '\e877';
+  color: @yellow;
 }
 
+/* determine */
 i.joker{
-  .icon(joker, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.joker:before{
+  content: '\e849';
+  color: @cyan;
 }
 
+/* inspire */
 i.love{
-  .icon(love, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.love:before{
+  content: '\e84b';
+  color: @orange;
 }
 
+/* serein */
 i.proud{
-  .icon(proud, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.proud:before{
+  content: '\e87e';
+  color: @green;
 }
 
+/* distrait */
 i.sad{
-  .icon(sad, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.sad:before{
+  content: '\e869';
+  color: @pink;
 }
 
+/* impatient */
 i.sick{
-  .icon(sick, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.sick:before{
+  content: '\e87d';
+  color: @red;
 }
 
+/* stresse */
 i.tired{
-  .icon(tired, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.tired:before{
+  content: '\e87c';
+  color: @red;
 }
 
+/* incertain */
 i.worried{
-  .icon(worried, 50px);
+  .fonticon;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.worried:before{
+  content: '\e87f';
+  color: @purple;
+}
+
+.current i{
+  font-size: 40px;
+  line-height: 40px;
+}
+
 
 /* end icones */
 
@@ -1756,14 +1841,20 @@ a.button[disabled]:hover, button[disabled]:hover, input[type=button][disabled]:h
 	}
 
 	.current.editing{
-		background: @primary;
-		color: #fff;
+		/*background: @primary;
+		color: #fff;*/
 		padding-left: 68px;
+
+      background-color: @white;
+      color: @primary;
+      box-shadow: 0 1px 3px @shadow;
 	}
 
 	.options-list{
-		background: @primary;
-		color: #fff;
+		/*background: @primary;
+		color: #fff;*/
+        background: @white;
+		color: #000;
 		font-size: 14px;
 		.border-radius-bottom(3px);
 		box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
@@ -3573,6 +3664,9 @@ select{
 .refused-status:before{
   content:  '\e848';
   font-size: 15px;
+}
+.periodic-status{
+  .fonticon;
 }
 .periodic-status:before{
   content: '\e844';

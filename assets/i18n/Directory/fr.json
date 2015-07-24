@@ -1,6 +1,17 @@
 {
-	"directory.explaination": "Saisissez quelques caractères et cliquez sur OK pour afficher les résultats.",
-    "userBook.profile.health": "Divers",
-	"password.errors": "Choisissez 8 caractères minimum, lettres et chiffres obligatoires.",
-	"password.recommandations": " Il est recommandé de mélanger chiffres, lettres, majuscules, minuscules et caractères spéciaux."
+  "userBook.mood.angry": "concentré(e)",
+  "userBook.mood.default": "Non renseigné",
+  "userBook.mood.dreamy": "nerveux(se)",
+  "userBook.mood.happy": "accompli(e)",
+  "userBook.mood.joker": "déterminé(e)",
+  "userBook.mood.love": "inspiré(e)",
+  "userBook.mood.proud": "serein(e)",
+  "userBook.mood.sad": "distrait(e)",
+  "userBook.mood.sick": "impatient(e)",
+  "userBook.mood.tired": "stressé(e)",
+  "userBook.mood.worried": "incertain(e)",
+  "directory.explaination": "Saisissez quelques caractères et cliquez sur OK pour afficher les résultats.",
+  "userBook.profile.health": "Divers",
+  "password.errors": "Choisissez 8 caractères minimum, lettres et chiffres obligatoires.",
+  "password.recommandations": " Il est recommandé de mélanger chiffres, lettres, majuscules, minuscules et caractères spéciaux."
 }

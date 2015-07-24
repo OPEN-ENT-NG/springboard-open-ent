@@ -7496,6 +7496,7 @@ i.show-admin {
   -moz-osx-font-smoothing: grayscale;
   background-image: none;
   text-align: center;
+  opacity: 0.3;
 }
 i.show-admin:before {
   content: '\e81a';
@@ -7514,7 +7515,7 @@ i.show-calendar {
   margin-right: 2px;
   float: right !important;
 }
-i.show-calendar {
+i.show-calendar:before {
   content: '\e834';
   font-size: 18px;
 }
@@ -7928,148 +7929,152 @@ i.history:before {
   font-size: 12px;
 }
 /* attention icones moods */
+/* default */
 i.default {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/default.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.default:before {
+  content: '\e870';
+  color: #555555;
+}
+/* concentre */
 i.angry {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/angry.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.angry:before {
+  content: '\e845';
+  color: #ff8500;
+}
+/* nerveux */
 i.dreamy {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/dreamy.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.dreamy:before {
+  content: '\e862';
+  color: #b930a2;
+}
+/* accompli */
 i.happy {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/happy.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.happy:before {
+  content: '\e877';
+  color: #ecbe30;
+}
+/* determine */
 i.joker {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/joker.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.joker:before {
+  content: '\e849';
+  color: #4cb0d6;
+}
+/* inspire */
 i.love {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/love.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.love:before {
+  content: '\e84b';
+  color: #ff8500;
+}
+/* serein */
 i.proud {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/proud.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.proud:before {
+  content: '\e87e';
+  color: #46bfaf;
+}
+/* distrait */
 i.sad {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/sad.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.sad:before {
+  content: '\e869';
+  color: #b930a2;
+}
+/* impatient */
 i.sick {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/sick.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.sick:before {
+  content: '\e87d';
+  color: #e13a3a;
+}
+/* stresse */
 i.tired {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/tired.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
 }
+i.tired:before {
+  content: '\e87c';
+  color: #e13a3a;
+}
+/* incertain */
 i.worried {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/worried.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  font-size: 55px;
+  line-height: 50px;
+}
+i.worried:before {
+  content: '\e87f';
+  color: #763294;
+}
+.current i {
+  font-size: 40px;
+  line-height: 40px;
 }
 /* end icones */
 .tabs {
@@ -8468,13 +8473,18 @@ input[type=submit][disabled]:hover {
   margin-right: 8px;
 }
 .icons-select .current.editing {
-  background: #4bafd5;
-  color: #fff;
+  /*background: @primary;
+		color: #fff;*/
   padding-left: 68px;
+  background-color: #ffffff;
+  color: #4bafd5;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.26);
 }
 .icons-select .options-list {
-  background: #4bafd5;
-  color: #fff;
+  /*background: @primary;
+		color: #fff;*/
+  background: #ffffff;
+  color: #000;
   font-size: 14px;
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-bottom-right-radius: 3px;
@@ -10379,6 +10389,12 @@ select {
 .refused-status:before {
   content: '\e848';
   font-size: 15px;
+}
+.periodic-status {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 .periodic-status:before {
   content: '\e844';
