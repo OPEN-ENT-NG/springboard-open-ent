@@ -7579,6 +7579,10 @@ i.close:before {
   font-size: 12px;
 }
 i.close-2x {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
   text-align: center;
 }
 i.close-2x:before {
@@ -7917,10 +7921,10 @@ i.history:before {
   font-size: 12px;
 }
 /* attention icones moods */
-i.angry {
+i.default {
   height: 50px;
   width: 50px;
-  background-image: url("../img/icons/angry.png");
+  background-image: url("../img/icons/default.png");
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
@@ -7930,10 +7934,10 @@ i.angry {
   box-sizing: border-box;
   vertical-align: middle;
 }
-i.default {
+i.angry {
   height: 50px;
   width: 50px;
-  background-image: url("../img/icons/default.png");
+  background-image: url("../img/icons/angry.png");
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
