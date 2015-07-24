@@ -6581,7 +6581,6 @@ i.type.edumedia::before,
 i.edumedia::before {
   content: "\e887";
   color: #4cb0d6;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.lesitetv-large,
@@ -6709,7 +6708,6 @@ i.type.admission-post-bac::before,
 i.admission-post-bac::before {
   content: '\e816';
   color: #e13a3a;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.pronote-large,
@@ -6725,7 +6723,6 @@ i.type.pronote::before,
 i.pronote::before {
   content: '\e82a';
   color: #763294;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.cerise-large,
@@ -6741,7 +6738,6 @@ i.type.cerise::before,
 i.cerise::before {
   content: '\e81c';
   color: #763294;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.charlemagne-large,
@@ -6757,7 +6753,6 @@ i.type.charlemagne::before,
 i.charlemagne::before {
   content: '\e885';
   color: #e13a3a;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.scolinfo-large,
@@ -6773,7 +6768,6 @@ i.type.scolinfo::before,
 i.scolinfo::before {
   content: '\e886';
   color: #763294;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.paraschool-large,
@@ -6789,7 +6783,6 @@ i.type.paraschool::before,
 i.paraschool::before {
   content: '\e82d';
   color: #763294;
-  font-size: 21px;
   vertical-align: middle;
 }
 i.vie-scolaire-large,
@@ -6805,7 +6798,6 @@ i.type.vie-scolaire::before,
 i.vie-scolaire::before {
   content: '\e879';
   color: #ecbe30;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.pro-eps-large,
@@ -6821,7 +6813,6 @@ i.type.pro-eps::before,
 i.pro-eps::before {
   content: '\e884';
   color: #4cb0d6;
-  font-size: 23px;
   vertical-align: middle;
 }
 i.kne-large,
@@ -6837,7 +6828,6 @@ i.type.kne::before,
 i.kne::before {
   content: '\e81f';
   color: #763294;
-  font-size: 21px;
   vertical-align: middle;
 }
 i.picardie-cursus-large,
@@ -6853,7 +6843,36 @@ i.type.picardie-cursus::before,
 i.picardie-cursus::before {
   content: '\e889';
   color: #763294;
-  font-size: 21px;
+  vertical-align: middle;
+}
+i.onisep-large,
+i.type.onisep,
+i.onisep {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.onisep-large::before,
+i.type.onisep::before,
+i.onisep::before {
+  content: '\e88c';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.cns-large,
+i.type.cns,
+i.cns {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.cns-large::before,
+i.type.cns::before,
+i.cns::before {
+  content: '\e88a';
+  color: #46bfaf;
   vertical-align: middle;
 }
 /* futur apps ? */
