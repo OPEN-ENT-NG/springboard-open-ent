@@ -7457,6 +7457,36 @@ i.prive {
 i.prive::before {
   content: '\e860';
 }
+i.mine {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  cursor: pointer;
+}
+i.mine::before {
+  content: '\e870';
+}
+i.pending-action {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  cursor: pointer;
+}
+i.pending-action::before {
+  content: '\e85c';
+}
+i.dates {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  cursor: pointer;
+}
+i.dates::before {
+  content: '\e834';
+}
 i.send-mail {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
