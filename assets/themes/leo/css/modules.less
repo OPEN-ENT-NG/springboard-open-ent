@@ -992,6 +992,7 @@ i.show-calendar{
 i.show-calendar:before{
   content: '\e834';
   font-size: 18px;
+  padding: 0 6px;
 }
 i.show-calendar.selected{
 	opacity: 0.6;
@@ -3816,18 +3817,29 @@ select{
 	}
 }
 
-/* ok icon */
+.week-switcher .date-picker-icon i.calendar:before{
+  font-size: 45px;
+}
+
+.filters .filters-icons li.selected:nth-child(6n + 4) .date-picker-icon i.calendar{
+  background: none;
+  box-shadow: none;
+}
+
 .date-picker-icon{
-	a{
+	 a{
+       position: relative;
+       text-align: right;
+
 		i.calendar{
-		    .fonticon;
+          .fonticon;
 		  font-size: 20px;
-			opacity: 0.7;
-			.run-transition(opacity);
+          opacity: 0.7;
+          .run-transition(opacity);
 		}
 		i.calendar:before{
   			content:'\e834';
-		  	font-size: 45px;
+		  	//font-size: 45px;
 		}
 		i.calendar:hover{
 			opacity: 1;
@@ -3836,13 +3848,19 @@ select{
 	}
 }
 
+
 .week-switcher{
 	position: absolute;
 	z-index: 30;
 	left: 45px;
 	font-size: 12px;
+
 	.date-picker-icon{
-		margin-right: 8px;
+      margin-right: 8px;
+
+      i.calendar:before{
+        font-size: 45px;
+      }
 	}
 }
 
