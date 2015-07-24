@@ -7228,6 +7228,9 @@ i.actualites-icon:before {
 i.rss-icon:before {
   content: '\e861';
 }
+i.bookmark-icon:before {
+  content: '\e80c';
+}
 i.maxicours-icon:before {
   content: '\e825';
 }
