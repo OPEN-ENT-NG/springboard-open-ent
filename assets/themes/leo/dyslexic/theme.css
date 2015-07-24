@@ -7433,6 +7433,7 @@ nav.horizontal #my-photo {
   margin-top: 11px;
   vertical-align: 0;
 }
+/* attention icones*/
 i.public {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
@@ -7471,161 +7472,20 @@ i.send-mail::before {
 i.send-mail:hover {
   color: #ff8500;
 }
-/* attention icones moods */
-i.angry {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/angry.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.default {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/default.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.dreamy {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/dreamy.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.happy {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/happy.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.joker {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/joker.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.love {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/love.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.proud {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/proud.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.sad {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/sad.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.sick {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/sick.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.tired {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/tired.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-i.worried {
-  height: 50px;
-  width: 50px;
-  background-image: url("../img/icons/worried.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-}
-/* attention icones*/
 i.show-icons {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: none;
   opacity: 0.2;
+  margin: 0 5px;
 }
 i.show-icons:before {
   content: '\e837';
   font-size: 28px;
+}
+i.show-icons.selected {
+  opacity: 0.6;
 }
 i.show-admin {
   font-family: "fontello";
@@ -7637,6 +7497,9 @@ i.show-admin {
 i.show-admin:before {
   content: '\e81a';
   font-size: 18px;
+}
+i.show-admin.selected {
+  opacity: 0.6;
 }
 i.show-calendar {
   font-family: "fontello";
@@ -7666,24 +7529,23 @@ i.show-details:before {
   content: '\e86d';
   font-size: 18px;
 }
+i.show-details.selected {
+  opacity: 0.6;
+}
 i.show-list {
-  height: 24px;
-  width: 24px;
-  background-image: url("../img/icons/glyphicons_158_show_lines.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
   opacity: 0.2;
   text-align: center;
 }
 i.show-list:before {
   content: '\e84f';
   font-size: 18px;
+}
+i.show-list.selected {
+  opacity: 0.6;
 }
 i.show-carousel {
   height: 24px;
@@ -7700,19 +7562,10 @@ i.show-carousel {
   opacity: 0.2;
   background-size: 100% 93%;
 }
-i.show-icons.selected {
-  opacity: 0.6;
+i.show-carousel:before {
+  /*attention icone en cours de création*/
 }
 i.show-carousel.selected {
-  opacity: 0.6;
-}
-i.show-details.selected {
-  opacity: 0.6;
-}
-i.show-list.selected {
-  opacity: 0.6;
-}
-i.show-admin.selected {
   opacity: 0.6;
 }
 i.close {
@@ -7904,172 +7757,153 @@ i.folder:before {
   font-size: 18px;
 }
 i.img {
-  height: 25px;
-  width: 25px;
-  background-image: url("../img/icons/img.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.img:before {
+  content: '\e84a';
+  font-size: 20px;
 }
 i.zip {
-  height: 32px;
-  width: 32px;
-  background-image: url("../img/icons/zip.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.zip:before {
+  content: '\e81d';
+  font-size: 25px;
 }
 i.zip-large {
-  height: 119px;
-  width: 119px;
-  background-image: url("../img/icons/zip-large.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.zip-large:before {
+  content: '\e81d';
+  font-size: 45px;
 }
 i.audio {
-  height: 32px;
-  width: 32px;
-  background-image: url("../img/icons/audio.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.audio:before {
+  content: '\e839';
+  font-size: 25px;
 }
 i.audio-large {
-  height: 119px;
-  width: 119px;
-  background-image: url("../img/icons/audio-large.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.audio-large:before {
+  content: '\e839';
+  font-size: 45px;
 }
 i.view {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_051_eye_open.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: contain;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.view:before {
+  content: '\e873';
+  font-size: 12px;
 }
 i.edit {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_030_pencil.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: contain;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.edit:before {
+  content: '\e858';
+  font-size: 12px;
 }
 i.manage {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_137_cogwheels.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: contain;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.manage:before {
+  content: '\e854';
+  font-size: 12px;
 }
 i.mail-in {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_122_message_in.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: contain;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.mail-in:before {
+  content: '\e83f';
+  font-size: 12px;
 }
 i.mail-out {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_123_message_out.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: contain;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.mail-out:before {
+  content: '\e84e';
+  font-size: 12px;
 }
 i.mail-new {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_129_message_new.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: contain;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.mail-new:before {
+  content: '\e828';
+  font-size: 12px;
 }
 i.remove-small {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_197_remove.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: middle;
-  background-size: contain;
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.remove-small:before {
+  content: '\e866';
+  font-size: 12px;
 }
 i.history {
-  height: 15px;
-  width: 15px;
-  background-image: url("../img/icons/glyphicons_057_history.png");
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.history:before {
+  content: '\e844';
+  font-size: 12px;
+}
+/* attention icones moods */
+i.angry {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/angry.png");
   background-repeat: no-repeat;
   background-position: center;
   display: inline-block;
@@ -8079,6 +7913,137 @@ i.history {
   box-sizing: border-box;
   vertical-align: middle;
 }
+i.default {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/default.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.dreamy {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/dreamy.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.happy {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/happy.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.joker {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/joker.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.love {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/love.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.proud {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/proud.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.sad {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/sad.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.sick {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/sick.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.tired {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/tired.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+i.worried {
+  height: 50px;
+  width: 50px;
+  background-image: url("../img/icons/worried.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+/* end icones */
 .tabs {
   text-align: center;
 }

@@ -921,6 +921,9 @@ nav.horizontal{
 }
 
 
+
+/* attention icones*/
+
 i.public{
   .fonticon;
   cursor: pointer;
@@ -946,70 +949,21 @@ i.send-mail::before{
   content: '\e84e';
   color: white;
 }
-
 i.send-mail:hover{
   color: @accent;
 }
 
-
-
-/* attention icones moods */
-
-
-i.angry{
-	.icon(angry, 50px);
-}
-
-i.default{
-	.icon(default, 50px);
-}
-
-i.dreamy{
-	.icon(dreamy, 50px);
-}
-
-i.happy{
-	.icon(happy, 50px);
-}
-
-i.joker{
-	.icon(joker, 50px);
-}
-
-i.love{
-	.icon(love, 50px);
-}
-
-i.proud{
-	.icon(proud, 50px);
-}
-
-i.sad{
-	.icon(sad, 50px);
-}
-
-i.sick{
-	.icon(sick, 50px);
-}
-
-i.tired{
-	.icon(tired, 50px);
-}
-
-i.worried{
-	.icon(worried, 50px);
-}
-
-/* attention icones*/
-
-
 i.show-icons{
 	.fonticon;
 	opacity: 0.2;
+    margin: 0 5px;
 }
 i.show-icons:before{
   content: '\e837';
   font-size: 28px;
+}
+i.show-icons.selected{
+  opacity: 0.6;
 }
 
 i.show-admin{
@@ -1019,6 +973,9 @@ i.show-admin{
 i.show-admin:before{
 	content: '\e81a';
  	 font-size: 18px;
+}
+i.show-admin.selected{
+  opacity: 0.6;
 }
 
 i.show-calendar{
@@ -1044,9 +1001,12 @@ i.show-details:before{
   content: '\e86d';
   font-size: 18px;
 }
+i.show-details.selected{
+  opacity: 0.6;
+}
 
 i.show-list{
-	.icon(glyphicons_158_show_lines, 24px);
+  .fonticon;
 	opacity: 0.2;
 	text-align: center;
 }
@@ -1054,30 +1014,19 @@ i.show-list:before{
   content: '\e84f';
   font-size: 18px;
 }
+i.show-list.selected{
+  opacity: 0.6;
+}
 
 i.show-carousel{
 	.icon(show-carousel, 24px);
 	opacity: 0.2;
 	background-size: 100% 93%;
 }
-
-i.show-icons.selected{
-	opacity: 0.6;
+i.show-carousel:before{
+  /*attention icone en cours de création*/
 }
-
 i.show-carousel.selected{
-	opacity: 0.6;
-}
-
-i.show-details.selected{
-	opacity: 0.6;
-}
-
-i.show-list.selected{
-	opacity: 0.6;
-}
-
-i.show-admin.selected{
 	opacity: 0.6;
 }
 
@@ -1107,6 +1056,7 @@ i.tools:before{
   content: '\e855';
   font-size: 28px;
 }
+
 
 i.unknown-large, i.doc-large{
   .fonticon;
@@ -1229,64 +1179,168 @@ i.folder:before{
 }
 
 
-
-
-
 i.img{
-	.icon(img, 25px);
+  .fonticon;
+  text-align: center;
 }
-
+i.img:before{
+  content: '\e84a';
+  font-size: 20px;
+}
 
 i.zip{
-	.icon(zip, 32px);
+  .fonticon;
+  text-align: center;
+}
+i.zip:before{
+  content: '\e81d';
+  font-size: 25px;
 }
 i.zip-large{
-  .icon(zip-large, 119px);
+  .fonticon;
+  text-align: center;
+}
+i.zip-large:before{
+  content: '\e81d';
+  font-size: 45px;
 }
 
 i.audio{
-	.icon(audio, 32px);
+  .fonticon;
+  text-align: center;
+}
+i.audio:before{
+  content: '\e839';
+  font-size: 25px;
 }
 i.audio-large{
-	.icon(audio-large, 119px);
+  .fonticon;
+  text-align: center;
+}
+i.audio-large:before{
+  content: '\e839';
+  font-size: 45px;
 }
 
-
 i.view{
-    .icon(glyphicons_051_eye_open, 15px);
-	background-size: contain;
+  .fonticon;
+  text-align: center;
+}
+i.view:before{
+  content: '\e873';
+  font-size: 12px;
 }
 
 i.edit{
-	.icon(glyphicons_030_pencil, 15px);
-	background-size: contain;
+  .fonticon;
+  text-align: center;
+}
+i.edit:before{
+  content: '\e858';
+  font-size: 12px;
 }
 
 i.manage{
-    .icon(glyphicons_137_cogwheels, 15px);
-	background-size: contain;
+  .fonticon;
+  text-align: center;
+}
+i.manage:before{
+  content: '\e854';
+  font-size: 12px;
 }
 
 i.mail-in{
-	.icon(glyphicons_122_message_in, 15px);
-	background-size: contain;
+  .fonticon;
+  text-align: center;
 }
-i.mail-out{
-	.icon(glyphicons_123_message_out, 15px);
-	background-size: contain;
-}
-i.mail-new{
-	.icon(glyphicons_129_message_new, 15px);
-	background-size: contain;
-}
-i.remove-small{
-	.icon(glyphicons_197_remove, 15px);
-	background-size: contain;
-}
-i.history{
-	.icon(glyphicons_057_history, 15px);
+i.mail-in:before{
+  content: '\e83f';
+  font-size: 12px;
 }
 
+i.mail-out{
+  .fonticon;
+  text-align: center;
+}
+i.mail-out:before{
+  content: '\e84e';
+  font-size: 12px;
+}
+
+i.mail-new{
+  .fonticon;
+  text-align: center;
+}
+i.mail-new:before{
+  content: '\e828';
+  font-size: 12px;
+}
+
+i.remove-small{
+  .fonticon;
+  text-align: center;
+}
+i.remove-small:before{
+  content: '\e866';
+  font-size: 12px;
+}
+
+i.history{
+  .fonticon;
+  text-align: center;
+}
+i.history:before{
+  content: '\e844';
+  font-size: 12px;
+}
+
+/* attention icones moods */
+
+i.angry{
+  .icon(angry, 50px);
+}
+
+i.default{
+  .icon(default, 50px);
+}
+
+i.dreamy{
+  .icon(dreamy, 50px);
+}
+
+i.happy{
+  .icon(happy, 50px);
+}
+
+i.joker{
+  .icon(joker, 50px);
+}
+
+i.love{
+  .icon(love, 50px);
+}
+
+i.proud{
+  .icon(proud, 50px);
+}
+
+i.sad{
+  .icon(sad, 50px);
+}
+
+i.sick{
+  .icon(sick, 50px);
+}
+
+i.tired{
+  .icon(tired, 50px);
+}
+
+i.worried{
+  .icon(worried, 50px);
+}
+
+/* end icones */
 
 .tabs{
 	text-align:center;
