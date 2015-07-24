@@ -11592,6 +11592,11 @@ plus .opener.minus {
 .main-col .preview {
   float: left;
 }
+nav.vertical .cell .illustration img {
+  height: auto;
+  max-height: 100%;
+  margin: auto;
+}
 h1 {
   font-size: 24px;
 }
