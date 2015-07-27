@@ -10654,6 +10654,10 @@ select {
   background: none;
   box-shadow: none;
 }
+.date-picker-icon {
+  position: relative;
+  left: 28px;
+}
 .date-picker-icon a {
   position: relative;
   text-align: right;
@@ -10663,6 +10667,8 @@ select {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: none;
+  background: none;
+  box-shadow: none;
   font-size: 20px;
   opacity: 0.7;
   -o-transition: opacity 250ms ease;
@@ -10675,6 +10681,9 @@ select {
 }
 .date-picker-icon a i.calendar:hover {
   opacity: 1;
+}
+.date-picker-icon + .cell {
+  margin-left: 30px;
 }
 .week-switcher {
   position: absolute;

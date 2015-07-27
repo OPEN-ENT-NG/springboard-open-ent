@@ -3857,27 +3857,34 @@ select{
 }
 
 .date-picker-icon{
+  position: relative;
+  left: 28px;
+
 	 a{
        position: relative;
        text-align: right;
 
 		i.calendar{
           .fonticon;
-		  font-size: 20px;
+		  background: none;
+          box-shadow: none;
+          font-size: 20px;
           opacity: 0.7;
           .run-transition(opacity);
 		}
 		i.calendar:before{
   			content:'\e834';
-		  	//font-size: 45px;
 		}
 		i.calendar:hover{
 			opacity: 1;
 		}
 
-	}
-}
+	 }
 
+}
+.date-picker-icon + .cell{
+  margin-left: 30px;
+}
 
 .week-switcher{
 	position: absolute;
@@ -4959,3 +4966,4 @@ nav.vertical .cell .illustration img{
   max-height: 100%;
   margin: auto;
 }
+
