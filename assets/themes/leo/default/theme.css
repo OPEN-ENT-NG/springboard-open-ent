@@ -7016,6 +7016,34 @@ i.archive::before {
   content: "\e81d";
   color: #ff8500;
 }
+i.sacoche-large,
+i.type.sacoche,
+i.sacoche {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.sacoche-large::before,
+i.type.sacoche::before,
+i.sacoche::before {
+  content: "";
+  color: #ff8500;
+}
+i.notes-large,
+i.type.notes,
+i.notes {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.notes-large::before,
+i.type.notes::before,
+i.notes::before {
+  content: '\e806';
+  color: #e13a3a;
+}
 i.blog-large,
 i.type.blog,
 i.blog {
