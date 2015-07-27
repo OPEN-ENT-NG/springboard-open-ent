@@ -7418,6 +7418,9 @@ i.disconnect::before {
 h1 i:before {
   display: none;
 }
+grid-cell h2 > i:before {
+  display: none;
+}
 /* nav horiz menu icons */
 nav.horizontal {
   height: 64px;
