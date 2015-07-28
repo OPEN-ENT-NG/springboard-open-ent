@@ -10454,6 +10454,12 @@ select {
 }
 .schedule .schedule-items .schedule-item .schedule-item-content i.periodic-status {
   position: absolute;
+  right: 28px;
+  bottom: 15px;
+  z-index: 510;
+}
+.schedule .schedule-items .schedule-item .schedule-item-content i.suspended-status {
+  position: absolute;
   bottom: 12px;
   right: 12px;
   z-index: 510;
@@ -10473,13 +10479,31 @@ select {
 .schedule .schedule-items .schedule-item.six {
   width: 50%;
 }
+.pending-status {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
 .pending-status:before {
   content: '\e85c';
   font-size: 16px;
   position: static!important;
 }
+.validated-status {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
 .validated-status:before {
   content: '\e871';
+}
+.refused-status {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
 }
 .refused-status:before {
   content: '\e848';
@@ -10493,6 +10517,16 @@ select {
 }
 .periodic-status:before {
   content: '\e844';
+  font-size: 15px;
+}
+.suspended-status {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+.suspended-status:before {
+  content: '\e856';
   font-size: 15px;
 }
 .share h3 {

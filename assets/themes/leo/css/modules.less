@@ -3678,6 +3678,12 @@ select{
 				}
 				i.periodic-status{
 				  position: absolute;
+                  right: 28px;
+                  bottom: 15px;
+				  z-index: 510;
+				}
+                i.suspended-status{
+				  position: absolute;
 				  bottom: 12px;
 				  right: 12px;
 				  z-index: 510;
@@ -3703,24 +3709,43 @@ select{
 	}
 }
 
-
+.pending-status{
+  .fonticon;
+}
 .pending-status:before{
   content: '\e85c';
   font-size: 16px;
   position: static!important;
 }
+
+.validated-status{
+  .fonticon;
+}
 .validated-status:before{
   content: '\e871';
+}
+
+.refused-status{
+  .fonticon;
 }
 .refused-status:before{
   content:  '\e848';
   font-size: 15px;
 }
+
 .periodic-status{
   .fonticon;
 }
 .periodic-status:before{
   content: '\e844';
+  font-size: 15px;
+}
+
+.suspended-status{
+  .fonticon;
+}
+.suspended-status:before{
+  content: '\e856';
   font-size: 15px;
 }
 
