@@ -11349,7 +11349,7 @@ ul.colored ul {
   background: transparent;
 }
 ul.colored ul li a.selected {
-  color: #ffffff;
+  color: #fff;
 }
 ul.colored ul.cyan li a.selected {
   background: #4cb0d6;
@@ -11371,6 +11371,15 @@ ul.colored ul.orange li a.selected {
 }
 ul.colored ul.grey li a.selected {
   background: #555555;
+}
+ul.colored li a i.caret {
+  color: white;
+  opacity: 1;
+}
+ul.colored li ul a i {
+  position: absolute;
+  top: 2px;
+  right: 5px;
 }
 .wizard {
   background: #fff;
