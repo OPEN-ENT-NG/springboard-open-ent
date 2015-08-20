@@ -5884,6 +5884,7 @@ plus .opener.minus .plus {
   position: absolute;
   top: 5px;
   left: 5px;
+  z-index: 1;
 }
 .cards-list .card h3:first-of-type,
 .cards-list .card h1:first-of-type,
@@ -9582,6 +9583,7 @@ textarea:focus {
 .icons-view .element a.container i {
   width: 117px;
   height: 117px;
+  display: inline-block;
 }
 .icons-view .element i.history {
   position: absolute;
