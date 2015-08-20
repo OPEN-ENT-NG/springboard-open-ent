@@ -986,6 +986,7 @@ nav.half-stamps article > div:nth-child(1) img {
 textarea {
   width: 100%;
   height: 130px;
+  overflow: auto;
 }
 .centered-text {
   text-align: center !important;
@@ -4309,6 +4310,17 @@ i.shared {
   bottom: -2px;
   right: -3px;
 }
+ul.toc {
+  padding: 0;
+  margin: 0;
+}
+ul.toc li {
+  list-style-type: none;
+  padding: 3px;
+}
+ul.toc li a {
+  font-size: 16px;
+}
 .page-markers {
   position: fixed;
   right: 0;
@@ -5655,6 +5667,7 @@ nav.hash-magnet.vertical {
   padding-top: 80px;
   display: block;
   pointer-events: none;
+  clear: none;
 }
 .hash-magnet > *,
 nav.hash-magnet.vertical > * {
