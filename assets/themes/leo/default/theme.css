@@ -11016,13 +11016,13 @@ nav.illustrated-links ul li .content p {
 nav.illustrated-links ul li .content em {
   color: #aaa;
 }
-nav.illustrated-links ul li .content a {
-  line-height: 40px;
-}
-nav.illustrated-links ul li .content a i.public {
+nav.illustrated-links ul li .content i.public {
   display: block;
   margin-right: 5px;
   margin-top: -4px;
+}
+nav.illustrated-links ul li .content a {
+  line-height: 40px;
 }
 nav.illustrated-links ul ul.secondary-list {
   padding-left: 78px;
