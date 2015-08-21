@@ -11016,8 +11016,8 @@ nav.illustrated-links ul li .content p {
 nav.illustrated-links ul li .content em {
   color: #aaa;
 }
-nav.illustrated-links ul li .content i.public {
-  display: block;
+nav.illustrated-links ul li .content i.public::before {
+  display: inline-block;
   margin-right: 5px;
   margin-top: -4px;
 }

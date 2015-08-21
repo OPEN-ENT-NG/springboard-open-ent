@@ -986,6 +986,7 @@ nav.half-stamps article > div:nth-child(1) img {
 textarea {
   width: 100%;
   height: 130px;
+  overflow: auto;
 }
 .centered-text {
   text-align: center !important;
@@ -5666,6 +5667,7 @@ nav.hash-magnet.vertical {
   padding-top: 80px;
   display: block;
   pointer-events: none;
+  clear: none;
 }
 .hash-magnet > *,
 nav.hash-magnet.vertical > * {
@@ -5882,6 +5884,7 @@ plus .opener.minus .plus {
   position: absolute;
   top: 5px;
   left: 5px;
+  z-index: 1;
 }
 .cards-list .card h3:first-of-type,
 .cards-list .card h1:first-of-type,
@@ -6174,27 +6177,6 @@ input[type=search],
 .drop-down-button.hidden label {
   font-family: OpenDyslexic;
 }
-/*@font-face {
-  font-family: 'FontAwesome';
-  src: url('../font/fontawesome-webfont.eot?v=4.3.0');
-  src: url('../font/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../font/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../font/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../font/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../font/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello.woff?8144122');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'fontello';
-  src: url('../font/fontello-custom.woff?8144122');
-  font-weight: normal;
-  font-style: normal;
-}*/
 @font-face {
   font-family: 'fontello';
   src: url('../font/new_fontello/fontello.woff');
@@ -7519,7 +7501,6 @@ i.public {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: none;
-  cursor: pointer;
 }
 i.public::before {
   content: '\e863';
@@ -11035,6 +11016,11 @@ nav.illustrated-links ul li .content p {
 }
 nav.illustrated-links ul li .content em {
   color: #aaa;
+}
+nav.illustrated-links ul li .content i.public::before {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: -4px;
 }
 nav.illustrated-links ul li .content a {
   line-height: 40px;
