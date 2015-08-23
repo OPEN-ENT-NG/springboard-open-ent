@@ -47,14 +47,31 @@
 					</a>
 				</p>
 			</div>
-			<h1 translate content="auth.header"></h1>
-			<form>
+      <h1 translate content="auth.header"></h1>
+      <p class="warning" ng-if="error">[[error]]</p>
+      <form method="post" action="/auth/login">
 				<p class="warning row">
 					Fermeture estivale : l'ENT sera de nouveau disponible le 25 août pour le personnel et les
 					enseignants, le premier septembre pour les élèves et leurs parents.
 				</p>
-			</form>
-
+        <p>
+          <label translate content="auth.email"></label>
+          <input type="text" ng-model="user.email" name="email" id="email" autofocus tabindex=1 />
+        </p>
+        <p>
+          <label translate content="auth.password"></label>
+          <input-password type="password" ng-model="user.password" name="password" id="password" tabindex=2></input-password>
+        </p>
+        <p>
+          <input type="checkbox" ng-model="user.rememberMe" name="rememberMe" id="rememberMe" value="true">&nbsp;&nbsp;<small translate content="auth.remember.me"></small>
+        </p>
+        <input type="hidden" name="callBack" ng-value="callBack" />
+        <div class="row">
+          <a class="cell" href="/auth/forgot#/password"><small translate content="need.help"></small></a>
+          <input type="submit" translate attr="value" value="auth.login" tabindex=3 />
+        </div>
+        <div class="clear"></div>
+      </form>
 		</div>
 	</section>
 </div>
