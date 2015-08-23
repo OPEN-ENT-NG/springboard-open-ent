@@ -46,7 +46,6 @@ dependencies {
     deployment "fr.wseduc:fake-sso:$fakeSSOVersion:deployment"
     deployment "fr.wseduc:xiti:$xitiVersion:deployment"
     deployment "net.atos:statistics:$statisticsVersion:deployment"
-    deployment "fr.wseduc:sms-proxy:$smsProxyVersion:deployment"
 }
 
 repositories{
