@@ -1,0 +1,32 @@
+{
+  "name": "entcore-css-lib",
+  "homepage": "https://github.com/entcore/css-lib",
+  "authors": [
+    "Camille Wintz <camille.wintz@web-education.net>"
+  ],
+  "description": "CSS library for quick skin development with ent-core",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "css",
+    "grid",
+    "less"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "c062dec9e3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c062dec9e36945baa2b22dc577619d5b2e749ea6"
+  },
+  "_source": "git://github.com/entcore/css-lib.git",
+  "_target": "*",
+  "_originalSource": "entcore-css-lib"
+}
