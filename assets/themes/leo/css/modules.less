@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/new_fontello/fontello.woff');
+  src: url('../font/fontello.3.6.3/fontello.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -1981,6 +1981,7 @@ input.ng-invalid.ng-dirty {
 }
 
 input-password{
+
     input[type=password], input[type=text]{
         width: 90%;
         margin: 0px;
@@ -2004,7 +2005,33 @@ input-password{
             box-shadow: none;
         }
 
+
     }
+
+	button:active::before, input[type=button]:active::before,
+	a.button:active::before, input[type=submit]:active::before,
+	button:focus::before, input[type=button]:focus::before,
+	a.button:focus::before, input[type=submit]:focus::before,
+	button:active, input[type=button]:active,
+	a.button:active, input[type=submit]:active,
+	button:focus, input[type=button]:focus,
+	a.button:focus, input[type=submit]:focus{
+	  &::before{
+
+		-webkit-animation: none;
+		-moz-animation: none;
+		-ms-animation: none;
+		-o-animation: none;
+		animation: none;
+
+		-webkit-transition: none;
+		transition: none;
+
+
+	  }
+	}
+
+
 	button:before{
 	  content: '\e873';
 	  line-height: 31px;

@@ -6178,7 +6178,7 @@ input[type=submit],
 }
 @font-face {
   font-family: 'fontello';
-  src: url('../font/new_fontello/fontello.woff');
+  src: url('../font/fontello.3.6.3/fontello.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -8634,7 +8634,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
 }
 .aligned {
   display: inline-block;
@@ -8720,6 +8720,30 @@ input-password button {
 input-password button.pushed {
   background-color: #b25d00;
   box-shadow: none;
+}
+input-password button:active::before::before,
+input-password input[type=button]:active::before::before,
+input-password a.button:active::before::before,
+input-password input[type=submit]:active::before::before,
+input-password button:focus::before::before,
+input-password input[type=button]:focus::before::before,
+input-password a.button:focus::before::before,
+input-password input[type=submit]:focus::before::before,
+input-password button:active::before,
+input-password input[type=button]:active::before,
+input-password a.button:active::before,
+input-password input[type=submit]:active::before,
+input-password button:focus::before,
+input-password input[type=button]:focus::before,
+input-password a.button:focus::before,
+input-password input[type=submit]:focus::before {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  -o-animation: none;
+  animation: none;
+  -webkit-transition: none;
+  transition: none;
 }
 input-password button:before {
   content: '\e873';
@@ -8841,7 +8865,7 @@ input-password button:before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: #ffffff;
+  background: white;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
