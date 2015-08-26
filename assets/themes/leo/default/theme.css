@@ -5667,7 +5667,6 @@ nav.hash-magnet.vertical {
   padding-top: 80px;
   display: block;
   pointer-events: none;
-  clear: none;
 }
 .hash-magnet > *,
 nav.hash-magnet.vertical > * {
@@ -5884,7 +5883,6 @@ plus .opener.minus .plus {
   position: absolute;
   top: 5px;
   left: 5px;
-  z-index: 1;
 }
 .cards-list .card h3:first-of-type,
 .cards-list .card h1:first-of-type,
@@ -5967,6 +5965,356 @@ nav.floating .content {
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+editor.drawing-zone {
+  height: auto;
+}
+editor {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+editor popover {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+}
+editor popover ul {
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+editor popover ul li {
+  list-style-type: none;
+  line-height: 30px;
+  text-align: left;
+  padding-left: 15px;
+  cursor: pointer;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+editor popover ul li:hover {
+  background: #eee;
+}
+editor popover popover-content {
+  width: 180px;
+  left: -160px;
+}
+editor popover popover-content::before {
+  left: auto;
+  right: 0;
+}
+editor > [contenteditable] {
+  overflow: hidden;
+  float: left;
+  box-sizing: border-box;
+  -o-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -webkit-transition: width 250ms ease;
+  transition: width 250ms ease;
+  min-height: 300px;
+}
+editor > textarea {
+  float: left;
+  box-sizing: border-box;
+  -o-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -webkit-transition: width 250ms ease;
+  transition: width 250ms ease;
+  margin: 0;
+  min-height: 300px;
+}
+editor.edit > [contenteditable] {
+  width: 100%;
+}
+editor.edit > textarea {
+  width: 0;
+  padding: 0;
+  border: 0;
+}
+editor.html > [contenteditable] {
+  width: 0;
+  padding: 0;
+  border: 0;
+}
+editor.html > textarea {
+  width: 100%;
+}
+editor.both > [contenteditable] {
+  width: 50%;
+}
+editor.both > textarea {
+  width: 50%;
+  border-left-width: 0px;
+}
+editor::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+editor editor-toolbar {
+  display: block;
+  float: left;
+  width: 100%;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-bottom: 0;
+}
+editor editor-toolbar .category {
+  float: left;
+  margin-right: 10px;
+  border-right: 1px solid #ddd;
+  height: 36px;
+  padding: 5px;
+}
+editor editor-toolbar .option {
+  display: inline-block;
+  padding: 6px 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+editor editor-toolbar .option i {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 1px;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  background-size: contain;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+editor editor-toolbar .option:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+editor editor-toolbar .option:hover i {
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  filter: invert(100%);
+}
+editor editor-toolbar .option.toggled {
+  background-color: #e4e4e4;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+editor editor-toolbar .option.undo i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_221_unshare.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.redo i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_222_share.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.bold i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_102_bold.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.italic i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_101_italic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.underline i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_103_text_underline.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.justify-left i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_110_align_left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.justify-right i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_112_align_right.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.justify-center i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_111_align_center.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.quote i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/glyphicons_245_chat.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.ulist i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/ulist.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.olist i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/olist.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.remove-format i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/remove-format.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.image i {
+  height: 20px;
+  width: 20px;
+  background-image: url("../img/icons/picture-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.font:hover {
+  background: none;
+}
+select-list {
+  position: relative;
+  font-size: 14px;
+}
+select-list .options {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  opacity: 1;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+select-list .options.hidden {
+  height: 0 !important;
+  opacity: 0;
+  padding: 0 10px;
+}
+select-list .selected-value {
+  border-bottom: 1px solid #ddd;
+  min-width: 82px;
+  min-height: 24px;
+  pointer-events: all;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 15px;
 }
 html,
 body {
@@ -8634,7 +8982,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
 }
 .aligned {
   display: inline-block;
@@ -8819,7 +9167,7 @@ input-password button:before {
 .panel form:not(.nostyle) {
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
+  max-width: 600px;
   background: #fff;
   border-radius: 3px;
   padding: 30px;
@@ -8865,7 +9213,7 @@ input-password button:before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: white;
+  background: #ffffff;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
@@ -8978,20 +9326,6 @@ input-password button:before {
   -webkit-animation: blink 3s linear infinite;
   -moz-animation: blink 3s linear infinite;
   animation: blink 3s linear infinite;
-}
-@media screen and (max-width: 550px) {
-  nav.horizontal {
-    right: 0;
-  }
-  nav.horizontal > a {
-    font-size: 14px;
-    margin-left: 0;
-  }
-  nav.horizontal i.disconnect {
-    width: 22px !important;
-    margin-right: 0;
-    margin-left: 0;
-  }
 }
 button:hover,
 input[type=button]:hover,
@@ -11747,4 +12081,21 @@ nav.vertical .illustration input[type=checkbox] {
   left: auto;
   right: 5px;
   bottom: 5px;
+}
+@media screen and (max-width: 550px) {
+  nav.horizontal {
+    right: 0;
+  }
+  nav.horizontal > a {
+    font-size: 14px;
+    margin-left: 0;
+  }
+  nav.horizontal i.disconnect {
+    width: 22px !important;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .login h1 {
+    display: none;
+  }
 }
