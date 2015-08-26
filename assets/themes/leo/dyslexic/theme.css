@@ -6183,6 +6183,13 @@ input[type=search],
   font-weight: normal;
   font-style: normal;
 }
+/* Mixin for icons style */
+.fonticon {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
 a {
   color: #4bafd5;
   text-decoration: none;
@@ -6511,13 +6518,6 @@ input[type=email] {
   width: 236px;
   margin: 0;
   background-size: contain;
-}
-/* Mixin for icons style */
-.fonticon {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
 }
 /* ico for connectors */
 i.agenda-large,
