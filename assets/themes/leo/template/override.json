@@ -1,3 +1,4 @@
 {
-  "auth": ["activation-form", "forgot-form", "login-form"]
+  "auth": ["activation-form", "forgot-form", "login-form"],
+  "timeline": ["notifications"]
 }
