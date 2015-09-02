@@ -1596,7 +1596,7 @@ nav.vertical.stamps, nav.vertical.half-stamps{
 		.material-card(2px, 3px);
 		background: white;
 		line-height: 20px;
-		.run-transition(background);
+		.run-transition(all);
 		font-size: 12px;
 
 		h3{
@@ -1635,7 +1635,32 @@ nav.vertical.stamps, nav.vertical.half-stamps{
 				color: @primary;
 			}
 		}
+
+	  	input[type=text]{
+		  	color: @white;
+		}
 	}
+}
+nav.vertical.half-stamps{
+  article{
+	margin-bottom: 10px;
+
+	h3{
+	  color: #AAA;
+	}
+  }
+
+  article.selected{
+	background: @primary;
+
+	h3{
+	  color: @white;
+	}
+  }
+
+}
+.side-col nav.vertical.half-stamps article:hover{
+  box-shadow: 0 4px 6px fade(black, 40%);
 }
 
 .dominos{

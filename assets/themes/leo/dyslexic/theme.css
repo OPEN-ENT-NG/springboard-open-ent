@@ -8627,10 +8627,10 @@ nav.vertical.half-stamps article {
   border-radius: 2px;
   background: white;
   line-height: 20px;
-  -o-transition: background 250ms ease;
-  -moz-transition: background 250ms ease;
-  -webkit-transition: background 250ms ease;
-  transition: background 250ms ease;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
   font-size: 12px;
 }
 nav.vertical.stamps article h3,
@@ -8675,6 +8675,25 @@ nav.vertical.half-stamps article.selected a {
 nav.vertical.stamps article.selected a:hover,
 nav.vertical.half-stamps article.selected a:hover {
   color: #4bafd5;
+}
+nav.vertical.stamps article.selected input[type=text],
+nav.vertical.half-stamps article.selected input[type=text] {
+  color: #ffffff;
+}
+nav.vertical.half-stamps article {
+  margin-bottom: 10px;
+}
+nav.vertical.half-stamps article h3 {
+  color: #AAA;
+}
+nav.vertical.half-stamps article.selected {
+  background: #4bafd5;
+}
+nav.vertical.half-stamps article.selected h3 {
+  color: #ffffff;
+}
+.side-col nav.vertical.half-stamps article:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 .dominos .item {
   width: 14%;
