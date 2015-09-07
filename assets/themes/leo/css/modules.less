@@ -863,10 +863,7 @@ i.disconnect-large::before, i.type.disconnect::before, i.disconnect::before{
   content: '\e842';
 }
 
-/* no ico in app page title*/
-h1 i:before{
-	display: none;
-}
+
 grid-cell h2 > i:before{
   display: none;
 }
@@ -5115,4 +5112,9 @@ nav.vertical{
   left: auto;
   right: 5px;
   bottom: 5px;
+}
+
+/* no ico in app page title*/
+h1 i:before, h1 i:after, h1 i{
+  display: none!important;
 }

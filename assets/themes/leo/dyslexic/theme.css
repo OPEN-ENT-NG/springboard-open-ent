@@ -7438,10 +7438,6 @@ i.type.disconnect::before,
 i.disconnect::before {
   content: '\e842';
 }
-/* no ico in app page title*/
-h1 i:before {
-  display: none;
-}
 grid-cell h2 > i:before {
   display: none;
 }
@@ -11786,6 +11782,12 @@ nav.vertical .illustration input[type=checkbox] {
   left: auto;
   right: 5px;
   bottom: 5px;
+}
+/* no ico in app page title*/
+h1 i:before,
+h1 i:after,
+h1 i {
+  display: none!important;
 }
 @media screen and (max-width: 550px) {
   nav.horizontal {
