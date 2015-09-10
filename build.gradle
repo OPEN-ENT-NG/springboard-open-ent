@@ -46,8 +46,6 @@ dependencies {
     deployment "fr.wseduc:fake-sso:$fakeSSOVersion:deployment"
     deployment "fr.wseduc:xiti:$xitiVersion:deployment"
     deployment "net.atos:statistics:$statisticsVersion:deployment"
-    deployment "org.entcore:cursus:$cursusVersion:deployment"
-    deployment "org.entcore:maxicours:$maxicoursVersion:deployment"
 }
 
 repositories{
