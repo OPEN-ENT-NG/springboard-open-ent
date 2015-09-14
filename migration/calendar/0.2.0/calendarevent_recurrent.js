@@ -1,11 +1,20 @@
 // adapt path
-load("/home/ongdev/ent/springboard-leo/mods/org.entcore~infra~1.14.2/public/js/moment+langs.js");
+
+//var version = '1.15-SNAPSHOT';
+
+//load("../../../mods/org.entcore~infra~" + version + "/public/js/moment-langs.js");
+load("moment+langs.js");
+
 
 function adjustStartEndDates(cle) {
     var startMoment = moment(cle.startMoment);
     startMoment.seconds(0).milliseconds(0);    
     var endMoment = moment(cle.endMoment);
     endMoment.seconds(0).milliseconds(0);
+    // inside day 
+    if (endMoment.isAfter(moment(startMoment).hours(23).minutes(45))) {
+        endMoment = moment(startMoment).hours(23).minutes(45);
+    }
     // rounded to 15 min
     var duration = endMoment.diff(startMoment, 'seconds');
     var intervalMinute = 15;
@@ -41,13 +50,18 @@ function adjustStartEndDates(cle) {
     } else {
         startMoment = moment(endMoment).subtract(duration, 'seconds');
     }
-    // bounded beteen 7h and 20h
+    // bounded beteen 7h and 20h 
     if (startMoment.hours() < 7) {
         startMoment.hours(7).minutes(0);
-    }   
-    if (endMoment.isAfter(moment(startMoment).hours(20).minutes(0))) {
-        endMoment = moment(startMoment).hours(20).minutes(0);
     }
+    if (endMoment.hours() == 20 && endMoment.minutes() > 0) {
+        endMoment.hours(20).minutes(0);
+        startMoment = moment(endMoment).subtract(duration, 'seconds');
+    }
+    if (endMoment.hours() > 20) {
+        endMoment.hours(20).minutes(0);
+        startMoment = moment(endMoment).subtract(duration, 'seconds');
+    }  
     if (endMoment.isBefore(moment(startMoment))) {
         endMoment = moment(startMoment).add(1, 'hours');
     }
