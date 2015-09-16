@@ -6179,7 +6179,7 @@ input[type=search],
 }
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.3.6.3/fontello.woff');
+  src: url('../font/fontello.3.6.4/fontello.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -6854,19 +6854,35 @@ i.picardie-cursus::before {
   color: #763294;
   vertical-align: middle;
 }
-i.onisep-large,
-i.type.onisep,
-i.onisep {
+i.award-large,
+i.type.award,
+i.award {
   font-family: "fontello";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: none;
 }
-i.onisep-large::before,
-i.type.onisep::before,
-i.onisep::before {
-  content: '\e88c';
-  color: #4cb0d6;
+i.award-large::before,
+i.type.award::before,
+i.award::before {
+  content: '\e818';
+  color: #763294;
+  vertical-align: middle;
+}
+/*3.6.3 */
+i.bookmark-empty-large,
+i.type.bookmark-empty,
+i.bookmark-empty {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.bookmark-empty-large::before,
+i.type.bookmark-empty::before,
+i.bookmark-empty::before {
+  content: '\e888';
+  color: #46bfaf;
   vertical-align: middle;
 }
 i.cns-large,
@@ -6882,6 +6898,472 @@ i.type.cns::before,
 i.cns::before {
   content: '\e88a';
   color: #46bfaf;
+  vertical-align: middle;
+}
+i.suitcase-large,
+i.type.suitcase,
+i.suitcase {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.suitcase-large::before,
+i.type.suitcase::before,
+i.suitcase::before {
+  content: '\e88b';
+  color: #e13a3a;
+  vertical-align: middle;
+}
+i.onisep-large,
+i.type.onisep,
+i.onisep {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.onisep-large::before,
+i.type.onisep::before,
+i.onisep::before {
+  content: '\e88c';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.banquesavoir-large,
+i.type.banquesavoir,
+i.banquesavoir {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.banquesavoir-large::before,
+i.type.banquesavoir::before,
+i.banquesavoir::before {
+  content: '\e88d';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.unstagepourtous-large,
+i.type.unstagepourtous,
+i.unstagepourtous {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.unstagepourtous-large::before,
+i.type.unstagepourtous::before,
+i.unstagepourtous::before {
+  content: '\e88e';
+  color: #ff8500;
+  vertical-align: middle;
+}
+i.bcdi-large,
+i.type.bcdi,
+i.bcdi {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.bcdi-large::before,
+i.type.bcdi::before,
+i.bcdi::before {
+  content: '\e88f';
+  color: #763294;
+  vertical-align: middle;
+}
+i.ressoucesdepartementale91-large,
+i.type.ressoucesdepartementale91,
+i.ressoucesdepartementale91 {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.ressoucesdepartementale91-large::before,
+i.type.ressoucesdepartementale91::before,
+i.ressoucesdepartementale91::before {
+  content: '\e890';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.assr-large,
+i.type.assr,
+i.assr {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.assr-large::before,
+i.type.assr::before,
+i.assr::before {
+  content: '\e891';
+  color: #e13a3a;
+  vertical-align: middle;
+}
+i.museefrancaisphoto-large,
+i.type.museefrancaisphoto,
+i.museefrancaisphoto {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.museefrancaisphoto-large::before,
+i.type.museefrancaisphoto::before,
+i.museefrancaisphoto::before {
+  content: '\e892';
+  color: #763294;
+  vertical-align: middle;
+}
+i.cidj-large,
+i.type.cidj,
+i.cidj {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.cidj-large::before,
+i.type.cidj::before,
+i.cidj::before {
+  content: '\e893';
+  color: #46bfaf;
+  vertical-align: middle;
+}
+i.onisep2-large,
+i.type.onisep2,
+i.onisep2 {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.onisep2-large::before,
+i.type.onisep2::before,
+i.onisep2::before {
+  content: '\e894';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.itopstore-large,
+i.type.itopstore,
+i.itopstore {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.itopstore-large::before,
+i.type.itopstore::before,
+i.itopstore::before {
+  content: '\e895';
+  color: #46bfaf;
+  vertical-align: middle;
+}
+i.cervoprint-large,
+i.type.cervoprint,
+i.cervoprint {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.cervoprint-large::before,
+i.type.cervoprint::before,
+i.cervoprint::before {
+  content: '\e896';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.glpi-large,
+i.type.glpi,
+i.glpi {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.glpi-large::before,
+i.type.glpi::before,
+i.glpi::before {
+  content: '\e897';
+  color: #e13a3a;
+  vertical-align: middle;
+}
+i.elyceepicardie-large,
+i.type.elyceepicardie,
+i.elyceepicardie {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.elyceepicardie-large::before,
+i.type.elyceepicardie::before,
+i.elyceepicardie::before {
+  content: '\e898';
+  color: #763294;
+  vertical-align: middle;
+}
+i.sacoche-large,
+i.type.sacoche,
+i.sacoche {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.sacoche-large::before,
+i.type.sacoche::before,
+i.sacoche::before {
+  content: '\e899';
+  color: #ff8500;
+  vertical-align: middle;
+}
+i.planetemetierspicardie-large,
+i.type.planetemetierspicardie,
+i.planetemetierspicardie {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.planetemetierspicardie-large::before,
+i.type.planetemetierspicardie::before,
+i.planetemetierspicardie::before {
+  content: '\e89a';
+  color: #763294;
+  vertical-align: middle;
+}
+i.electron-large,
+i.type.electron,
+i.electron {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.electron-large::before,
+i.type.electron::before,
+i.electron::before {
+  content: '\e89b';
+  color: #e13a3a;
+  vertical-align: middle;
+}
+/* 3.6.4 */
+i.gepi-large,
+i.type.gepi,
+i.gepi {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.gepi-large::before,
+i.type.gepi::before,
+i.gepi::before {
+  content: '\e89c';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.madmagz-large,
+i.type.madmagz,
+i.madmagz {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.madmagz-large::before,
+i.type.madmagz::before,
+i.madmagz::before {
+  content: '\e89d';
+  color: #ecbe30;
+  vertical-align: middle;
+}
+i.educagri-large,
+i.type.educagri,
+i.educagri {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.educagri-large::before,
+i.type.educagri::before,
+i.educagri::before {
+  content: '\e89e';
+  color: #763294;
+  vertical-align: middle;
+}
+i.monorientationenligne-large,
+i.type.monorientationenligne,
+i.monorientationenligne {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.monorientationenligne-large::before,
+i.type.monorientationenligne::before,
+i.monorientationenligne::before {
+  content: '\e89f';
+  color: #ecbe30;
+  vertical-align: middle;
+}
+i.turboself-large,
+i.type.turboself,
+i.turboself {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.turboself-large::before,
+i.type.turboself::before,
+i.turboself::before {
+  content: '\e8a0';
+  color: #ecbe30;
+  vertical-align: middle;
+}
+i.netvibes-large,
+i.type.netvibes,
+i.netvibes {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.netvibes-large::before,
+i.type.netvibes::before,
+i.netvibes::before {
+  content: '\e8a1';
+  color: #46bfaf;
+  vertical-align: middle;
+}
+i.monstageenligne-large,
+i.type.monstageenligne,
+i.monstageenligne {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.monstageenligne-large::before,
+i.type.monstageenligne::before,
+i.monstageenligne::before {
+  content: '\e8a2';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.matholycee-large,
+i.type.matholycee,
+i.matholycee {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.matholycee-large::before,
+i.type.matholycee::before,
+i.matholycee::before {
+  content: '\e8a3';
+  color: #e13a3a;
+  vertical-align: middle;
+}
+i.biblionisep-large,
+i.type.biblionisep,
+i.biblionisep {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.biblionisep-large::before,
+i.type.biblionisep::before,
+i.biblionisep::before {
+  content: '\e8a4';
+  color: #46bfaf;
+  vertical-align: middle;
+}
+i.lesechos-large,
+i.type.lesechos,
+i.lesechos {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.lesechos-large::before,
+i.type.lesechos::before,
+i.lesechos::before {
+  content: '\e8a5';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.edutheque-large,
+i.type.edutheque,
+i.edutheque {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.edutheque-large::before,
+i.type.edutheque::before,
+i.edutheque::before {
+  content: '\e8a6';
+  color: #ecbe30;
+  vertical-align: middle;
+}
+i.europress-large,
+i.type.europress,
+i.europress {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.europress-large::before,
+i.type.europress::before,
+i.europress::before {
+  content: '\e8a7';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.picardieregion-large,
+i.type.picardieregion,
+i.picardieregion {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.picardieregion-large::before,
+i.type.picardieregion::before,
+i.picardieregion::before {
+  content: '\e8a8';
+  color: #ff8500;
+  vertical-align: middle;
+}
+i.lemonde-large,
+i.type.lemonde,
+i.lemonde {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.lemonde-large::before,
+i.type.lemonde::before,
+i.lemonde::before {
+  content: '\e8a9';
+  color: #4cb0d6;
   vertical-align: middle;
 }
 /* futur apps ? */
@@ -7010,20 +7492,6 @@ i.archive-large::before,
 i.type.archive::before,
 i.archive::before {
   content: "\e81d";
-  color: #ff8500;
-}
-i.sacoche-large,
-i.type.sacoche,
-i.sacoche {
-  font-family: "fontello";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: none;
-}
-i.sacoche-large::before,
-i.type.sacoche::before,
-i.sacoche::before {
-  content: "";
   color: #ff8500;
 }
 i.notes-large,
@@ -9499,6 +9967,13 @@ textarea:focus {
 .rss-widget.widget .selected-item a {
   color: #fff;
   font-weight: bold;
+}
+.rss-widget.widget .loading-panel {
+  border: none;
+}
+.rss-widget.widget .loading-panel h1 {
+  padding: 10px;
+  color: #ff8500;
 }
 /*ico ok*/
 .maxicours-widget h1:first-child {
