@@ -9544,6 +9544,13 @@ textarea:focus {
   height: 50px;
   margin-right: 10px;
 }
+.maxicours-widget .loading-panel {
+  border: none;
+}
+.maxicours-widget .loading-panel h1 {
+  padding: 10px;
+  color: #ff8500;
+}
 .cursus-widget {
   padding-bottom: 15px;
   font-size: 14px;
