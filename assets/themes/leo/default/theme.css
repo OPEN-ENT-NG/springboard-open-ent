@@ -732,6 +732,8 @@ h1 i {
 }
 help section.lightbox > div.content {
   width: 920px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 help section.lightbox > div.content .app-single-post {
   background: #fff;
@@ -4521,6 +4523,9 @@ popover popover-content.hidden {
   .panel a {
     clear: both;
     float: left !important;
+  }
+  .panel p {
+    clear: both;
   }
 }
 @media screen and (max-width: 420px) {
@@ -9206,22 +9211,12 @@ input-password button.pushed {
   background-color: #b25d00;
   box-shadow: none;
 }
-input-password button:active::before::before,
-input-password input[type=button]:active::before::before,
-input-password a.button:active::before::before,
-input-password input[type=submit]:active::before::before,
-input-password button:focus::before::before,
-input-password input[type=button]:focus::before::before,
-input-password a.button:focus::before::before,
-input-password input[type=submit]:focus::before::before,
+input-password button.pushed::before {
+  content: " " !important;
+}
+input-password button::before,
 input-password button:active::before,
-input-password input[type=button]:active::before,
-input-password a.button:active::before,
-input-password input[type=submit]:active::before,
-input-password button:focus::before,
-input-password input[type=button]:focus::before,
-input-password a.button:focus::before,
-input-password input[type=submit]:focus::before {
+input-password button:focus::before {
   -webkit-animation: none;
   -moz-animation: none;
   -ms-animation: none;
@@ -9229,14 +9224,19 @@ input-password input[type=submit]:focus::before {
   animation: none;
   -webkit-transition: none;
   transition: none;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0;
 }
-input-password button:before {
-  content: '\e873';
+input-password button::before {
+  content: '\e873' !important;
   line-height: 31px;
   font-size: 27px;
   text-align: center;
   text-indent: 40px;
-  color: black;
+  color: #fff;
+  background: transparent !important;
 }
 .fill-bar {
   width: 100%;
@@ -12287,6 +12287,18 @@ h1 i {
   display: none!important;
 }
 @media screen and (max-width: 550px) {
+  .panel {
+    background: #4bafd5;
+  }
+  .panel input-password button {
+    float: left;
+    padding: 5px;
+  }
+  .panel input-password button::before {
+    position: relative;
+    line-height: 23px;
+    font-size: 16px;
+  }
   nav.horizontal {
     right: 0;
   }
@@ -12301,5 +12313,13 @@ h1 i {
   }
   .login h1 {
     display: none;
+  }
+  .logo {
+    height: 66px;
+    width: 120px;
+    margin-left: 10px;
+  }
+  body .material section.main {
+    padding: 8px 15px;
   }
 }

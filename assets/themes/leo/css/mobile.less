@@ -1,4 +1,18 @@
 @media screen and (max-width: 550px){
+	.panel{
+		background: @primary;
+		input-password{
+			button{
+				float: left;
+				padding: 5px;
+				&::before{
+					position: relative;
+					line-height: 23px;
+					font-size: 16px;
+				}
+			}
+		}
+	}
 	nav.horizontal{
 		right: 0;
 		> a{
@@ -15,5 +29,20 @@
 		h1{
 			display: none;
 		}
+	}
+	.logo{
+		height: 66px;
+		width: 120px;
+		margin-left: 10px;
+	}
+	body .material section.main{
+		padding: 8px 15px;
+	}
+	.toggle-panel{
+		right: -15px;
+		top: 52px;
+	}
+	.notification article .notification-date{
+		right: 0;
 	}
 }

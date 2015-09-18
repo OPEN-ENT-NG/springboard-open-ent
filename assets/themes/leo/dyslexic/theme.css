@@ -732,6 +732,8 @@ h1 i {
 }
 help section.lightbox > div.content {
   width: 920px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 help section.lightbox > div.content .app-single-post {
   background: #fff;
@@ -9207,22 +9209,7 @@ input-password button.pushed {
   background-color: #b25d00;
   box-shadow: none;
 }
-input-password button:active::before::before,
-input-password input[type=button]:active::before::before,
-input-password a.button:active::before::before,
-input-password input[type=submit]:active::before::before,
-input-password button:focus::before::before,
-input-password input[type=button]:focus::before::before,
-input-password a.button:focus::before::before,
-input-password input[type=submit]:focus::before::before,
-input-password button:active::before,
-input-password input[type=button]:active::before,
-input-password a.button:active::before,
-input-password input[type=submit]:active::before,
-input-password button:focus::before,
-input-password input[type=button]:focus::before,
-input-password a.button:focus::before,
-input-password input[type=submit]:focus::before {
+input-password button::before {
   -webkit-animation: none;
   -moz-animation: none;
   -ms-animation: none;
@@ -9237,7 +9224,7 @@ input-password button:before {
   font-size: 27px;
   text-align: center;
   text-indent: 40px;
-  color: black;
+  color: #fff;
 }
 .fill-bar {
   width: 100%;
@@ -12288,6 +12275,9 @@ h1 i {
   display: none!important;
 }
 @media screen and (max-width: 550px) {
+  .panel {
+    background: #4bafd5;
+  }
   nav.horizontal {
     right: 0;
   }
@@ -12302,6 +12292,14 @@ h1 i {
   }
   .login h1 {
     display: none;
+  }
+  .logo {
+    height: 66px;
+    width: 120px;
+    margin-left: 10px;
+  }
+  body .material section.main {
+    padding: 8px 15px;
   }
 }
 h1 {
