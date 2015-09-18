@@ -909,6 +909,10 @@ input[type=tel],
 input[type=email] {
   border: none;
 }
+input[type=color] {
+  background: transparent;
+  border: none;
+}
 nav.stamps article {
   margin-bottom: 15px;
   margin-top: 0;
@@ -4420,6 +4424,7 @@ ul.toc li a {
 popover {
   position: relative;
   display: inline-block;
+  z-index: 10;
 }
 popover popover-content::before {
   content: "\25b2";
@@ -5972,6 +5977,631 @@ nav.floating .content {
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+editor.drawing-zone {
+  height: auto;
+}
+editor {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+editor > popover {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+}
+editor > popover > [popover-opener] {
+  width: 39px;
+}
+editor > popover ul {
+  padding: 0;
+  margin: 10px 0 10px 0;
+}
+editor > popover ul li {
+  list-style-type: none;
+  line-height: 30px;
+  text-align: left;
+  padding-left: 15px;
+  cursor: pointer;
+  -o-transition: background 250ms ease;
+  -moz-transition: background 250ms ease;
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+}
+editor > popover ul li:hover {
+  background: #eee;
+}
+editor > popover popover-content {
+  width: 180px;
+  left: -165px;
+  margin-top: 15px;
+}
+editor > popover popover-content::before {
+  left: auto;
+  right: 0;
+}
+editor > [contenteditable] {
+  overflow: hidden;
+  float: left;
+  box-sizing: border-box;
+  -o-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -webkit-transition: width 250ms ease;
+  transition: width 250ms ease;
+  min-height: 300px;
+}
+editor > [contenteditable] a img {
+  border: 1px dashed;
+}
+editor > textarea {
+  float: left;
+  box-sizing: border-box;
+  -o-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -webkit-transition: width 250ms ease;
+  transition: width 250ms ease;
+  margin: 0;
+  min-height: 300px;
+}
+editor.edit > [contenteditable] {
+  width: 100%;
+}
+editor.edit > textarea {
+  width: 0;
+  padding: 0;
+  border: 0;
+}
+editor.html > [contenteditable] {
+  width: 0;
+  padding: 0;
+  border: 0;
+  min-height: 0 !important;
+  height: 0 !important;
+}
+editor.html > textarea {
+  width: 100%;
+}
+editor.both > [contenteditable] {
+  width: 50%;
+}
+editor.both > textarea {
+  width: 50%;
+  border-left-width: 0;
+}
+editor::after {
+  content: " ";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+editor contextual-menu {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  z-index: 10;
+  background-color: #fff;
+  -o-transition: width 250ms ease;
+  -moz-transition: width 250ms ease;
+  -webkit-transition: width 250ms ease;
+  transition: width 250ms ease;
+}
+editor contextual-menu ul {
+  margin: 0;
+  padding: 0;
+}
+editor contextual-menu ul li {
+  padding: 5px;
+  list-style-type: none;
+}
+editor contextual-menu ul li:hover {
+  background: #eee;
+}
+editor contextual-menu.show {
+  width: 200px;
+}
+editor editor-toolbar {
+  display: block;
+  float: left;
+  width: 100%;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-bottom: 0;
+}
+editor editor-toolbar.inline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  -o-transition: bottom 250ms ease;
+  -moz-transition: bottom 250ms ease;
+  -webkit-transition: bottom 250ms ease;
+  transition: bottom 250ms ease;
+}
+editor editor-toolbar.inline select-list,
+editor editor-toolbar.inline popover {
+  display: none;
+}
+editor editor-toolbar.inline.show {
+  top: auto;
+  bottom: 100%;
+}
+editor editor-toolbar.inline.show select-list {
+  display: inline;
+}
+editor editor-toolbar.inline.show popover {
+  display: inline-block;
+}
+editor editor-toolbar .sp-replacer {
+  display: none;
+}
+editor editor-toolbar .sp-replacer:first-of-type {
+  display: inline-block;
+}
+editor editor-toolbar .option {
+  display: inline-block;
+  padding: 6px 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  height: 30px;
+  min-width: 20px;
+  vertical-align: middle;
+  border-bottom: 3px solid transparent;
+}
+editor editor-toolbar .option i {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin: 1px;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  background-size: contain;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+editor editor-toolbar .option.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+editor editor-toolbar .option:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+editor editor-toolbar .option.toggled {
+  background-color: #e4e4e4;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+editor editor-toolbar .option.undo > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/undo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.redo > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/redo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.bold > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/bold.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.italic > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/italic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.underline > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/underline.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.justify-left > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/justify-left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.justify-right > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/justify-right.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.justify-center > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/justify-center.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.justify-full > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/justify-full.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.subscript > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/subscript.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.superscript > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/superscript.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.quote > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/quote.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.ulist i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/ulist.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.olist > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/olist.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.remove-format > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/remove-format.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.image > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.sound > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/sound.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.mathjax > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/mathjax.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.templates > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/templates.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.font {
+  width: 120px;
+}
+editor editor-toolbar .option.font:hover {
+  background: none;
+  border: none;
+}
+editor editor-toolbar .option.font-size:hover {
+  background: none;
+  border: none;
+}
+editor editor-toolbar .option.format:hover {
+  background: none;
+  border: none;
+}
+editor editor-toolbar .option.format h1,
+editor editor-toolbar .option.format h2,
+editor editor-toolbar .option.format h3,
+editor editor-toolbar .option.format p {
+  margin: 0;
+}
+editor editor-toolbar .option.table .draw-table .cell {
+  height: 10px;
+  width: 10px;
+  border: 1px solid #fff;
+  background: #efefef;
+}
+editor editor-toolbar .option.table .draw-table .cell.match {
+  background: #ddd;
+}
+editor editor-toolbar .option.table popover > i {
+  height: 21px;
+  width: 21px;
+  background-image: url("../img/icons/editor/table.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.table popover popover-content {
+  width: 120px;
+  left: -58px;
+  margin-top: 15px;
+}
+editor editor-toolbar .option.linker > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/linker.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.smileys > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/smileys.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.smileys lightbox img {
+  width: 50px;
+  height: 50px;
+}
+editor editor-toolbar .option.unlink > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/unlink.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.embed > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/embed.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+editor editor-toolbar .option.audio > i {
+  height: 15px;
+  width: 15px;
+  background-image: url("../img/icons/editor/audio.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+[contenteditable] audio,
+[bind-html] audio {
+  display: block;
+}
+[contenteditable] audio::before,
+[bind-html] audio::before {
+  content: " ";
+}
+[contenteditable] a img,
+[bind-html] a img {
+  cursor: pointer !important;
+}
+[contenteditable] img,
+[bind-html] img {
+  float: left;
+}
+select-list {
+  position: relative;
+  font-size: 14px;
+  z-index: 1;
+}
+select-list .options {
+  position: absolute;
+  background-color: #fff;
+  padding: 0 10px 10px;
+  opacity: 1;
+  -o-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+select-list .options opt {
+  padding: 5px;
+  display: block;
+}
+select-list .options.hidden {
+  height: 0 !important;
+  opacity: 0;
+  padding: 0 10px;
+}
+select-list .selected-value {
+  border-bottom: 1px solid #ddd;
+  min-width: 82px;
+  min-height: 24px;
+  pointer-events: all;
+  line-height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 15px;
 }
 html,
 body {
@@ -9231,12 +9861,13 @@ input-password button:focus::before {
 }
 input-password button::before {
   content: '\e873' !important;
-  line-height: 31px;
+  line-height: 18px;
   font-size: 27px;
   text-align: center;
   text-indent: 40px;
   color: #fff;
   background: transparent !important;
+  position: relative;
 }
 .fill-bar {
   width: 100%;
@@ -12090,8 +12721,11 @@ nav.horizontal .bookmarked-app a i {
   display: block;
   font-size: 50px;
   height: 55px !important;
-  line-height: 40px;
+  line-height: 55px;
   width: 100%;
+}
+nav.horizontal .bookmarked-app a img {
+  height: 55px;
 }
 nav.horizontal .bookmarked-app a:hover {
   border-bottom: none !important;
@@ -12321,5 +12955,12 @@ h1 i {
   }
   body .material section.main {
     padding: 8px 15px;
+  }
+  .toggle-panel {
+    right: -15px;
+    top: 52px;
+  }
+  .notification article .notification-date {
+    right: 0;
   }
 }

@@ -46,7 +46,8 @@
 							</div>
 							<div class="bookmarked-app" ng-repeat="app in me.bookmarkedApps">
 								<a href="[[app.address]]" target="[[app.target]]">
-									<i class="[[app.icon]]" tooltip="[[app.displayName]]"></i>
+									<i class="[[app.icon]]" ng-if="app.icon.indexOf('/') === -1" tooltip="[[app.displayName]]"></i>
+									<img skin-src="[[app.icon]]" ng-if="app.icon.indexOf('/') !== -1" tooltip="[[app.displayName]]" />
 								</a>
 							</div>
 						</div>
