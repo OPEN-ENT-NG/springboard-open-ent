@@ -4524,6 +4524,9 @@ popover popover-content.hidden {
     clear: both;
     float: left !important;
   }
+  .panel p {
+    clear: both;
+  }
 }
 @media screen and (max-width: 420px) {
   .drop-down-filters,
@@ -7369,6 +7372,37 @@ i.lemonde::before {
   color: #4cb0d6;
   vertical-align: middle;
 }
+/* 3.6.5 */
+i.connecteurgenerique1-large,
+i.type.connecteurgenerique1,
+i.connecteurgenerique1 {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.connecteurgenerique1-large::before,
+i.type.connecteurgenerique1::before,
+i.connecteurgenerique1::before {
+  content: '\e8aa';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
+i.connecteurgenerique2-large,
+i.type.connecteurgenerique2,
+i.connecteurgenerique2 {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+}
+i.connecteurgenerique2-large::before,
+i.type.connecteurgenerique2::before,
+i.connecteurgenerique2::before {
+  content: '\e8ab';
+  color: #4cb0d6;
+  vertical-align: middle;
+}
 /* futur apps ? */
 i.chat-large,
 i.type.chat,
@@ -9209,7 +9243,12 @@ input-password button.pushed {
   background-color: #b25d00;
   box-shadow: none;
 }
-input-password button::before {
+input-password button.pushed::before {
+  content: " " !important;
+}
+input-password button::before,
+input-password button:active::before,
+input-password button:focus::before {
   -webkit-animation: none;
   -moz-animation: none;
   -ms-animation: none;
@@ -9217,14 +9256,20 @@ input-password button::before {
   animation: none;
   -webkit-transition: none;
   transition: none;
+  width: auto;
+  height: auto;
+  top: 0;
+  left: 0;
 }
-input-password button:before {
-  content: '\e873';
-  line-height: 31px;
+input-password button::before {
+  content: '\e873' !important;
+  line-height: 18px;
   font-size: 27px;
   text-align: center;
   text-indent: 40px;
   color: #fff;
+  background: transparent !important;
+  position: relative;
 }
 .fill-bar {
   width: 100%;
@@ -12078,8 +12123,11 @@ nav.horizontal .bookmarked-app a i {
   display: block;
   font-size: 50px;
   height: 55px !important;
-  line-height: 40px;
+  line-height: 55px;
   width: 100%;
+}
+nav.horizontal .bookmarked-app a img {
+  height: 55px;
 }
 nav.horizontal .bookmarked-app a:hover {
   border-bottom: none !important;
@@ -12278,6 +12326,15 @@ h1 i {
   .panel {
     background: #4bafd5;
   }
+  .panel input-password button {
+    float: left;
+    padding: 5px;
+  }
+  .panel input-password button::before {
+    position: relative;
+    line-height: 23px;
+    font-size: 16px;
+  }
   nav.horizontal {
     right: 0;
   }
@@ -12300,6 +12357,13 @@ h1 i {
   }
   body .material section.main {
     padding: 8px 15px;
+  }
+  .toggle-panel {
+    right: -15px;
+    top: 52px;
+  }
+  .notification article .notification-date {
+    right: 0;
   }
 }
 h1 {
