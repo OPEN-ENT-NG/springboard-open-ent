@@ -4918,9 +4918,13 @@ nav.illustrated-links ul li .content {
   position: relative;
   min-height: 0;
 }
-nav.illustrated-links ul li .content h1 {
+nav.illustrated-links ul li .content h1,
+nav.illustrated-links ul li .content h2 {
   margin: 0px;
   font-size: 22px;
+}
+nav.illustrated-links ul li .content label {
+  top: 8px;
 }
 nav.illustrated-links ul li .content em,
 nav.illustrated-links ul li .content strong {
@@ -6328,6 +6332,9 @@ h4 {
 .share tbody tr.new-element {
   background: #efefef;
   font-weight: bold;
+}
+ul.list-view {
+  margin: 0;
 }
 table,
 ul.list-view {
