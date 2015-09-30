@@ -3885,6 +3885,9 @@ select{
 
 .grid-media{
 	outline: 1px solid @primary;
+	image-select > div::before{
+		left: 0;
+	}
 }
 
 .editor.drawing-grid{
@@ -5455,4 +5458,51 @@ nav.vertical{
 /* no ico in app page title*/
 h1 i:before, h1 i:after, h1 i{
   display: none!important;
+}
+
+editor{
+	.selected-value:hover{
+		border-color: @accent;
+	}
+	.option:hover{
+		border-bottom: 3px solid @accent;
+	}
+	editor-toolbar{
+		.option.table{
+			.draw-table{
+				.cell.match{
+					background: @accent;
+				}
+			}
+		}
+	}
+	contextual-menu{
+		.material-card();
+	}
+
+	[contenteditable]{
+		article{
+			border: 1px dotted #ddd;
+		}
+	}
+}
+
+[contenteditable], [bind-html]{
+	table{
+		td{
+			border: 1px solid #eee;
+		}
+		tr:hover{
+			background: none;
+		}
+	}
+}
+
+contextual-menu{
+	ul{
+		li:hover{
+			background: @accent;
+			color: #fff;
+		}
+	}
 }
