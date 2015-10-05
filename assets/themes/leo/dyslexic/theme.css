@@ -3887,6 +3887,9 @@ a.cke_smile img {
 .editor .viewer .media {
   opacity: 1;
 }
+.editor iframe {
+  pointer-events: none;
+}
 .drawing-grid .viewer {
   padding-left: 0;
 }
@@ -3939,6 +3942,9 @@ a.cke_smile img {
   -moz-transition: background 250ms ease;
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
+}
+grid-cell {
+  overflow: hidden;
 }
 .media.height-one .media-wrapper,
 .media.height-two .media-wrapper,
@@ -9919,7 +9925,6 @@ textarea:focus {
   text-align: center;
 }
 .rss-widget.widget h1:before {
-  content: "RSS";
   color: #4bafd5;
 }
 .rss-widget.widget h1 .rss-config-button {
@@ -12259,9 +12264,6 @@ plus .opener.minus {
 }
 .bookmark-widget {
   /* attention icone */
-}
-.bookmark-widget h1::before {
-  content: "Signets";
 }
 .bookmark-widget .bookmark-add-button {
   display: block;
