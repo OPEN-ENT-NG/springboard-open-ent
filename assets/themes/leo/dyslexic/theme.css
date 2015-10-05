@@ -710,10 +710,7 @@ i {
 }
 iframe {
   border: none;
-  width: 100%;
-  height: 100%;
   overflow: visible;
-  min-height: 500px;
 }
 body.app {
   margin: 0;
@@ -3989,6 +3986,7 @@ a.cke_smile img {
 .media.height-eleven .media-wrapper .media-container iframe,
 .media.height-twelve .media-wrapper .media-container iframe {
   height: 100%;
+  width: 100%;
   min-height: 0;
   position: absolute;
 }
@@ -4922,9 +4920,6 @@ nav.illustrated-links ul li .content h1,
 nav.illustrated-links ul li .content h2 {
   margin: 0px;
   font-size: 22px;
-}
-nav.illustrated-links ul li .content label {
-  top: 8px;
 }
 nav.illustrated-links ul li .content em,
 nav.illustrated-links ul li .content strong {
@@ -11633,9 +11628,6 @@ nav.illustrated-links ul li .content i.public::before {
   display: inline-block;
   margin-right: 5px;
   margin-top: -4px;
-}
-nav.illustrated-links ul li .content a {
-  line-height: 40px;
 }
 nav.illustrated-links ul ul.secondary-list {
   padding-left: 78px;
