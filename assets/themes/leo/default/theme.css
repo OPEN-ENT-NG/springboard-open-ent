@@ -368,6 +368,9 @@
   top: 0;
   left: 0;
 }
+.zero {
+  display: none;
+}
 .one {
   width: 8.33333333%;
 }
@@ -710,10 +713,7 @@ i {
 }
 iframe {
   border: none;
-  width: 100%;
-  height: 100%;
   overflow: visible;
-  min-height: 500px;
 }
 body.app {
   margin: 0;
@@ -3890,6 +3890,9 @@ a.cke_smile img {
 .editor .viewer .media {
   opacity: 1;
 }
+.editor iframe {
+  pointer-events: none;
+}
 .drawing-grid .viewer {
   padding-left: 0;
 }
@@ -3943,6 +3946,9 @@ a.cke_smile img {
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
 }
+grid-cell {
+  overflow: hidden;
+}
 .media.height-one .media-wrapper,
 .media.height-two .media-wrapper,
 .media.height-three .media-wrapper,
@@ -3989,6 +3995,7 @@ a.cke_smile img {
 .media.height-eleven .media-wrapper .media-container iframe,
 .media.height-twelve .media-wrapper .media-container iframe {
   height: 100%;
+  width: 100%;
   min-height: 0;
   position: absolute;
 }
@@ -12386,9 +12393,6 @@ contextual-menu ul li:hover {
     margin-right: 0;
     margin-left: 0;
   }
-  .login h1 {
-    display: none;
-  }
   .logo {
     height: 66px;
     width: 120px;
@@ -12403,5 +12407,10 @@ contextual-menu ul li:hover {
   }
   .notification article .notification-date {
     right: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .login h1 {
+    display: none;
   }
 }
