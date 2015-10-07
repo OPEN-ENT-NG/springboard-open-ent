@@ -710,7 +710,10 @@ i {
 }
 iframe {
   border: none;
+  width: 100%;
+  height: 100%;
   overflow: visible;
+  min-height: 500px;
 }
 body.app {
   margin: 0;
@@ -3887,9 +3890,6 @@ a.cke_smile img {
 .editor .viewer .media {
   opacity: 1;
 }
-.editor iframe {
-  pointer-events: none;
-}
 .drawing-grid .viewer {
   padding-left: 0;
 }
@@ -3943,9 +3943,6 @@ a.cke_smile img {
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
 }
-grid-cell {
-  overflow: hidden;
-}
 .media.height-one .media-wrapper,
 .media.height-two .media-wrapper,
 .media.height-three .media-wrapper,
@@ -3992,7 +3989,6 @@ grid-cell {
 .media.height-eleven .media-wrapper .media-container iframe,
 .media.height-twelve .media-wrapper .media-container iframe {
   height: 100%;
-  width: 100%;
   min-height: 0;
   position: absolute;
 }
@@ -9265,9 +9261,6 @@ input-password button.pushed {
   background-color: #b25d00;
   box-shadow: none;
 }
-input-password button.pushed::before {
-  content: " " !important;
-}
 input-password button::before,
 input-password button:active::before,
 input-password button:focus::before {
@@ -9281,7 +9274,7 @@ input-password button:focus::before {
   width: auto;
   height: auto;
   top: 0;
-  left: 0;
+  left: -5px;
 }
 input-password button::before {
   content: '\e873' !important;
@@ -12380,6 +12373,7 @@ contextual-menu ul li:hover {
     position: relative;
     line-height: 23px;
     font-size: 16px;
+    left: 0;
   }
   nav.horizontal {
     right: 0;
