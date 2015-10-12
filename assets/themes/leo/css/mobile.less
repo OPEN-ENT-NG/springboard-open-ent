@@ -77,3 +77,25 @@
 		}
 	}
 }
+
+@media screen and (max-width: 800px){
+	nav.vertical[side-nav]{
+		ul{
+			border-left: none !important;
+			li{
+				a.selected{
+					background: rgba(255,255,255, 0.2)
+				}
+				a{
+					color: #fff;
+				}
+			}
+		}
+		a.classic-link{
+			background: #fff;
+		}
+		background-color: @primary;
+		border-left: 10px solid @accent;
+		padding-left: 0;
+	}
+}

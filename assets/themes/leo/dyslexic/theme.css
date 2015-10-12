@@ -13188,6 +13188,25 @@ alphabetical .domino .bottom a:hover h4 {
     display: none;
   }
 }
+@media screen and (max-width: 800px) {
+  nav.vertical[side-nav] {
+    background-color: #4bafd5;
+    border-left: 10px solid #ff8500;
+    padding-left: 0;
+  }
+  nav.vertical[side-nav] ul {
+    border-left: none !important;
+  }
+  nav.vertical[side-nav] ul li a.selected {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  nav.vertical[side-nav] ul li a {
+    color: #fff;
+  }
+  nav.vertical[side-nav] a.classic-link {
+    background: #fff;
+  }
+}
 h1 {
   font-size: 24px;
 }
