@@ -1781,6 +1781,13 @@ i.worried:before{
   line-height: 40px;
 }
 
+i.link{
+    .fonticon;
+    &:before{
+        content: '\e84d';
+    }
+}
+
 
 /* end icones */
 
@@ -1797,6 +1804,12 @@ i.worried:before{
 		font-weight: bold;
 		text-transform: uppercase;
 		background: transparent;
+        margin-right: 10px;
+        .run-transition(border-bottom);
+
+        &:hover{
+            border-bottom: 2px solid lighten(@primary, 20%);
+        }
 	}
 	header.selected{
 		border: none;
@@ -4484,6 +4497,15 @@ h1.letter-picker:hover{
 	background: @accent;
 }
 
+hr.separator{
+    border-top: 1px solid lighten(black, 20%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    padding: 0px;
+    box-shadow: 0px 0px 1px black;
+}
+
 hr.line{
 	margin-left: 0;
 	margin-right: 0;
@@ -5500,4 +5522,26 @@ contextual-menu{
 			color: #fff;
 		}
 	}
+}
+
+.cns {
+    .dominos{
+        border: none;
+    }
+    .domino{
+        .bottom{
+            padding-bottom: 100%;
+            h4{
+                line-height: 20px;
+            }
+        }
+    }
+    .loading-panel{
+        border: none;
+        padding: 25px 30px;
+
+        h1{
+            padding: 10px;
+        }
+    }
 }
