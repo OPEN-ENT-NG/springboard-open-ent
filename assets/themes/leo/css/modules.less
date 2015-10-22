@@ -5524,24 +5524,115 @@ contextual-menu{
 	}
 }
 
-.cns {
-    .dominos{
-        border: none;
-    }
-    .domino{
-        .bottom{
-            padding-bottom: 100%;
-            h4{
-                line-height: 20px;
-            }
-        }
-    }
-    .loading-panel{
-        border: none;
-        padding: 25px 30px;
 
-        h1{
-            padding: 10px;
-        }
+.tabs .loading-panel{
+    border: none;
+    padding: 25px 30px;
+
+    h1{
+        padding: 10px;
     }
+}
+
+.tabs section.dominos{
+  border: none;
+
+  input[type=text]{
+	margin: 30px auto;
+  }
+}
+
+
+.dominos alphabetical .item{
+  max-width: none;
+  width: 20%;
+
+  .domino{
+	border-radius: 0;
+	padding: 0;
+	img{
+	  background-color: @primary;
+	}
+	.bottom {
+	  margin: 0;
+	  div.content{
+		padding: 0;
+	  }
+	}
+
+  }
+  .domino:hover{
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+  }
+}
+
+h1.letter-picker:first-child {
+  margin-top: 50px;
+}
+
+alphabetical{
+
+  h1.letter-picker {
+	margin: auto auto 15px;
+  }
+
+  h1.letter-picker + hr.line {
+	padding: 0;
+	border-bottom: 1px solid @primary;
+	margin-bottom: 15px;
+  }
+
+  .domino{
+   .run-transition(box-shadow);
+
+    .bottom{
+      background: transparent;
+
+    }
+    .bottom a{
+      display: block;
+      position: absolute;
+      height: 100%;
+      h4{
+        .run-transition;
+		color: @primary;
+		line-height: 20px;
+		padding: 5px 15px;
+	  }
+    }
+    .bottom a:hover h4{
+      color: @accent;
+    }
+  }
+
+}
+
+.ribbon{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: fade(@white, 60%);
+  text-align: right;
+  height: 0;
+  overflow: hidden;
+  .run-transition(height);
+
+  i.knur-plus{
+	height: 30px;
+	width: 30px;
+	background-image: url("../img/icons/knur-plus.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+	background-size: 80%;
+  }
+
+
+}
+
+
+.domino .top:hover .ribbon{
+  height: 30px;
 }
