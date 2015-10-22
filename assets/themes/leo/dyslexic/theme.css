@@ -12992,7 +12992,7 @@ contextual-menu ul li:hover {
   margin: 30px auto;
 }
 .dominos alphabetical .item {
-  max-width: none;
+  max-width: 230px;
   width: 20%;
 }
 .dominos alphabetical .item .domino {
