@@ -1983,6 +1983,34 @@ p i {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+.domino .top:hover .ribbon {
+  height: 30px;
+}
+.ribbon {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: right;
+  height: 0;
+  overflow: hidden;
+  -o-transition: height 250ms ease;
+  -moz-transition: height 250ms ease;
+  -webkit-transition: height 250ms ease;
+  transition: height 250ms ease;
+}
+.ribbon i {
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.ribbon span {
+  padding-left: 30px;
+}
 img.text-sized {
   height: 20px;
   vertical-align: top;
@@ -13047,32 +13075,9 @@ alphabetical .domino .bottom a h4 {
 alphabetical .domino .bottom a:hover h4 {
   color: #ff8500;
 }
-.ribbon {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.6);
-  text-align: right;
-  height: 0;
-  overflow: hidden;
-  -o-transition: height 250ms ease;
-  -moz-transition: height 250ms ease;
-  -webkit-transition: height 250ms ease;
-  transition: height 250ms ease;
-}
 .ribbon i.knur-plus {
-  height: 30px;
-  width: 30px;
   background-image: url("../img/icons/knur-plus.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  display: inline-block;
-  box-sizing: border-box;
-  vertical-align: middle;
   background-size: 80%;
-}
-.domino .top:hover .ribbon {
-  height: 30px;
 }
 @media screen and (max-width: 550px) {
   .panel {
