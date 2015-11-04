@@ -6522,9 +6522,6 @@ nav.floating .content {
   padding-bottom: 20px;
 }
 @media screen and (max-width: 700px) {
-  * {
-    -ms-scroll-chaining: none;
-  }
   body {
     width: 100%;
     min-height: 100%;
@@ -6544,19 +6541,6 @@ nav.floating .content {
     margin-top: 0;
     border-radius: 0;
     box-sizing: border-box;
-  }
-  body .icons-view .element {
-    width: 105px;
-    height: 155px;
-  }
-  body .icons-view .element legend {
-    line-height: 18px;
-  }
-  body .icons-view .element legend a {
-    font-size: 12px;
-  }
-  body .icons-view .element legend strong {
-    font-size: 12px;
   }
   body .icons-view.apps .element {
     width: 80px;
@@ -6611,30 +6595,13 @@ nav.floating .content {
     float: left;
   }
   body nav.vertical[side-nav] {
-    position: fixed;
-    left: 0;
-    top: 50px;
+    position: absolute;
+    width: 300px;
+    left: -315px;
+    top: -10px;
     z-index: 10001;
-    -o-transition: all 250ms ease;
-    -moz-transition: all 250ms ease;
-    -webkit-transition: all 250ms ease;
-    transition: all 250ms ease;
-    box-sizing: border-box;
-    width: 0;
-    overflow: hidden;
-    padding: 0;
-  }
-  body nav.vertical[side-nav] > ul,
-  body nav.vertical[side-nav] > div > ul,
-  body nav.vertical[side-nav] a.classic-link {
-    width: 270px;
-  }
-  body nav.vertical[side-nav] a.classic-link {
-    white-space: nowrap;
-  }
-  body nav.vertical[side-nav].slide {
-    width: 305px;
     padding: 10px;
+    box-sizing: border-box;
   }
   body .toggle-buttons {
     left: 0;
@@ -10904,6 +10871,10 @@ filters p:first-child i {
 }
 .toggle-buttons button:hover,
 .toggle-buttons .button:hover {
+  background: #ff8500;
+  color: #fff;
+}
+.toggle-buttons input[type=button].pick-file {
   background: #ff8500;
   color: #fff;
 }
