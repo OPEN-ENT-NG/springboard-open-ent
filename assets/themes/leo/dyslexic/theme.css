@@ -6522,6 +6522,9 @@ nav.floating .content {
   padding-bottom: 20px;
 }
 @media screen and (max-width: 700px) {
+  * {
+    -ms-scroll-chaining: none;
+  }
   body {
     width: 100%;
     min-height: 100%;
@@ -6541,6 +6544,19 @@ nav.floating .content {
     margin-top: 0;
     border-radius: 0;
     box-sizing: border-box;
+  }
+  body .icons-view .element {
+    width: 105px;
+    height: 155px;
+  }
+  body .icons-view .element legend {
+    line-height: 18px;
+  }
+  body .icons-view .element legend a {
+    font-size: 12px;
+  }
+  body .icons-view .element legend strong {
+    font-size: 12px;
   }
   body .icons-view.apps .element {
     width: 80px;
@@ -6595,13 +6611,30 @@ nav.floating .content {
     float: left;
   }
   body nav.vertical[side-nav] {
-    position: absolute;
-    width: 300px;
-    left: -315px;
-    top: -10px;
+    position: fixed;
+    left: 0;
+    top: 50px;
     z-index: 10001;
-    padding: 10px;
+    -o-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
     box-sizing: border-box;
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  body nav.vertical[side-nav] > ul,
+  body nav.vertical[side-nav] > div > ul,
+  body nav.vertical[side-nav] a.classic-link {
+    width: 270px;
+  }
+  body nav.vertical[side-nav] a.classic-link {
+    white-space: nowrap;
+  }
+  body nav.vertical[side-nav].slide {
+    width: 305px;
+    padding: 10px;
   }
   body .toggle-buttons {
     left: 0;
@@ -9811,7 +9844,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
 }
 .aligned {
   display: inline-block;
@@ -10035,7 +10068,7 @@ input-password button::before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: #ffffff;
+  background: white;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
@@ -11479,6 +11512,9 @@ select {
 }
 .grid-media image-select > div::before {
   left: 0;
+}
+.drawing-grid strong {
+  color: inherit;
 }
 .editor.drawing-grid .grid-add-row {
   background: #4bafd5;
