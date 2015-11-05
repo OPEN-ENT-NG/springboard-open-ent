@@ -13138,6 +13138,22 @@ alphabetical .domino .bottom a:hover h4 {
   body nav.vertical[side-nav] a.classic-link {
     background: #fff;
   }
+  body .mobile-nav-opener {
+    display: none;
+    font-family: fontello;
+    background: none;
+  }
+  body .mobile-nav-opener::before {
+    content: '\e84f';
+    font-size: 28px;
+    color: #ff8500;
+    position: absolute;
+    top: 11px;
+    left: 10px;
+  }
+  body .mobile-nav-opener.visible {
+    display: inline-block;
+  }
   h1 {
     font-size: 23px;
     margin-bottom: 9px;
@@ -13208,19 +13224,6 @@ alphabetical .domino .bottom a:hover h4 {
   }
   .notification article .notification-date {
     right: 0;
-  }
-  .mobile-nav-opener {
-    display: none;
-    font-family: fontello;
-    background: none;
-  }
-  .mobile-nav-opener::before {
-    content: '\e84f';
-    font-size: 28px;
-    color: #ff8500;
-  }
-  .mobile-nav-opener.visible {
-    display: inline-block;
   }
 }
 @media screen and (max-width: 1200px) {
