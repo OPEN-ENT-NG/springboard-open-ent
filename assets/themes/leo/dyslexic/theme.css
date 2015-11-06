@@ -10543,6 +10543,10 @@ image-select > div:hover::before {
 i.important {
   color: #ff8500;
 }
+i.blog,
+i.wiki {
+  display: inline-block !important;
+}
 i side-panel {
   font-family: Roboto;
 }
