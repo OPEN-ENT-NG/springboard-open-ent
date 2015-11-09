@@ -59,8 +59,19 @@
 	.navbar{
 		height: 50px;
 	}
+	.application-title{
+		position: fixed;
+		color: #fff;
+		top: 0;
+		left: 0;
+		z-index: 10001;
+		line-height: 50px;
+		&.move-right{
+			margin-left: 50px;
+		}
+	}
 	.logo{
-		margin-top: -7px;
+		display: none;
 	}
 	nav.vertical[side-nav]{
 		top: 60px;
@@ -86,12 +97,6 @@
 		> a i::before, popover > a i::before{
 			font-size: 25px;
 		}
-	}
-
-	.logo{
-		height: 66px;
-		width: 120px;
-		margin-left: 10px;
 	}
 	body{
 		font-size: 14px;

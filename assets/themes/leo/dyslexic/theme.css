@@ -10758,7 +10758,7 @@ alphabetical .domino .bottom a:hover h4 {
 /* font family with # version */
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.3.6.5/fontello.woff');
+  src: url('../font/fontello.3.6.6/font/fontello.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -12391,7 +12391,7 @@ i.show-list {
   text-align: center;
 }
 i.show-list:before {
-  content: '\e84f';
+  content: '\e8ae';
   font-size: 28px;
 }
 i.show-list.selected {
