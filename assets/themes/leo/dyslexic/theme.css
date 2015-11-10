@@ -12407,6 +12407,7 @@ i.show-carousel {
   vertical-align: middle;
   opacity: 0.2;
   background-size: 100% 93%;
+  margin-top: -4px;
 }
 i.show-carousel:before {
   /*attention icone en cours de création*/
