@@ -6538,7 +6538,25 @@ nav.floating .content {
   body.slide {
     left: 300px;
   }
+  body .share {
+    font-size: 10px;
+  }
+  body .share table thead th,
+  body .share table thead td {
+    padding: 5px;
+    font-size: 10px;
+  }
+  body .share td:first-child,
+  body .share th:first-child {
+    padding: 5px;
+    font-size: 10px;
+    max-width: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   body section.lightbox > div.content {
+    padding: 7px;
     min-height: 100%;
     width: 100%;
     margin-top: 0;
@@ -13130,7 +13148,7 @@ input-password button::before {
     display: inline-block;
   }
   h1 {
-    font-size: 23px;
+    font-size: 18px;
     margin-bottom: 9px;
     line-height: 30px;
   }
