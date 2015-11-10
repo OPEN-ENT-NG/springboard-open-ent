@@ -6631,6 +6631,7 @@ nav.floating .content {
     float: left;
   }
   body nav.vertical[side-nav] {
+    overflow: auto;
     position: fixed;
     left: 0;
     top: 50px;
@@ -6641,7 +6642,6 @@ nav.floating .content {
     transition: all 250ms ease;
     box-sizing: border-box;
     width: 0;
-    overflow: hidden;
     padding: 0;
   }
   body nav.vertical[side-nav] > ul,

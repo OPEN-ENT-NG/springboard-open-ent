@@ -2713,6 +2713,7 @@ ul.icons-tabs li i {
   padding: 8px;
 }
 .icons-view {
+  margin-top: 15px;
   width: 100%;
   position: relative;
   clear: both;
@@ -6538,7 +6539,25 @@ nav.floating .content {
   body.slide {
     left: 300px;
   }
+  body .share {
+    font-size: 10px;
+  }
+  body .share table thead th,
+  body .share table thead td {
+    padding: 5px;
+    font-size: 10px;
+  }
+  body .share td:first-child,
+  body .share th:first-child {
+    padding: 5px;
+    font-size: 10px;
+    max-width: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   body section.lightbox > div.content {
+    padding: 7px;
     min-height: 100%;
     width: 100%;
     margin-top: 0;
@@ -6595,6 +6614,7 @@ nav.floating .content {
   body .toggle-buttons .button,
   body .toggle-buttons button {
     padding: 5px;
+    padding-right: 10px;
   }
   body .mobile-nav-opener {
     height: 50px;
@@ -6611,6 +6631,7 @@ nav.floating .content {
     float: left;
   }
   body nav.vertical[side-nav] {
+    overflow: auto;
     position: fixed;
     left: 0;
     top: 50px;
@@ -6621,7 +6642,6 @@ nav.floating .content {
     transition: all 250ms ease;
     box-sizing: border-box;
     width: 0;
-    overflow: hidden;
     padding: 0;
   }
   body nav.vertical[side-nav] > ul,
@@ -7550,9 +7570,6 @@ input[type=submit][disabled]:hover {
 .small-text label {
   font-size: 14px !important;
   line-height: 26px;
-}
-.icons-view.apps {
-  margin-top: 12px;
 }
 .icons-view.apps .element {
   padding: 0;
@@ -8599,9 +8616,6 @@ textarea:focus {
   font-size: 18px;
   font-weight: bold;
 }
-.icons-view {
-  margin-top: 0;
-}
 .icons-view strong {
   font-style: italic;
   font-weight: normal;
@@ -9178,24 +9192,6 @@ select {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-/*
-.bubble-container:nth-child(2n+1){
-	.bubble::after{
-		border-right: 2px solid #ddd;
-		border-bottom: 2px solid #ddd;
-		content: "";
-		position: absolute;
-		width: 15px;
-		height: 15px;
-		top: 60px;
-		background: white;
-		right: -10px;
-		z-index: 10;
-		transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-	}
-}
-*/
 .menu-items {
   padding: 0;
   margin: 0;
@@ -13113,6 +13109,9 @@ input-password button::before {
   body nav.vertical[side-nav] a.classic-link {
     background: #fff;
   }
+  body nav.vertical[side-nav] a.classic-link:hover {
+    color: #4bafd5;
+  }
   body .mobile-nav-opener {
     display: none;
     font-family: fontello;
@@ -13130,7 +13129,7 @@ input-password button::before {
     display: inline-block;
   }
   h1 {
-    font-size: 23px;
+    font-size: 18px;
     margin-bottom: 9px;
     line-height: 30px;
   }
@@ -13150,8 +13149,19 @@ input-password button::before {
   .navbar {
     height: 50px;
   }
+  .application-title {
+    position: fixed;
+    color: #fff;
+    top: 0;
+    left: 10px;
+    z-index: 10001;
+    line-height: 50px;
+  }
+  .application-title.move-right {
+    margin-left: 40px;
+  }
   .logo {
-    margin-top: -7px;
+    display: none;
   }
   nav.vertical[side-nav] {
     top: 60px;
@@ -13179,11 +13189,6 @@ input-password button::before {
   nav.horizontal > a i::before,
   nav.horizontal popover > a i::before {
     font-size: 25px;
-  }
-  .logo {
-    height: 66px;
-    width: 120px;
-    margin-left: 10px;
   }
   body {
     font-size: 14px;
