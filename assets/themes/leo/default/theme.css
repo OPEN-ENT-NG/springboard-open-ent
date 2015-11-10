@@ -2713,6 +2713,7 @@ ul.icons-tabs li i {
   padding: 8px;
 }
 .icons-view {
+  margin-top: 15px;
   width: 100%;
   position: relative;
   clear: both;
@@ -7569,9 +7570,6 @@ input[type=submit][disabled]:hover {
   font-size: 14px !important;
   line-height: 26px;
 }
-.icons-view.apps {
-  margin-top: 12px;
-}
 .icons-view.apps .element {
   padding: 0;
   height: 120px;
@@ -8617,9 +8615,6 @@ textarea:focus {
   font-size: 18px;
   font-weight: bold;
 }
-.icons-view {
-  margin-top: 0;
-}
 .icons-view strong {
   font-style: italic;
   font-weight: normal;
@@ -9196,24 +9191,6 @@ select {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-/*
-.bubble-container:nth-child(2n+1){
-	.bubble::after{
-		border-right: 2px solid #ddd;
-		border-bottom: 2px solid #ddd;
-		content: "";
-		position: absolute;
-		width: 15px;
-		height: 15px;
-		top: 60px;
-		background: white;
-		right: -10px;
-		z-index: 10;
-		transform: rotate(-45deg);
-        -webkit-transform: rotate(-45deg);
-	}
-}
-*/
 .menu-items {
   padding: 0;
   margin: 0;
