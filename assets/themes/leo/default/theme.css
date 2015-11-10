@@ -13131,6 +13131,9 @@ input-password button::before {
   body nav.vertical[side-nav] a.classic-link {
     background: #fff;
   }
+  body nav.vertical[side-nav] a.classic-link:hover {
+    color: #4bafd5;
+  }
   body .mobile-nav-opener {
     display: none;
     font-family: fontello;
