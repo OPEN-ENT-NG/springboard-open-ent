@@ -5841,16 +5841,13 @@ carousel .images .image {
   background: #fff;
   box-sizing: border-box;
 }
-carousel .images .image img {
-  display: inline-block;
-  max-height: 100%;
-}
 carousel .images .image .image-container {
   height: 100%;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 carousel nav ul {
   padding: 0;
@@ -5879,9 +5876,6 @@ carousel.slide .image.previous {
 }
 carousel.slide .image.previous .image-container {
   line-height: 132px;
-}
-carousel.slide .image.previous .image-container img {
-  vertical-align: middle;
 }
 carousel.slide .image.previous::before {
   content: " ";
@@ -5923,9 +5917,6 @@ carousel.slide .image.next {
 carousel.slide .image.next .image-container {
   line-height: 132px;
 }
-carousel.slide .image.next .image-container img {
-  vertical-align: middle;
-}
 carousel.slide .image.next::before {
   content: " ";
   position: absolute;
@@ -5965,9 +5956,6 @@ carousel.slide .image.current {
 }
 carousel.slide .image.current .image-container {
   line-height: 308px;
-}
-carousel.slide .image.current .image-container img {
-  vertical-align: middle;
 }
 carousel.fade .image {
   width: 100%;
