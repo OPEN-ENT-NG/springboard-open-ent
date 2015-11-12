@@ -25,7 +25,7 @@
 		</section>
 	</div>
 
-<header class="main" data-ng-controller="Account">
+<header class="main" ng-controller="Account">
 	<section class="navbar row">
 		<div class="mobile-nav-opener"></div>
 		<div class="cell">
@@ -37,7 +37,7 @@
 			<a href="/timeline/timeline"><i class="home"></i></a>
 			<a href="/community" ng-if="me.hasWorkflow('net.atos.entng.community.controllers.CommunityController|view')"><i class="community"></i></a>
 			<popover>
-				<a href="/welcome" popover-opener><i class="apps"></i></a>
+				<a href="/welcome" popover-opener ng-click="openApps($event)"><i class="apps"></i></a>
 				<popover-content>
 					<div class="content">
 						<div class="my-apps row">

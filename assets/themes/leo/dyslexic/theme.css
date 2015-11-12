@@ -2713,7 +2713,6 @@ ul.icons-tabs li i {
   padding: 8px;
 }
 .icons-view {
-  margin-top: 15px;
   width: 100%;
   position: relative;
   clear: both;
@@ -6539,25 +6538,7 @@ nav.floating .content {
   body.slide {
     left: 300px;
   }
-  body .share {
-    font-size: 10px;
-  }
-  body .share table thead th,
-  body .share table thead td {
-    padding: 5px;
-    font-size: 10px;
-  }
-  body .share td:first-child,
-  body .share th:first-child {
-    padding: 5px;
-    font-size: 10px;
-    max-width: 40px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
   body section.lightbox > div.content {
-    padding: 7px;
     min-height: 100%;
     width: 100%;
     margin-top: 0;
@@ -6614,7 +6595,6 @@ nav.floating .content {
   body .toggle-buttons .button,
   body .toggle-buttons button {
     padding: 5px;
-    padding-right: 10px;
   }
   body .mobile-nav-opener {
     height: 50px;
@@ -6631,7 +6611,6 @@ nav.floating .content {
     float: left;
   }
   body nav.vertical[side-nav] {
-    overflow: auto;
     position: fixed;
     left: 0;
     top: 50px;
@@ -6642,6 +6621,7 @@ nav.floating .content {
     transition: all 250ms ease;
     box-sizing: border-box;
     width: 0;
+    overflow: hidden;
     padding: 0;
   }
   body nav.vertical[side-nav] > ul,
