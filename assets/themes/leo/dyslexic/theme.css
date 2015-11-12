@@ -6174,7 +6174,7 @@ recorder .controls i:first-child {
   cursor: text !important;
 }
 article.preview {
-  height: 130px;
+  height: 140px;
   overflow: hidden;
   -o-transition: height 250ms ease;
   -moz-transition: height 250ms ease;
