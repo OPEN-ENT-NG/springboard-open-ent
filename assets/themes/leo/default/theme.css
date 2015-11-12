@@ -2172,6 +2172,7 @@ table tr.underline {
   overflow: hidden;
 }
 .list-view {
+  margin-top: 15px;
   width: 100%;
   list-style-type: none;
 }
