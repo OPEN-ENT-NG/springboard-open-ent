@@ -2193,7 +2193,7 @@ table tr.underline {
   vertical-align: middle;
 }
 .list-view td a {
-  word-break: break-word;
+  word-break: break-all;
 }
 .list-view td.user,
 .list-view th.user {
@@ -2713,6 +2713,7 @@ ul.icons-tabs li i {
   padding: 8px;
 }
 .icons-view {
+  margin-top: 15px;
   width: 100%;
   position: relative;
   clear: both;
@@ -6545,7 +6546,34 @@ nav.floating .content {
   body.slide {
     left: 300px;
   }
+  body table th,
+  body ul.list-view th,
+  body table td,
+  body ul.list-view td {
+    padding: 7px;
+  }
+  body .list-view .content {
+    max-width: 180px;
+  }
+  body .share {
+    font-size: 10px;
+  }
+  body .share table thead th,
+  body .share table thead td {
+    padding: 5px;
+    font-size: 10px;
+  }
+  body .share td:first-child,
+  body .share th:first-child {
+    padding: 5px;
+    font-size: 10px;
+    max-width: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
   body section.lightbox > div.content {
+    padding: 7px;
     min-height: 100%;
     width: 100%;
     margin-top: 0;
@@ -6602,6 +6630,7 @@ nav.floating .content {
   body .toggle-buttons .button,
   body .toggle-buttons button {
     padding: 5px;
+    padding-right: 10px;
   }
   body .mobile-nav-opener {
     height: 50px;
@@ -6646,6 +6675,16 @@ nav.floating .content {
   body .toggle-buttons {
     left: 0;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  body .list-view .content {
+    max-width: 130px;
+  }
+}
+@media screen and (max-width: 325px) {
+  body .list-view .content {
+    max-width: 90px;
   }
 }
 html,
