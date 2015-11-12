@@ -8145,13 +8145,14 @@ nav.vertical ul li a i.arrow,
   display: block;
   float: left;
   color: #fff;
-  font-family: Arial;
 }
 nav.vertical ul li a i.arrow::before,
 .app-menu ul li a i.arrow::before {
-  content: "▸";
-  font-size: 25px;
-  line-height: 13px;
+  display: block;
+  content: " ";
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid;
   color: #ff8500;
 }
 nav.vertical ul li a i,
@@ -8165,7 +8166,12 @@ nav.vertical ul li a.selected,
 }
 nav.vertical ul li a.opened i.arrow::before,
 .app-menu ul li a.opened i.arrow::before {
-  content: "▾";
+  margin-top: 3px;
+  content: " ";
+  border-top: 8px solid;
+  border-bottom: none;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
 }
 nav.vertical ul:first-child > li,
 .app-menu ul:first-child > li,

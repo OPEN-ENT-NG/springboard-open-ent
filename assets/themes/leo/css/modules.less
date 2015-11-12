@@ -1224,12 +1224,13 @@ nav.vertical, .app-menu{
 					display: block;
 					float: left;
 					color: #fff;
-					font-family: Arial;
 				}
 				i.arrow::before{
-					content: "▸";
-					font-size: 25px;
-					line-height: 13px;
+					display: block;
+					content: " ";
+					border-top: 6px solid transparent;
+					border-bottom: 6px solid transparent;
+					border-left: 8px solid;
 					color: @accent;
 				}
 				i{
@@ -1242,7 +1243,12 @@ nav.vertical, .app-menu{
 			}
 			a.opened{
 				i.arrow::before{
-					content: "▾";
+					margin-top: 3px;
+					content: " ";
+					border-top: 8px solid;
+					border-bottom: none;
+					border-left: 6px solid transparent;
+					border-right: 6px solid transparent;
 				}
 			}
 		}
