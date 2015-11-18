@@ -8190,6 +8190,7 @@ nav.vertical ul li a i.arrow::before,
 nav.vertical ul li a i,
 .app-menu ul li a i {
   margin-left: 5px;
+  text-indent: 10px;
 }
 nav.vertical ul li a.selected,
 .app-menu ul li a.selected {
@@ -12470,6 +12471,17 @@ i.close {
 }
 i.close:before {
   content: '\e866';
+  font-size: 12px;
+}
+i.edit {
+  font-family: "fontello";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: none;
+  text-align: center;
+}
+i.edit:before {
+  content: '\e858';
   font-size: 12px;
 }
 i.close-2x {
