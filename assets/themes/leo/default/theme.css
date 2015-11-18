@@ -4928,28 +4928,6 @@ ul.toc li a {
 .blogs-posts-list table {
   table-layout: fixed;
 }
-@media screen and (max-width: 800px) {
-  .widgets {
-    display: none;
-  }
-  .widgets-friend {
-    margin-left: 0px !important;
-  }
-  .drop-down-filters .wrapper i {
-    height: 55px !important;
-    width: 55px !important;
-    background-size: 60px 60px;
-  }
-  .drop-down-filters .wrapper p {
-    display: none;
-  }
-  .drop-down-filters .wrapper label {
-    width: 59px;
-  }
-  .navbar .welcome-message {
-    display: none;
-  }
-}
 .bookmarked-apps {
   min-height: 48px;
   padding: 5px;
@@ -5044,49 +5022,6 @@ popover popover-content.hidden {
 }
 .panel input[type=submit] {
   float: right;
-}
-@media screen and (max-width: 550px) {
-  .notification .avatar {
-    display: none;
-  }
-  .notification .content {
-    margin: 0;
-  }
-  .panel {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .panel label,
-  .panel input[type=text],
-  .panel input[type=password],
-  .panel input[type=tel],
-  .panel input[type=email] {
-    clear: both;
-    float: left !important;
-  }
-  .panel input[type=submit],
-  .panel a {
-    clear: both;
-    float: left !important;
-  }
-  .panel p {
-    clear: both;
-  }
-}
-@media screen and (max-width: 420px) {
-  .drop-down-filters,
-  .filters {
-    display: none !important;
-  }
 }
 .schedule {
   width: 100%;
@@ -6518,6 +6453,28 @@ nav.floating .content {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+@media screen and (max-width: 800px) {
+  body .widgets {
+    display: none;
+  }
+  body .widgets-friend {
+    margin-left: 0px !important;
+  }
+  body .drop-down-filters .wrapper i {
+    height: 55px !important;
+    width: 55px !important;
+    background-size: 60px 60px;
+  }
+  body .drop-down-filters .wrapper p {
+    display: none;
+  }
+  body .drop-down-filters .wrapper label {
+    width: 59px;
+  }
+  body .navbar .welcome-message {
+    display: none;
+  }
+}
 @media screen and (max-width: 700px) {
   * {
     -ms-scroll-chaining: none;
@@ -6534,6 +6491,24 @@ nav.floating .content {
   }
   body.slide {
     left: 300px;
+  }
+  body .logo {
+    display: none;
+  }
+  body .application-title {
+    position: fixed;
+    color: #fff;
+    top: 0;
+    left: 10px;
+    z-index: 10001;
+    line-height: 50px;
+    margin-top: 0;
+  }
+  body .application-title.move-right {
+    margin-left: 40px;
+  }
+  body .application-title i {
+    display: none !important;
   }
   body table th,
   body ul.list-view th,
@@ -6634,6 +6609,10 @@ nav.floating .content {
     box-sizing: border-box;
     vertical-align: middle;
     float: left;
+    display: none;
+  }
+  body .mobile-nav-opener.visible {
+    display: inline-block;
   }
   body nav.vertical[side-nav] {
     position: fixed;
@@ -6664,6 +6643,55 @@ nav.floating .content {
   body .toggle-buttons {
     left: 0;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  body .notification .avatar {
+    display: none;
+  }
+  body .notification .content {
+    margin: 0;
+  }
+  body .auth .panel {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+  body .auth .panel label,
+  body .auth .panel input[type=text],
+  body .auth .panel input[type=password],
+  body .auth .panel input[type=tel],
+  body .auth .panel input[type=email] {
+    clear: both;
+    float: left !important;
+  }
+  body .auth .panel input[type=submit],
+  body .auth .panel a {
+    clear: both;
+  }
+  body .auth .panel p {
+    clear: both;
+  }
+  body .auth .panel input-password input[type=password] {
+    width: 88%;
+  }
+  body .auth .panel input-password button {
+    float: left;
+  }
+}
+@media screen and (max-width: 420px) {
+  .drop-down-filters,
+  .filters {
+    display: none !important;
   }
 }
 @media screen and (max-width: 400px) {
@@ -7743,7 +7771,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
 }
 .aligned {
   display: inline-block;
@@ -7962,7 +7990,7 @@ input-password button::before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: #ffffff;
+  background: white;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
@@ -13129,7 +13157,6 @@ input-password button::before {
     color: #4bafd5;
   }
   body .mobile-nav-opener {
-    display: none;
     font-family: fontello;
     background: none;
   }
@@ -13140,9 +13167,6 @@ input-password button::before {
     position: absolute;
     top: 11px;
     left: 10px;
-  }
-  body .mobile-nav-opener.visible {
-    display: inline-block;
   }
   h1 {
     font-size: 18px;
@@ -13164,20 +13188,6 @@ input-password button::before {
   }
   .navbar {
     height: 50px;
-  }
-  .application-title {
-    position: fixed;
-    color: #fff;
-    top: 0;
-    left: 10px;
-    z-index: 10001;
-    line-height: 50px;
-  }
-  .application-title.move-right {
-    margin-left: 40px;
-  }
-  .logo {
-    display: none;
   }
   nav.vertical[side-nav] {
     top: 60px;
