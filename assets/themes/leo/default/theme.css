@@ -8167,9 +8167,11 @@ nav.vertical ul li a,
   -webkit-transition: background 250ms ease;
   transition: background 250ms ease;
   margin-left: 0;
+  text-indent: 25px;
 }
 nav.vertical ul li a i.arrow,
 .app-menu ul li a i.arrow {
+  position: absolute;
   height: 20px;
   display: block;
   float: left;
