@@ -48,6 +48,7 @@ dependencies {
     deployment "net.atos:statistics:$statisticsVersion:deployment"
     deployment "org.entcore:cursus:$cursusVersion:deployment"
     deployment "org.entcore:maxicours:$maxicoursVersion:deployment"
+    deployment "org.entcore:cns:$cnsVersion:deployment"
 }
 
 repositories{
