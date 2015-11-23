@@ -2172,7 +2172,6 @@ table tr.underline {
   overflow: hidden;
 }
 .list-view {
-  margin-top: 15px;
   width: 100%;
   list-style-type: none;
 }
@@ -2194,7 +2193,7 @@ table tr.underline {
   vertical-align: middle;
 }
 .list-view td a {
-  word-break: break-all;
+  word-break: break-word;
 }
 .list-view td.user,
 .list-view th.user {
@@ -4928,6 +4927,28 @@ ul.toc li a {
 .blogs-posts-list table {
   table-layout: fixed;
 }
+@media screen and (max-width: 800px) {
+  .widgets {
+    display: none;
+  }
+  .widgets-friend {
+    margin-left: 0px !important;
+  }
+  .drop-down-filters .wrapper i {
+    height: 55px !important;
+    width: 55px !important;
+    background-size: 60px 60px;
+  }
+  .drop-down-filters .wrapper p {
+    display: none;
+  }
+  .drop-down-filters .wrapper label {
+    width: 59px;
+  }
+  .navbar .welcome-message {
+    display: none;
+  }
+}
 .bookmarked-apps {
   min-height: 48px;
   padding: 5px;
@@ -4946,6 +4967,17 @@ popover {
   position: relative;
   display: inline-block;
 }
+popover popover-content::before {
+  content: "\25b2";
+  display: block;
+  position: absolute;
+  top: -15px;
+  font-size: 36px;
+  left: 50%;
+  margin-left: -17px;
+  color: #fff;
+  z-index: 0;
+}
 popover popover-content {
   position: absolute;
   min-height: 100px;
@@ -4961,24 +4993,6 @@ popover popover-content {
   margin-left: 50%;
   text-align: center;
   border: 1px solid #ccc;
-}
-popover popover-content::before {
-  content: "\25b2";
-  display: block;
-  position: absolute;
-  top: -15px;
-  font-size: 36px;
-  left: 50%;
-  margin-left: -17px;
-  color: #fff;
-  z-index: 0;
-}
-popover popover-content.right {
-  left: -240px;
-}
-popover popover-content.right::before {
-  left: 100%;
-  margin-left: -33px;
 }
 popover popover-content .content {
   z-index: 1;
@@ -5022,6 +5036,49 @@ popover popover-content.hidden {
 }
 .panel input[type=submit] {
   float: right;
+}
+@media screen and (max-width: 550px) {
+  .notification .avatar {
+    display: none;
+  }
+  .notification .content {
+    margin: 0;
+  }
+  .panel {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .panel label,
+  .panel input[type=text],
+  .panel input[type=password],
+  .panel input[type=tel],
+  .panel input[type=email] {
+    clear: both;
+    float: left !important;
+  }
+  .panel input[type=submit],
+  .panel a {
+    clear: both;
+    float: left !important;
+  }
+  .panel p {
+    clear: both;
+  }
+}
+@media screen and (max-width: 420px) {
+  .drop-down-filters,
+  .filters {
+    display: none !important;
+  }
 }
 .schedule {
   width: 100%;
@@ -5777,13 +5834,16 @@ carousel .images .image {
   background: #fff;
   box-sizing: border-box;
 }
+carousel .images .image img {
+  display: inline-block;
+  max-height: 100%;
+}
 carousel .images .image .image-container {
   height: 100%;
   width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 carousel nav ul {
   padding: 0;
@@ -5812,6 +5872,9 @@ carousel.slide .image.previous {
 }
 carousel.slide .image.previous .image-container {
   line-height: 132px;
+}
+carousel.slide .image.previous .image-container img {
+  vertical-align: middle;
 }
 carousel.slide .image.previous::before {
   content: " ";
@@ -5853,6 +5916,9 @@ carousel.slide .image.next {
 carousel.slide .image.next .image-container {
   line-height: 132px;
 }
+carousel.slide .image.next .image-container img {
+  vertical-align: middle;
+}
 carousel.slide .image.next::before {
   content: " ";
   position: absolute;
@@ -5892,6 +5958,9 @@ carousel.slide .image.current {
 }
 carousel.slide .image.current .image-container {
   line-height: 308px;
+}
+carousel.slide .image.current .image-container img {
+  vertical-align: middle;
 }
 carousel.fade .image {
   width: 100%;
@@ -6109,7 +6178,7 @@ recorder .controls i:first-child {
   cursor: text !important;
 }
 article.preview {
-  height: 140px;
+  height: 130px;
   overflow: hidden;
   -o-transition: height 250ms ease;
   -moz-transition: height 250ms ease;
@@ -6453,28 +6522,6 @@ nav.floating .content {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-@media screen and (max-width: 800px) {
-  body .widgets {
-    display: none;
-  }
-  body .widgets-friend {
-    margin-left: 0px !important;
-  }
-  body .drop-down-filters .wrapper i {
-    height: 55px !important;
-    width: 55px !important;
-    background-size: 60px 60px;
-  }
-  body .drop-down-filters .wrapper p {
-    display: none;
-  }
-  body .drop-down-filters .wrapper label {
-    width: 59px;
-  }
-  body .navbar .welcome-message {
-    display: none;
-  }
-}
 @media screen and (max-width: 700px) {
   * {
     -ms-scroll-chaining: none;
@@ -6491,33 +6538,6 @@ nav.floating .content {
   }
   body.slide {
     left: 300px;
-  }
-  body .logo {
-    display: none;
-  }
-  body .application-title {
-    position: fixed;
-    color: #fff;
-    top: 0;
-    left: 10px;
-    z-index: 10001;
-    line-height: 50px;
-    margin-top: 0;
-  }
-  body .application-title.move-right {
-    margin-left: 40px;
-  }
-  body .application-title i {
-    display: none !important;
-  }
-  body table th,
-  body ul.list-view th,
-  body table td,
-  body ul.list-view td {
-    padding: 7px;
-  }
-  body .list-view .content {
-    max-width: 180px;
   }
   body .share {
     font-size: 10px;
@@ -6609,12 +6629,9 @@ nav.floating .content {
     box-sizing: border-box;
     vertical-align: middle;
     float: left;
-    display: none;
-  }
-  body .mobile-nav-opener.visible {
-    display: inline-block;
   }
   body nav.vertical[side-nav] {
+    overflow: auto;
     position: fixed;
     left: 0;
     top: 50px;
@@ -6625,7 +6642,6 @@ nav.floating .content {
     transition: all 250ms ease;
     box-sizing: border-box;
     width: 0;
-    overflow: hidden;
     padding: 0;
   }
   body nav.vertical[side-nav] > ul,
@@ -6643,65 +6659,6 @@ nav.floating .content {
   body .toggle-buttons {
     left: 0;
     margin-left: 0;
-  }
-}
-@media screen and (max-width: 550px) {
-  body .notification .avatar {
-    display: none;
-  }
-  body .notification .content {
-    margin: 0;
-  }
-  body .auth .panel {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-  }
-  body .auth .panel label,
-  body .auth .panel input[type=text],
-  body .auth .panel input[type=password],
-  body .auth .panel input[type=tel],
-  body .auth .panel input[type=email] {
-    clear: both;
-    float: left !important;
-  }
-  body .auth .panel input[type=submit],
-  body .auth .panel a {
-    clear: both;
-  }
-  body .auth .panel p {
-    clear: both;
-  }
-  body .auth .panel input-password input[type=password] {
-    width: 88%;
-  }
-  body .auth .panel input-password button {
-    float: left;
-  }
-}
-@media screen and (max-width: 420px) {
-  .drop-down-filters,
-  .filters {
-    display: none !important;
-  }
-}
-@media screen and (max-width: 400px) {
-  body .list-view .content {
-    max-width: 130px;
-  }
-}
-@media screen and (max-width: 325px) {
-  body .list-view .content {
-    max-width: 90px;
   }
 }
 html,
@@ -7772,7 +7729,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
 }
 .aligned {
   display: inline-block;
@@ -7991,7 +7948,7 @@ input-password button::before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: white;
+  background: #ffffff;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
@@ -10801,7 +10758,7 @@ alphabetical .domino .bottom a:hover h4 {
 /* font family with # version */
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.3.6.6/font/fontello.woff');
+  src: url('../font/fontello.3.6.7/font/fontello.woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -12434,7 +12391,7 @@ i.show-list {
   text-align: center;
 }
 i.show-list:before {
-  content: '\e8ae';
+  content: '\e8bc';
   font-size: 28px;
 }
 i.show-list.selected {
