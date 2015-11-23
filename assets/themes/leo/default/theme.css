@@ -7772,7 +7772,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
 }
 .aligned {
   display: inline-block;
@@ -7991,7 +7991,7 @@ input-password button::before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: #ffffff;
+  background: white;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
@@ -10306,6 +10306,11 @@ carousel.slide .image.previous::after {
 }
 carousel.slide .image.next::after {
   border-left: 35px solid #4bafd5;
+}
+carousel .images .image {
+  -webkit-transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 ul.colored {
   padding-right: 15px;
