@@ -1,3 +1,4 @@
+(node) util.print is deprecated. Use console.log instead.
 @import url(https://fonts.googleapis.com/css?family=Roboto:500,300,700,400);
 .row {
   width: 100%;
@@ -8188,6 +8189,7 @@ nav.vertical ul li a i.arrow::before,
   height: 0;
   width: 0;
   color: #ff8500;
+  width: 0;
 }
 nav.vertical ul li a i,
 .app-menu ul li a i {
