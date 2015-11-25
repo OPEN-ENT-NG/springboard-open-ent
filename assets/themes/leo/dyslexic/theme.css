@@ -5445,9 +5445,6 @@ ul.thought-out-actions > li p {
   opacity: 1;
   pointer-events: all;
 }
-.edit-grid .grid-guides {
-  opacity: 1;
-}
 .edit-grid .grid-media {
   pointer-events: all;
 }
@@ -5458,7 +5455,6 @@ ul.thought-out-actions > li p {
 .blur-grid button,
 .blur-grid i,
 .blur-grid input[button] {
-  opacity: 0.2;
   pointer-events: none;
 }
 .blur-grid .grid-guides {
@@ -5476,9 +5472,6 @@ ul.thought-out-actions > li p {
 .blur-grid .edit-grid input[button] {
   opacity: 1;
   pointer-events: all;
-}
-.blur-grid .edit-grid .grid-guides {
-  opacity: 1;
 }
 .blur-grid .edit-grid .grid-media {
   pointer-events: all;
@@ -7773,7 +7766,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
 }
 .aligned {
   display: inline-block;
@@ -7992,7 +7985,7 @@ input-password button::before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: white;
+  background: #ffffff;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
@@ -10123,7 +10116,6 @@ nav.illustrated-links ul ul.secondary-list li .bubble-container::after {
 .blur-grid button,
 .blur-grid i,
 .blur-grid input[button] {
-  opacity: 0.2;
   pointer-events: none;
 }
 .blur-grid .grid-guides {
@@ -10140,7 +10132,6 @@ nav.illustrated-links ul ul.secondary-list li .bubble-container::after {
 .blur-grid .edit-grid button,
 .blur-grid .edit-grid i,
 .blur-grid .edit-grid input[button] {
-  opacity: 1;
   pointer-events: all;
 }
 .blur-grid .edit-grid .grid-guides {
