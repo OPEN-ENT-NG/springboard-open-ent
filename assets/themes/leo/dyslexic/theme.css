@@ -12771,8 +12771,8 @@ i.default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: none;
-  font-size: 55px;
-  line-height: 50px;
+  font-size: 45px;
+  line-height: 45px;
 }
 i.default:before {
   content: '\e870';
