@@ -4936,6 +4936,9 @@ ul.toc li a {
 .bookmarked-apps .icons-view.apps {
   margin-top: 0;
 }
+.icons-view.apps {
+  text-align: left;
+}
 popover {
   position: relative;
   display: inline-block;
