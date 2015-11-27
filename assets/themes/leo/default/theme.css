@@ -2715,6 +2715,7 @@ ul.icons-tabs li i {
 }
 .icons-view {
   margin-top: 15px;
+  text-align: center;
   width: 100%;
   position: relative;
   clear: both;
@@ -2726,21 +2727,14 @@ ul.icons-tabs li i {
   padding-left: 0;
 }
 .icons-view .element {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
+  display: inline-block;
   box-sizing: border-box;
-  float: left;
-  display: block;
   height: 192px;
   overflow: hidden;
   width: 145px;
   margin: 2px;
   position: relative;
   list-style-type: none;
-}
-.icons-view .element img {
-  max-width: 100%;
 }
 .icons-view .element .container {
   height: 117px;
