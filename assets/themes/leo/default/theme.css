@@ -2715,7 +2715,6 @@ ul.icons-tabs li i {
 }
 .icons-view {
   margin-top: 15px;
-  text-align: center;
   width: 100%;
   position: relative;
   clear: both;
@@ -2727,14 +2726,21 @@ ul.icons-tabs li i {
   padding-left: 0;
 }
 .icons-view .element {
-  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
   box-sizing: border-box;
+  float: left;
+  display: block;
   height: 192px;
   overflow: hidden;
   width: 145px;
   margin: 2px;
   position: relative;
   list-style-type: none;
+}
+.icons-view .element img {
+  max-width: 100%;
 }
 .icons-view .element .container {
   height: 117px;
@@ -4936,9 +4942,6 @@ ul.toc li a {
 .bookmarked-apps .icons-view.apps {
   margin-top: 0;
 }
-.icons-view.apps {
-  text-align: left;
-}
 popover {
   position: relative;
   display: inline-block;
@@ -5442,6 +5445,9 @@ ul.thought-out-actions > li p {
   opacity: 1;
   pointer-events: all;
 }
+.edit-grid .grid-guides {
+  opacity: 1;
+}
 .edit-grid .grid-media {
   pointer-events: all;
 }
@@ -5452,6 +5458,7 @@ ul.thought-out-actions > li p {
 .blur-grid button,
 .blur-grid i,
 .blur-grid input[button] {
+  opacity: 0.2;
   pointer-events: none;
 }
 .blur-grid .grid-guides {
@@ -5469,6 +5476,9 @@ ul.thought-out-actions > li p {
 .blur-grid .edit-grid input[button] {
   opacity: 1;
   pointer-events: all;
+}
+.blur-grid .edit-grid .grid-guides {
+  opacity: 1;
 }
 .blur-grid .edit-grid .grid-media {
   pointer-events: all;
@@ -7762,7 +7772,7 @@ input:-webkit-autofill {
 }
 div.background-material {
   position: absolute;
-  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, #ffffff 200px, #ffffff 100%);
+  background: linear-gradient(to bottom, #4bafd5 0%, #4bafd5 200px, #4bafd5 200px, white 200px, white 100%);
 }
 .aligned {
   display: inline-block;
@@ -7981,7 +7991,7 @@ input-password button::before {
 }
 .panel button.flat-button,
 .panel input[type=submit].flat-button {
-  background: #ffffff;
+  background: white;
 }
 .panel.activation input[type="email"],
 .panel.activation input[type="tel"] {
@@ -13149,6 +13159,9 @@ input-password button::before {
   content: '\e873' !important;
 }
 @media screen and (max-width: 700px) {
+  body.point-out {
+    cursor: pointer!important;
+  }
   body nav.vertical[side-nav] {
     background-color: #4bafd5;
     border-left: 10px solid #ff8500;
