@@ -1,0 +1,21 @@
+{
+  "name": "OPEN-ENT-NG Springboard",
+  "homepage": "https://github.com/OPEN-ENT-NG/springboard-opent-ent",
+  "authors": [
+    "WebServices pour l'Education"
+  ],
+  "description": "OPEn-ENT-NG Springboard and configuration",
+  "main": "",
+  "moduleType": [],
+  "license": "AGPL v3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leo": "*"
+  }
+}
