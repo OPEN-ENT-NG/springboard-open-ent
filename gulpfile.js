@@ -3,7 +3,7 @@ var less = require('gulp-less');
 var bower = require('gulp-bower');
 
 gulp.task('update-libs', function () {
-    return bower(({ directory: '../assets/themes/leo/bower_components', cwd: './assets/themes/leo' }))
+    return bower(({ cwd: './assets/themes/leo' }))
       .pipe(gulp.dest('./assets/themes/leo/lib'));
 });
 
