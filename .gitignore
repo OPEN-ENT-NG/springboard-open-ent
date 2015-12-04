@@ -14,6 +14,10 @@ out
 *.iml
 *.ipr
 *.iws
+*.css
+assets/themes/*/lib
+assets/themes/*/bower_components/*
+assets/themes/*/bower_components
 test-output
 test-results
 test-tmp
