@@ -49,6 +49,7 @@ dependencies {
     deployment "org.entcore:cursus:$cursusVersion:deployment"
     deployment "org.entcore:maxicours:$maxicoursVersion:deployment"
     deployment "org.entcore:cns:$cnsVersion:deployment"
+    deployment "fr.wseduc:leo-theme:$version"
 }
 
 repositories{
