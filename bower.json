@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "leo": "*"
+    "leo": "0.15.0"
   }
 }
