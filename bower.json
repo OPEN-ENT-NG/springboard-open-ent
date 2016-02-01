@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "leo": "0.15.0"
+    "leo": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#dev"
   }
 }
