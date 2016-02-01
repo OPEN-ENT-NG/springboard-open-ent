@@ -1,6 +1,6 @@
 ﻿var gulp = require('gulp');
-var less = require('gulp-less');
 var bower = require('gulp-bower');
+var sass = require('gulp-sass');
 
 gulp.task('update-libs', function () {
     return bower({ directory: './bower_components', cwd: '.' })
@@ -8,8 +8,8 @@ gulp.task('update-libs', function () {
 });
 
 gulp.task('themes', ['update-libs'], function () {
-    return gulp.src('./assets/themes/**/theme.less')
-      .pipe(less())
+    return gulp.src('./assets/themes/**/theme.scss')
+      .pipe(sass())
       .pipe(gulp.dest('./assets/themes'));
 });
 
@@ -27,11 +27,11 @@ gulp.task('copy-css-lib', function () {
 
 // compile local css to test
 gulp.task('compile-leo-css', ['copy-theme-leo', 'copy-css-lib'], function () {
-   gulp.src('./assets/themes/leo/default/*.less')
-     .pipe(less())
+   gulp.src('./assets/themes/leo/default/*.scss')
+     .pipe(sass())
      .pipe(gulp.dest('./assets/themes/leo/default'));
 
-   gulp.src('./assets/themes/leo/dyslexic/*.less')
-     .pipe(less())
+   gulp.src('./assets/themes/leo/dyslexic/*.scss')
+     .pipe(sass())
      .pipe(gulp.dest('./assets/themes/leo/dyslexic'));
 });
