@@ -50,7 +50,7 @@ dependencies {
     deployment "org.entcore:maxicours:$maxicoursVersion:deployment"
     deployment "org.entcore:cns:$cnsVersion:deployment"
     deployment "net.atos:collaborative-editor:$collaborativeEditorVersion:deployment"
-    deployment "fr.wseduc:leo-theme:$version"
+    deployment "fr.wseduc:leo-theme:$themeVersion"
 }
 
 repositories{
