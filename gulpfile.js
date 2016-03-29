@@ -3,57 +3,64 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var bower = require('gulp-bower');
 
-var childtheme = 'leo';
+
+
+var childTheme = 'leo';
+var parentTheme = '/theme-open-ent/**/*';
+
+var themePath = './assets/themes';
+var localcsslib = '../entcore-css-lib/**/*';
+var localparentTheme = '../theme-open-ent/**/*';
 
 var sourceDependency = [];
 
 //recupere theme sur git & copy dans springboard
 gulp.task('update-libs', function () {
-    return bower({ directory: './assets/themes', cwd: '.' });
+    return bower({ directory: themePath, cwd: '.' });
 });
 
-//copy dans childtheme ce qu'il a recup du theme (git)
+//copy dans childTheme ce qu'il a recup du theme (git)
 gulp.task('fill-theme', sourceDependency, function () {
-    return gulp.src('./assets/themes/theme-open-ent/**/*')
-        .pipe(gulp.dest('./assets/themes/' + childtheme));
+    return gulp.src(themePath + parentTheme)
+        .pipe(gulp.dest(themePath + '/' + childTheme));
 });
 
 
 ////////////////////////
 
-//copy dans childtheme les dependances locales
+//copy dans childTheme les dependances locales
 gulp.task('copy-local', function () {
     //copy css-lib local
-    return gulp.src(['../entcore-css-lib/**/*', '../theme-open-ent/**/*'], {base: '../'})
-        .pipe(gulp.dest('./assets/themes'));
+    return gulp.src([localcsslib, localparentTheme], {base: '../'})
+        .pipe(gulp.dest(themePath));
 });
 
 ////////////////////////
 
 
-//override dans childtheme les el specifique
+//override dans childTheme les el specifique
 gulp.task('override-theme', ['fill-theme'], function () {
-    gulp.src(['./assets/themes/'+childtheme+'/override-img/**/*'])
-        .pipe(gulp.dest('./assets/themes/'+childtheme+'/img'));
+    gulp.src([themePath + '/' + childTheme+'/override-img/**/*'])
+        .pipe(gulp.dest(themePath + '/' + childTheme + '/img'));
 
-    gulp.src(['./assets/themes/'+childtheme+'/override-js/**/*'])
-        .pipe(gulp.dest('./assets/themes/'+childtheme+'/js'));
+    gulp.src([themePath + '/' + childTheme + '/override-js/**/*'])
+        .pipe(gulp.dest(themePath + '/' + childTheme+'/js'));
 
-    gulp.src(['./assets/themes/'+childtheme+'/override-template/**/*'])
-        .pipe(gulp.dest('./assets/themes/'+childtheme+'/template'));
+    gulp.src([themePath + '/' + childTheme + '/override-template/**/*'])
+        .pipe(gulp.dest(themePath + '/' + childTheme + '/template'));
 });
 
 
 //compile sass
 gulp.task('compile-sass', ['override-theme'], function () {
     //compile le css specifique dans le fichier default et ecrase le theme.css
-    gulp.src('./assets/themes/'+childtheme+'/override-css/default/theme.scss')
+    gulp.src(themePath + '/' + childTheme + '/override-css/default/theme.scss')
       .pipe(sass())
-      .pipe(gulp.dest('./assets/themes/'+childtheme+'/default'));
+      .pipe(gulp.dest(themePath + '/' + childTheme + '/default'));
 
-    gulp.src('./assets/themes/'+childtheme+'/dyslexic/*.scss')
+    gulp.src(themePath + '/' + childTheme + '/dyslexic/*.scss')
       .pipe(sass())
-      .pipe(gulp.dest('./assets/themes/'+childtheme+'/dyslexic'));
+      .pipe(gulp.dest(themePath + '/' + childTheme + '/dyslexic'));
 });
 
 
@@ -83,14 +90,14 @@ gulp.task('themes', function(){
 //         // gulp.src(['../theme-open-ent/**/*'])
 //         //     .pipe(gulp.dest('./assets/themes/theme-open-ent'));
 //
-//         //compile childtheme
-//         gulp.src('./assets/themes/'+childtheme+'/default/theme.scss')
+//         //compile childTheme
+//         gulp.src('./assets/themes/'+childTheme+'/default/theme.scss')
 //             .pipe(sass())
-//             .pipe(gulp.dest('./assets/themes/'+childtheme+'/default'));
+//             .pipe(gulp.dest('./assets/themes/'+childTheme+'/default'));
 //     }
 //     watch('../css-lib/**/*.scss', compileTheme);
 //     //watch theme-open-ent local
 //     watch('../theme-open-ent/**/*.scss', compileTheme);
-//     watch('./assets/themes/'+childtheme+'/**/*.scss', compileTheme);
+//     watch('./assets/themes/'+childTheme+'/**/*.scss', compileTheme);
 //
 // });
