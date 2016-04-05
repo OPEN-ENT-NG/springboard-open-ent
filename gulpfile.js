@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 //var watch = require('gulp-watch');
 var bower = require('gulp-bower');
-
+var del = require('del');
 
 
 var childTheme = 'leo';
@@ -14,8 +14,12 @@ var localparentTheme = '../theme-open-ent/**/*';
 
 var sourceDependency = [];
 
+gulp.task('clean', function(){
+    return del([themePath + '/*', '!' + themePath + '/' + childTheme, themePath + '/' + childTheme + '/*',  '!' + themePath + '/' + childTheme + '/override*']);
+});
+
 //recupere theme sur git & copy dans springboard
-gulp.task('update-libs', function () {
+gulp.task('update-libs', ['clean'], function () {
     return bower({ directory: themePath, cwd: '.' });
 });
 
