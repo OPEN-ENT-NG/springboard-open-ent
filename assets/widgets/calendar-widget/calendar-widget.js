@@ -1,5 +1,5 @@
 (function(){
-	var Calendar = model.widgets.findWidget('calendar');
+	var Calendar = model.widgets.findWidget('calendar-widget');
 
 	Calendar.daysInWeek = [{ letter: 'L' }, { letter: 'M' }, { letter: 'M' }, { letter: 'J' }, { letter: 'V' }, { letter: 'S' }, { letter: 'D' }];
 	Calendar.today = function(format){
