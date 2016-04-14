@@ -28,6 +28,10 @@
 
     "timeline.weekly.mail.notification.event-types.ul.style": "padding: 10px; margin: 0;",
     "timeline.weekly.mail.notification.event-type.li.style": "color: black; list-style: none; padding: 5px; margin: 0;",
+
+    "timeline.weekly.mail.call.link.style": "text-align: right; display: block; text-decoration: none; margin-top: 5px;",
+    "timeline.weekly.mail.call.button.style": "width: 130px; height: 40px; line-height: 40px; font-size: 14px; background: #FF8500; color: white; text-decoration:none; text-transform: uppercase; text-align: center; margin-left: 70%;",
+
     "timeline.weekly.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='https://ent.picardie.fr' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
 
     "timeline.mail.bottom": "<div style='padding: 20px; font-size: 13px; color: black;'>Pour changer vos préférences de notifications, <a href='https://ent.picardie.fr/userbook/mon-compte' style='color: #2a9cc8;'>cliquez ici</a></div>"
