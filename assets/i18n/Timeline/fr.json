@@ -1,13 +1,13 @@
 {
-    "timeline.home.url": "https://ent.picardie.fr/timeline/timeline",
+    "timeline.home.url": "{{#host}}/timeline/timeline{{/host}}",
 
     "timeline.mail.banner.style": "background: #2a9cc8; text-align: left;",
-    "timeline.mail.logo.src": "https://ent.picardie.fr/assets/themes/leo/img/illustrations/logo.png ",
+    "timeline.mail.logo.src": "{{#host}}/assets/themes/leo/img/illustrations/logo.png{{/host}} ",
     "timeline.mail.logo.style": "width: 270px; height: 85px; padding: 10px;",
 
     "timeline.immediate.mail.subject.header": "ENT LEO Nouvelle notification : ",
     "timeline.immediate.mail.header": "<div style='padding: 5px 20px 30px; font-size: 14px; color: white; background: #2a9cc8;'>Bonjour, <br />Vous avez reçu une nouvelle notification :</div>",
-    "timeline.immediate.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='https://ent.picardie.fr' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
+    "timeline.immediate.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='{{#host}}{{/host}}' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
     "timeline.immediate.mail.notification.div.style": "padding: 30px; border-bottom: 1px solid #2a9cc8; color: black;",
     "timeline.immediate.mail.action.button.style": "font-size: 18px; line-height: 50px; text-decoration: none; color:#FF8500;",
     "timeline.immediate.mail.action.div.style": "text-align: center;",
@@ -18,7 +18,7 @@
     "timeline.daily.mail.notification.div.style": "padding: 30px; border-bottom: 1px solid #2a9cc8; color: black;",
     "timeline.daily.mail.action.button.style": "font-size: 18px; line-height: 50px; text-decoration: none; color:#FF8500;",
     "timeline.daily.mail.action.div.style": "text-align: center;",
-    "timeline.daily.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='https://ent.picardie.fr' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
+    "timeline.daily.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='{{#host}}{{/host}}' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
 
     "timeline.weekly.mail.subject.header": "ENT LEO - Quoi de neuf cette semaine ?",
     "timeline.weekly.mail.header": "<div style='padding: 5px 20px 30px; font-size: 14px; color: white; background: #2a9cc8;'>Bonjour, <br />Voici les nouveautés de la semaine dans votre ENT</div>",
@@ -32,8 +32,8 @@
     "timeline.weekly.mail.call.link.style": "text-align: right; display: block; text-decoration: none; margin-top: 5px;",
     "timeline.weekly.mail.call.button.style": "width: 130px; height: 40px; line-height: 40px; font-size: 14px; background: #FF8500; color: white; text-decoration:none; text-transform: uppercase; text-align: center; margin-left: 70%;",
 
-    "timeline.weekly.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='https://ent.picardie.fr' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
+    "timeline.weekly.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='{{#host}}{{/host}}' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
 
-    "timeline.mail.bottom": "<div style='padding: 20px; font-size: 13px; color: black;'>Pour changer vos préférences de notifications, <a href='https://ent.picardie.fr/userbook/mon-compte' style='color: #2a9cc8;'>cliquez ici</a></div>"
+    "timeline.mail.bottom": "<div style='padding: 20px; font-size: 13px; color: black;'>Pour changer vos préférences de notifications, <a href='{{#host}}/userbook/mon-compte{{/host}}' style='color: #2a9cc8;'>cliquez ici</a></div>"
 
 }
