@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 //var watch = require('gulp-watch');
 var bower = require('gulp-bower');
 var del = require('del');
+var autoprefixer = require('gulp-autoprefixer');
 
 
 var childTheme = 'leo';
@@ -59,11 +60,13 @@ gulp.task('override-theme', ['fill-theme'], function () {
 gulp.task('compile-sass', ['override-theme'], function () {
     //compile le css specifique dans le fichier default et ecrase le theme.css
     gulp.src(themePath + '/' + childTheme + '/override-css/default/theme.scss')
-      .pipe(sass())
+      .pipe(sass({ outputStyle: 'compressed' }))
+      .pipe(autoprefixer())
       .pipe(gulp.dest(themePath + '/' + childTheme + '/default'));
 
     gulp.src(themePath + '/' + childTheme + '/dyslexic/*.scss')
-      .pipe(sass())
+      .pipe(sass({ outputStyle: 'compressed' }))
+      .pipe(autoprefixer())
       .pipe(gulp.dest(themePath + '/' + childTheme + '/dyslexic'));
 });
 
