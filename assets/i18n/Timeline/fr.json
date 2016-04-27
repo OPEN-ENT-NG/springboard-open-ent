@@ -9,7 +9,7 @@
     "timeline.immediate.mail.header": "<div style='padding: 5px 20px 30px; font-size: 14px; color: white; background: #2a9cc8;'>Bonjour, <br />Vous avez reçu une nouvelle notification :</div>",
     "timeline.immediate.mail.footer": "<div style='padding: 20px; font-size: 14px; color: white; background: #2a9cc8;'>À bientôt sur LEO <br /><br /><a href='{{#host}}{{/host}}' style='color: white; font-size: 13px;'>ent.picardie.fr</a></div>",
     "timeline.immediate.mail.notification.div.style": "padding: 30px; border-bottom: 1px solid #2a9cc8; color: black;",
-    "timeline.immediate.mail.action.button.style": "font-size: 18px; line-height: 50px; text-decoration: none; color:#FF8500;",
+    "timeline.immediate.mail.action.button.style": "width: 220px; height: 50px; line-height: 50px; font-size: 14px; background: #FF8500; color: white; text-decoration:none; text-transform: uppercase; text-align: center; margin: 15px auto; display: block",
     "timeline.immediate.mail.action.div.style": "text-align: center;",
     "timeline.immediate.mail.action.text": "Consulter dans l'ENT",
 
