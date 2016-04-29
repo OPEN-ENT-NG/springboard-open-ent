@@ -16,6 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#0.18.0"
+    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#dev"
   }
 }
