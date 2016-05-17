@@ -51,6 +51,7 @@ dependencies {
     deployment "org.entcore:cns:$cnsVersion:deployment"
     deployment "net.atos:collaborative-editor:$collaborativeEditorVersion:deployment"
     deployment "fr.openent:share-big-files:$shareBigFilesVersion:deployment"
+    deployment "fr.openent:exercizer:$exercizerVersion:deployment"
     deployment "fr.wseduc:leo-theme:$themeVersion"
 }
 
