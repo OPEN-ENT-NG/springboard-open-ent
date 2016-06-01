@@ -10,7 +10,8 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-bower": "^0.0.11",
     "gulp-less": "^3.0.5",
-    "gulp-sass": "^2.2.0"
+    "gulp-sass": "^2.2.0",
+    "merge2": "^1.0.2"
   },
   "devDependencies": {},
   "scripts": {
