@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "timeline": ["notifications"], "auth": ["activation-form", "forgot-form"]
+=======
+  "auth": ["activation-form","forgot-form"]
+>>>>>>> 3305f21... #9847 Remove opinion banner
 }
