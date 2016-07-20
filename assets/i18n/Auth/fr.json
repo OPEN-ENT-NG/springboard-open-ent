@@ -10,7 +10,7 @@
 	"auth.still.lost": "Vous êtes toujours perdu ?",
 	"auth.still.lost.text": "<strong>Consulter l'aide en ligne :</strong> <ul><li><a href='http://leo.picardie.fr/?p=1539'>Guide de première connexion</a></li><li><a href='http://leo.picardie.fr/?p=1555'>Guide de prise en main</a></li></ul>",
 	"auth.contact.help": "Vous souhaitez contacter l'assistance ?",
-	"auth.contact.help.text": "<ul><li>ASSISTANCE PARENT : 0810 901 982 (du lundi au vendredi de 8h à 20h et le samedi de 8h à 15h, N° azur 0,078€/appel puis 0,028€/min) ou via le <a href='http://leo.picardie.fr/assistance/' target='_blank' style='display: inline'>formulaire d'assistance</a>.</li><li>Assistance académique pour les enseignants et personnels : 03 22 82 37 40</li></ul>",
+	"auth.contact.help.text": "<ul><li>ASSISTANCE PARENT : via le <a href='http://leo.picardie.fr/assistance/' target='_blank' style='display: inline'>formulaire d'assistance</a>.</li><li>Assistance académique pour les enseignants et personnels : 03 22 82 37 40</li></ul>",
 	"auth.back.to.login": "Retour à l'écran d'accueil",
 	"auth.click.to.send.mail": "Recevoir un courriel à l'adresse",
 	"auth.click.to.send.sms": "Recevoir un texto au numéro",
