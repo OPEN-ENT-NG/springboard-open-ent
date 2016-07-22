@@ -72,10 +72,13 @@ gulp.task('copy-local', function () {
 
 gulp.task('override-theme', ['fill-theme'], function () {
     var overrides = ['img', 'js', 'fonts', 'template', 'default'];
+    var tasks = [];
     overrides.forEach((override) => {
-        gulp.src(['./assets/themes/' + childTheme + '/override-' + override + '/**/*'])
+        var t = gulp.src(['./assets/themes/' + childTheme + '/override-' + override + '/**/*'])
             .pipe(gulp.dest('./assets/themes/' + childTheme + '/' + override));
+        tasks.push(t);
     });
+    return merge(tasks);
 });
 
 gulp.task('compile-sass', ['override-theme'], function () {
