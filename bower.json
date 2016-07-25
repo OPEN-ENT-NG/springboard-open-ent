@@ -20,6 +20,7 @@
     "entcore-css-lib": "git://github.com/entcore/css-lib.git#dev",
     "notes": "git://github.com/web-education/notes.git#dev",
     "record-me": "git://github.com/web-education/record-me.git#dev",
-    "calendar-widget": "git://github.com/web-education/calendar-widget.git#dev"
+    "calendar-widget": "git://github.com/web-education/calendar-widget.git#dev",
+	"my-apps": "git://github.com/web-education/my-apps.git#dev"
   }
 }

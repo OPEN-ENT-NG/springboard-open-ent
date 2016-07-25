@@ -6,14 +6,14 @@ var autoprefixer = require('gulp-autoprefixer');
 var merge = require('merge2');
 
 var themeDependencies = ['theme-open-ent', 'entcore-css-lib'];
-var widgets = ['notes', 'calendar-widget', 'record-me'];
+var widgets = ['notes', 'calendar-widget', 'record-me', 'my-apps'];
 
 var childTheme = 'leo';
 var parentTheme = 'theme-open-ent';
 
 var localPaths = {
     themes: ['../entcore-css-lib/**/*', '../theme-open-ent/**/*'],
-    widgets: ['../notes/**/*', '../calendar-widget/**/*', '../record-me/**/*']
+    widgets: ['../notes/**/*', '../calendar-widget/**/*', '../record-me/**/*', '../my-apps/**/*']
 };
 
 var sourceDependency = [];
