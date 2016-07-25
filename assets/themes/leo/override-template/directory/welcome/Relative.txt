@@ -1,31 +1,25 @@
 <p>
-Chers utilisateurs de LEO,
+Cher utilisateur de LEO,
 </p>
 <p>
-Bienvenue dans LEO 2, la nouvelle version de votre ENT !<br />
-Entièrement repensé à partir de vos remarques et suggestions, LEO s’est réinventé !
-</p>
-<p>
-L’utilisation de LEO est plus simple, plus rapide et plus intuitive.
-</p>
-<p>
-Les contenus que vous aviez créés dans LEO sont toujours disponibles dans LEO 2. Vous retrouvez vos messages au format PDF dans l’application Documents.
+Bienvenue dans LEO, votre ENT de seconde génération !
 </p>
 <p>
 LEO 2 vous offre tous les services numériques dont vous avez besoin pour accompagner la scolarité de votre enfant : accès aux notes et au cahier de textes, informations sur la vie de l’établissement et outils pour communiquer avec les équipes du lycée, ressources pour aider votre enfant à réviser ou à approfondir un point de cours (en particulier l’Aide aux devoirs), etc.
 </p>
 <p>
-Pour faire plus ample connaissance avec LEO 2, nous vous invitons à consulter les <a href="http://leo.picardie.fr/category/ressources/video-scena/">vidéos</a> qui vous guideront dans votre prise en main des différentes applications. Un service d’aide en ligne, accessible grâce au bouton (?) dans la barre de navigation de l’ENT, est également disponible.
+Pour faire plus ample connaissance avec LEO, nous vous invitons à consulter la <a href="http://leo.picardie.fr/2015/09/video-leo-2-visite-guidee/">vidéo de découverte</a> ainsi que les autres <a href="http://leo.picardie.fr/category/ressources/video-scena/">vidéos</a> qui vous guideront dans votre prise en main des différentes applications. Un service d’aide en ligne, accessible grâce au bouton (?) dans la barre de navigation de l’ENT, est également disponible.
 </p>
 <p>
-Enfin, le référent ENT de votre établissement est à votre disposition pour vous accompagner dans votre découverte de LEO 2.
+Enfin, le référent ENT de votre établissement est à votre disposition pour vous accompagner dans votre découverte de LEO.
 </p>
 <p>
 Nous vous souhaitons une bonne navigation dans LEO 2 !
 </p>
 <p>
-Cordialement,
+Bien cordialement,
 </p>
 <p>
 L’équipe projet LEO
 </p>
+<p> LEO, l'environnement numérique de travail des lycées picards </p>
