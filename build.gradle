@@ -52,9 +52,6 @@ dependencies {
     deployment "net.atos:collaborative-editor:$collaborativeEditorVersion:deployment"
     deployment "fr.openent:share-big-files:$shareBigFilesVersion:deployment"
     deployment "fr.openent:search-engine:$searchEngineVersion:deployment"
-    deployment "fr.openent:exercizer:$exercizerVersion:deployment"
-    deployment "fr.openent:search-engine:$searchEngineVersion:deployment"
-    deployment "fr.openent:diary:$diaryVersion:deployment"
     deployment "fr.wseduc:leo-theme:$themeVersion"
 }
 
