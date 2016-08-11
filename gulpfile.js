@@ -58,7 +58,7 @@ gulp.task('update', ['bower'], function () {
 });
 
 gulp.task('fill-theme', sourceDependency, function () {
-    return gulp.src('./assets/themes/' + parentTheme + '/**/*')
+    return gulp.src(['./assets/themes/' + parentTheme + '/**/*', '!./assets/themes/' + parentTheme + '/**/*.db'])
         .pipe(gulp.dest('./assets/themes/' + childTheme));
 });
 
