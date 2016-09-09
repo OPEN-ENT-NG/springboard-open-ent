@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#0.19.0",
+    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#0.19.0.1",
     "entcore-css-lib": "git://github.com/entcore/css-lib.git#1.5.0",
     "notes": "git://github.com/web-education/notes.git#0.1.0",
     "record-me": "git://github.com/web-education/record-me.git#0.1.0",
