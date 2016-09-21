@@ -6,14 +6,14 @@ var autoprefixer = require('gulp-autoprefixer');
 var merge = require('merge2');
 
 var themeDependencies = ['theme-open-ent', 'entcore-css-lib'];
-var widgets = ['notes', 'calendar-widget', 'record-me', 'my-apps'];
+var widgets = ['notes', 'calendar-widget', 'record-me', 'my-apps', 'carnet-de-bord'];
 
 var childTheme = 'leo';
 var parentTheme = 'theme-open-ent';
 
 var localPaths = {
     themes: ['../entcore-css-lib/**/*', '../theme-open-ent/**/*'],
-    widgets: ['../notes/**/*', '../calendar-widget/**/*', '../record-me/**/*', '../my-apps/**/*']
+    widgets: ['../notes/**/*', '../calendar-widget/**/*', '../record-me/**/*', '../my-apps/**/*', '../carnet-de-bord/**/*']
 };
 
 var sourceDependency = [];
@@ -50,7 +50,7 @@ gulp.task('bower', ['clean'], () => {
 gulp.task('update', ['bower'], function () {
     var themes = gulp.src(themesSources(), { base: './bower_components' })
         .pipe(gulp.dest('./assets/themes'));
-    
+
     var widgets = gulp.src(widgetsSources(), { base: './bower_components' })
         .pipe(gulp.dest('./assets/widgets'));
 
