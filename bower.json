@@ -16,8 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#1.1.0",
-    "entcore-css-lib": "git://github.com/entcore/css-lib.git#1.6.3",
+    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#dev",
+    "entcore-css-lib": "git://github.com/entcore/css-lib.git#dev",
     "notes": "git://github.com/web-education/notes.git#0.1.0",
     "record-me": "git://github.com/web-education/record-me.git#0.1.0",
     "calendar-widget": "git://github.com/web-education/calendar-widget.git#0.1.0",
