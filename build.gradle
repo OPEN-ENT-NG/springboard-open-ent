@@ -70,7 +70,11 @@ repositories{
 task copyMod {}
 
 subprojects {
-	afterEvaluate { project ->
+    tasks.withType(ScalaCompile) {
+        sourceCompatibility = "1.7"
+        targetCompatibility = "1.7"
+    }
+    afterEvaluate { project ->
 		project.tasks['copyMod'].doLast {
 			file('mods').mkdir()
 			copy {
