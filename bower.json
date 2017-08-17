@@ -16,11 +16,11 @@
     "tests"
   ],
   "dependencies": {
-    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#dev",
-    "entcore-css-lib": "git://github.com/entcore/css-lib.git#dev",
-    "generic-icons": "git://github.com/entcore/generic-icons.git#master",
-    "notes": "git://github.com/web-education/notes.git#0.1.0",
-    "record-me": "git://github.com/web-education/record-me.git#0.1.0",
+    "theme-open-ent": "git://github.com/OPEN-ENT-NG/theme-open-ent.git#1.6.0",
+    "entcore-css-lib": "git://github.com/entcore/css-lib.git#1.11.0",
+    "generic-icons": "git://github.com/entcore/generic-icons.git#1.6.0",
+    "notes": "git://github.com/web-education/notes.git#0.2.0",
+    "record-me": "git://github.com/web-education/record-me.git#0.1.1",
     "calendar-widget": "git://github.com/web-education/calendar-widget.git#0.1.0",
     "my-apps": "git://github.com/web-education/my-apps.git#0.1.1",
     "carnet-de-bord": "git://github.com/OPEN-ENT-NG/carnet-de-bord.git#1.0.0"
