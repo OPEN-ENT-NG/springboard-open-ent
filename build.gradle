@@ -70,6 +70,7 @@ dependencies {
     deployment "fr.openent:search-engine:$searchEngineVersion:deployment"
     deployment "fr.openent:exercizer:$exercizerVersion:deployment"
     deployment "fr.wseduc:scrap-book:$scrapbookVersion:deployment"
+    help "com.opendigitaleducation:application-help:$applicationHelpVersion"
 }
 
 repositories{
