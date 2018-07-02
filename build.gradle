@@ -71,6 +71,12 @@ dependencies {
     deployment "fr.openent:exercizer:$exercizerVersion:deployment"
     deployment "fr.wseduc:scrap-book:$scrapbookVersion:deployment"
     help "com.opendigitaleducation:application-help:$applicationHelpVersion"
+    i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"fr", ext:"tar.gz"
+    i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"en", ext:"tar.gz"
+    i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"it", ext:"tar.gz"
+    i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"de", ext:"tar.gz"
+    i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"pt", ext:"tar.gz"
+    i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"es", ext:"tar.gz"
 }
 
 repositories{
