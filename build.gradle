@@ -36,13 +36,13 @@ configurations.all {
 
 dependencies {
     testCompile "org.entcore:tests:$entCoreVersion"
-    testCompile "org.entcore:blog:$blogVersion:tests"
+/*  testCompile "org.entcore:blog:$blogVersion:tests"
     testCompile "net.atos:actualites:$actualitesVersion:tests"
     testCompile "net.atos:forum:$forumVersion:tests"
     testCompile "net.atos:rbs:$rbsVersion:tests"
-    testCompile "net.atos:wiki:$wikiVersion:tests"
+    testCompile "net.atos:wiki:$wikiVersion:tests"*/
     testCompile "net.atos:community:$communityVersion:tests"
-    deployment "org.entcore:blog:$blogVersion:deployment"
+/*  deployment "org.entcore:blog:$blogVersion:deployment"
     deployment "net.atos:forum:$forumVersion:deployment"
     deployment "net.atos:actualites:$actualitesVersion:deployment"
     deployment "net.atos:rbs:$rbsVersion:deployment"
@@ -50,9 +50,9 @@ dependencies {
     deployment "net.atos:rss:$rssVersion:deployment"
     deployment "net.atos:support:$supportVersion:deployment"
     deployment "fr.wseduc:eliot:$eliotVersion:deployment"
-    deployment "fr.wseduc:pages:$pagesVersion:deployment"
+    deployment "fr.wseduc:pages:$pagesVersion:deployment"*/
     deployment "net.atos:community:$communityVersion:deployment"
-    deployment "fr.wseduc:rack:$rackVersion:deployment"
+/*  deployment "fr.wseduc:rack:$rackVersion:deployment"
     deployment "net.atos:bookmark:$bookmarkVersion:deployment"
     deployment "net.atos:collaborativewall:$collaborativewallVersion:deployment"
     deployment "net.atos:calendar:$calendarVersion:deployment"
@@ -67,9 +67,9 @@ dependencies {
     deployment "org.entcore:cns:$cnsVersion:deployment"
     deployment "net.atos:collaborative-editor:$collaborativeEditorVersion:deployment"
     deployment "fr.openent:share-big-files:$shareBigFilesVersion:deployment"
-    deployment "fr.openent:search-engine:$searchEngineVersion:deployment"
+    deployment "fr.openent:search-engine:$searchEngineVersion:deployment"*/
     deployment "fr.openent:exercizer:$exercizerVersion:deployment"
-    deployment "fr.wseduc:scrap-book:$scrapbookVersion:deployment"
+//  deployment "fr.wseduc:scrap-book:$scrapbookVersion:deployment"
 }
 
 repositories{
