@@ -17,7 +17,8 @@ exports.conf = {
         { 
             parent: 'theme-open-ent', 
             child: 'leo',
-            skins: ['default', 'dyslexic']
+            skins: ['default', 'dyslexic'],
+	    help: '/help-2d'
         }
     ]
 };
