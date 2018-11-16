@@ -29,8 +29,8 @@ clean () {
     if [ "$USER_UID" != "1000" ] && [ -e mods ]; then
       docker run --rm -v "$PWD"/mods:/srv/springboard/mods opendigitaleducation/vertx-service-launcher:1.0.0 chmod -R 777 mods/*
     fi
-    docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle clean
     stop && docker-compose rm -f
+    docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle clean
     docker volume ls -qf dangling=true | xargs -r docker volume rm
   fi
 }

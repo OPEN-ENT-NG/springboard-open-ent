@@ -37,13 +37,13 @@ configurations.all {
 dependencies {
     testCompile "org.entcore:tests:$entCoreVersion"
     testCompile "org.entcore:blog:$blogVersion:tests"
-    testCompile "net.atos:actualites:$actualitesVersion:tests"
+/*    testCompile "net.atos:actualites:$actualitesVersion:tests"
     testCompile "net.atos:forum:$forumVersion:tests"
     testCompile "net.atos:rbs:$rbsVersion:tests"
     testCompile "net.atos:wiki:$wikiVersion:tests"
-    testCompile "net.atos:community:$communityVersion:tests"
+    testCompile "net.atos:community:$communityVersion:tests"*/
     deployment "org.entcore:blog:$blogVersion:deployment"
-    deployment "net.atos:forum:$forumVersion:deployment"
+/*    deployment "net.atos:forum:$forumVersion:deployment"
     deployment "net.atos:actualites:$actualitesVersion:deployment"
     deployment "net.atos:rbs:$rbsVersion:deployment"
     deployment "net.atos:wiki:$wikiVersion:deployment"
@@ -69,7 +69,7 @@ dependencies {
     deployment "fr.openent:share-big-files:$shareBigFilesVersion:deployment"
     deployment "fr.openent:search-engine:$searchEngineVersion:deployment"
     deployment "fr.openent:exercizer:$exercizerVersion:deployment"
-    deployment "fr.wseduc:scrap-book:$scrapbookVersion:deployment"
+    deployment "fr.wseduc:scrap-book:$scrapbookVersion:deployment"*/
     help "com.opendigitaleducation:application-help:$applicationHelpVersion"
     i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"fr", ext:"tar.gz"
     i18n group: "com.opendigitaleducation", name:"ong-i18n", version:"$i18nVersion", classifier:"en", ext:"tar.gz"
