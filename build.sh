@@ -104,6 +104,14 @@ buildFront() {
   fi
 }
 
+# /!\ : add to docker-compose node volumes for local build:
+#    - ../theme-open-ent:/home/node/theme-open-ent
+#    - ../entcore-css-lib:/home/node/entcore-css-lib
+#    - ../generic-icons:/home/node/generic-icons
+buildLocalFront() {
+  docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "node_modules/gulp/bin/gulp.js build-local --max_old_space_size=5000"
+}
+
 archive() {
   #tar cfzh $NAME-static.tar.gz static
   tar cfzh ${NAME}.tar.gz mods/*.jar assets/* static
@@ -124,8 +132,7 @@ generateConf() {
 }
 
 integrationTest() {
-  BASE_CONTAINER_NAME=`basename "$PWD" | sed 's/-//g'`
-  VERTX_IP=`docker inspect ${BASE_CONTAINER_NAME}_vertx_1 | grep '"IPAddress"' | head -1 | grep -Eow "[0-9\.]+"`
+  VERTX_IP=`docker inspect ${NAME}_vertx_1 | grep '"IPAddress"' | head -1 | grep -Eow "[0-9\.]+"`
   sed -i "s|baseURL.*$|baseURL(\"http://$VERTX_IP:$PORT\")|" src/test/scala/org/entcore/test/simulations/IntegrationTest.scala
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle integrationTest
 }
@@ -154,6 +161,9 @@ do
     buildFront)
       buildFront
       ;;
+    buildLocalFront)
+      buildLocalFront
+      ;;
     archive)
       archive
       ;;
@@ -167,3 +177,4 @@ do
     exit 1
   fi
 done
+
