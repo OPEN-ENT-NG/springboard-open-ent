@@ -29,8 +29,8 @@ clean () {
     if [ "$USER_UID" != "1000" ] && [ -e mods ]; then
       docker run --rm -v "$PWD"/mods:/srv/springboard/mods opendigitaleducation/vertx-service-launcher:1.0.0 chmod -R 777 mods/*
     fi
+    docker-compose down
     docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle clean
-    stop && docker-compose rm -f
     docker volume ls -qf dangling=true | xargs -r docker volume rm
   fi
 }
@@ -62,6 +62,16 @@ init() {
 }
 
 run() {
+  docker-compose up -d neo4j
+  docker-compose up -d postgres
+  docker-compose up -d mongo
+  sleep 10
+  docker-compose up -d vertx
+}
+
+runJenkins() {
+  sed -i 's/- "8090:8090"/#- "8090:8090"/' docker-compose.yml
+  sed -i 's/ports:/#ports:/' docker-compose.yml
   docker-compose up -d neo4j
   docker-compose up -d postgres
   docker-compose up -d mongo
@@ -147,6 +157,9 @@ do
       ;;
     run)
       run
+      ;;
+    runJenkins)
+      runJenkins
       ;;
     stop)
       stop
