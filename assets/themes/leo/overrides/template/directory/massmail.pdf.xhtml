@@ -84,7 +84,7 @@
 	{{#users}}
 	{{! Users that are not activated }}
 	{{#activationCode}}
-	<div style="page-break-after: always">
+	<div{{^end}} style="page-break-after: always"{{/end}}>
 		<img id="logo" src="logo.png"></img>
 		<div class="banner">
 			<h1>La première connexion à Léo</h1>
@@ -162,7 +162,7 @@
 	{{/activationCode}}
 	{{! Users that are activated }}
 	{{^activationCode}}
-	<div style="page-break-after: always">
+	<div{{^end}} style="page-break-after: always"{{/end}}>
 		<img id="logo" src="logo.png"></img>
 		<div class="banner">
 			<h1>Informations sur votre compte Léo</h1>
