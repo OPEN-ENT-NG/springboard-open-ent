@@ -1,0 +1,13 @@
+{
+  "name": "widgets",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "dependencies": {
+    "notes": "git+https://github.com/web-education/notes.git#0.2.0",
+    "record-me": "git+https://github.com/web-education/record-me.git#0.1.1",
+    "calendar-widget": "git+https://github.com/web-education/calendar-widget.git#0.1.0",
+    "my-apps": "git+https://github.com/web-education/my-apps.git#0.1.1",
+    "carnet-de-bord": "git+https://github.com/OPEN-ENT-NG/carnet-de-bord.git#1.0.1"
+  }
+}

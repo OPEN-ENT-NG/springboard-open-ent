@@ -74,33 +74,50 @@ stop() {
 }
 
 buildFront() {
-  if [ "$USER_UID" != "1000" ] && [ -e mods ]; then
-    mv mods mods.old
-    cp -r mods.old mods
-    docker run --rm -v "$PWD"/mods.old:/srv/springboard/mods opendigitaleducation/vertx-service-launcher:1.0.0 chmod -R 777 mods/*
-    rm -rf mods.old
-  fi
-  case `uname -s` in
-    MINGW*)
-      docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install --no-bin-links && node_modules/bower/bin/bower cache clean && node_modules/gulp/bin/gulp.js build --max_old_space_size=5000"
-      ;;
-    *)
-      docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass && npm install && node_modules/bower/bin/bower cache clean && node_modules/gulp/bin/gulp.js build --max_old_space_size=5000"
-  esac
-  #rm mods/*.jar
-  bash -c 'for i in `ls -d mods/* | egrep -i -v "feeder|session|tests|json-schema|proxy|~mod|tracer"`; do DEST=$(echo $i | sed "s/[a-z\.\/]*~\([a-z\-]*\)~[A-Z0-9\-\.]*\(-SNAPSHOT\)*/\1/g"); mkdir static/`echo $DEST`; cp -r $i/public static/`echo $DEST`; done; exit 0'
+  set -e
+  #prepare
+  chmod -R 777 assets/ || true
+  find assets/js/ -mindepth 1 -maxdepth 1 -not -name 'package.json' -not -name '.npmrc' -exec rm -rf {} \;
+  find assets/themes/ -mindepth 1 -maxdepth 1 -not -name 'package.json' -not -name '.npmrc' -exec rm -rf {} \;
+  find assets/widgets/ -mindepth 1 -maxdepth 1 -not -name 'package.json' -not -name '.npmrc' -exec rm -rf {} \;
+  #run npm install
+  sed -i "s/BOWER_USERNAME/$BOWER_USERNAME/" assets/widgets/package.json
+  sed -i "s/BOWER_PASSWORD/$BOWER_PASSWORD/" assets/widgets/package.json
+  docker run -e NPM_TOKEN -u "$USER_UID:$GROUP_GID" --rm -v "$PWD":/home/node opendigitaleducation/node:16-alpine sh -c "cd /home/node/assets/themes && npm install && chmod -R 777 node_modules && cd /home/node/assets/widgets && npm install  && chmod -R 777 node_modules && cd /home/node/assets/js && npm install  && chmod -R 777 node_modules"
+  #clean
+  find assets/js/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
+  find assets/themes/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
+  find assets/widgets/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
+  #move artefact
+  mv assets/widgets/node_modules/* assets/widgets/
+  find ./assets/js/node_modules/ -mindepth 1 -maxdepth 2 -type d -name "dist" | sed -e "s/assets\/js\/node_modules\///"  | sed -e "s/dist//" | xargs -i mv ./assets/js/node_modules/{}dist/ ./assets/js/{}
+  find ./assets/themes/node_modules/ -mindepth 1 -maxdepth 2 -type d -name "dist" | sed -e "s/assets\/themes\/node_modules\///"  | sed -e "s/dist//" | xargs -i mv ./assets/themes/node_modules/{}dist/ ./assets/themes/{}
+  #clean node_modules
+  rm -rf assets/js/package.json assets/themes/package.json assets/widgets/package.json
+  rm -rf assets/js/node_modules assets/themes/node_modules assets/widgets/node_modules
+  #Retrocompatibilité avec les static
+  bash -c 'for i in `ls -d mods/* | egrep -i -v "feeder|session|tests|json-schema|proxy|~mod|tracer"`; do DEST=$(echo $i | sed "s/[a-z\.\/]*~\([a-z\-]*\)~[A-Z0-9\-\.]*\(-[a-z]*\)*\(-SNAPSHOT\)*/\1/g"); mkdir static/`echo $DEST`; cp -r $i/public static/`echo $DEST`; done; exit 0'
   mv static/app-registry static/appregistry
   mv static/collaborative-editor static/collaborativeeditor
   mv static/scrap-book static/scrapbook
   mv static/fake-sso static/sso
   mv static/share-big-files static/sharebigfiles
   mv static/search-engine static/searchengine
+  mv static/web-conference static/webconference
+  mv static/gar-connector static/gar
   mv errors static/
   find static/help -type l -exec rename 's/index.html\?iframe\=true/index.html/' '{}' \;
   I18N_VERSION=`grep 'i18nVersion=' gradle.properties | sed 's/i18nVersion=//'`
   if [ -e i18n ] && [ ! -z "$I18N_VERSION" ]; then
     rm -rf assets/i18n
     mv i18n assets/
+  fi
+  COUNT_THEME=$(find assets/themes/*/skins/default -name theme.css | grep -v 'bootstrap' | wc -l)
+  if [ "$COUNT_THEME" -eq "0" ]; then
+    echo "Error: 0 theme.css build"
+    exit 1
+  else
+    echo "$COUNT_THEME successful theme.css build"
   fi
 }
 

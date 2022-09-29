@@ -1,0 +1,11 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "dependencies": {
+    "ode-ngjs-front": "dev-produit",
+    "ode-ts-client": "dev-produit",
+    "entcore": "dev-produit"
+  }
+}
