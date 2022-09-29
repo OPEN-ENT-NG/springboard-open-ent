@@ -1,0 +1,11 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "dependencies": {
+    "ode-ngjs-front": "feat-produit",
+    "ode-ts-client": "feat-produit",
+    "entcore": "feat-produit"
+  }
+}

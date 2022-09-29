@@ -1,0 +1,14 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "dependencies": {
+    "theme-open-ent": "npm:ode-csslib-openent@feat-produit",
+    "panda": "npm:ode-csslib-panda@feat-produit",
+    "leo": "npm:ode-csslib-openent@feat-produit",
+    "leo1d": "npm:ode-csslib-panda@feat-produit",
+    "ode-bootstrap-neo": "npm:ode-bootstrap-neo@feat-produit",
+    "ode-bootstrap-one": "npm:ode-bootstrap-one@feat-produit"
+  }
+}
