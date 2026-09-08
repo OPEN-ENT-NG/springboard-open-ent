@@ -1,0 +1,11 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "dependencies": {
+    "entcore-css-lib": "npm:ode-csslib@4.3.11",
+    "openent": "npm:ode-csslib-openent@3.4.13",
+    "ode-bootstrap-neo": "npm:ode-bootstrap-neo@1.4.10"
+  }
+}

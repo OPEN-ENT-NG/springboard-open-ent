@@ -24,13 +24,20 @@ then
 fi
 
 clean () {
+  rm -Rf ./it
+  rm -Rf ./stress
+  mkdir -p ./it/src
+  mkdir -p ./it/resources
+  mkdir -p ./stress/src
+  mkdir -p ./stress/resources
+  rm -rf mods.old
   rm -rf data scripts src ent*.json *.template deployments run.sh stop.sh *.tar.gz static default.properties bower_components traductions i18n
   if [ -e docker-compose.yml ]; then
     if [ "$USER_UID" != "1000" ] && [ -e mods ]; then
-      docker run --rm -v "$PWD"/mods:/srv/springboard/mods opendigitaleducation/vertx-service-launcher:1.0.0 chmod -R 777 mods/*
+      docker run --rm -v "$PWD"/mods:/srv/springboard/mods opendigitaleducation/vertx-service-launcher:1.1.0 chmod -R 777 mods/*
     fi
+    docker-compose down
     docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle clean
-    stop && docker-compose rm -f
     docker volume ls -qf dangling=true | xargs -r docker volume rm
   fi
 }
@@ -42,71 +49,123 @@ init() {
   if [ ! -e node_modules ]; then
     mkdir node_modules
   fi
-  if [ -e "?/.gradle" ] && [ ! -e "?/.gradle/gradle.properties" ]
+  if [ ! -e "?/.gradle/gradle.properties" ]
   then
+    mkdir -p "?/.gradle/"
     echo "odeUsername=$NEXUS_ODE_USERNAME" > "?/.gradle/gradle.properties"
     echo "odePassword=$NEXUS_ODE_PASSWORD" >> "?/.gradle/gradle.properties"
+    echo "cgiUsername=$NEXUS_CGI_USERNAME" >> "?/.gradle/gradle.properties"
+    echo "cgiPassword=$NEXUS_CGI_PASSWORD" >> "?/.gradle/gradle.properties"
   fi
   docker run --rm -v "$PWD":/home/gradle/project -v ~/.m2:/home/gradle/.m2 -v ~/.gradle:/home/gradle/.gradle -w /home/gradle/project -u "$USER_UID:$GROUP_GID" gradle:4.5-alpine gradle init
-  sed -i "s/8090:/$PORT:/" docker-compose.yml
+  sed -i "s/8090:/$PORT:/" docker-compose.yml.template
+  # Update github token
+  sed -i "s/GITHUB_API_TOKEN/$GITHUB_API_TOKEN/" assets/widgets/package.json
   if [ -e bower.json ]; then
     sed -i "s/bower_username:bower_password/$BOWER_USERNAME:$BOWER_PASSWORD/" bower.json
   fi
   if [ ! -z ${MAVEN_REPOSITORIES:+x} ]
   then
-    sed -i "s/#environment:/  environment:/" docker-compose.yml
+    sed -i "s/#environment:/  environment:/" docker-compose.yml.template
     MVN_REPOS=`echo $MAVEN_REPOSITORIES | sed 's/"/\\\\"/g'`
-    sed -i "s|#  MAVEN_REPOSITORIES: ''|    MAVEN_REPOSITORIES: '$MVN_REPOS'|" docker-compose.yml
+    sed -i "s|#  MAVEN_REPOSITORIES: ''|    MAVEN_REPOSITORIES: '$MVN_REPOS'|" docker-compose.yml.template
   fi
-  # TODO add translate
+  # TODO add translate 
 }
 
 run() {
-  docker-compose up -d neo4j
-  docker-compose up -d postgres
-  docker-compose up -d mongo
+  docker-compose up -d --scale vertx=0
   sleep 10
-  docker-compose up -d vertx
+  docker-compose up -d --scale vertx=1
+}
+
+runJenkins() {
+  chmod -R 777 assets/
+  sed -i 's#vertx-service-launcher:2.0.1#vertx-service-launcher:2.0.1-jenkins#' docker-compose.yml
+  sed -i 's/- "8090:8090"/#- "8090:8090"/' docker-compose.yml
+  sed -i 's/- "3000:3000"/#- "3000:3000"/' docker-compose.yml
+  sed -i 's/- "9200:9200"/#- "9200:9200"/' docker-compose.yml
+  sed -i 's/- "9300:9300"/#- "9300:9300"/' docker-compose.yml
+  sed -i 's/- "3100:3000"/#- "3100:3000"/' docker-compose.yml
+  sed -i 's/ports:/#ports:/' docker-compose.yml
+  docker-compose up -d --scale vertx=0
+  sleep 10
+  docker-compose up -d --scale vertx=1
 }
 
 stop() {
   docker-compose stop
 }
 
+down() {
+  docker-compose down
+}
+
 buildFront() {
-  if [ "$USER_UID" != "1000" ] && [ -e mods ]; then
-    mv mods mods.old
-    cp -r mods.old mods
-    docker run --rm -v "$PWD"/mods.old:/srv/springboard/mods opendigitaleducation/vertx-service-launcher:1.0.0 chmod -R 777 mods/*
-    rm -rf mods.old
-  fi
-  case `uname -s` in
-    MINGW*)
-      docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass --no-bin-links && npm install --no-bin-links && node_modules/bower/bin/bower cache clean && node_modules/gulp/bin/gulp.js build --max_old_space_size=5000"
-      ;;
-    *)
-      docker-compose run --rm -u "$USER_UID:$GROUP_GID" node sh -c "npm rebuild node-sass && npm install && node_modules/bower/bin/bower cache clean && node_modules/gulp/bin/gulp.js build --max_old_space_size=5000"
-  esac
+  set -e
+  #prepare
+  chmod -R 777 assets/ || true
+  find -L assets/js/ -mindepth 1 -maxdepth 1 -not -name 'package.json' -not -name '.npmrc' -exec rm -rf {} \;
+  find -L assets/themes/ -mindepth 1 -maxdepth 1 -not -name 'package.json' -not -name '.npmrc' -exec rm -rf {} \;
+  find -L assets/widgets/ -mindepth 1 -maxdepth 1 -not -name 'package.json' -not -name '.npmrc' -exec rm -rf {} \;
+  #run pnpm install
+  sed -i "s/BOWER_USERNAME/$BOWER_USERNAME/" assets/widgets/package.json
+  sed -i "s/BOWER_PASSWORD/$BOWER_PASSWORD/" assets/widgets/package.json
+  docker run -e NPM_TOKEN --rm -v "$PWD":/home/node opendigitaleducation/node:18-alpine-pnpm sh -c "cd /home/node/assets/themes && yarn install && chmod -R 777 node_modules && cd /home/node/assets/widgets && yarn install  && chmod -R 777 node_modules && cd /home/node/assets/js && pnpm install  && chmod -R 777 node_modules"
+  #clean
+  find -L assets/js/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
+  find -L assets/themes/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
+  find -L assets/widgets/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
+  #move artefact
+  mv assets/widgets/node_modules/* assets/widgets/
+  find -L ./assets/js/node_modules/ -mindepth 1 -maxdepth 2 -type d -name "dist" | sed -e "s/assets\/js\/node_modules\///"  | sed -e "s/dist//" | xargs -i mv ./assets/js/node_modules/{}dist/ ./assets/js/{}
+  find -L ./assets/themes/node_modules/ -mindepth 1 -maxdepth 2 -type d -name "dist" | sed -e "s/assets\/themes\/node_modules\///"  | sed -e "s/dist//" | xargs -i mv ./assets/themes/node_modules/{}dist/ ./assets/themes/{}
+  #clean node_modules
+  rm -rf assets/js/package.json assets/themes/package.json assets/widgets/package.json
+  rm -rf assets/js/node_modules assets/themes/node_modules assets/widgets/node_modules
+  docker run --rm -v "$PWD":/home/node opendigitaleducation/node:18-alpine-pnpm sh -c "rm -rf /home/node/assets/.pnpm-store"
   #rm mods/*.jar
-  bash -c 'for i in `ls -d mods/* | egrep -i -v "feeder|session|tests|json-schema|proxy|~mod|tracer"`; do DEST=$(echo $i | sed "s/[a-z\.\/]*~\([a-z\-]*\)~[A-Z0-9\-\.]*\(-SNAPSHOT\)*/\1/g"); mkdir static/`echo $DEST`; cp -r $i/public static/`echo $DEST`; done; exit 0'
+  bash -c 'for i in `ls -d mods/* | egrep -i -v "feeder|session|tests|json-schema|proxy|~mod|tracer"`; do DEST=$(echo $i | sed "s/[a-z\.\/]*~\([a-z\-]*\)~[A-Z0-9\-\.]*\(-[a-z]*\)*\(-SNAPSHOT\)*/\1/g"); mkdir static/`echo $DEST`; cp -r $i/public static/`echo $DEST`; done; exit 0'
+  #bash -c 'for i in `ls -d mods/* | egrep -i -v "feeder|session|tests|json-schema|proxy|~mod|tracer"`; do DEST=$(echo $i | sed "s/[a-z\.\/]*~\([a-z\-]*\)~[A-Z0-9\-\.]*\(-SNAPSHOT\)*/\1/g"); mkdir static/`echo $DEST`; cp -r $i/public static/`echo $DEST`; done; exit 0'
+  #bash -c 'for i in `ls -d mods/* | egrep -i -v "feeder|session|tests|json-schema|proxy|~mod|tracer"`; do DEST=$(echo $i | sed "s/[a-z\.\/]*~\([a-z\-]*\)~.*/\1/g"); mkdir static/`echo $DEST`; cp -r $i/public static/`echo $DEST`; done; exit 0'
   mv static/app-registry static/appregistry
   mv static/collaborative-editor static/collaborativeeditor
-  mv static/scrap-book static/scrapbook
   mv static/fake-sso static/sso
   mv static/share-big-files static/sharebigfiles
   mv static/search-engine static/searchengine
-  mv errors static/
   find static/help -type l -exec rename 's/index.html\?iframe\=true/index.html/' '{}' \;
   I18N_VERSION=`grep 'i18nVersion=' gradle.properties | sed 's/i18nVersion=//'`
   if [ -e i18n ] && [ ! -z "$I18N_VERSION" ]; then
     rm -rf assets/i18n
     mv i18n assets/
   fi
+  
+  CANTOO_VERSION=`grep 'cantooVersion=' gradle.properties | sed 's/cantooVersion=//'`
+  if [ ! -z "$CANTOO_VERSION" ]; then
+	wget https://$NEXUS_ODE_USERNAME:$NEXUS_ODE_PASSWORD@maven.opendigitaleducation.com/repository/cantoo/default/cantoo-web_v$CANTOO_VERSION.js
+	mv cantoo-web_v$CANTOO_VERSION.js static/portal/public/cantoo-web.js
+  fi
+  
+  echo "$VERSION" > assets/version
 }
 
 archive() {
-  #tar cfzh $NAME-static.tar.gz static
-  tar cfzh ${NAME}.tar.gz mods/*.jar assets/* static
+  COUNT_THEME=$(find assets/themes/*/skins/default -name theme.css | grep -v 'bootstrap' | wc -l)
+  if [ "$COUNT_THEME" -eq "0" ]; then
+    echo "Error: 0 theme.css build"
+    exit 1
+  else
+    echo "$COUNT_THEME successful theme.css build"
+  fi
+  
+  if [ -e static/forum ] && [ -e static/blog ] && [ -e static/mindmap ] && [ -e static/explorer ] && [ -e static/collaborativewall ]; then
+    echo "Check statics successful"
+  else
+    echo "Error: missing statics. It usually happens when many springboards are built at the same time, try to rebuild."
+    exit 1
+  fi
+  
+  tar cfzh ${NAME}.tar.gz assets/* cdn/* static
 }
 
 publish() {
@@ -114,13 +173,18 @@ publish() {
     *SNAPSHOT) nexusRepository='snapshots' ;;
     *)         nexusRepository='releases' ;;
   esac
-  mvn deploy:deploy-file -DgroupId=$GROUPID -DartifactId=$NAME -Dversion=$VERSION -Dpackaging=tar.gz -Dfile=${NAME}.tar.gz -DrepositoryId=ode-$nexusRepository -Durl=https://maven.opendigitaleducation.com/nexus/content/repositories/ode-$nexusRepository/
+  docker run --rm -v "$(echo ~/.m2)":/root/.m2 -v "$(pwd)":/usr/src/mymaven -w /usr/src/mymaven maven:3.3-jdk-8 mvn deploy:deploy-file -DgroupId=$GROUPID -DartifactId=$NAME -Dversion=$VERSION -Dpackaging=tar.gz -Dfile=${NAME}.tar.gz -DrepositoryId=ode-$nexusRepository -Durl=https://maven.opendigitaleducation.com/nexus/content/repositories/ode-$nexusRepository/
  # mvn deploy:deploy-file -DgroupId=$GROUPID -DartifactId=$NAME -Dversion=$VERSION -Dpackaging=tar.gz -Dclassifier=static -Dfile=${NAME}-static.tar.gz -DrepositoryId=ode-$nexusRepository -Durl=https://maven.opendigitaleducation.com/nexus/content/repositories/ode-$nexusRepository/
 
 }
 
 generateConf() {
+  echo "DEFAULT_DOCKER_USER=`id -u`:`id -g`" > .env
+  ENTCOREVERSION=$(grep entCoreVersion= gradle.properties | awk -F "=" '{ print $2 }' | sed -e "s/\r//")
+  sed -i "s/entcoreVersion=.*/entcoreVersion=$ENTCOREVERSION/" conf.properties
+  sed -i "s/.*REMOVE_BY_CI.*//g" docker-compose.yml.template
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle generateConf
+  docker run --rm $USER_OPTION -v "$PWD":/home/gradle/project -v ~/.m2:/home/gradle/.m2 -v ./?/.gradle:/home/gradle/.gradle -w /home/gradle/project $SET_HOME_ENV_ARG opendigitaleducation/gradle:4.5.1 gradle generateConf
 }
 
 integrationTest() {
@@ -128,6 +192,27 @@ integrationTest() {
   VERTX_IP=`docker inspect ${BASE_CONTAINER_NAME}_vertx_1 | grep '"IPAddress"' | head -1 | grep -Eow "[0-9\.]+"`
   sed -i "s|baseURL.*$|baseURL(\"http://$VERTX_IP:$PORT\")|" src/test/scala/org/entcore/test/simulations/IntegrationTest.scala
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle integrationTest
+}
+
+overrideDefaultSkinByTheme() {
+  mv assets/themes/hdf1d/skins/default assets/themes/hdf1d/skins/hills
+  cp -R assets/themes/hdf1d/skins/hills assets/themes/pdc1d/skins/
+  mv assets/themes/hdf1d/skins/monthly assets/themes/hdf1d/skins/default
+  cp -R assets/themes/hdf1d/skins/default/* assets/themes/pdc1d/skins/default
+  sed -i "s/, 'monthly'//" assets/theme-conf.js
+  find assets/themes/ -name monthly -exec rm -r {} \+
+}
+
+deployCDN()
+{
+  #cdn
+  mkdir -p cdn
+  rm -r cdn/* 2>/dev/null
+  cp -R assets/ cdn/
+  cp -R static/* cdn/
+  rm -rf cd cdn/*.jar
+  cp -R cdn/portal/public/ cdn/
+  cp -R cdn/directory/ cdn/userbook/
 }
 
 for param in "$@"
@@ -148,14 +233,26 @@ do
     run)
       run
       ;;
+    runJenkins)
+      runJenkins
+      ;;
     stop)
       stop
+      ;;
+	down)
+      down
       ;;
     buildFront)
       buildFront
       ;;
     archive)
       archive
+      ;;
+    deployCDN)
+      deployCDN
+      ;;
+    overrideDefaultSkinByTheme)
+      overrideDefaultSkinByTheme
       ;;
     publish)
       publish
