@@ -23,6 +23,12 @@ then
   source ~/.bower_credentials
 fi
 
+# Use Docker Compose v2 when the docker-compose v1 binary is not installed
+if ! command -v docker-compose > /dev/null 2>&1
+then
+  docker-compose() { docker compose "$@"; }
+fi
+
 clean () {
   rm -Rf ./it
   rm -Rf ./stress
@@ -57,10 +63,9 @@ init() {
     echo "cgiUsername=$NEXUS_CGI_USERNAME" >> "?/.gradle/gradle.properties"
     echo "cgiPassword=$NEXUS_CGI_PASSWORD" >> "?/.gradle/gradle.properties"
   fi
+  mkdir -p ~/.gradle ~/.m2
   docker run --rm -v "$PWD":/home/gradle/project -v ~/.m2:/home/gradle/.m2 -v ~/.gradle:/home/gradle/.gradle -w /home/gradle/project -u "$USER_UID:$GROUP_GID" gradle:4.5-alpine gradle init
   sed -i "s/8090:/$PORT:/" docker-compose.yml.template
-  # Update github token
-  sed -i "s/GITHUB_API_TOKEN/$GITHUB_API_TOKEN/" assets/widgets/package.json
   if [ -e bower.json ]; then
     sed -i "s/bower_username:bower_password/$BOWER_USERNAME:$BOWER_PASSWORD/" bower.json
   fi
@@ -111,7 +116,7 @@ buildFront() {
   #run pnpm install
   sed -i "s/BOWER_USERNAME/$BOWER_USERNAME/" assets/widgets/package.json
   sed -i "s/BOWER_PASSWORD/$BOWER_PASSWORD/" assets/widgets/package.json
-  docker run -e NPM_TOKEN --rm -v "$PWD":/home/node opendigitaleducation/node:18-alpine-pnpm sh -c "cd /home/node/assets/themes && yarn install && chmod -R 777 node_modules && cd /home/node/assets/widgets && yarn install  && chmod -R 777 node_modules && cd /home/node/assets/js && pnpm install  && chmod -R 777 node_modules"
+  docker run -e NPM_TOKEN="${NPM_TOKEN:-}" --rm -v "$PWD":/home/node opendigitaleducation/node:18-alpine-pnpm sh -c "cd /home/node/assets/themes && yarn install && chmod -R 777 node_modules && cd /home/node/assets/widgets && yarn install  && chmod -R 777 node_modules && cd /home/node/assets/js && pnpm install  && chmod -R 777 node_modules"
   #clean
   find -L assets/js/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
   find -L assets/themes/ -mindepth 1 -maxdepth 1 -not -name 'node_modules' -exec rm -rf {} \;
@@ -134,17 +139,6 @@ buildFront() {
   mv static/share-big-files static/sharebigfiles
   mv static/search-engine static/searchengine
   find static/help -type l -exec rename 's/index.html\?iframe\=true/index.html/' '{}' \;
-  I18N_VERSION=`grep 'i18nVersion=' gradle.properties | sed 's/i18nVersion=//'`
-  if [ -e i18n ] && [ ! -z "$I18N_VERSION" ]; then
-    rm -rf assets/i18n
-    mv i18n assets/
-  fi
-  
-  CANTOO_VERSION=`grep 'cantooVersion=' gradle.properties | sed 's/cantooVersion=//'`
-  if [ ! -z "$CANTOO_VERSION" ]; then
-	wget https://$NEXUS_ODE_USERNAME:$NEXUS_ODE_PASSWORD@maven.opendigitaleducation.com/repository/cantoo/default/cantoo-web_v$CANTOO_VERSION.js
-	mv cantoo-web_v$CANTOO_VERSION.js static/portal/public/cantoo-web.js
-  fi
   
   echo "$VERSION" > assets/version
 }
@@ -165,7 +159,7 @@ archive() {
     exit 1
   fi
   
-  tar cfzh ${NAME}.tar.gz assets/* cdn/* static
+  tar cfzh ${NAME}.tar.gz assets/* static
 }
 
 publish() {
@@ -182,9 +176,21 @@ generateConf() {
   echo "DEFAULT_DOCKER_USER=`id -u`:`id -g`" > .env
   ENTCOREVERSION=$(grep entCoreVersion= gradle.properties | awk -F "=" '{ print $2 }' | sed -e "s/\r//")
   sed -i "s/entcoreVersion=.*/entcoreVersion=$ENTCOREVERSION/" conf.properties
-  sed -i "s/.*REMOVE_BY_CI.*//g" docker-compose.yml.template
-  docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle generateConf
+  # Remove published ports on CI only, so that they stay available on a local run
+  if [ "$CI" = "true" ] || [ -n "$JENKINS_URL" ]; then
+    sed -i "s/.*REMOVE_BY_CI.*//g" docker-compose.yml.template
+  fi
   docker run --rm $USER_OPTION -v "$PWD":/home/gradle/project -v ~/.m2:/home/gradle/.m2 -v ./?/.gradle:/home/gradle/.gradle -w /home/gradle/project $SET_HOME_ENV_ARG opendigitaleducation/gradle:4.5.1 gradle generateConf
+  # Fill the services list of ent-core.json from the template.j2 of each mod
+  docker run --rm -u "$(id -u):$(id -g)" -v "$PWD"/mods:/opt/conf -v "$PWD":/out opendigitaleducation/vertx-cli:${VERTX_CLI_VERSION:-latest} config /opt/conf /out/entcore.out.json --overwrite --properties-file=/out/conf.properties --main=/out/ent-core.json
+  if [ ! -e ent-core.json.save ]; then
+    cp ent-core.json ent-core.json.save
+  fi
+  mv -f entcore.out.json ent-core.json
+  # vertx-service-launcher reads its configuration from VERTX_CONF_PATH (default /opt/conf/entcore.json)
+  if ! grep -q VERTX_CONF_PATH docker-compose.yml; then
+    sed -i "s#^\( *\)- MODE=cluster#&\n\1- VERTX_CONF_PATH=/srv/springboard/conf/vertx.conf#" docker-compose.yml
+  fi
 }
 
 integrationTest() {
@@ -192,27 +198,6 @@ integrationTest() {
   VERTX_IP=`docker inspect ${BASE_CONTAINER_NAME}_vertx_1 | grep '"IPAddress"' | head -1 | grep -Eow "[0-9\.]+"`
   sed -i "s|baseURL.*$|baseURL(\"http://$VERTX_IP:$PORT\")|" src/test/scala/org/entcore/test/simulations/IntegrationTest.scala
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle integrationTest
-}
-
-overrideDefaultSkinByTheme() {
-  mv assets/themes/hdf1d/skins/default assets/themes/hdf1d/skins/hills
-  cp -R assets/themes/hdf1d/skins/hills assets/themes/pdc1d/skins/
-  mv assets/themes/hdf1d/skins/monthly assets/themes/hdf1d/skins/default
-  cp -R assets/themes/hdf1d/skins/default/* assets/themes/pdc1d/skins/default
-  sed -i "s/, 'monthly'//" assets/theme-conf.js
-  find assets/themes/ -name monthly -exec rm -r {} \+
-}
-
-deployCDN()
-{
-  #cdn
-  mkdir -p cdn
-  rm -r cdn/* 2>/dev/null
-  cp -R assets/ cdn/
-  cp -R static/* cdn/
-  rm -rf cd cdn/*.jar
-  cp -R cdn/portal/public/ cdn/
-  cp -R cdn/directory/ cdn/userbook/
 }
 
 for param in "$@"
@@ -247,12 +232,6 @@ do
       ;;
     archive)
       archive
-      ;;
-    deployCDN)
-      deployCDN
-      ;;
-    overrideDefaultSkinByTheme)
-      overrideDefaultSkinByTheme
       ;;
     publish)
       publish
