@@ -134,17 +134,6 @@ buildFront() {
   mv static/share-big-files static/sharebigfiles
   mv static/search-engine static/searchengine
   find static/help -type l -exec rename 's/index.html\?iframe\=true/index.html/' '{}' \;
-  I18N_VERSION=`grep 'i18nVersion=' gradle.properties | sed 's/i18nVersion=//'`
-  if [ -e i18n ] && [ ! -z "$I18N_VERSION" ]; then
-    rm -rf assets/i18n
-    mv i18n assets/
-  fi
-  
-  CANTOO_VERSION=`grep 'cantooVersion=' gradle.properties | sed 's/cantooVersion=//'`
-  if [ ! -z "$CANTOO_VERSION" ]; then
-	wget https://$NEXUS_ODE_USERNAME:$NEXUS_ODE_PASSWORD@maven.opendigitaleducation.com/repository/cantoo/default/cantoo-web_v$CANTOO_VERSION.js
-	mv cantoo-web_v$CANTOO_VERSION.js static/portal/public/cantoo-web.js
-  fi
   
   echo "$VERSION" > assets/version
 }
@@ -165,7 +154,7 @@ archive() {
     exit 1
   fi
   
-  tar cfzh ${NAME}.tar.gz assets/* cdn/* static
+  tar cfzh ${NAME}.tar.gz assets/* static
 }
 
 publish() {
@@ -192,27 +181,6 @@ integrationTest() {
   VERTX_IP=`docker inspect ${BASE_CONTAINER_NAME}_vertx_1 | grep '"IPAddress"' | head -1 | grep -Eow "[0-9\.]+"`
   sed -i "s|baseURL.*$|baseURL(\"http://$VERTX_IP:$PORT\")|" src/test/scala/org/entcore/test/simulations/IntegrationTest.scala
   docker-compose run --rm -u "$USER_UID:$GROUP_GID" gradle gradle integrationTest
-}
-
-overrideDefaultSkinByTheme() {
-  mv assets/themes/hdf1d/skins/default assets/themes/hdf1d/skins/hills
-  cp -R assets/themes/hdf1d/skins/hills assets/themes/pdc1d/skins/
-  mv assets/themes/hdf1d/skins/monthly assets/themes/hdf1d/skins/default
-  cp -R assets/themes/hdf1d/skins/default/* assets/themes/pdc1d/skins/default
-  sed -i "s/, 'monthly'//" assets/theme-conf.js
-  find assets/themes/ -name monthly -exec rm -r {} \+
-}
-
-deployCDN()
-{
-  #cdn
-  mkdir -p cdn
-  rm -r cdn/* 2>/dev/null
-  cp -R assets/ cdn/
-  cp -R static/* cdn/
-  rm -rf cd cdn/*.jar
-  cp -R cdn/portal/public/ cdn/
-  cp -R cdn/directory/ cdn/userbook/
 }
 
 for param in "$@"
@@ -247,12 +215,6 @@ do
       ;;
     archive)
       archive
-      ;;
-    deployCDN)
-      deployCDN
-      ;;
-    overrideDefaultSkinByTheme)
-      overrideDefaultSkinByTheme
       ;;
     publish)
       publish

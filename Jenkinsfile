@@ -42,11 +42,6 @@ pipeline {
           sh './build.sh buildFront'
         }
       }
-      stage('CDN') {
-        steps {
-          sh './build.sh deployCDN'
-        }
-      }
       stage('Archive') {
         steps {
           sh './build.sh archive'
